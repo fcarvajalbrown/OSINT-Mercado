@@ -8,6 +8,7 @@ dependencies = [
     "truststore>=0.9",
     "polars>=1.0",
     "python-dotenv>=1.0",
+    "rapidfuzz>=3.0",
 ]
 
 [project.optional-dependencies]
