@@ -23,7 +23,7 @@ def get(params: dict) -> dict:
     resp = requests.get(BASE, params=params, timeout=60)
     try:
         resp.raise_for_status()
-    except requests.HTTPError as exc:
+    except requests.HTTPError:
         # requests embeds the full request URL (including the ticket) in the
         # default HTTPError message; re-raise without it.
         raise SystemExit(f"HTTP {resp.status_code} error calling OC API") from None
