@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Node / frontend build tooling
+node_modules/
+.cache/
+dist-tmp/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local data scratch (published/curated datasets are committed deliberately)
+*.tmp
+scratch/
