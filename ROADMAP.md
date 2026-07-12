@@ -68,11 +68,14 @@ _Shaped by: ADR 0002, 0004._
 - Controlled-basket classifier: per-SKU keyword/model rules + fuzzy fallback, developed
   test-first against a labeled sample.
 - Per-unit normalization (not per-pack).
+- **Prerequisite:** currency normalization to CLP (`mindicador.cl`-backed conversion + date-
+  keyed rate cache, deferred by ADR 0009) and net-vs-gross (IVA) alignment, before any raw
+  `unit_price`/`total` is compared across orders or against a retail baseline.
 - Overprice ratio + severity tiers (configurable). Only score when baseline confidence is
   sufficient; otherwise mark "needs baseline" rather than flag.
 - Emit `pending` anomalies with provenance fields (source id, url, captured_at).
 
-_Shaped by: ADR 0002, 0005, 0006, 0007._
+_Shaped by: ADR 0002, 0005, 0006, 0007, 0009._
 
 ## Phase 4 — Curation workflow
 **Status:** Not Started
