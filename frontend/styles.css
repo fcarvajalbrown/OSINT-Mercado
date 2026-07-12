@@ -1,0 +1,81 @@
+:root {
+  --bg: #0f1720;
+  --panel: #17212b;
+  --ink: #e7edf3;
+  --muted: #9fb0c0;
+  --line: #26333f;
+  --accent: #4ea1ff;
+  --watch: #d9a441;
+  --high: #e2722e;
+  --severe: #e0473f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+header, .filters, main, footer { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+header { padding-top: 32px; }
+h1 { margin: 0 0 4px; font-size: 1.9rem; letter-spacing: -0.02em; }
+.tagline { margin: 0 0 12px; color: var(--muted); font-size: 1.05rem; }
+.note { margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; max-width: 70ch; }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: end;
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
+.filters label { display: flex; flex-direction: column; font-size: 0.78rem; color: var(--muted); gap: 4px; }
+.filters select {
+  background: var(--panel);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  min-width: 180px;
+}
+.count { margin-left: auto; color: var(--muted); font-size: 0.9rem; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 12px; }
+table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+thead th {
+  text-align: left;
+  padding: 12px 14px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+tbody td { padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tbody tr:last-child td { border-bottom: 0; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+.badge { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; }
+.badge.watch { background: rgba(217,164,65,0.16); color: var(--watch); }
+.badge.high { background: rgba(226,114,46,0.16); color: var(--high); }
+.badge.severe { background: rgba(224,71,63,0.18); color: var(--severe); }
+.mult { font-weight: 600; }
+
+a { color: var(--accent); }
+.empty {
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+}
+footer { padding: 28px 20px 40px; color: var(--muted); font-size: 0.82rem; }

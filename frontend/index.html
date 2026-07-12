@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSINT-Mercado — Sobreprecios en compras municipales</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header>
+    <h1>OSINT-Mercado</h1>
+    <p class="tagline">Auditoría de sobreprecios en compras municipales de la Región Metropolitana.</p>
+    <p class="note">
+      Cada fila es una orden de compra pública contrastada contra un precio de referencia de
+      retail para un producto equivalente. Solo se publican casos revisados y confirmados por una
+      persona; cada uno enlaza a la orden oficial en Mercado Público para su verificación
+      independiente.
+    </p>
+  </header>
+
+  <section class="filters" aria-label="Filtros">
+    <label>Comuna
+      <select id="filter-comuna"><option value="">Todas</option></select>
+    </label>
+    <label>Categoría
+      <select id="filter-categoria"><option value="">Todas</option></select>
+    </label>
+    <label>Severidad
+      <select id="filter-severidad">
+        <option value="">Todas</option>
+        <option value="watch">Watch (&ge;1.5x)</option>
+        <option value="high">High (&ge;2x)</option>
+        <option value="severe">Severe (&ge;3x)</option>
+      </select>
+    </label>
+    <span id="count" class="count" role="status"></span>
+  </section>
+
+  <main>
+    <div id="empty" class="empty" hidden>
+      No hay banderas confirmadas todavía. Los casos pendientes están en revisión.
+    </div>
+    <div class="table-wrap">
+      <table id="flags" hidden>
+        <thead>
+          <tr>
+            <th>Comuna</th>
+            <th>Producto</th>
+            <th>Categoría</th>
+            <th class="num">Pagado (CLP, c/IVA)</th>
+            <th class="num">Referencia (CLP)</th>
+            <th class="num">Sobreprecio</th>
+            <th>Severidad</th>
+            <th>Fuente</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <p>Datos: Mercado Público / ChileCompra. Código y metodología abiertos.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

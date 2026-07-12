@@ -14,6 +14,9 @@ node_modules/
 .cache/
 dist-tmp/
 
+# Built static site (generated in CI from confirmed_flags.json)
+dist/
+
 # OS
 .DS_Store
 Thumbs.db
