@@ -83,13 +83,16 @@ _Shaped by: ADR 0002, 0004, 0010._
 _Shaped by: ADR 0002, 0005, 0006, 0007, 0009; new ADR 0011, 0012, 0013._
 
 ## Phase 4 — Curation workflow
-**Status:** Not Started
+**Status:** Done
 
-- Review artifact listing pending flags for confirm/dismiss with an optional note.
-- Confirmed flags promote into the published dataset; dismissed archived with reason.
-- Re-run stability: same inputs → same flags.
+- Git-native decisions ledger (`data/curation_decisions.json`) keyed by stable anomaly id,
+  driven by the `osint-curate` CLI (`status` / `confirm` / `dismiss` / `promote`) (ADR 0014).
+- Confirmed flags promote into the published `data/confirmed_flags.json` (Phase 5 input);
+  dismissed archived with reason into `data/dismissed_flags.json`. Only reviewable statuses
+  (`pending`, `unit_ambiguous`) are curatable; `needs_baseline` is excluded.
+- Pure `apply_decisions` is deterministic: same pending + ledger -> identical published output.
 
-_Shaped by: ADR 0006, 0007._
+_Shaped by: ADR 0006, 0007; new ADR 0014._
 
 ## Phase 5 — Static dashboard & deploy
 **Status:** Not Started

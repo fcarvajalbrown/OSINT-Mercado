@@ -18,6 +18,7 @@ dev = ["pytest>=8.0", "responses>=0.25", "ruff>=0.6"]
 osint-ingest = "osint_mercado.ingest:main"
 osint-build-baselines = "osint_mercado.build_baselines:main"
 osint-score = "osint_mercado.score:main"
+osint-curate = "osint_mercado.curate:main"
 
 [build-system]
 requires = ["setuptools>=68"]

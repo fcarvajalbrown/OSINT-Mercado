@@ -23,3 +23,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0011 | Currency conversion to CLP and net-vs-gross (IVA) alignment            | Accepted |
 | 0012 | Controlled-basket matcher: implementation                             | Accepted |
 | 0013 | Anomaly scoring, severity tiers, unit guardrail, and pending output    | Accepted |
+| 0014 | Curation workflow: git-native decisions ledger + osint-curate CLI     | Accepted |
