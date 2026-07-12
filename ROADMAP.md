@@ -89,9 +89,13 @@ _Shaped by: ADR 0006, 0007._
 - Static frontend: filter confirmed flags by commune / category / severity; each row shows
   unit-paid vs baseline, overprice %, severity, and the official source link.
 - Build in GitHub Actions; emit static output.
-- Hostinger native Git integration auto-deploys to `public_html` on push (Business shared).
+- Deploy over **SSH**: `rsync` the built static site to `public_html`, authenticating with the
+  Hostinger SSH password (`SSH_HOSTINGER` in `.env` locally / a GitHub Actions secret in CI,
+  non-interactive via `sshpass`). Needs the SSH host, port, and username (not secret) at build
+  time. This replaces the native-Git-integration transport; write a superseding ADR then.
+  (Consider migrating to SSH key auth later — more secure and cleaner to automate than a password.)
 
-_Shaped by: ADR 0003._
+_Shaped by: ADR 0003 (deploy transport to be superseded at Phase 5)._
 
 ## Later phases (toward the PDF's grand vision)
 **Status:** Not Started
