@@ -18,6 +18,7 @@ ITEM_COLUMNS = [
     "product", "quantity", "unit_price",
     "moneda", "total", "total_cargos", "total_descuentos", "total_impuestos",
     "category", "category_code", "product_code",
+    "correlativo", "unidad", "espec_comprador", "espec_proveedor",
     "oc_url", "captured_at",
 ]
 
@@ -55,6 +56,10 @@ def orders_to_items_df(orders: list[PurchaseOrder], captured_at: str) -> pl.Data
             "category": item.category,
             "category_code": item.category_code,
             "product_code": item.product_code,
+            "correlativo": item.correlativo,
+            "unidad": item.unidad,
+            "espec_comprador": item.espec_comprador,
+            "espec_proveedor": item.espec_proveedor,
             "oc_url": f"{OC_PUBLIC_URL}{o.codigo}",
             "captured_at": captured_at,
         }

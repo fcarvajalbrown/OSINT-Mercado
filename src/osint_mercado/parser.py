@@ -47,6 +47,11 @@ def _parse_items(order: dict) -> list[LineItem]:
             category=str(row.get(schema.ITEM_CATEGORIA, "")),
             category_code=_to_int(row.get(schema.ITEM_CODIGO_CATEGORIA)),
             product_code=_to_int(row.get(schema.ITEM_CODIGO_PRODUCTO)),
+            correlativo=_to_int(row.get(schema.ITEM_CORRELATIVO)),
+            # Unidad/Especificacion* can be JSON null -> coerce to "" (not "None").
+            unidad=str(row.get(schema.ITEM_UNIDAD) or ""),
+            espec_comprador=str(row.get(schema.ITEM_ESPEC_COMPRADOR) or ""),
+            espec_proveedor=str(row.get(schema.ITEM_ESPEC_PROVEEDOR) or ""),
         )
         for row in rows
     ]

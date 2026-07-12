@@ -8,6 +8,8 @@ def _orders():
         "Toner HP 85A", 2.0, 45000.0,
         moneda="CLP", total=90000.0, total_cargos=0.0, total_descuentos=0.0,
         total_impuestos=0.0, category="Toner", category_code=44103109, product_code=44103110,
+        correlativo=1, unidad="", espec_comprador="compra toner",
+        espec_proveedor="HP 85A CE285A original",
     )]
     return [PurchaseOrder(
         "1234-5-SE26", "compra", "01072026", buyer, items,
@@ -45,6 +47,10 @@ def test_orders_to_items_df_includes_status_currency_and_category_columns():
     assert row["category"] == "Toner"
     assert row["category_code"] == 44103109
     assert row["product_code"] == 44103110
+    assert row["correlativo"] == 1
+    assert row["unidad"] == ""
+    assert row["espec_proveedor"] == "HP 85A CE285A original"
+    assert row["espec_comprador"] == "compra toner"
 
 
 def test_write_parquet_roundtrip(tmp_path):

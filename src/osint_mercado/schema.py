@@ -53,7 +53,13 @@ COMPRADOR_REGION = "RegionUnidad"
 # Items container and line-item fields
 OC_ITEMS = "Items"
 ITEMS_LISTADO = "Listado"
+ITEM_CORRELATIVO = "Correlativo"
 ITEM_PRODUCTO = "Producto"
+ITEM_UNIDAD = "Unidad"
+# The real product identity lives in these free-text spec fields, not in Producto
+# (which is only the generic UNSPSC label). They are the matcher's primary input.
+ITEM_ESPEC_COMPRADOR = "EspecificacionComprador"
+ITEM_ESPEC_PROVEEDOR = "EspecificacionProveedor"
 ITEM_CANTIDAD = "Cantidad"
 ITEM_PRECIO = "PrecioNeto"
 ITEM_MONEDA = "Moneda"

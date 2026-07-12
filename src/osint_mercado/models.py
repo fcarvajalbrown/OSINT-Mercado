@@ -22,6 +22,10 @@ class LineItem:
     category: str = ""
     category_code: int = 0
     product_code: int = 0
+    correlativo: int = 0
+    unidad: str = ""
+    espec_comprador: str = ""
+    espec_proveedor: str = ""
 
 
 @dataclass(frozen=True)

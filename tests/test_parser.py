@@ -60,3 +60,12 @@ def test_parsed_item_has_category_codes():
     assert item.category == "Ropa, maletas y productos de aseo personal / Calzado / Zapatos"
     assert item.category_code == 53111600
     assert item.product_code == 53111601
+
+
+def test_parsed_item_has_identity_fields():
+    item = parser.parse_detail(_detail())[0].items[0]
+    assert item.correlativo == 1
+    assert "BOTIN PANAMA JACK" in item.espec_proveedor
+    assert item.espec_comprador.startswith("RES X")
+    # Fixture Unidad is null -> defaults to empty string, not the literal "None".
+    assert item.unidad == ""
