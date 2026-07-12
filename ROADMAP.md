@@ -32,7 +32,7 @@ _Shaped by: ADR 0001, 0002, 0003, 0004, 0005, 0006, 0007._
 _Shaped by: ADR 0001, 0002, 0004, 0008._
 
 ## Phase 1.5 — Parser enrichment
-**Status:** Not Started
+**Status:** Done
 
 From `docs/research/2026-07-12-parser-improvement.md`: the parser extracts only ~4 of ~26
 order fields and 3 of 14 item fields already present in the real payload — most of these are

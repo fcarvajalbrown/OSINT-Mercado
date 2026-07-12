@@ -56,6 +56,28 @@ Fields used by `schema.py` today:
 - `Nombre` (str) — order title, e.g. `"EPP FUNC. OSORNO"`. Matches `schema.OC_NOMBRE`.
 - `Comprador` (object) — buyer, see below. Matches `schema.OC_COMPRADOR`.
 - `Items` (object) — line items container, see below. Matches `schema.OC_ITEMS`.
+- `CodigoEstado` (int, observed `6`) / `Estado` (str, observed `"Aceptada"`) — order
+  status. Matches `schema.OC_CODIGO_ESTADO`/`schema.OC_ESTADO`. Only `CodigoEstado == 9`
+  ("Cancelada", per the official status table at `https://www.chilecompra.cl/api/`) is
+  currently acted on, by `order_status.drop_cancelled`; the pipeline has never observed
+  a real order with a status other than `6` to confirm the rest of the table against.
+- `CodigoTipo` (str, observed `"8"` — a JSON string, not an int) / `Tipo` (str, observed
+  `"SE"`) — order type. Matches `schema.OC_CODIGO_TIPO`/`schema.OC_TIPO`. Not currently
+  used for filtering, only stored for future analysis (Convenio Marco vs. Trato Directo).
+- `CodigoEstadoProveedor` (int, observed `4`) / `EstadoProveedor` (str, observed
+  `"Aceptada"`) — supplier-side acceptance status. Matches
+  `schema.OC_CODIGO_ESTADO_PROVEEDOR`/`schema.OC_ESTADO_PROVEEDOR`. **Open question:**
+  no real fixture example of a rejected order exists yet to confirm whether this field
+  (rather than `CodigoEstado`) is where order rejection actually surfaces — the
+  official `CodigoEstado` table has no distinct "Rechazada" value. Revisit once a
+  rejected-order payload is captured.
+- `TipoMoneda` (str, observed `"CLP"`), `PorcentajeIva` (float, observed `19.0`),
+  `Total` (float, observed `539041.0`), `TotalNeto` (float, observed `452976.0`),
+  `Impuestos` (float, observed `86065.0`), `Cargos` (float, observed `0.0`),
+  `Descuentos` (float, observed `0.0`) — order-level currency/tax. Matches
+  `schema.OC_TIPO_MONEDA`, `schema.OC_PORCENTAJE_IVA`, `schema.OC_TOTAL`,
+  `schema.OC_TOTAL_NETO`, `schema.OC_IMPUESTOS`, `schema.OC_CARGOS`,
+  `schema.OC_DESCUENTOS`. Captured raw only — no CLP conversion yet, see ADR 0009.
 
 ### Correction: order creation date is nested, not a flat field
 
@@ -118,6 +140,19 @@ Each item in `Items.Listado` observed keys: `Cantidad`, `Categoria`,
 - `ITEM_PRODUCTO = "Producto"` — matches (e.g. `"Zapatos de hombre"`).
 - `ITEM_CANTIDAD = "Cantidad"` — matches (float, e.g. `4.0`).
 - `ITEM_PRECIO = "PrecioNeto"` — matches (float, e.g. `94788.0`).
+- `ITEM_MONEDA = "Moneda"` — matches (str, observed `"CLP"`).
+- `ITEM_TOTAL = "Total"` — matches (float, observed `379152.0` for the first item;
+  note this collides in name with the order-level `Total` field — the flattened
+  Parquet output (`store.py`) disambiguates as `order_total` vs. `total`).
+- `ITEM_TOTAL_CARGOS = "TotalCargos"`, `ITEM_TOTAL_DESCUENTOS = "TotalDescuentos"`,
+  `ITEM_TOTAL_IMPUESTOS = "TotalImpuestos"` — match (float, all observed `0.0` for this
+  order's items).
+- `ITEM_CATEGORIA = "Categoria"` — matches (str, observed
+  `"Ropa, maletas y productos de aseo personal / Calzado / Zapatos"`).
+- `ITEM_CODIGO_CATEGORIA = "CodigoCategoria"` — matches (int, observed `53111600`, a
+  UNSPSC class-level code).
+- `ITEM_CODIGO_PRODUCTO = "CodigoProducto"` — matches (int, observed `53111601`, a
+  UNSPSC commodity-level code).
 
 ## Summary of reconciliation
 
