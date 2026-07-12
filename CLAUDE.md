@@ -1,0 +1,67 @@
+# OSINT-Mercado
+
+Public-interest webapp that audits Chilean municipal procurement for overpricing. A Python
+pipeline (external compute) ingests purchase orders from the Mercado Público / ChileCompra
+API, compares them against a curated retail baseline for a controlled basket of commoditized
+goods, flags deviations, routes them through a human curation gate, and publishes confirmed
+flags to a static dashboard where each one links back to its official source order.
+
+**Vision and scope:** `PRD.md`. **Phase status:** `ROADMAP.md`. **Every significant
+decision:** `docs/adr/` (these are the source of truth; the root `docs/OSINT_Mercado_PRD.pdf`
+is a superseded historical artifact).
+
+## Current scope (v1)
+
+- **Coverage:** the 52 municipalities of the Región Metropolitana, queried by-organism
+  (`CodigoOrganismo`). Long-term goal: national, broad product categories.
+- **Data acquisition:** live API, `ordenesdecompra.json?fecha=…&CodigoOrganismo=…` per
+  municipal code, then detail-per-order for prices. The bulk open-data dumps are not usable
+  (tenders-only, stale) — see the acquisition ADR.
+- **Basket:** a tight controlled set of commoditized SKUs (~15-25).
+
+## Architecture
+
+Split across three planes (ADR 0001): a Python + Polars pipeline runs on **external compute**
+(GitHub Actions — Python does not run on the target Hostinger shared host); the store is
+**versioned data files** in the repo (ADR 0004); the presentation plane is a **static
+frontend** deployed to Hostinger via its native Git integration (ADR 0003). No Rust/PyO3
+(ADR 0002). Matching is a **controlled-basket classifier** (ADR 0005). Every published flag
+passes a **human curation gate** (ADR 0006) and carries a **provenance link** (ADR 0007).
+
+## Commits and PRs
+- Use **Conventional Commits** (`feat:`, `fix:`, `docs:`, `test:`, `chore:`,
+  `refactor:`, `ci:`), scoped where useful (`feat(ir): ...`).
+- Commit per completed task; push as work progresses.
+- **Never open a pull request unless explicitly asked** in that same request.
+- **No AI attribution** anywhere: no `Co-Authored-By` trailers, no "Generated
+  with ..." lines in commits, PRs, code, or docs.
+
+## Writing
+- **No emojis** anywhere: code, comments, docs, commit messages, chat.
+- **Outward-facing non-technical prose** (README, announcements, marketing copy)
+  must go through the humanizer pass before publishing, to strip AI-writing tells
+  (em-dash-as-aside, "not just X, but Y" parallelism, uniform sentence rhythm,
+  repeated stock adjectives). Technical documents are exempt: ADRs, PRD, code
+  comments, this file.
+- Keep the doc structure: `PRD.md` (stable vision), `ROADMAP.md` (phase status),
+  `docs/adr/` (one MADR-lite file per decision, immutable once Accepted; supersede
+  via a new ADR). Decisions are settled in the ADRs. Do not silently diverge; if
+  something seems wrong, stop and ask.
+
+## Development
+- Python 3.11+ (dev machine: 3.14). Package layout under `src/osint_mercado/`.
+- Venv: `python -m venv .venv` then `.venv/Scripts/python -m pip install -e ".[dev]"`
+  (Windows path uses `Scripts/`, not `bin/`).
+- **TDD:** write the failing test first, confirm it fails, implement, confirm it passes.
+  Run `.venv/Scripts/python -m pytest -q` and `.venv/Scripts/python -m ruff check src tests`.
+- **Never guess** API field names, params, quotas, or library behavior — verify against a
+  real captured fixture or official docs first. API field names funnel through
+  `src/osint_mercado/schema.py`; nothing else hard-codes them.
+
+## Secrets and TLS
+- The ChileCompra API ticket lives only in a gitignored `.env` (key `CHILECOMPRA_API_TICKET`)
+  locally, and a GitHub Actions secret of the same name in CI. Never commit it, print it, or
+  put it in a fixture or a logged URL.
+- This dev machine intercepts TLS with a self-signed cert. HTTP clients verify against the OS
+  trust store via the `truststore` package (`truststore.inject_into_ssl()`). **Never disable
+  certificate verification.**

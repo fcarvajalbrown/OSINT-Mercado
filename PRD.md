@@ -31,8 +31,10 @@ largely unnoticed without dedicated auditing.
 **Primary objective.** Automate anomaly detection for localized municipal acquisitions of
 standard, commoditized goods, and present the findings on a public, verifiable dashboard.
 
-**In scope (v1).** Municipal buyers nationally, restricted to a **tight controlled basket**
-(~15–25 hand-picked commoditized SKUs with clean retail baselines).
+**In scope (v1).** The **52 municipalities of the Región Metropolitana** (queried by-organism
+via `CodigoOrganismo`; see ADR 0008), restricted to a **tight controlled basket** (~15–25
+hand-picked commoditized SKUs with clean retail baselines). National coverage remains the
+long-term goal.
 
 **Out of scope.** Complex service contracts, public works (Obras Públicas), and specialized
 consulting where pricing lacks a standardized retail baseline. Real-time telemetry (a
