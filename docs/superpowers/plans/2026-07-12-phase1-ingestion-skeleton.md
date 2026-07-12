@@ -29,6 +29,34 @@ Every task implicitly includes these. Copied from the project's rules and spec.
 - Response envelope: top-level `Cantidad` (int) and `Listado` (array). Exact per-order field names are locked from the real fixture in Task 1 — do not hard-code assumed names elsewhere; import them from `schema.py`.
 - Sources: [ChileCompra API](https://www.chilecompra.cl/api/), [Utilización](https://api.mercadopublico.cl/modules/api.aspx).
 
+## REVISION 2 (2026-07-12) — by-organism acquisition, Región Metropolitana scope (ADR 0008)
+
+Implementation of Task 1 proved the by-date approach infeasible (list endpoint has no buyer or
+prices; ~16,600 national orders/day; HTTP 429). This section **overrides** the tasks below
+where they conflict; where they conflict, this section governs.
+
+- **Scope:** v1 covers the **52 Región Metropolitana municipalities**, queried **by-organism** —
+  not national by-date.
+- **Task 2 (HTTP client):** additionally provide
+  `build_by_organism_url(fecha, codigo_organismo, ticket)` →
+  `…ordenesdecompra.json?fecha=…&CodigoOrganismo=…&ticket=…`; and add **retry-with-backoff on
+  HTTP 429** in `fetch_json` (bounded retries, exponential backoff, honor `Retry-After` if
+  present). Tests: assert the by-organism URL carries both params; mock a 429-then-200 sequence
+  and assert it retries then succeeds.
+- **NEW Task 5b (RM municipal codes):** build a versioned `data/rm_municipal_codes.json`
+  mapping `comuna → CodigoOrganismo` for the 52 RM municipalities, each code **verified against a
+  real API response** (query by-organism, confirm `NombreOrganismo`/comuna). Provide a discovery
+  script; do NOT hard-code guessed codes. Full coverage may require sampling several dates; the
+  list is expandable. Depends on Task 2.
+- **Task 3 (parser):** the order creation date is **nested** — read
+  `order[schema.OC_FECHAS][schema.OC_FECHA]` (schema.py already defines `OC_FECHAS = "Fechas"`),
+  not `order.get(schema.OC_FECHA)`. Guard when `Fechas` is absent.
+- **Task 6 (CLI):** replace the by-date loop with: load the RM codes; for each code, query
+  by-organism for the date; collect order codes; fetch detail per order (throttled, backoff);
+  parse; keep the municipal filter as a safety check; store. Add `--codes <path>` (RM codes
+  file); keep `--max-orders` as a per-run safety cap.
+- **Task 7 (workflow):** unchanged except the run command passes `--codes data/rm_municipal_codes.json`.
+
 ## File structure
 
 - `pyproject.toml` — package metadata, dependencies, `ruff`/`pytest` config, console script.

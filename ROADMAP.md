@@ -17,14 +17,37 @@ in `PRD.md`; decisions in `docs/adr/`.
 _Shaped by: ADR 0001, 0002, 0003, 0004, 0005, 0006, 0007._
 
 ## Phase 1 — Data ingestion skeleton
-**Status:** Not Started
+**Status:** In Progress
 
-- Register a ChileCompra / Mercado Público API ticket (free); store as a CI secret.
-- Confirm the exact OC endpoint, params, and rate limits from official API docs.
-- Fetch municipal-buyer purchase orders for a date window; persist raw responses.
+- Register a ChileCompra / Mercado Público API ticket (free); store as a CI secret. (Done)
+- Confirm the exact OC endpoint, params, and response schema from a real captured fixture.
+  (Done — see `docs/api/ordenes-de-compra-schema.md`.)
+- Build a versioned `comuna → CodigoOrganismo` list for the 52 Región Metropolitana
+  municipalities, each code verified against a real API response (ADR 0008).
+- Ingest by-organism: for each RM municipal code, query `fecha + CodigoOrganismo`, fetch
+  detail per order (throttled, backoff on 429), parse items and prices, persist normalized
+  per-line-item data with provenance.
 - First GitHub Actions scheduled workflow (daily) running ingestion end-to-end.
 
-_Shaped by: ADR 0001, 0002, 0004._
+_Shaped by: ADR 0001, 0002, 0004, 0008._
+
+## Phase 1.5 — Parser enrichment
+**Status:** Not Started
+
+From `docs/research/2026-07-12-parser-improvement.md`: the parser extracts only ~4 of ~26
+order fields and 3 of 14 item fields already present in the real payload — most of these are
+"extract what is already there", not new API calls.
+
+- Extract order `CodigoEstado` / `CodigoTipo` and **drop cancelled/rejected orders**
+  (correctness: cancelled orders are currently counted as real purchases with real prices).
+- Extract `Moneda` / `TipoMoneda` + `PorcentajeIva`; normalize amounts to CLP
+  (UTM / UF / USD / EUR) and align net-vs-gross before any price comparison.
+- Extract `CodigoCategoria` / `CodigoProducto` (UNSPSC) as a strong join key for basket
+  matching — reusable by the mining data product.
+- Before adding `schema.py` constants, open the official OC data-dictionary PDF manually to
+  confirm exact field names.
+
+_Shaped by: ADR 0005; parser-improvement research (2026-07-12)._
 
 ## Phase 2 — Basket & retail baseline engine
 **Status:** Not Started

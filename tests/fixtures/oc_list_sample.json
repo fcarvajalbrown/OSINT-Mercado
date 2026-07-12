@@ -1,0 +1,32 @@
+{
+  "Cantidad": 16664,
+  "FechaCreacion": "2026-07-12T14:25:20.1713287Z",
+  "Version": "v1",
+  "Listado": [
+    {
+      "Codigo": "1002-211-SE26",
+      "Nombre": "EPP FUNC. OSORNO",
+      "CodigoEstado": 6
+    },
+    {
+      "Codigo": "1002588-86-AG26",
+      "Nombre": "Adquisición de agua purificada; para establecimientos rurales del SLEP Puerto Cordillera; Orden de Compra generada por invitación a compra ágil: 1002588-34-COT26",
+      "CodigoEstado": 12
+    },
+    {
+      "Codigo": "1002772-3915-SE26",
+      "Nombre": "PROTESIS DE RODILLA PRIMARIA PERSONA LIC 1002772-26-LR24 (LC, PABELLON , 2204004004,CMG)",
+      "CodigoEstado": 12
+    },
+    {
+      "Codigo": "1002772-4415-SE26",
+      "Nombre": "PROTESIS MAMARIA EXTERNA CON SOSTEN VARIAS MEDIDAS ID: 1002772-98-LQ23 (LC,Patologia Mamaria,2204004004,MMC)",
+      "CodigoEstado": 12
+    },
+    {
+      "Codigo": "1002772-6860-SE26",
+      "Nombre": "COMPO DESECHABLE 60X60 CM  PAPEL GRADO MEDICO ESTERI/HISOPO PICELADOR ESTERIL,ID 1002772-25-LP24,(LC,TRANSVERSAL,2204004003,MMC)",
+      "CodigoEstado": 12
+    }
+  ]
+}

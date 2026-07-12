@@ -28,8 +28,9 @@ showcase.
 | Where heavy compute runs | **External** — GitHub Actions (Python not runnable on shared host) | 0001, 0002 |
 | Pipeline language | Python + Polars; **no Rust/PyO3** in v1 | 0002 |
 | Store | Versioned data files (Parquet/JSON) in repo; DuckDB build-time only | 0004 |
-| v1 coverage | **National** municipal buyers, **tight controlled basket** (~15–25 SKUs) | — |
-| Long-term goal | National + broad product categories (widen the basket over phases) | — |
+| v1 coverage | **52 Región Metropolitana municipalities** (by-organism), **tight controlled basket** (~15–25 SKUs) | 0008 |
+| Data acquisition | By-organism API (`fecha + CodigoOrganismo`) → detail per order, throttled; bulk open-data rejected (tenders-only, stale) | 0008 |
+| Long-term goal | National + broad product categories (widen basket and regions over phases) | — |
 | Baseline source | Hybrid: aggregator + targeted scrape + **curated manual seed** fallback | 0002, 0004 |
 | Matching | **Controlled-basket classifier** (per-SKU rules + fuzzy fallback), not general fuzzy | 0005 |
 | Publish gate | **Human curation** — pending → confirmed/dismissed; review 1–3×/week | 0006 |

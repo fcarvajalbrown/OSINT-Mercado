@@ -1,0 +1,39 @@
+name: ingest
+
+on:
+  schedule:
+    - cron: "0 12 * * *"  # daily 12:00 UTC (about 08:00 Chile time)
+  workflow_dispatch:
+    inputs:
+      fecha:
+        description: "date ddmmaaaa (default: yesterday)"
+        required: false
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e .
+      - name: Compute fecha
+        id: d
+        run: |
+          if [ -n "${{ github.event.inputs.fecha }}" ]; then
+            echo "fecha=${{ github.event.inputs.fecha }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "fecha=$(date -u -d yesterday +%d%m%Y)" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Run ingestion
+        env:
+          CHILECOMPRA_API_TICKET: ${{ secrets.CHILECOMPRA_API_TICKET }}
+        run: osint-ingest --fecha "${{ steps.d.outputs.fecha }}" --codes data/rm_municipal_codes.json --out data --max-per-organism 200 --pace 0.25
+      - name: Upload dataset
+        uses: actions/upload-artifact@v4
+        with:
+          name: oc-items-${{ steps.d.outputs.fecha }}
+          path: data/*.parquet
+          if-no-files-found: warn

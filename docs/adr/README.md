@@ -17,3 +17,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0005 | Controlled-basket classifier over general fuzzy matching              | Accepted |
 | 0006 | Human curation gate before publishing flags                           | Accepted |
 | 0007 | Provenance linking (verifiable flags) in v1                           | Accepted |
+| 0008 | By-organism API acquisition, scoped to the Región Metropolitana        | Accepted |
