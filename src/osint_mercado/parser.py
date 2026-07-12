@@ -44,6 +44,9 @@ def _parse_items(order: dict) -> list[LineItem]:
             total_cargos=_to_float(row.get(schema.ITEM_TOTAL_CARGOS)),
             total_descuentos=_to_float(row.get(schema.ITEM_TOTAL_DESCUENTOS)),
             total_impuestos=_to_float(row.get(schema.ITEM_TOTAL_IMPUESTOS)),
+            category=str(row.get(schema.ITEM_CATEGORIA, "")),
+            category_code=_to_int(row.get(schema.ITEM_CODIGO_CATEGORIA)),
+            product_code=_to_int(row.get(schema.ITEM_CODIGO_PRODUCTO)),
         )
         for row in rows
     ]

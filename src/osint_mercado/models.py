@@ -19,6 +19,9 @@ class LineItem:
     total_cargos: float = 0.0
     total_descuentos: float = 0.0
     total_impuestos: float = 0.0
+    category: str = ""
+    category_code: int = 0
+    product_code: int = 0
 
 
 @dataclass(frozen=True)

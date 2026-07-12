@@ -53,3 +53,10 @@ def test_parsed_item_has_currency_and_tax_fields():
     assert item.total_cargos == 0.0
     assert item.total_descuentos == 0.0
     assert item.total_impuestos == 0.0
+
+
+def test_parsed_item_has_category_codes():
+    item = parser.parse_detail(_detail())[0].items[0]
+    assert item.category == "Ropa, maletas y productos de aseo personal / Calzado / Zapatos"
+    assert item.category_code == 53111600
+    assert item.product_code == 53111601
