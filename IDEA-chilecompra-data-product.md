@@ -10,6 +10,26 @@ A value-added data product on top of Chile's public procurement data (ChileCompr
 Mercado Público): a clean API and/or dashboard that serves the *usable* information the
 official channels bury.
 
+## 1.0 focus: mining industry (vertical wedge)
+
+**1.0 targets one vertical only: mining.** Rationale (to validate, not asserted): mining is
+the core of Chile's economy, state and state-linked mining buyers move large procurement
+volumes, and mining suppliers are well-resourced with a clear reason to pay for procurement
+intelligence. A bounded set of large buyers is also far more tractable to cover well than all
+of government.
+
+- **Target buyers:** state mining entities such as CODELCO and ENAMI, plus mining-related
+  public buyers. Confirm each one's coverage on Mercado Público vs. its own procurement portal
+  before relying on it.
+- **Target customers:** suppliers to the mining sector wanting visibility into state mining
+  procurement (what is bought, from whom, at what price, on what cadence).
+- **Deliverable:** the clean-API and/or dashboard concept below, but populated and marketed
+  for mining only. Other verticals (municipalities, health, general government) are explicitly
+  deferred to later versions.
+- **To confirm before building:** which mining buyers actually publish on Mercado Público and
+  in what detail; whether their high-value purchases use methods the API exposes; who already
+  sells mining-procurement intelligence.
+
 ## The opportunity (grounded in what we verified building OSINT-Mercado)
 
 Chile's procurement data is nominally "open" but practically painful to use — a real gap
