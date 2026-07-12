@@ -24,5 +24,9 @@
   {"sku_id": "mascarillas_quirurgicas_caja50", "retailer": "Dr. Simi", "price_clp": 5800, "observed_at": "2026-07-12", "url": "https://www.drsimi.cl/mascarilla-de-3-pliegues-descartable-bolsa-50-unidades/p"},
   {"sku_id": "mascarillas_quirurgicas_caja50", "retailer": "Cordoneria Chike", "price_clp": 1480, "observed_at": "2026-07-12", "url": "https://www.chike.cl/product/mascarillas-caja-50-unidades"},
   {"sku_id": "extintor_pqs_6kg", "retailer": "RAC Seguridad Industrial", "price_clp": 36900, "observed_at": "2026-07-12", "url": "https://rac.cl/products/extintor-pqs-abc-6-kgs-6a-30b-c-cert"},
-  {"sku_id": "extintor_pqs_6kg", "retailer": "Treck", "price_clp": 42610, "observed_at": "2026-07-12", "url": "https://www.treck.cl/extintor-pqs-abc-6kg-35782/p"}
+  {"sku_id": "extintor_pqs_6kg", "retailer": "Treck", "price_clp": 42610, "observed_at": "2026-07-12", "url": "https://www.treck.cl/extintor-pqs-abc-6kg-35782/p"},
+  {"sku_id": "cloro_lavandina_4l", "retailer": "Falabella", "price_clp": 3490, "observed_at": "2026-07-12", "url": "https://www.falabella.com/falabella-cl/category/CATG10624/Cloro"},
+  {"sku_id": "alcohol_gel_1l", "retailer": "Falabella", "price_clp": 5790, "observed_at": "2026-07-12", "url": "https://www.falabella.com/falabella-cl/category/CATG11801/Alcohol"},
+  {"sku_id": "escoba_fibra", "retailer": "Falabella", "price_clp": 1990, "observed_at": "2026-07-12", "url": "https://www.falabella.com/falabella-cl/category/CATG10603/Escobas-y-palas"},
+  {"sku_id": "basurero_plastico_60l", "retailer": "Falabella", "price_clp": 12990, "observed_at": "2026-07-12", "url": "https://www.falabella.com/falabella-cl/shop/basurero-60-litros"}
 ]
