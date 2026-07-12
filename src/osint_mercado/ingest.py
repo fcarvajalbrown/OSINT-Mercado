@@ -5,7 +5,7 @@ import time
 from datetime import datetime, timezone
 from pathlib import Path
 
-from osint_mercado import api_client, municipal, parser, schema, store
+from osint_mercado import api_client, municipal, order_status, parser, schema, store
 from osint_mercado.api_client import ApiError
 from osint_mercado.config import load_ticket
 
@@ -47,7 +47,8 @@ def run(fecha, out_dir, ticket, codes_path, session=None, max_per_organism=None,
         if pace_seconds:
             sleep(pace_seconds)
 
-    municipals = municipal.filter_municipal(orders)
+    active = order_status.drop_cancelled(orders)
+    municipals = municipal.filter_municipal(active)
     captured_at = datetime.now(timezone.utc).isoformat()
     df = store.orders_to_items_df(municipals, captured_at=captured_at)
     out_path = Path(out_dir) / f"oc_items_{fecha}.parquet"
