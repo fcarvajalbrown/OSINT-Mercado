@@ -17,3 +17,10 @@ def test_every_sku_has_canonical_name_unit_and_keywords():
         assert sku.canonical_name
         assert sku.unit
         assert sku.keywords
+
+
+def test_every_sku_has_a_dashboard_category():
+    skus = load_basket(BASKET_PATH)
+    cats = {s.category for s in skus}
+    assert "" not in cats
+    assert cats == {"Oficina y computación", "Seguridad y EPP", "Limpieza"}
