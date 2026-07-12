@@ -1,0 +1,19 @@
+[
+  {"sku_id": "toner_hp_cf283a", "retailer": "Alcaplus", "price_clp": 89900, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/hp-toner-83a-laserjet-cf283a/"},
+  {"sku_id": "toner_hp_cf283a", "retailer": "DGA Insumos", "price_clp": 71281, "observed_at": "2026-07-12", "url": "https://www.dgainsumos.cl/products/toner-hp-83a-negro-cf283a"},
+  {"sku_id": "toner_hp_ce285a", "retailer": "Alcaplus", "price_clp": 79900, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/hp-toner-laserjet-negro-85a-ce285a/"},
+  {"sku_id": "toner_hp_ce285a", "retailer": "DGA Insumos", "price_clp": 80218, "observed_at": "2026-07-12", "url": "https://www.dgainsumos.cl/products/toner-hp-85a-negro-ce285a"},
+  {"sku_id": "toner_hp_ce285a", "retailer": "Laser Chile", "price_clp": 98000, "observed_at": "2026-07-12", "url": "https://laserchile.com/producto/toner-hp-85a-ce285a/"},
+  {"sku_id": "papel_resma_carta_75g", "retailer": "IntegraMundo", "price_clp": 3500, "observed_at": "2026-07-12", "url": "https://www.integramundo.cl/products/resma-carta-75-gr-500-hojas"},
+  {"sku_id": "papel_resma_oficio_75g", "retailer": "Jamila", "price_clp": 4090, "observed_at": "2026-07-12", "url": "https://www.jamila.cl/producto-detalle/papeleria/10974/resma-oficio-500-hojas-1-unidad-75-gramos-pix"},
+  {"sku_id": "pilas_aa_blister4", "retailer": "Todopilas", "price_clp": 3790, "observed_at": "2026-07-12", "url": "https://www.todopilas.cl/producto/pila-aa-alcalina-duracell-lr6-blister-4/"},
+  {"sku_id": "pilas_aaa_blister4", "retailer": "Todopilas", "price_clp": 5490, "observed_at": "2026-07-12", "url": "https://www.todopilas.cl/producto/pila-aaa-alcalina-duracell-optimum-blister-4/"},
+  {"sku_id": "pilas_aaa_blister4", "retailer": "Casa Royal", "price_clp": 3990, "observed_at": "2026-07-12", "url": "https://www.casaroyal.cl/-power-one-blister-pilas-alcalinas-aaa-x-4-/p"},
+  {"sku_id": "pendrive_usb_16gb", "retailer": "Alcaplus", "price_clp": 3368, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/kingston-pendrive-datatraveler-i-g4-dtig4-16gb/"},
+  {"sku_id": "mouse_usb", "retailer": "Tecno Mas", "price_clp": 3990, "observed_at": "2026-07-12", "url": "https://www.solotodo.cl/products/28918-genius-dx-110-negro-31010116100"},
+  {"sku_id": "mouse_usb", "retailer": "Alcaplus", "price_clp": 3312, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/microlab-mouse-usb-mcl-6450/"},
+  {"sku_id": "teclado_usb", "retailer": "Alcaplus", "price_clp": 6490, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/xtech-teclado-multimedia-usb-negro-xtk-160s/"},
+  {"sku_id": "teclado_usb", "retailer": "Tecno Mas", "price_clp": 4990, "observed_at": "2026-07-12", "url": "https://tecnomas.cl/producto/teclado-standard-usb"},
+  {"sku_id": "cartucho_tinta_hp_664_negro", "retailer": "Laser Chile", "price_clp": 13990, "observed_at": "2026-07-12", "url": "https://laserchile.com/producto/cartucho-hp-664-negro/"},
+  {"sku_id": "cartucho_tinta_hp_664_negro", "retailer": "Alcaplus", "price_clp": 14990, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/hp-tinta-664-negro-advantage-f6v29al/"}
+]
