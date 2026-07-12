@@ -16,8 +16,10 @@ source order so any claim can be independently verified.
 - **Phase 1.5 — Parser enrichment: Done.** Extracts order status/type (dropping
   cancelled orders), raw currency/tax fields, and UNSPSC product-classification
   codes.
-- **Phase 2 (basket/baseline), 3 (matching/scoring), 4 (curation), 5
-  (dashboard/deploy): Not started.**
+- **Phase 2 — Basket & retail baseline engine: Done.** Curated a 19-SKU controlled
+  basket with canonical keywords/units, seeded real retail price observations per SKU,
+  and computes a median reference price with a high/medium/insufficient confidence tier.
+- **Phase 3 (matching/scoring), 4 (curation), 5 (dashboard/deploy): Not started.**
 
 See `ROADMAP.md` for phase-by-phase status and `PRD.md` for the stable product
 vision. Every significant architectural decision is recorded in `docs/adr/`.

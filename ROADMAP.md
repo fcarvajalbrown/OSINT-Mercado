@@ -50,17 +50,20 @@ order fields and 3 of 14 item fields already present in the real payload — mos
 _Shaped by: ADR 0005; parser-improvement research (2026-07-12)._
 
 ## Phase 2 — Basket & retail baseline engine
-**Status:** Not Started
+**Status:** Done
 
-- Define the v1 controlled basket (~15–25 commoditized SKUs) with canonical
-  keywords/model identifiers and units.
-- Curated manual-seed price list (versioned) as guaranteed baseline fallback.
-- Aggregator source integration where coverage exists; targeted per-product scrapes for the
-  rest.
+- Defined the v1 controlled basket of 19 commoditized SKUs with canonical
+  keywords/model identifiers and units (`data/basket.json`).
+- Curated manual-seed price list (versioned) as guaranteed baseline fallback
+  (`data/seed_prices.json`) — 30 real retailer observations gathered via live
+  web lookups, covering all 19 SKUs.
+- Aggregator source integration deferred (no source chosen/verified yet); the
+  engine is pluggable for one later, per ADR 0010.
 - Reference price = median across available sources, anchored by the seed. Baseline-confidence
-  flag per SKU.
+  flag (high/medium/insufficient) per SKU, computed by `build_baselines.py` into
+  `data/baselines.json`.
 
-_Shaped by: ADR 0002, 0004._
+_Shaped by: ADR 0002, 0004, 0010._
 
 ## Phase 3 — Matching & anomaly scoring
 **Status:** Not Started
