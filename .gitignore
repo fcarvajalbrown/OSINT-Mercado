@@ -22,3 +22,7 @@ Thumbs.db
 *.tmp
 scratch/
 .superpowers/
+
+# Ingested output data (parquet, etc). Tracked reference files like
+# data/rm_municipal_codes.json were added before this rule and stay tracked.
+data/
