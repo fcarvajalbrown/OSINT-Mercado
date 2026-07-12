@@ -19,3 +19,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0007 | Provenance linking (verifiable flags) in v1                           | Accepted |
 | 0008 | By-organism API acquisition, scoped to the Región Metropolitana        | Accepted |
 | 0009 | Currency and tax fields captured raw; CLP normalization deferred       | Accepted |
+| 0010 | Basket & retail baseline: seed-only v1, pluggable multi-source design  | Accepted |
