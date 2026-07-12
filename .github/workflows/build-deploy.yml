@@ -1,0 +1,57 @@
+name: build-deploy
+
+# Manual trigger only: the first push must never silently publish to the live site.
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "deploy as rsync dry-run (no remote changes)"
+        type: boolean
+        default: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: pip install -e .
+      - name: Build static site
+        run: osint-build-site --confirmed data/confirmed_flags.json --out dist
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    # Only deploy when the SSH password secret is configured.
+    if: ${{ secrets.SSH_HOSTINGER != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: dist
+      - name: Install sshpass and rsync
+        run: sudo apt-get update && sudo apt-get install -y sshpass rsync
+      - name: Deploy over SSH
+        env:
+          SSH_HOST: ${{ vars.SSH_HOST }}
+          SSH_PORT: ${{ vars.SSH_PORT }}
+          SSH_USER: ${{ vars.SSH_USER }}
+          SSH_REMOTE_PATH: ${{ vars.SSH_REMOTE_PATH }}
+          SSHPASS: ${{ secrets.SSH_HOSTINGER }}
+        run: |
+          chmod +x scripts/deploy.sh
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            scripts/deploy.sh --dry-run
+          else
+            scripts/deploy.sh
+          fi
