@@ -21,3 +21,4 @@ Thumbs.db
 # Local data scratch (published/curated datasets are committed deliberately)
 *.tmp
 scratch/
+.superpowers/
