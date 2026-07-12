@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install
-        run: pip install -e ".[dev]"
+        run: pip install -e .
       - name: Compute fecha
         id: d
         run: |
@@ -30,7 +30,7 @@ jobs:
       - name: Run ingestion
         env:
           CHILECOMPRA_API_TICKET: ${{ secrets.CHILECOMPRA_API_TICKET }}
-        run: osint-ingest --fecha "${{ steps.d.outputs.fecha }}" --codes data/rm_municipal_codes.json --out data --max-orders 200
+        run: osint-ingest --fecha "${{ steps.d.outputs.fecha }}" --codes data/rm_municipal_codes.json --out data --max-per-organism 200 --pace 0.25
       - name: Upload dataset
         uses: actions/upload-artifact@v4
         with:

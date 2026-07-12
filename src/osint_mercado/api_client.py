@@ -39,6 +39,7 @@ def fetch_json(url, session, *, max_retries=4, backoff_base=1.0, sleep=time.slee
             if resp.status_code == 429 and attempt < max_retries:
                 retry_after = resp.headers.get("Retry-After")
                 delay = float(retry_after) if retry_after and retry_after.isdigit() else backoff_base * (2 ** attempt)
+                resp.close()
                 sleep(delay)
                 attempt += 1
                 continue
