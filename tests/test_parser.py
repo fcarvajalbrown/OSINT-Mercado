@@ -33,3 +33,23 @@ def test_parsed_order_has_status_and_type():
     assert order.tipo == "SE"
     assert order.codigo_estado_proveedor == 4
     assert order.estado_proveedor == "Aceptada"
+
+
+def test_parsed_order_has_currency_and_tax_fields():
+    order = parser.parse_detail(_detail())[0]
+    assert order.tipo_moneda == "CLP"
+    assert order.porcentaje_iva == 19.0
+    assert order.total == 539041.0
+    assert order.total_neto == 452976.0
+    assert order.impuestos == 86065.0
+    assert order.cargos == 0.0
+    assert order.descuentos == 0.0
+
+
+def test_parsed_item_has_currency_and_tax_fields():
+    item = parser.parse_detail(_detail())[0].items[0]
+    assert item.moneda == "CLP"
+    assert item.total == 379152.0
+    assert item.total_cargos == 0.0
+    assert item.total_descuentos == 0.0
+    assert item.total_impuestos == 0.0

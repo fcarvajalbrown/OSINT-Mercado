@@ -39,6 +39,11 @@ def _parse_items(order: dict) -> list[LineItem]:
             product=str(row.get(schema.ITEM_PRODUCTO, "")),
             quantity=_to_float(row.get(schema.ITEM_CANTIDAD)),
             unit_price=_to_float(row.get(schema.ITEM_PRECIO)),
+            moneda=str(row.get(schema.ITEM_MONEDA, "")),
+            total=_to_float(row.get(schema.ITEM_TOTAL)),
+            total_cargos=_to_float(row.get(schema.ITEM_TOTAL_CARGOS)),
+            total_descuentos=_to_float(row.get(schema.ITEM_TOTAL_DESCUENTOS)),
+            total_impuestos=_to_float(row.get(schema.ITEM_TOTAL_IMPUESTOS)),
         )
         for row in rows
     ]
@@ -59,6 +64,13 @@ def parse_detail(payload: dict) -> list[PurchaseOrder]:
             tipo=str(order.get(schema.OC_TIPO, "")),
             codigo_estado_proveedor=_to_int(order.get(schema.OC_CODIGO_ESTADO_PROVEEDOR)),
             estado_proveedor=str(order.get(schema.OC_ESTADO_PROVEEDOR, "")),
+            tipo_moneda=str(order.get(schema.OC_TIPO_MONEDA, "")),
+            porcentaje_iva=_to_float(order.get(schema.OC_PORCENTAJE_IVA)),
+            total=_to_float(order.get(schema.OC_TOTAL)),
+            total_neto=_to_float(order.get(schema.OC_TOTAL_NETO)),
+            impuestos=_to_float(order.get(schema.OC_IMPUESTOS)),
+            cargos=_to_float(order.get(schema.OC_CARGOS)),
+            descuentos=_to_float(order.get(schema.OC_DESCUENTOS)),
         )
         for order in orders
     ]

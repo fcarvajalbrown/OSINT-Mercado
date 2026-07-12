@@ -36,6 +36,14 @@ OC_ESTADO_PROVEEDOR = "EstadoProveedor"
 # confirmed against a real captured fixture.
 ESTADO_CANCELADA = 9
 
+OC_TIPO_MONEDA = "TipoMoneda"
+OC_PORCENTAJE_IVA = "PorcentajeIva"
+OC_TOTAL = "Total"
+OC_TOTAL_NETO = "TotalNeto"
+OC_IMPUESTOS = "Impuestos"
+OC_CARGOS = "Cargos"
+OC_DESCUENTOS = "Descuentos"
+
 # Buyer (Comprador) fields
 COMPRADOR_NOMBRE = "NombreOrganismo"
 COMPRADOR_CODIGO = "CodigoOrganismo"
@@ -48,3 +56,8 @@ ITEMS_LISTADO = "Listado"
 ITEM_PRODUCTO = "Producto"
 ITEM_CANTIDAD = "Cantidad"
 ITEM_PRECIO = "PrecioNeto"
+ITEM_MONEDA = "Moneda"
+ITEM_TOTAL = "Total"
+ITEM_TOTAL_CARGOS = "TotalCargos"
+ITEM_TOTAL_DESCUENTOS = "TotalDescuentos"
+ITEM_TOTAL_IMPUESTOS = "TotalImpuestos"

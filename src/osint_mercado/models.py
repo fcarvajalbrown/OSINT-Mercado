@@ -14,6 +14,11 @@ class LineItem:
     product: str
     quantity: float
     unit_price: float
+    moneda: str = ""
+    total: float = 0.0
+    total_cargos: float = 0.0
+    total_descuentos: float = 0.0
+    total_impuestos: float = 0.0
 
 
 @dataclass(frozen=True)
@@ -29,3 +34,10 @@ class PurchaseOrder:
     tipo: str = ""
     codigo_estado_proveedor: int = 0
     estado_proveedor: str = ""
+    tipo_moneda: str = ""
+    porcentaje_iva: float = 0.0
+    total: float = 0.0
+    total_neto: float = 0.0
+    impuestos: float = 0.0
+    cargos: float = 0.0
+    descuentos: float = 0.0
