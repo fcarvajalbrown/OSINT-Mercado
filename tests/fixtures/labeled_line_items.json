@@ -1,0 +1,25 @@
+[
+  {"producto": "ZAPATOS SEGURIDAD EDELBROCK PVC", "espec_proveedor": "(2219065) ZAPATOS SEGURIDAD EDELBROCK PVC SIN PUNTA ACERO 42 PAR REGION METROPOLITANA", "espec_comprador": "", "expected_sku_id": "zapatos_seguridad_puntera_acero", "note": "Real RM line-item. Safety footwear; labeled to the safety-shoe SKU (baseline spans general safety boots)."},
+  {"producto": "Botas de hombre", "espec_proveedor": "BOTA DE SEGURIDAD V-FLEX V301 SOLDADOR ANTICLAVO CAFE, TALLA N 39", "espec_comprador": "", "expected_sku_id": "zapatos_seguridad_puntera_acero", "note": "Producto is the generic UNSPSC label; identity is in the spec (bota de seguridad)."},
+  {"producto": "Guantes protectores", "espec_proveedor": "GUANTES NITRILO PUNO TEJIDO COT:1913013", "espec_comprador": "", "expected_sku_id": "guantes_nitrilo_caja100", "note": "Nitrile gloves; 'nitrilo' is the distinctive token."},
+  {"producto": "Solventes de alcohol", "espec_proveedor": "ALCOHOL GEL SIMONDS CON VALVULA 360 ml", "espec_comprador": "", "expected_sku_id": "alcohol_gel_1l", "note": "Alcohol gel; pack size differs from the 1L SKU but same commodity (unit guardrail handled at scoring)."},
+  {"producto": "Escobillones", "espec_proveedor": "ESCOBILLON USO EXTERIOR FIBRA MEDIA MANGO METALICO 34 cm", "espec_comprador": "", "expected_sku_id": "escoba_fibra", "note": "Escobillon (push broom) with fibra; matched via 'escobillon' keyword."},
+  {"producto": "Papel para fotocopiadora", "espec_proveedor": "PAPEL FOTOCOPIA TAMANO CARTA 500 HOJAS", "espec_comprador": "", "expected_sku_id": "papel_resma_carta_75g", "note": "Photocopy ream, carta, 500 sheets."},
+  {"producto": "Papel para fotocopiadora", "espec_proveedor": "PAPEL FOTOCOPIA TAMANO OFICIO 500 HOJAS", "espec_comprador": "", "expected_sku_id": "papel_resma_oficio_75g", "note": "Photocopy ream, oficio, 500 sheets."},
+
+  {"producto": "Guantes protectores", "espec_proveedor": "GUANTES MULTIFLEX COT:151", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: gloves but NOT nitrile."},
+  {"producto": "Papel multiuso", "espec_proveedor": "RESMA DE OPALINA LISA TAMANO CARTA 100 HOJAS DE 200 GRS.", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: opalina cardstock (200g, 100 sheets), not a 75g bond ream."},
+  {"producto": "TE SUPREMO NEGRO ARGENTINA", "espec_proveedor": "(4249251) TE SUPREMO NEGRO ARGENTINA CAJA 100 BOLSAS UNIDAD RM", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: tea 'CAJA 100' must not match gloves-caja-100."},
+  {"producto": "AVENA OSO INSTANTANEA", "espec_proveedor": "(4208519) AVENA OSO INSTANTANEA CAJA 500 G UNIDAD RM", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: oatmeal 'CAJA 500 G' must not match masks-caja-50."},
+  {"producto": "Palas para basura", "espec_proveedor": "PALA ASEO PLASTICA CON MANGO DE 74 cm", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: dustpan, not a broom (category 'Escobas...' would leak if used)."},
+  {"producto": "Uniformes de seguridad", "espec_proveedor": "", "expected_sku_id": null, "espec_comprador": "", "note": "Hard negative: uniforms, not safety footwear or vest."},
+  {"producto": "Papel facial", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: facial tissue, not a paper ream."},
+  {"producto": "Toallas de papel", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: paper towels, not a paper ream."},
+  {"producto": "Antisepticos basados en alcohol", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: 'alcohol' alone must not match alcohol GEL (needs both tokens)."},
+  {"producto": "Delimitadores o conos", "espec_proveedor": "CONOS DE SEGURIDAD REFLECTANTE DE 70 CM", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: 'seguridad reflectante' cones must not match chaleco or zapatos."},
+  {"producto": "Protectores oculares", "espec_proveedor": "PROTECTOR FACIAL MASCARA DE SEGURIDAD CARETA MALLA", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: face shield 'mascara' must not match mascarilla quirurgica."},
+  {"producto": "Envases para residuos o forros", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: generic residue containers/liners, not a 60L plastic bin."},
+  {"producto": "Cloruro de polivinilo (PVC)", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: 'cloruro' must not substring-match 'cloro'."},
+  {"producto": "Leche en polvo Dafood semidescremada", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: food staple."},
+  {"producto": "Ropa termorresistente", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: heat-resistant clothing, not a reflective vest."}
+]
