@@ -66,19 +66,21 @@ _Shaped by: ADR 0005; parser-improvement research (2026-07-12)._
 _Shaped by: ADR 0002, 0004, 0010._
 
 ## Phase 3 — Matching & anomaly scoring
-**Status:** Not Started
+**Status:** Done
 
-- Controlled-basket classifier: per-SKU keyword/model rules + fuzzy fallback, developed
-  test-first against a labeled sample.
-- Per-unit normalization (not per-pack).
-- **Prerequisite:** currency normalization to CLP (`mindicador.cl`-backed conversion + date-
-  keyed rate cache, deferred by ADR 0009) and net-vs-gross (IVA) alignment, before any raw
-  `unit_price`/`total` is compared across orders or against a retail baseline.
-- Overprice ratio + severity tiers (configurable). Only score when baseline confidence is
-  sufficient; otherwise mark "needs baseline" rather than flag.
-- Emit `pending` anomalies with provenance fields (source id, url, captured_at).
+- CLP conversion (`mindicador.cl`, date-keyed committed `data/fx_rates.json`, business-day
+  fallback) + net-vs-gross IVA gross-up landed first, per ADR 0009's deferral (ADR 0011).
+- Controlled-basket classifier (`matcher.py`): per-SKU keyword rules over the item-identity
+  fields, rapidfuzz only to disambiguate, developed test-first against a hand-labeled real RM
+  sample (precision 1.0, documented recall) (ADR 0012).
+- Overprice ratio + severity tiers (Watch >=1.5x, High >=2x, Severe >=3x) with a per-unit
+  plausibility band routing unit mismatches to `unit_ambiguous`; matched lines with an
+  insufficient baseline emit `needs_baseline` rather than a flag (ADR 0013).
+- `osint-score` CLI emits a deterministic `data/pending_anomalies.json` with provenance
+  (oc id, url, captured_at) and stable ids for the curation gate. Validated end-to-end on a
+  real bounded RM capture.
 
-_Shaped by: ADR 0002, 0005, 0006, 0007, 0009._
+_Shaped by: ADR 0002, 0005, 0006, 0007, 0009; new ADR 0011, 0012, 0013._
 
 ## Phase 4 — Curation workflow
 **Status:** Not Started

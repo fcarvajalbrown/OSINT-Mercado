@@ -20,3 +20,6 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0008 | By-organism API acquisition, scoped to the Región Metropolitana        | Accepted |
 | 0009 | Currency and tax fields captured raw; CLP normalization deferred       | Accepted |
 | 0010 | Basket & retail baseline: seed-only v1, pluggable multi-source design  | Accepted |
+| 0011 | Currency conversion to CLP and net-vs-gross (IVA) alignment            | Accepted |
+| 0012 | Controlled-basket matcher: implementation                             | Accepted |
+| 0013 | Anomaly scoring, severity tiers, unit guardrail, and pending output    | Accepted |
