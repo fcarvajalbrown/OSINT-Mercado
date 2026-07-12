@@ -23,6 +23,6 @@ Thumbs.db
 scratch/
 .superpowers/
 
-# Ingested output data (parquet, etc). Tracked reference files like
-# data/rm_municipal_codes.json were added before this rule and stay tracked.
-data/
+# Ingested output data (parquet). Curated/published datasets (basket.json,
+# seed_prices.json, baselines.json, rm_municipal_codes.json) are committed.
+data/*.parquet
