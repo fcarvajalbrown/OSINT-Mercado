@@ -23,3 +23,9 @@ class PurchaseOrder:
     fecha: str
     buyer: Buyer
     items: list[LineItem]
+    codigo_estado: int = 0
+    estado: str = ""
+    codigo_tipo: str = ""
+    tipo: str = ""
+    codigo_estado_proveedor: int = 0
+    estado_proveedor: str = ""

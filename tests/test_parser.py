@@ -23,3 +23,13 @@ def test_parsed_order_has_core_fields():
     assert order.items
     assert order.items[0].unit_price > 0
     assert order.items[0].quantity > 0
+
+
+def test_parsed_order_has_status_and_type():
+    order = parser.parse_detail(_detail())[0]
+    assert order.codigo_estado == 6
+    assert order.estado == "Aceptada"
+    assert order.codigo_tipo == "8"
+    assert order.tipo == "SE"
+    assert order.codigo_estado_proveedor == 4
+    assert order.estado_proveedor == "Aceptada"

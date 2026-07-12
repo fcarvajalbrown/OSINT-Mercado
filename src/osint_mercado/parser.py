@@ -9,6 +9,13 @@ def _to_float(value) -> float:
         return 0.0
 
 
+def _to_int(value) -> int:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return 0
+
+
 def _parse_fecha(order: dict) -> str:
     fechas = order.get(schema.OC_FECHAS) or {}
     return str(fechas.get(schema.OC_FECHA, ""))
@@ -46,6 +53,12 @@ def parse_detail(payload: dict) -> list[PurchaseOrder]:
             fecha=_parse_fecha(order),
             buyer=_parse_buyer(order),
             items=_parse_items(order),
+            codigo_estado=_to_int(order.get(schema.OC_CODIGO_ESTADO)),
+            estado=str(order.get(schema.OC_ESTADO, "")),
+            codigo_tipo=str(order.get(schema.OC_CODIGO_TIPO, "")),
+            tipo=str(order.get(schema.OC_TIPO, "")),
+            codigo_estado_proveedor=_to_int(order.get(schema.OC_CODIGO_ESTADO_PROVEEDOR)),
+            estado_proveedor=str(order.get(schema.OC_ESTADO_PROVEEDOR, "")),
         )
         for order in orders
     ]

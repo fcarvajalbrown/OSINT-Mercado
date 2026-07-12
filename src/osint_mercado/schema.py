@@ -22,6 +22,20 @@ OC_FECHAS = "Fechas"
 OC_FECHA = "FechaCreacion"
 OC_COMPRADOR = "Comprador"
 
+OC_CODIGO_ESTADO = "CodigoEstado"
+OC_ESTADO = "Estado"
+OC_CODIGO_TIPO = "CodigoTipo"
+OC_TIPO = "Tipo"
+OC_CODIGO_ESTADO_PROVEEDOR = "CodigoEstadoProveedor"
+OC_ESTADO_PROVEEDOR = "EstadoProveedor"
+
+# The official status table at https://www.chilecompra.cl/api/ lists eight
+# CodigoEstado values (4, 5, 6, 9, 12, 13, 14, 15). Only this one is currently relied
+# on by the pipeline (order_status.drop_cancelled); the others are extracted and
+# stored but not otherwise acted on, since only CodigoEstado=6 ("Aceptada") is
+# confirmed against a real captured fixture.
+ESTADO_CANCELADA = 9
+
 # Buyer (Comprador) fields
 COMPRADOR_NOMBRE = "NombreOrganismo"
 COMPRADOR_CODIGO = "CodigoOrganismo"
