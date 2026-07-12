@@ -31,7 +31,9 @@ passes a **human curation gate** (ADR 0006) and carries a **provenance link** (A
 ## Commits and PRs
 - Use **Conventional Commits** (`feat:`, `fix:`, `docs:`, `test:`, `chore:`,
   `refactor:`, `ci:`), scoped where useful (`feat(ir): ...`).
-- Commit per completed task; push as work progresses.
+- **Always commit and push as you go**: one commit per completed, logical unit of
+  work (not one giant commit at the end), pushed to `origin` right after each
+  commit — don't let local commits pile up unpushed.
 - **Never open a pull request unless explicitly asked** in that same request.
 - **No AI attribution** anywhere: no `Co-Authored-By` trailers, no "Generated
   with ..." lines in commits, PRs, code, or docs.
