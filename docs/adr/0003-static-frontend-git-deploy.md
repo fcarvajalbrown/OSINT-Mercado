@@ -1,8 +1,12 @@
 # 0003 — Static web frontend + native Git deploy; Dear PyGui dropped
 
-**Status:** Accepted (Supersedes ADR 002 of `docs/OSINT_Mercado_PRD.pdf`)
+**Status:** Accepted (Supersedes ADR 002 of `docs/OSINT_Mercado_PRD.pdf`); deploy transport superseded by ADR 0015
 **Date:** 2026-07-12
 **Deciders:** Felipe Carvajal Brown
+
+> Note: the static-frontend + client-side-filtering decision below stands. Only the
+> **deploy transport** (Hostinger native Git integration) is superseded by ADR 0015
+> (rsync over SSH).
 
 ## Context
 

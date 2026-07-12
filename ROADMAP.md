@@ -95,18 +95,21 @@ _Shaped by: ADR 0002, 0005, 0006, 0007, 0009; new ADR 0011, 0012, 0013._
 _Shaped by: ADR 0006, 0007; new ADR 0014._
 
 ## Phase 5 — Static dashboard & deploy
-**Status:** Not Started
+**Status:** Done (deploy automation built; first live push pending the SSH credential + go-ahead)
 
-- Static frontend: filter confirmed flags by commune / category / severity; each row shows
-  unit-paid vs baseline, overprice %, severity, and the official source link.
-- Build in GitHub Actions; emit static output.
-- Deploy over **SSH**: `rsync` the built static site to `public_html`, authenticating with the
-  Hostinger SSH password (`SSH_HOSTINGER` in `.env` locally / a GitHub Actions secret in CI,
-  non-interactive via `sshpass`). Needs the SSH host, port, and username (not secret) at build
-  time. This replaces the native-Git-integration transport; write a superseding ADR then.
-  (Consider migrating to SSH key auth later — more secure and cleaner to automate than a password.)
+- Self-contained static frontend (`frontend/`, no external deps): filters confirmed flags by
+  commune / category / severity; each row shows unit-paid (gross CLP) vs baseline, overprice %,
+  severity, and the official Mercado Público source link. Empty-state until curation confirms.
+- `osint-build-site` builds `dist/` from `data/confirmed_flags.json` + basket (adds
+  canonical name, category, overprice %). Built in CI (`.github/workflows/build-deploy.yml`).
+- Deploy over SSH: `scripts/deploy.sh` mirrors `dist/` to `public_html` with
+  `rsync -az --delete` via `sshpass` (password `SSH_HOSTINGER`; host/port/user/path as
+  non-secret CI variables). `workflow_dispatch`-only + `--dry-run`; env validated before any
+  network call. Transport supersedes ADR 0003 (ADR 0015).
+- **Pending:** the real `SSH_HOSTINGER` secret + host/port/user and the user's explicit
+  go-ahead before the first live publish to the public site.
 
-_Shaped by: ADR 0003 (deploy transport to be superseded at Phase 5)._
+_Shaped by: ADR 0003 (transport superseded), 0004, 0007; new ADR 0015._
 
 ## Later phases (toward the PDF's grand vision)
 **Status:** Not Started

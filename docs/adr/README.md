@@ -12,7 +12,7 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 |------|-----------------------------------------------------------------------|----------|
 | 0001 | Split-compute architecture: external pipeline + static Hostinger site | Accepted |
 | 0002 | Python + Polars pipeline; Rust/PyO3 deferred                          | Accepted |
-| 0003 | Static web frontend + native Git deploy; Dear PyGui dropped            | Accepted |
+| 0003 | Static web frontend + native Git deploy; Dear PyGui dropped            | Accepted (transport superseded by 0015) |
 | 0004 | Versioned file dataset as store; DuckDB build-time only                | Accepted |
 | 0005 | Controlled-basket classifier over general fuzzy matching              | Accepted |
 | 0006 | Human curation gate before publishing flags                           | Accepted |
@@ -24,3 +24,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0012 | Controlled-basket matcher: implementation                             | Accepted |
 | 0013 | Anomaly scoring, severity tiers, unit guardrail, and pending output    | Accepted |
 | 0014 | Curation workflow: git-native decisions ledger + osint-curate CLI     | Accepted |
+| 0015 | Deploy transport: SSH + rsync (supersedes the transport of ADR 0003)  | Accepted |
