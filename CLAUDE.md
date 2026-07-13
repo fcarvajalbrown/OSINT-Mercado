@@ -61,6 +61,12 @@ passes a **human curation gate** (ADR 0006) and carries a **provenance link** (A
 - **Never guess** API field names, params, quotas, or library behavior — verify against a
   real captured fixture or official docs first. API field names funnel through
   `src/osint_mercado/schema.py`; nothing else hard-codes them.
+- **Statistics:** the anomaly and peer engines (`scoring.py`, `peers.py`, `baseline.py`)
+  use robust statistics — median / MAD / IQR and outlier detection — never mean/stddev,
+  which are not robust to the contract-vs-unit outliers we hunt. When extending or
+  reviewing this math, use the `statistical-analysis` skill (project-local under
+  `.claude/skills/`; `.claude/` is gitignored, so if it is missing reinstall with
+  `npx skills add anthropics/knowledge-work-plugins@statistical-analysis`).
 
 ## Secrets and TLS
 - The ChileCompra API ticket lives only in a gitignored `.env` (key `CHILECOMPRA_API_TICKET`)
