@@ -31,6 +31,7 @@
    "unit": "unidad", "category": "Oficina y computación", "unspsc_category_code": 0, "unspsc_product_code": 0},
   {"sku_id": "zapatos_seguridad_puntera_acero", "canonical_name": "Zapatos de seguridad con puntera de acero",
    "keywords": ["zapatos seguridad", "zapato seguridad", "calzado seguridad", "bota seguridad", "botin seguridad", "puntera acero"],
+   "exclude": ["sin punta", "sin puntera", "soldador"],
    "unit": "par", "category": "Seguridad y EPP", "unspsc_category_code": 0, "unspsc_product_code": 0},
   {"sku_id": "chaleco_reflectante_seguridad", "canonical_name": "Chaleco reflectante de seguridad",
    "keywords": ["chaleco reflectante", "chaleco seguridad", "chaleco alta visibilidad"],

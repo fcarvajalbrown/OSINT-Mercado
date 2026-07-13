@@ -34,6 +34,17 @@ def test_mouse_positive_matches_by_keyword():
     assert r.sku_id == "mouse_usb"
 
 
+def test_exclude_keywords_reject_non_steeltoe_and_specialized_footwear():
+    # "sin punta acero" (no steel toe) and "soldador" (specialized welder boot) are
+    # not the commodity steel-toe SKU, so they must NOT match (QA signal from curation).
+    r1 = _match(producto="Zapatos seguridad",
+                espec_proveedor="ZAPATOS SEGURIDAD EDELBROCK PVC SIN PUNTA ACERO 42")
+    assert r1.sku_id is None
+    r2 = _match(producto="Botas de hombre",
+                espec_proveedor="BOTA DE SEGURIDAD V-FLEX V301 SOLDADOR ANTICLAVO")
+    assert r2.sku_id is None
+
+
 def test_off_basket_line_item_does_not_match():
     r = _match(producto="Notebook", espec_proveedor="Notebook 15 pulgadas Core i5 8GB RAM")
     assert r.sku_id is None

@@ -81,6 +81,7 @@ def match(producto: str, espec_proveedor: str, espec_comprador: str,
     candidates = [
         sku for sku in skus
         if any(_keyword_matches(kw, text) for kw in sku.keywords)
+        and not any(_keyword_matches(x, text) for x in sku.exclude)
     ]
 
     if not candidates:

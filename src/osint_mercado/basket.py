@@ -8,6 +8,7 @@ class Sku:
     sku_id: str
     canonical_name: str
     keywords: list[str] = field(default_factory=list)
+    exclude: list[str] = field(default_factory=list)
     unit: str = ""
     category: str = ""
     unspsc_category_code: int = 0
@@ -30,6 +31,7 @@ def load_basket(path) -> list[Sku]:
             sku_id=row["sku_id"],
             canonical_name=row["canonical_name"],
             keywords=list(row.get("keywords") or []),
+            exclude=list(row.get("exclude") or []),
             unit=row.get("unit", ""),
             category=row.get("category", ""),
             unspsc_category_code=int(row.get("unspsc_category_code") or 0),
