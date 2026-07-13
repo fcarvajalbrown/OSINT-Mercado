@@ -50,13 +50,18 @@ order fields and 3 of 14 item fields already present in the real payload — mos
 _Shaped by: ADR 0005; parser-improvement research (2026-07-12)._
 
 ## Phase 2 — Basket & retail baseline engine
-**Status:** Done
+**Status:** Done (basket subsequently grown to 75 SKUs)
 
-- Defined the v1 controlled basket of 19 commoditized SKUs with canonical
-  keywords/model identifiers and units (`data/basket.json`).
+- Defined the controlled basket of commoditized SKUs with canonical
+  keywords/exclude rules and units (`data/basket.json`). Started at 19 SKUs;
+  grown to **75 SKUs across five categories** (Oficina y computación, Seguridad
+  y EPP, Limpieza, Ferretería y herramientas, Alimentos y abarrotes),
+  data-driven from real RM line-item frequency. This lifted match coverage on
+  the 2026-07-09 capture from 1.9% to 21.1% of line-items.
 - Curated manual-seed price list (versioned) as guaranteed baseline fallback
-  (`data/seed_prices.json`) — 30 real retailer observations gathered via live
-  web lookups, covering all 19 SKUs.
+  (`data/seed_prices.json`) — **123 real, web-verified retailer observations**
+  (each with a source URL), giving scorable baselines for 74 of 75 SKUs. No
+  prices invented; unverifiable retailers omitted rather than guessed.
 - Aggregator source integration deferred (no source chosen/verified yet); the
   engine is pluggable for one later, per ADR 0010.
 - Reference price = median across available sources, anchored by the seed. Baseline-confidence
@@ -115,6 +120,10 @@ _Shaped by: ADR 0003 (transport superseded), 0004, 0007; new ADR 0015._
 **Status:** Not Started
 
 - **Broaden the basket** progressively toward national / broad product categories.
+  (In progress: grown from 19 to 75 SKUs across five categories; next steps are
+  a second-source retail aggregator for baseline robustness, filling the single
+  remaining `needs_baseline` SKU, and adding more single-observation SKUs' second
+  sources so more baselines reach `high` confidence.)
 - **Archive the source order in our own store** (not just a link out). Each published flag
   must stay verifiable even when the official Mercado Público page is unreachable or a reader
   cannot access it. Snapshot the relevant order payload (or a rendered copy) into the versioned
