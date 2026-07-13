@@ -46,8 +46,11 @@ def _keyword_tokens(keyword: str) -> list[str]:
 
 
 def _keyword_matches(keyword: str, text: str) -> bool:
+    # Each token must appear at a word start (\b prefix), not mid-word. This keeps
+    # plural/suffix matches ("escobillon" in "escobillones") while rejecting spurious
+    # mid-word hits ("cloro" inside "hidroclorotiazida", a medication).
     tokens = _keyword_tokens(keyword)
-    return bool(tokens) and all(t in text for t in tokens)
+    return bool(tokens) and all(re.search(r"\b" + re.escape(t), text) for t in tokens)
 
 
 @dataclass(frozen=True)

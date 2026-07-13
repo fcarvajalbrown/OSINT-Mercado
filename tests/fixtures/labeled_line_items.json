@@ -21,5 +21,6 @@
   {"producto": "Envases para residuos o forros", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: generic residue containers/liners, not a 60L plastic bin."},
   {"producto": "Cloruro de polivinilo (PVC)", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: 'cloruro' must not substring-match 'cloro'."},
   {"producto": "Leche en polvo Dafood semidescremada", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: food staple."},
-  {"producto": "Ropa termorresistente", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: heat-resistant clothing, not a reflective vest."}
+  {"producto": "Ropa termorresistente", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: heat-resistant clothing, not a reflective vest."},
+  {"producto": "Telmisartán", "espec_proveedor": "TENSUREN D 80", "espec_comprador": "Telmisartán 80 mg / Hidroclorotiazida", "expected_sku_id": null, "note": "Hard negative (real): medication. 'cloro' must not match mid-word inside 'hidroclorotiazida'."}
 ]
