@@ -53,5 +53,7 @@ jobs:
             echo "no changes to pending queue"
           else
             git commit -m "data(pipeline): refresh pending anomalies for ${{ steps.d.outputs.fecha }}"
+            # Rebase onto any commits pushed during the (long) run, then push.
+            git pull --rebase origin master
             git push
           fi

@@ -37,5 +37,6 @@ jobs:
             echo "published flags unchanged"
           else
             git commit -m "data(publish): rebuild published flags"
+            git pull --rebase origin master
             git push
           fi
