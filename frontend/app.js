@@ -3,6 +3,7 @@
 const state = { flags: [] };
 
 const CLP = new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 0 });
+const SEV_LABELS = { watch: "Moderada", high: "Alta", severe: "Severa" };
 
 function fmtClp(n) {
   return typeof n === "number" ? CLP.format(Math.round(n)) : "-";
@@ -68,7 +69,7 @@ function render() {
       { html: `<span class="num">${fmtClp(flag.unit_price_clp_gross)}</span>`, cls: "num" },
       { html: `<span class="num">${fmtClp(flag.reference_price_clp)}</span>`, cls: "num" },
       { html: `<span class="num mult">${pct} <small>(${mult})</small></span>`, cls: "num" },
-      { html: `<span class="badge ${sev}">${sev}</span>` },
+      { html: `<span class="badge ${sev}">${SEV_LABELS[sev] || sev}</span>` },
       { html: flag.oc_url ? `<a href="${flag.oc_url}" target="_blank" rel="noopener">orden</a>` : "" },
     ];
     for (const cell of cells) {
