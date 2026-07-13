@@ -30,8 +30,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    # Only deploy when the SSH password secret is configured.
-    if: ${{ secrets.SSH_HOSTINGER != '' }}
+    # Only deploy once the connection is configured (SSH_HOST variable set).
+    # The password lives in the SSH_HOSTINGER secret, checked inside deploy.sh.
+    if: ${{ vars.SSH_HOST != '' }}
     steps:
       - uses: actions/checkout@v4
       - name: Download site artifact
