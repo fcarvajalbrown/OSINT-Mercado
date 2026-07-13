@@ -704,5 +704,253 @@
     "observed_at": "2026-07-13",
     "url": "https://www.unimarc.cl/product/galleta-triton-126-gr-frutilla",
     "note": "Galletas Triton frutilla 126 g McKay"
+  },
+  {
+    "sku_id": "mascara_soldar",
+    "retailer": "Herramientas Total",
+    "price_clp": 26990,
+    "observed_at": "2026-07-13",
+    "url": "https://herramientastotal.cl/products/mascara-para-soldar-fotosensible-92x42mm-total-tsp9306",
+    "note": "Mascara para Soldar Fotosensible 92x42mm Total TSP9306"
+  },
+  {
+    "sku_id": "mascara_soldar",
+    "retailer": "Max Service",
+    "price_clp": 42990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.maxservice.cl/mascara-soldar-fotosensible/p",
+    "note": "Mascara Soldar Fotosensible Hammer autooscurecimiento"
+  },
+  {
+    "sku_id": "casco_seguridad",
+    "retailer": "Treck",
+    "price_clp": 3690,
+    "observed_at": "2026-07-13",
+    "url": "https://www.treck.cl/casco-de-seguridad-industrial-tipo-i-clase-a-e-con-arnes-de-6-puntas-y-ajuste-ratchet/p",
+    "note": "Casco Activex I, arnes 6 puntas con Ratchet"
+  },
+  {
+    "sku_id": "casco_seguridad",
+    "retailer": "Nova Seguridad",
+    "price_clp": 16590,
+    "observed_at": "2026-07-13",
+    "url": "https://novaseguridad.cl/product/casco-de-seguridad-3m-con-suspension-rachet-4-puntos-h-701r-blanco/",
+    "note": "Casco 3M Suspension Rachet 4 Puntos H-701R (normal 23000)"
+  },
+  {
+    "sku_id": "casco_seguridad",
+    "retailer": "RAC Seguridad Industrial",
+    "price_clp": 67350,
+    "observed_at": "2026-07-13",
+    "url": "https://rac.cl/products/casco-deltaplus-onyx",
+    "note": "Casco Deltaplus ONYX2 (gama alta importada)"
+  },
+  {
+    "sku_id": "lentes_seguridad",
+    "retailer": "Nova Seguridad",
+    "price_clp": 690,
+    "observed_at": "2026-07-13",
+    "url": "https://novaseguridad.cl/product/lentes-de-seguridad-economico-claros/",
+    "note": "Lentes de Seguridad Economico Claros (normal 870)"
+  },
+  {
+    "sku_id": "lentes_seguridad",
+    "retailer": "Nova Seguridad",
+    "price_clp": 4440,
+    "observed_at": "2026-07-13",
+    "url": "https://novaseguridad.cl/product/lentes-de-seguridad-3m-ox-claro/",
+    "note": "Lentes de Seguridad 3M OX Claro (normal 5990)"
+  },
+  {
+    "sku_id": "guantes_cabritilla",
+    "retailer": "Chilemat",
+    "price_clp": 2290,
+    "observed_at": "2026-07-13",
+    "url": "https://www.chilemat.com/guante-cabritilla-talla-m-gili-blanco-28589/p",
+    "note": "Guante Cabritilla Talla M Gili Blanco EN388 par (normal 2790)"
+  },
+  {
+    "sku_id": "guantes_cabritilla",
+    "retailer": "Nova Seguridad",
+    "price_clp": 1327,
+    "observed_at": "2026-07-13",
+    "url": "https://novaseguridad.cl/product/guantes-de-seguridad-estandar-cabritilla-descarne-gris/",
+    "note": "Guantes Cabritilla Descarne Gris par (normal 1593)"
+  },
+  {
+    "sku_id": "pintura_esmalte_gal",
+    "retailer": "Chilemat",
+    "price_clp": 24890,
+    "observed_at": "2026-07-13",
+    "url": "https://www.chilemat.com/esmalte-al-agua-1-galon-blanco-mate-soquina-30628/p",
+    "note": "Esmalte al Agua 1 Galon Blanco Mate Soquina (normal 38292)"
+  },
+  {
+    "sku_id": "pintura_esmalte_gal",
+    "retailer": "Ferreteria Jaramillo",
+    "price_clp": 31990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.ferreteriajaramillo.cl/esmalte-al-agua-1-galon-pieza-y-fachada-ceresita-blanco-2176-373399/p",
+    "note": "Esmalte al Agua 1 Galon Pieza y Fachada Ceresita (normal 36990)"
+  },
+  {
+    "sku_id": "pintura_esmalte_gal",
+    "retailer": "Ferreteria Toso",
+    "price_clp": 42000,
+    "observed_at": "2026-07-13",
+    "url": "https://www.toso.cl/producto/esmalte-agua-profesional-blanco-satin-gl/",
+    "note": "Esmalte Agua Profesional Blanco Satin Galon"
+  },
+  {
+    "sku_id": "pintura_latex_gal",
+    "retailer": "Chilemat",
+    "price_clp": 18990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.chilemat.com/pintura-latex-1-galon-blanco-sipa-32317/p",
+    "note": "Pintura Latex 1 Galon Blanco Sipa (normal 21990)"
+  },
+  {
+    "sku_id": "pintura_latex_gal",
+    "retailer": "Chilemat",
+    "price_clp": 24390,
+    "observed_at": "2026-07-13",
+    "url": "https://www.chilemat.com/pintura-latex-habitacional-blanco-n-1-gl-ceresita-31046/p",
+    "note": "Pintura Latex Habitacional Blanco n1 Gl Ceresita (normal 37523)"
+  },
+  {
+    "sku_id": "brocha_pintura",
+    "retailer": "Chilemat",
+    "price_clp": 1390,
+    "observed_at": "2026-07-13",
+    "url": "https://www.chilemat.com/brocha-2---2417850-rindex-33546/p",
+    "note": "Brocha 2 pulgadas Rindex (normal 1690)"
+  },
+  {
+    "sku_id": "brocha_pintura",
+    "retailer": "Chilemat",
+    "price_clp": 2990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.chilemat.com/brocha-1-2-x-2---1070124-hela-32290/p",
+    "note": "Brocha 1/2 X 2 pulgadas Hela (normal 3990)"
+  },
+  {
+    "sku_id": "rodillo_pintura",
+    "retailer": "Ferreteria Clarita",
+    "price_clp": 3600,
+    "observed_at": "2026-07-13",
+    "url": "https://www.ferreteriaclarita.cl/product/rodillo-4-uyustools/",
+    "note": "Rodillo 4 pulgadas Uyustools"
+  },
+  {
+    "sku_id": "rodillo_pintura",
+    "retailer": "Chilemat",
+    "price_clp": 8490,
+    "observed_at": "2026-07-13",
+    "url": "https://www.chilemat.com/rodillo-chiporro-18-cm-lizcal-blanco-30429/p",
+    "note": "Rodillo Chiporro 18 cm Lizcal (normal 13062)"
+  },
+  {
+    "sku_id": "cinta_aisladora",
+    "retailer": "Heys Electric",
+    "price_clp": 1490,
+    "observed_at": "2026-07-13",
+    "url": "https://heyselectric.cl/tienda/cinta-aislante-huincha-aisladora-3m-temflex-1500-18mmx10mx0-13mm-blanco/",
+    "note": "Cinta Aislante 3M Temflex 1500 Blanca 18mm x 10m"
+  },
+  {
+    "sku_id": "cinta_aisladora",
+    "retailer": "Electricidad Fernandez",
+    "price_clp": 2400,
+    "observed_at": "2026-07-13",
+    "url": "https://electricidadfernandez.cl/product/cintas-aisladoras-3m-x-20-mt/",
+    "note": "Cinta aisladora 3M x 20 mt"
+  },
+  {
+    "sku_id": "huincha_medir",
+    "retailer": "PernosKIM",
+    "price_clp": 12990,
+    "observed_at": "2026-07-13",
+    "url": "https://ferreteria.cl/ficha/5170/huincha-de-medir-stanley-powerlock-5-metros",
+    "note": "Huincha de Medir Stanley Powerlock 5 metros"
+  },
+  {
+    "sku_id": "huincha_medir",
+    "retailer": "Herramientas Total",
+    "price_clp": 4990,
+    "observed_at": "2026-07-13",
+    "url": "https://herramientastotal.cl/products/huincha-medir-5m-x-25mm-total",
+    "note": "Huincha de Medir 5M x 25MM con funda de goma Total"
+  },
+  {
+    "sku_id": "candado",
+    "retailer": "Poli",
+    "price_clp": 8990,
+    "observed_at": "2026-07-13",
+    "url": "https://poli.cl/products/candado-serie-s-50mm",
+    "note": "Candado Serie S 50mm bronce"
+  },
+  {
+    "sku_id": "candado",
+    "retailer": "Yale Chile",
+    "price_clp": 18990,
+    "observed_at": "2026-07-13",
+    "url": "https://yalechile.cl/products/candado-uso-general-50mm",
+    "note": "Candado de Bronce YE1 50mm"
+  },
+  {
+    "sku_id": "martillo",
+    "retailer": "Herramientas Total",
+    "price_clp": 3990,
+    "observed_at": "2026-07-13",
+    "url": "https://herramientastotal.cl/products/martillo-de-una-16oz-super-total",
+    "note": "Martillo de Una 16oz Total"
+  },
+  {
+    "sku_id": "martillo",
+    "retailer": "Olate Ferreteria",
+    "price_clp": 14490,
+    "observed_at": "2026-07-13",
+    "url": "https://olateferreteria.cl/producto/martillo-carpintero-una-curva-16oz-truper/",
+    "note": "Martillo Carpintero Una Curva 16oz Truper (normal 16990)"
+  },
+  {
+    "sku_id": "cono_seguridad",
+    "retailer": "SD Med",
+    "price_clp": 6490,
+    "observed_at": "2026-07-13",
+    "url": "https://sdmed.cl/productos/cono-trafico-y-seguridad-70-cm-2-cintas-reflectante-naranjo-1-8-kg/",
+    "note": "Cono Trafico 70 Cm 2 Cintas Reflectante Naranjo 1.8 KG"
+  },
+  {
+    "sku_id": "cono_seguridad",
+    "retailer": "Nova Seguridad",
+    "price_clp": 10709,
+    "observed_at": "2026-07-13",
+    "url": "https://novaseguridad.cl/product/cono-28-base-negra-doble-cinta/",
+    "note": "Cono 28in (70 cm) Base Negra Doble Cinta reflectante (normal 12851)"
+  },
+  {
+    "sku_id": "cono_seguridad",
+    "retailer": "Truck & Trailer Parts",
+    "price_clp": 13590,
+    "observed_at": "2026-07-13",
+    "url": "https://ttp.cl/cono-de-seguridad-pvc-reflectante-70-cm.html",
+    "note": "Cono de Seguridad PVC Reflectante 70 cm (normal 19873)"
+  },
+  {
+    "sku_id": "botiquin_primeros_auxilios",
+    "retailer": "RAC Seguridad Industrial",
+    "price_clp": 11900,
+    "observed_at": "2026-07-13",
+    "url": "https://rac.cl/products/botiquin-equipado-10-personas",
+    "note": "Botiquin Primeros Auxilios 10 Personas equipado"
+  },
+  {
+    "sku_id": "botiquin_primeros_auxilios",
+    "retailer": "Treck",
+    "price_clp": 14170,
+    "observed_at": "2026-07-13",
+    "url": "https://www.treck.cl/botiquin-activex-de-primeros-auxilios-25-personas/p",
+    "note": "Botiquin Activex Primeros Auxilios 25 Personas"
   }
 ]
