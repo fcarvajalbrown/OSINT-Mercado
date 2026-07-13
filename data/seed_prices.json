@@ -952,5 +952,157 @@
     "observed_at": "2026-07-13",
     "url": "https://www.treck.cl/botiquin-activex-de-primeros-auxilios-25-personas/p",
     "note": "Botiquin Activex Primeros Auxilios 25 Personas"
+  },
+  {
+    "sku_id": "papel_facial_caja",
+    "retailer": "Jumbo",
+    "price_clp": 1424,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/panuelos-faciales-elite-premium-triple-hoja-caja-disenos-60-unidades/p",
+    "note": "Panuelos Facial Elite Triple Hoja 60 un (size 60 vs 90)"
+  },
+  {
+    "sku_id": "toallitas_humedas_pack",
+    "retailer": "Jumbo",
+    "price_clp": 3550,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/toalla-desinfectante-multiuso-virutex-35-unid/p",
+    "note": "Toallitas Desinfectantes Virutex 35 un"
+  },
+  {
+    "sku_id": "bolsa_basura_pack",
+    "retailer": "Jumbo",
+    "price_clp": 1250,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/bolsas-de-basura-grande-superior-80-x-110-cm-10-unid/p",
+    "note": "Bolsa Basura Superior 80x110 cm 10 un"
+  },
+  {
+    "sku_id": "detergente_ropa",
+    "retailer": "Jumbo",
+    "price_clp": 13790,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/detergente-omo-matic-bolsa-5-kg/p",
+    "note": "Detergente Omo Matic 5 kg"
+  },
+  {
+    "sku_id": "limpiavidrios",
+    "retailer": "Jumbo",
+    "price_clp": 3840,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/limpiavidrios-glassex-gatillo-500-cc/p",
+    "note": "Limpiavidrios Glassex Gatillo 500 ml"
+  },
+  {
+    "sku_id": "lapiz_pasta_azul",
+    "retailer": "Arlib",
+    "price_clp": 490,
+    "observed_at": "2026-07-13",
+    "url": "https://www.arlib.cl/product/lapiz-pasta-cristal-punta-media-azul-bic",
+    "note": "Lapiz Pasta Cristal Azul BIC unidad"
+  },
+  {
+    "sku_id": "tijeras_oficina",
+    "retailer": "Libreria La Paloma",
+    "price_clp": 1690,
+    "observed_at": "2026-07-13",
+    "url": "https://librerialapaloma.cl/producto/tijera-oficina-grande/",
+    "note": "Tijera Oficina 19 CM"
+  },
+  {
+    "sku_id": "cartulina_espanola",
+    "retailer": "Embalados",
+    "price_clp": 300,
+    "observed_at": "2026-07-13",
+    "url": "https://embalados.cl/producto/cartulina-espanola/",
+    "note": "Cartulina Espanola pliego 55x77 cm 140g"
+  },
+  {
+    "sku_id": "sobre_oficio",
+    "retailer": "Libreria Odisea",
+    "price_clp": 200,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriaodisea.cl/sobre-oficio-blanco",
+    "note": "Sobre Oficio Blanco 25x35 cm unidad"
+  },
+  {
+    "sku_id": "clips_metalicos_caja",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 1062,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/clips-mariposa-19-mm-3-cms-50-unidades",
+    "note": "Clips Mariposa 50 unidades (caja x50)"
+  },
+  {
+    "sku_id": "clips_metalicos_caja",
+    "retailer": "Papeleria Marin",
+    "price_clp": 3800,
+    "observed_at": "2026-07-13",
+    "url": "https://www.papeleriamarin.com/oficina/952-clips-mariposa-caja-x50-7705465100038.html",
+    "note": "Clips Mariposa Caja x50"
+  },
+  {
+    "sku_id": "arroz_1kg",
+    "retailer": "Alimentos Selectos",
+    "price_clp": 2000,
+    "observed_at": "2026-07-13",
+    "url": "https://alimentosselectos.cl/producto/arroz-tucapel-1-kg/",
+    "note": "Arroz Tucapel Grado 2 1 Kg"
+  },
+  {
+    "sku_id": "fideos_400g",
+    "retailer": "Cugat",
+    "price_clp": 859,
+    "observed_at": "2026-07-13",
+    "url": "https://cugat.cl/producto/fideos-carozzi-spaghetti-5-400-g/",
+    "note": "Fideos Carozzi Spaghetti N5 400g"
+  },
+  {
+    "sku_id": "te_caja100",
+    "retailer": "Cugat",
+    "price_clp": 4990,
+    "observed_at": "2026-07-13",
+    "url": "https://cugat.cl/producto/te-negro-ceylan-supremo-100-bol/",
+    "note": "Te Supremo Ceylan 100 Bolsitas"
+  },
+  {
+    "sku_id": "leche_liquida_1l",
+    "retailer": "Cugat",
+    "price_clp": 1290,
+    "observed_at": "2026-07-13",
+    "url": "https://cugat.cl/producto/leche-natural-colun-1-lt/",
+    "note": "Leche Colun 1 Lt"
+  },
+  {
+    "sku_id": "agua_mineral_15l",
+    "retailer": "Operals",
+    "price_clp": 1200,
+    "observed_at": "2026-07-13",
+    "url": "https://operals.cl/products/benedictino-agua-sin-gas-1-5lt",
+    "note": "Benedictino Agua Sin Gas 1.5lt"
+  },
+  {
+    "sku_id": "harina_1kg",
+    "retailer": "Cugat",
+    "price_clp": 1590,
+    "observed_at": "2026-07-13",
+    "url": "https://cugat.cl/producto/harina-selecta-sin-polvos-1-kg/",
+    "note": "Harina Selecta sin Polvos 1kg"
+  },
+  {
+    "sku_id": "atun_conserva",
+    "retailer": "Alimentos Selectos",
+    "price_clp": 1600,
+    "observed_at": "2026-07-13",
+    "url": "https://alimentosselectos.cl/producto/atun-lomito-san-jose/",
+    "note": "Lomos de Atun San Jose 160g aceite"
+  },
+  {
+    "sku_id": "galletas_paquete",
+    "retailer": "Mercadito Virtual",
+    "price_clp": 729,
+    "observed_at": "2026-07-13",
+    "url": "https://www.sumar.cl/_mercaditovirtual/ficha/48109",
+    "note": "Galletas Triton Chocolate 126g"
   }
 ]
