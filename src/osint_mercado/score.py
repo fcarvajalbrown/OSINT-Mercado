@@ -47,7 +47,7 @@ def _row_date(row: dict) -> date:
 
 
 def run(items_path, baselines_path, basket_path, fx_cache_path, out_path,
-        *, session=None) -> Path:
+        *, session=None, accumulate=True) -> Path:
     skus = load_basket(basket_path)
     sku_by_id = {s.sku_id: s for s in skus}
     baselines = load_baselines(baselines_path)
@@ -81,10 +81,23 @@ def run(items_path, baselines_path, basket_path, fx_cache_path, out_path,
         if anomaly is not None:
             anomalies.append(anomaly)
 
-    anomalies.sort(key=lambda a: (a.comuna, a.sku_id, a.oc_id, a.correlativo))
-    rows_out = [asdict(a) for a in anomalies]
-
     out_path = Path(out_path)
+    # Accumulate across days: the pipeline scores one date per run, so overwriting
+    # would reset the review queue every day and the site could never fill. Merge
+    # into any existing queue, keyed by the stable anomaly id (a re-score of the
+    # same line wins). Curated ids are filtered downstream by the decisions ledger.
+    merged: dict[str, dict] = {}
+    if accumulate and out_path.exists():
+        for row in json.loads(out_path.read_text(encoding="utf-8")):
+            merged[row["id"]] = row
+    for a in anomalies:
+        merged[a.id] = asdict(a)
+
+    rows_out = sorted(
+        merged.values(),
+        key=lambda r: (r["comuna"], r["sku_id"], r["oc_id"], r["correlativo"]),
+    )
+
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(
         json.dumps(rows_out, indent=2, ensure_ascii=False), encoding="utf-8"
