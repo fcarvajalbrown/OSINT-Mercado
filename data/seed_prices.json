@@ -698,14 +698,6 @@
     "note": "Atun lomito Nuestra Cocina en agua 160 g neto (oferta, normal 1350)"
   },
   {
-    "sku_id": "galletas_paquete",
-    "retailer": "Unimarc",
-    "price_clp": 820,
-    "observed_at": "2026-07-13",
-    "url": "https://www.unimarc.cl/product/galleta-triton-126-gr-frutilla",
-    "note": "Galletas Triton frutilla 126 g McKay"
-  },
-  {
     "sku_id": "mascara_soldar",
     "retailer": "Herramientas Total",
     "price_clp": 26990,
@@ -1096,13 +1088,5 @@
     "observed_at": "2026-07-13",
     "url": "https://alimentosselectos.cl/producto/atun-lomito-san-jose/",
     "note": "Lomos de Atun San Jose 160g aceite"
-  },
-  {
-    "sku_id": "galletas_paquete",
-    "retailer": "Mercadito Virtual",
-    "price_clp": 729,
-    "observed_at": "2026-07-13",
-    "url": "https://www.sumar.cl/_mercaditovirtual/ficha/48109",
-    "note": "Galletas Triton Chocolate 126g"
   }
 ]

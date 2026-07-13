@@ -590,13 +590,5 @@
     "n_observations": 2,
     "freshest_observed_at": "2026-07-13",
     "spread_ratio": 0.3880597014925373
-  },
-  {
-    "sku_id": "galletas_paquete",
-    "reference_price_clp": 774.5,
-    "confidence": "high",
-    "n_observations": 2,
-    "freshest_observed_at": "2026-07-13",
-    "spread_ratio": 0.11749515816655907
   }
 ]
