@@ -22,5 +22,8 @@
   {"producto": "Cloruro de polivinilo (PVC)", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: 'cloruro' must not substring-match 'cloro'."},
   {"producto": "Leche en polvo Dafood semidescremada", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: food staple."},
   {"producto": "Ropa termorresistente", "espec_proveedor": "", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: heat-resistant clothing, not a reflective vest."},
-  {"producto": "Telmisartán", "espec_proveedor": "TENSUREN D 80", "espec_comprador": "Telmisartán 80 mg / Hidroclorotiazida", "expected_sku_id": null, "note": "Hard negative (real): medication. 'cloro' must not match mid-word inside 'hidroclorotiazida'."}
+  {"producto": "Telmisartán", "espec_proveedor": "TENSUREN D 80", "espec_comprador": "Telmisartán 80 mg / Hidroclorotiazida", "expected_sku_id": null, "note": "Hard negative (real): medication. 'cloro' must not match mid-word inside 'hidroclorotiazida'."},
+  {"producto": "Abono potásico", "espec_proveedor": "JABON POTASICO CONCENTRADO LIQUIDO 150 CC", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative (real): agricultural potassium soap (pesticide), not hand soap. Excluded by 'potasico'/'abono'."},
+  {"producto": "Corchetes", "espec_proveedor": "CORCHETERA ELECTRICA", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative (real): electric stapler is a different price tier from the manual desktop SKU. Excluded by 'electrica'."},
+  {"producto": "Plumas, bolígrafos o lápices de corrección", "espec_proveedor": "Set de Plumones permanentes de 4 colores", "espec_comprador": "", "expected_sku_id": "marcador_permanente", "note": "Permanent-marker set: correctly marcador_permanente (not lapiz_pasta, which excludes 'plumon'). Pack-of-4 handled by unit normalization."}
 ]

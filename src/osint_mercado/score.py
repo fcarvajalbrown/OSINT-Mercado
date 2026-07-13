@@ -49,6 +49,7 @@ def _row_date(row: dict) -> date:
 def run(items_path, baselines_path, basket_path, fx_cache_path, out_path,
         *, session=None) -> Path:
     skus = load_basket(basket_path)
+    sku_by_id = {s.sku_id: s for s in skus}
     baselines = load_baselines(baselines_path)
     fx_cache = fx.load_fx_cache(fx_cache_path)
     session = session or api_client.make_session()
@@ -61,6 +62,10 @@ def run(items_path, baselines_path, basket_path, fx_cache_path, out_path,
         )
         if result.sku_id is None:
             continue
+        spec_text = " ".join(
+            str(row.get(f) or "")
+            for f in ("product", "espec_proveedor", "espec_comprador")
+        )
         anomaly = scoring.score_line_item(
             oc_id=row["oc_id"], correlativo=int(row["correlativo"]),
             comuna=row["comuna"], producto=row["product"],
@@ -70,7 +75,8 @@ def run(items_path, baselines_path, basket_path, fx_cache_path, out_path,
             on_date=_row_date(row), oc_url=row["oc_url"],
             captured_at=row["captured_at"], match=result,
             baseline=baselines.get(result.sku_id), fx_cache=fx_cache,
-            session=session,
+            session=session, spec_text=spec_text,
+            sku=sku_by_id.get(result.sku_id),
         )
         if anomaly is not None:
             anomalies.append(anomaly)

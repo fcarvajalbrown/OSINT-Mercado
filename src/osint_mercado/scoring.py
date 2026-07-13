@@ -9,8 +9,9 @@ the Phase 4 curation gate and re-run reproducibility both rely on.
 import hashlib
 from dataclasses import dataclass
 
-from osint_mercado import fx
+from osint_mercado import fx, units
 from osint_mercado.baseline import Baseline
+from osint_mercado.basket import Sku
 from osint_mercado.matcher import MatchResult
 
 # Severity tiers (PRD defaults). Configurable here, in one place.
@@ -27,6 +28,11 @@ RATIO_CAP = 20.0
 # Only score against a baseline the retail engine considers trustworthy.
 SCORABLE_CONFIDENCE = {"medium", "high"}
 
+# For size-based SKUs, scaling a much smaller format UP to the baseline size is
+# unreliable (per-unit price is not linear: a 75 ml sachet is dearer per litre
+# than a 1 L bottle). Below this size divisor, route to review instead of flagging.
+MIN_SIZE_DIVISOR = 0.5
+
 
 @dataclass(frozen=True)
 class Anomaly:
@@ -41,6 +47,8 @@ class Anomaly:
     moneda: str
     unit_price: float
     unit_price_clp_gross: float
+    unit_divisor: float
+    normalized_unit_price_clp: float
     reference_price_clp: float | None
     baseline_confidence: str
     overprice_ratio: float | None
@@ -70,10 +78,35 @@ def make_anomaly_id(oc_id: str, correlativo: int, sku_id: str) -> str:
     return hashlib.sha1(raw).hexdigest()[:16]
 
 
+def unit_divisor(spec_text: str, sku: Sku | None) -> float:
+    """How many baseline units the OC's priced unit bundles (>= smallest 1e-6).
+
+    Returns 1.0 (no adjustment) when `sku` is None or nothing parses. Size-based
+    SKUs normalize by parsed magnitude (times any pack count); count-based SKUs by
+    parsed pack count relative to the baseline's own count. The scorer divides the
+    gross unit price by this so the ratio compares like-for-like.
+    """
+    if sku is None:
+        return 1.0
+    if sku.base_dim and sku.base_size > 0:
+        size = units.parse_size_in_dim(spec_text, sku.base_dim)
+        if size is None:
+            return 1.0
+        pack = units.parse_count(spec_text) or 1
+        divisor = (size * pack) / sku.base_size
+        return divisor if divisor > 0 else 1.0
+    count = units.parse_count(spec_text)
+    if count is None:
+        return 1.0
+    divisor = count / (sku.base_count or 1)
+    return divisor if divisor > 0 else 1.0
+
+
 def score_line_item(*, oc_id, correlativo, comuna, producto, quantity, moneda,
                     unit_price, porcentaje_iva, on_date, oc_url, captured_at,
                     match: MatchResult, baseline: Baseline | None,
-                    fx_cache, session) -> Anomaly | None:
+                    fx_cache, session, spec_text: str = "",
+                    sku: Sku | None = None) -> Anomaly | None:
     """Score one matched line-item.
 
     Returns None when the line is matched, in-band, and below the Watch
@@ -86,13 +119,17 @@ def score_line_item(*, oc_id, correlativo, comuna, producto, quantity, moneda,
     unit_clp = fx.to_clp(unit_price, moneda, on_date, fx_cache, session)
     gross = round(gross_up(unit_clp, porcentaje_iva), 2)
 
+    divisor = unit_divisor(spec_text, sku)
+    normalized = round(gross / divisor, 2)
+
     def _anomaly(*, reference, confidence, ratio, sev, status):
         return Anomaly(
             id=make_anomaly_id(oc_id, correlativo, match.sku_id),
             oc_id=oc_id, correlativo=correlativo, comuna=comuna,
             sku_id=match.sku_id, matched_rule=match.rule, product=producto,
             quantity=quantity, moneda=moneda, unit_price=unit_price,
-            unit_price_clp_gross=gross, reference_price_clp=reference,
+            unit_price_clp_gross=gross, unit_divisor=round(divisor, 4),
+            normalized_unit_price_clp=normalized, reference_price_clp=reference,
             baseline_confidence=confidence, overprice_ratio=ratio,
             severity=sev, status=status, oc_url=oc_url, captured_at=captured_at,
         )
@@ -104,9 +141,10 @@ def score_line_item(*, oc_id, correlativo, comuna, producto, quantity, moneda,
             ratio=None, sev=None, status="needs_baseline",
         )
 
-    ratio = round(gross / baseline.reference_price_clp, 4)
+    ratio = round(normalized / baseline.reference_price_clp, 4)
 
-    if ratio < RATIO_FLOOR or ratio > RATIO_CAP:
+    small_format = sku is not None and sku.base_dim and divisor < MIN_SIZE_DIVISOR
+    if small_format or ratio < RATIO_FLOOR or ratio > RATIO_CAP:
         return _anomaly(reference=baseline.reference_price_clp,
                         confidence=baseline.confidence, ratio=ratio, sev=None,
                         status="unit_ambiguous")
