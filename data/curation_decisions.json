@@ -1,4 +1,14 @@
 {
+  "26d8c73533d310ba": {
+    "decision": "confirm",
+    "note": "Set 8 lapiz pasta $17832 = $2229/unidad vs baseline $385 (5.8x)",
+    "reviewed_at": "2026-07-13"
+  },
+  "375b5bace7d58ec2": {
+    "decision": "confirm",
+    "note": "Cartulina de colores espanola $2142/pliego vs baseline $352 (6.1x)",
+    "reviewed_at": "2026-07-13"
+  },
   "5612ab12deb9e3af": {
     "decision": "dismiss",
     "note": "Probable escobillon industrial pesado segun ficha tecnica, no comparable a escoba de supermercado; baseline debil.",
@@ -23,6 +33,11 @@
     "decision": "confirm",
     "note": "Escobillon Virutex uso exterior, producto real verificable; 2.58x sobre referencia retail.",
     "reviewed_at": "2026-07-12"
+  },
+  "d4cccf5151c4db10": {
+    "decision": "confirm",
+    "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); mismo OC compra cartulina a $595/pliego",
+    "reviewed_at": "2026-07-13"
   },
   "e63348aaec9550bf": {
     "decision": "confirm",
