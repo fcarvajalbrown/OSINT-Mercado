@@ -1,0 +1,43 @@
+name: setup-refresh
+
+# One-shot: write gh_config.php (the refresh.php token config) onto the Hostinger
+# server, and verify refresh.php pulls. Re-run to rotate the token. The token flows
+# secret -> ssh stdin (never argv, never logged).
+on:
+  workflow_dispatch:
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    if: ${{ vars.SSH_HOST != '' }}
+    steps:
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+      - name: Write gh_config.php on the server
+        env:
+          SSH_HOST: ${{ vars.SSH_HOST }}
+          SSH_PORT: ${{ vars.SSH_PORT }}
+          SSH_USER: ${{ vars.SSH_USER }}
+          SSH_REMOTE_PATH: ${{ vars.SSH_REMOTE_PATH }}
+          SSHPASS: ${{ secrets.SSH_HOSTINGER }}
+          GH_TOKEN: ${{ secrets.OSINT_GIT }}
+        run: |
+          sshpass -e ssh -p "$SSH_PORT" -o StrictHostKeyChecking=accept-new \
+            "$SSH_USER@$SSH_HOST" "cat > ${SSH_REMOTE_PATH}/gh_config.php" <<PHP
+          <?php
+          declare(strict_types=1);
+          define('GH_TOKEN', '${GH_TOKEN}');
+          define('GH_OWNER', 'fcarvajalbrown');
+          define('GH_REPO', 'OSINT-Mercado');
+          define('GH_BRANCH', 'master');
+          define('GH_PATH', 'published/flags.json');
+          define('REFRESH_KEY', '');
+          PHP
+          echo "gh_config.php written to ${SSH_REMOTE_PATH}"
+      - name: Test refresh.php pulls the published flags
+        run: |
+          echo "hitting https://osint-mercado.cl/refresh.php"
+          curl -sS -m 40 "https://osint-mercado.cl/refresh.php"
+          echo
+          echo "verifying data/flags.json is now served:"
+          curl -sS -m 20 -o /dev/null -w "flags.json http=%{http_code}\n" "https://osint-mercado.cl/data/flags.json"
