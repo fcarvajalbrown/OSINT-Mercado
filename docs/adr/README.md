@@ -25,3 +25,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0013 | Anomaly scoring, severity tiers, unit guardrail, and pending output    | Accepted |
 | 0014 | Curation workflow: git-native decisions ledger + osint-curate CLI     | Accepted |
 | 0015 | Deploy transport: SSH + rsync (supersedes the transport of ADR 0003)  | Accepted |
+| 0016 | Pull-based data publishing via Hostinger cron (refines ADR 0015)      | Accepted |

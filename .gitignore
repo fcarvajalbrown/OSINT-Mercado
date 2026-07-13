@@ -17,6 +17,9 @@ dist-tmp/
 # Built static site (generated in CI from confirmed_flags.json)
 dist/
 
+# refresh.php server secret (token config lives only on the Hostinger server)
+gh_config.php
+
 # OS
 .DS_Store
 Thumbs.db

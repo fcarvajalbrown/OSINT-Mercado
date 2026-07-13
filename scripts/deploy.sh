@@ -36,7 +36,11 @@ echo "Deploying '$SRC_DIR/' -> ${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/ (port
 
 # --delete mirrors the source: files removed locally are removed on the remote.
 # Scoped to SSH_REMOTE_PATH (public_html), never the account root.
+# Excludes protect server-managed files this push must never touch:
+#   gh_config.php     - holds the refresh.php token (created on the server)
+#   data/             - flags.json is pulled by the Hostinger cron (refresh.php)
 sshpass -e rsync ${DRY} ${VERBOSE} -az --delete \
+  --exclude 'gh_config.php' --exclude 'data/' \
   -e "ssh -p ${SSH_PORT} -o StrictHostKeyChecking=accept-new" \
   "${SRC_DIR}/" "${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/"
 
