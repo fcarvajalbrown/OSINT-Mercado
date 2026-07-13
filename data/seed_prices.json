@@ -1,32 +1,708 @@
 [
-  {"sku_id": "toner_hp_cf283a", "retailer": "Alcaplus", "price_clp": 89900, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/hp-toner-83a-laserjet-cf283a/"},
-  {"sku_id": "toner_hp_cf283a", "retailer": "DGA Insumos", "price_clp": 71281, "observed_at": "2026-07-12", "url": "https://www.dgainsumos.cl/products/toner-hp-83a-negro-cf283a"},
-  {"sku_id": "toner_hp_ce285a", "retailer": "Alcaplus", "price_clp": 79900, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/hp-toner-laserjet-negro-85a-ce285a/"},
-  {"sku_id": "toner_hp_ce285a", "retailer": "DGA Insumos", "price_clp": 80218, "observed_at": "2026-07-12", "url": "https://www.dgainsumos.cl/products/toner-hp-85a-negro-ce285a"},
-  {"sku_id": "toner_hp_ce285a", "retailer": "Laser Chile", "price_clp": 98000, "observed_at": "2026-07-12", "url": "https://laserchile.com/producto/toner-hp-85a-ce285a/"},
-  {"sku_id": "papel_resma_carta_75g", "retailer": "IntegraMundo", "price_clp": 3500, "observed_at": "2026-07-12", "url": "https://www.integramundo.cl/products/resma-carta-75-gr-500-hojas"},
-  {"sku_id": "papel_resma_oficio_75g", "retailer": "Jamila", "price_clp": 4090, "observed_at": "2026-07-12", "url": "https://www.jamila.cl/producto-detalle/papeleria/10974/resma-oficio-500-hojas-1-unidad-75-gramos-pix"},
-  {"sku_id": "pilas_aa_blister4", "retailer": "Todopilas", "price_clp": 3790, "observed_at": "2026-07-12", "url": "https://www.todopilas.cl/producto/pila-aa-alcalina-duracell-lr6-blister-4/"},
-  {"sku_id": "pilas_aaa_blister4", "retailer": "Todopilas", "price_clp": 5490, "observed_at": "2026-07-12", "url": "https://www.todopilas.cl/producto/pila-aaa-alcalina-duracell-optimum-blister-4/"},
-  {"sku_id": "pilas_aaa_blister4", "retailer": "Casa Royal", "price_clp": 3990, "observed_at": "2026-07-12", "url": "https://www.casaroyal.cl/-power-one-blister-pilas-alcalinas-aaa-x-4-/p"},
-  {"sku_id": "pendrive_usb_16gb", "retailer": "Alcaplus", "price_clp": 3368, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/kingston-pendrive-datatraveler-i-g4-dtig4-16gb/"},
-  {"sku_id": "mouse_usb", "retailer": "Tecno Mas", "price_clp": 3990, "observed_at": "2026-07-12", "url": "https://www.solotodo.cl/products/28918-genius-dx-110-negro-31010116100"},
-  {"sku_id": "mouse_usb", "retailer": "Alcaplus", "price_clp": 3312, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/microlab-mouse-usb-mcl-6450/"},
-  {"sku_id": "teclado_usb", "retailer": "Alcaplus", "price_clp": 6490, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/xtech-teclado-multimedia-usb-negro-xtk-160s/"},
-  {"sku_id": "teclado_usb", "retailer": "Tecno Mas", "price_clp": 4990, "observed_at": "2026-07-12", "url": "https://tecnomas.cl/producto/teclado-standard-usb"},
-  {"sku_id": "cartucho_tinta_hp_664_negro", "retailer": "Laser Chile", "price_clp": 13990, "observed_at": "2026-07-12", "url": "https://laserchile.com/producto/cartucho-hp-664-negro/"},
-  {"sku_id": "cartucho_tinta_hp_664_negro", "retailer": "Alcaplus", "price_clp": 14990, "observed_at": "2026-07-12", "url": "https://alcaplus.cl/hp-tinta-664-negro-advantage-f6v29al/"},
-  {"sku_id": "zapatos_seguridad_puntera_acero", "retailer": "Nova Seguridad", "price_clp": 12090, "observed_at": "2026-07-12", "url": "https://novaseguridad.cl/product/botin-de-seguridad-economico-negro/"},
-  {"sku_id": "zapatos_seguridad_puntera_acero", "retailer": "Nova Seguridad", "price_clp": 34990, "observed_at": "2026-07-12", "url": "https://novaseguridad.cl/product/botin-de-seguridad-macao-m1-cafe/"},
-  {"sku_id": "chaleco_reflectante_seguridad", "retailer": "Tienda Abastecer", "price_clp": 3790, "observed_at": "2026-07-12", "url": "https://tienda.abastecer.cl/producto/chaleco-reflectante/"},
-  {"sku_id": "chaleco_reflectante_seguridad", "retailer": "DYG Seguridad Industrial", "price_clp": 3990, "observed_at": "2026-07-12", "url": "https://dygseguridad.cl/producto/chaleco-reflectante-alta-visibilidad/"},
-  {"sku_id": "guantes_nitrilo_caja100", "retailer": "Nova Seguridad", "price_clp": 3480, "observed_at": "2026-07-12", "url": "https://novaseguridad.cl/product/guantes-de-nitrilo-100-und-azul/"},
-  {"sku_id": "mascarillas_quirurgicas_caja50", "retailer": "Dr. Simi", "price_clp": 5800, "observed_at": "2026-07-12", "url": "https://www.drsimi.cl/mascarilla-de-3-pliegues-descartable-bolsa-50-unidades/p"},
-  {"sku_id": "mascarillas_quirurgicas_caja50", "retailer": "Cordoneria Chike", "price_clp": 1480, "observed_at": "2026-07-12", "url": "https://www.chike.cl/product/mascarillas-caja-50-unidades"},
-  {"sku_id": "extintor_pqs_6kg", "retailer": "RAC Seguridad Industrial", "price_clp": 36900, "observed_at": "2026-07-12", "url": "https://rac.cl/products/extintor-pqs-abc-6-kgs-6a-30b-c-cert"},
-  {"sku_id": "extintor_pqs_6kg", "retailer": "Treck", "price_clp": 42610, "observed_at": "2026-07-12", "url": "https://www.treck.cl/extintor-pqs-abc-6kg-35782/p"},
-  {"sku_id": "cloro_lavandina_4l", "retailer": "Falabella", "price_clp": 3490, "observed_at": "2026-07-12", "url": "https://www.falabella.com/falabella-cl/category/CATG10624/Cloro"},
-  {"sku_id": "alcohol_gel_1l", "retailer": "Falabella", "price_clp": 5790, "observed_at": "2026-07-12", "url": "https://www.falabella.com/falabella-cl/category/CATG11801/Alcohol"},
-  {"sku_id": "escoba_fibra", "retailer": "Falabella", "price_clp": 1990, "observed_at": "2026-07-12", "url": "https://www.falabella.com/falabella-cl/category/CATG10603/Escobas-y-palas"},
-  {"sku_id": "basurero_plastico_60l", "retailer": "Falabella", "price_clp": 12990, "observed_at": "2026-07-12", "url": "https://www.falabella.com/falabella-cl/shop/basurero-60-litros"}
+  {
+    "sku_id": "toner_hp_cf283a",
+    "retailer": "Alcaplus",
+    "price_clp": 89900,
+    "observed_at": "2026-07-12",
+    "url": "https://alcaplus.cl/hp-toner-83a-laserjet-cf283a/"
+  },
+  {
+    "sku_id": "toner_hp_cf283a",
+    "retailer": "DGA Insumos",
+    "price_clp": 71281,
+    "observed_at": "2026-07-12",
+    "url": "https://www.dgainsumos.cl/products/toner-hp-83a-negro-cf283a"
+  },
+  {
+    "sku_id": "toner_hp_ce285a",
+    "retailer": "Alcaplus",
+    "price_clp": 79900,
+    "observed_at": "2026-07-12",
+    "url": "https://alcaplus.cl/hp-toner-laserjet-negro-85a-ce285a/"
+  },
+  {
+    "sku_id": "toner_hp_ce285a",
+    "retailer": "DGA Insumos",
+    "price_clp": 80218,
+    "observed_at": "2026-07-12",
+    "url": "https://www.dgainsumos.cl/products/toner-hp-85a-negro-ce285a"
+  },
+  {
+    "sku_id": "toner_hp_ce285a",
+    "retailer": "Laser Chile",
+    "price_clp": 98000,
+    "observed_at": "2026-07-12",
+    "url": "https://laserchile.com/producto/toner-hp-85a-ce285a/"
+  },
+  {
+    "sku_id": "papel_resma_carta_75g",
+    "retailer": "IntegraMundo",
+    "price_clp": 3500,
+    "observed_at": "2026-07-12",
+    "url": "https://www.integramundo.cl/products/resma-carta-75-gr-500-hojas"
+  },
+  {
+    "sku_id": "papel_resma_oficio_75g",
+    "retailer": "Jamila",
+    "price_clp": 4090,
+    "observed_at": "2026-07-12",
+    "url": "https://www.jamila.cl/producto-detalle/papeleria/10974/resma-oficio-500-hojas-1-unidad-75-gramos-pix"
+  },
+  {
+    "sku_id": "pilas_aa_blister4",
+    "retailer": "Todopilas",
+    "price_clp": 3790,
+    "observed_at": "2026-07-12",
+    "url": "https://www.todopilas.cl/producto/pila-aa-alcalina-duracell-lr6-blister-4/"
+  },
+  {
+    "sku_id": "pilas_aaa_blister4",
+    "retailer": "Todopilas",
+    "price_clp": 5490,
+    "observed_at": "2026-07-12",
+    "url": "https://www.todopilas.cl/producto/pila-aaa-alcalina-duracell-optimum-blister-4/"
+  },
+  {
+    "sku_id": "pilas_aaa_blister4",
+    "retailer": "Casa Royal",
+    "price_clp": 3990,
+    "observed_at": "2026-07-12",
+    "url": "https://www.casaroyal.cl/-power-one-blister-pilas-alcalinas-aaa-x-4-/p"
+  },
+  {
+    "sku_id": "pendrive_usb_16gb",
+    "retailer": "Alcaplus",
+    "price_clp": 3368,
+    "observed_at": "2026-07-12",
+    "url": "https://alcaplus.cl/kingston-pendrive-datatraveler-i-g4-dtig4-16gb/"
+  },
+  {
+    "sku_id": "mouse_usb",
+    "retailer": "Tecno Mas",
+    "price_clp": 3990,
+    "observed_at": "2026-07-12",
+    "url": "https://www.solotodo.cl/products/28918-genius-dx-110-negro-31010116100"
+  },
+  {
+    "sku_id": "mouse_usb",
+    "retailer": "Alcaplus",
+    "price_clp": 3312,
+    "observed_at": "2026-07-12",
+    "url": "https://alcaplus.cl/microlab-mouse-usb-mcl-6450/"
+  },
+  {
+    "sku_id": "teclado_usb",
+    "retailer": "Alcaplus",
+    "price_clp": 6490,
+    "observed_at": "2026-07-12",
+    "url": "https://alcaplus.cl/xtech-teclado-multimedia-usb-negro-xtk-160s/"
+  },
+  {
+    "sku_id": "teclado_usb",
+    "retailer": "Tecno Mas",
+    "price_clp": 4990,
+    "observed_at": "2026-07-12",
+    "url": "https://tecnomas.cl/producto/teclado-standard-usb"
+  },
+  {
+    "sku_id": "cartucho_tinta_hp_664_negro",
+    "retailer": "Laser Chile",
+    "price_clp": 13990,
+    "observed_at": "2026-07-12",
+    "url": "https://laserchile.com/producto/cartucho-hp-664-negro/"
+  },
+  {
+    "sku_id": "cartucho_tinta_hp_664_negro",
+    "retailer": "Alcaplus",
+    "price_clp": 14990,
+    "observed_at": "2026-07-12",
+    "url": "https://alcaplus.cl/hp-tinta-664-negro-advantage-f6v29al/"
+  },
+  {
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "retailer": "Nova Seguridad",
+    "price_clp": 12090,
+    "observed_at": "2026-07-12",
+    "url": "https://novaseguridad.cl/product/botin-de-seguridad-economico-negro/"
+  },
+  {
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "retailer": "Nova Seguridad",
+    "price_clp": 34990,
+    "observed_at": "2026-07-12",
+    "url": "https://novaseguridad.cl/product/botin-de-seguridad-macao-m1-cafe/"
+  },
+  {
+    "sku_id": "chaleco_reflectante_seguridad",
+    "retailer": "Tienda Abastecer",
+    "price_clp": 3790,
+    "observed_at": "2026-07-12",
+    "url": "https://tienda.abastecer.cl/producto/chaleco-reflectante/"
+  },
+  {
+    "sku_id": "chaleco_reflectante_seguridad",
+    "retailer": "DYG Seguridad Industrial",
+    "price_clp": 3990,
+    "observed_at": "2026-07-12",
+    "url": "https://dygseguridad.cl/producto/chaleco-reflectante-alta-visibilidad/"
+  },
+  {
+    "sku_id": "guantes_nitrilo_caja100",
+    "retailer": "Nova Seguridad",
+    "price_clp": 3480,
+    "observed_at": "2026-07-12",
+    "url": "https://novaseguridad.cl/product/guantes-de-nitrilo-100-und-azul/"
+  },
+  {
+    "sku_id": "mascarillas_quirurgicas_caja50",
+    "retailer": "Dr. Simi",
+    "price_clp": 5800,
+    "observed_at": "2026-07-12",
+    "url": "https://www.drsimi.cl/mascarilla-de-3-pliegues-descartable-bolsa-50-unidades/p"
+  },
+  {
+    "sku_id": "mascarillas_quirurgicas_caja50",
+    "retailer": "Cordoneria Chike",
+    "price_clp": 1480,
+    "observed_at": "2026-07-12",
+    "url": "https://www.chike.cl/product/mascarillas-caja-50-unidades"
+  },
+  {
+    "sku_id": "extintor_pqs_6kg",
+    "retailer": "RAC Seguridad Industrial",
+    "price_clp": 36900,
+    "observed_at": "2026-07-12",
+    "url": "https://rac.cl/products/extintor-pqs-abc-6-kgs-6a-30b-c-cert"
+  },
+  {
+    "sku_id": "extintor_pqs_6kg",
+    "retailer": "Treck",
+    "price_clp": 42610,
+    "observed_at": "2026-07-12",
+    "url": "https://www.treck.cl/extintor-pqs-abc-6kg-35782/p"
+  },
+  {
+    "sku_id": "cloro_lavandina_4l",
+    "retailer": "Falabella",
+    "price_clp": 3490,
+    "observed_at": "2026-07-12",
+    "url": "https://www.falabella.com/falabella-cl/category/CATG10624/Cloro"
+  },
+  {
+    "sku_id": "alcohol_gel_1l",
+    "retailer": "Falabella",
+    "price_clp": 5790,
+    "observed_at": "2026-07-12",
+    "url": "https://www.falabella.com/falabella-cl/category/CATG11801/Alcohol"
+  },
+  {
+    "sku_id": "escoba_fibra",
+    "retailer": "Falabella",
+    "price_clp": 1990,
+    "observed_at": "2026-07-12",
+    "url": "https://www.falabella.com/falabella-cl/category/CATG10603/Escobas-y-palas"
+  },
+  {
+    "sku_id": "basurero_plastico_60l",
+    "retailer": "Falabella",
+    "price_clp": 12990,
+    "observed_at": "2026-07-12",
+    "url": "https://www.falabella.com/falabella-cl/shop/basurero-60-litros"
+  },
+  {
+    "sku_id": "archivador_palanca_oficio",
+    "retailer": "Dimeiggs",
+    "price_clp": 3490,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/archivador-of-ancho-burdeo-518-h-torre/p",
+    "note": "Archivador Palanca Oficio Lomo Ancho Para 450 Hojas Burdeo Torre"
+  },
+  {
+    "sku_id": "archivador_palanca_oficio",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 2115,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/archivador-oficio-palanca-lomo-ancho",
+    "note": "ARCHIVADOR OFICIO PALANCA LOMO ANCHO marca AUCA"
+  },
+  {
+    "sku_id": "lapiz_pasta_azul",
+    "retailer": "Dimeiggs",
+    "price_clp": 280,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/boligrafo-cristal-azul-codificado-bic-34673/p",
+    "note": "Lapiz Pasta Cristal Punta Media Azul 1 Unidad 1,0 Mm Bic"
+  },
+  {
+    "sku_id": "marcador_permanente",
+    "retailer": "Dimeiggs",
+    "price_clp": 790,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/marcador-permanente-punta-redonda-negro-rhein/p",
+    "note": "Marcador Permanente Punta Redonda Negro Rhein"
+  },
+  {
+    "sku_id": "marcador_permanente",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 693,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/marcador-permanente-fino",
+    "note": "MARCADOR PERMANENTE FINO PILOT (punta fina)"
+  },
+  {
+    "sku_id": "destacador_fluor",
+    "retailer": "Dimeiggs",
+    "price_clp": 1030,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/destacador-escritorio-amarillo-boss-70-stabilo/p",
+    "note": "Destacador De Escritorio Punta Biselada Amarillo Stabilo Boss 70 (premium)"
+  },
+  {
+    "sku_id": "destacador_fluor",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 405,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/destacador-colores-1",
+    "note": "DESTACADOR FULTONS unidad (commodity generic)"
+  },
+  {
+    "sku_id": "tijeras_oficina",
+    "retailer": "Dimeiggs",
+    "price_clp": 2490,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/tijera-multiuso-8-1-4-mango-plastico-y-goma-en-blister-lavoro/p",
+    "note": "Tijera Multiuso 8 1/4 (aprox 21cm) Mango Plastico Y Goma Lavoro"
+  },
+  {
+    "sku_id": "cinta_embalaje",
+    "retailer": "Dimeiggs",
+    "price_clp": 1090,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/cinta-embalaje-48mmx40mt-transparente/p",
+    "note": "Cinta Embalaje 48 Mm x 40 Mt Transparente Fultons"
+  },
+  {
+    "sku_id": "cinta_embalaje",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 585,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/cinta-de-embalaje-transparente-48mmx40-mts",
+    "note": "CINTA DE EMBALAJE TRANSPARENTE 48MMX40 MTS marca OFFIX"
+  },
+  {
+    "sku_id": "cartulina_espanola",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 405,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/pliego-cartulina-espanola-diferentes-colores",
+    "note": "PLIEGO CARTULINA ESPANOLA 55 x 77 cms, pliego individual"
+  },
+  {
+    "sku_id": "corchetera_metalica",
+    "retailer": "Dimeiggs",
+    "price_clp": 3790,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/corchetera-larga-metal-negro-p-20-hjs-26-6-24-6-fultons/p",
+    "note": "Corchetera Larga Metal Negro Para 20 Hojas Fultons 26/6 24/6"
+  },
+  {
+    "sku_id": "corchetera_metalica",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 3321,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/corchetera-metalica-mediana-246-266",
+    "note": "CORCHETERA METALICA MEDIANA marca NUOVO 26/6 o 24/6"
+  },
+  {
+    "sku_id": "corchetes_caja",
+    "retailer": "Dimeiggs",
+    "price_clp": 790,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/corchete-estandar-2-6-de-5000-unidades-cromado-fultons-34193/p",
+    "note": "Corchetes En Caja Acero Cromado 5000 Unidades Fultons 26/6"
+  },
+  {
+    "sku_id": "corchetes_caja",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 891,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/corchetes-torre-266-5000-unidades",
+    "note": "CORCHETES TORRE 26/6 5000 UNIDADES"
+  },
+  {
+    "sku_id": "lapiz_grafito",
+    "retailer": "Dimeiggs",
+    "price_clp": 210,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/lapiz-grafito-n-2hb-cpo-hexagonal-negro-faber/p",
+    "note": "Lapiz Grafito 2HB Hexagonal 1 Unidad Faber Castell"
+  },
+  {
+    "sku_id": "lapiz_grafito",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 261,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/lapiz-grafito-negro-2hb-hexagonal",
+    "note": "LAPIZ GRAFITO NEGRO 2HB HEXAGONAL Faber Castell 1 unidad"
+  },
+  {
+    "sku_id": "pegamento_barra",
+    "retailer": "Dimeiggs",
+    "price_clp": 2190,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/adh-en-barra-40gr-stick-fix-henkel/p",
+    "note": "Pegamento En Barra 40 Gramos Pritt"
+  },
+  {
+    "sku_id": "pegamento_barra",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 1971,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/pegamento-en-barra-henkel-40-gramos",
+    "note": "PEGAMENTO EN BARRA HENKEL 40 GRAMOS Pritt"
+  },
+  {
+    "sku_id": "plumon_pizarra",
+    "retailer": "Dimeiggs",
+    "price_clp": 790,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/marcador-de-pizarra-punta-redonda-azul-rhein/p",
+    "note": "Marcador De Pizarra Punta Redonda Azul Rhein"
+  },
+  {
+    "sku_id": "plumon_pizarra",
+    "retailer": "Libreria BlueMix",
+    "price_clp": 441,
+    "observed_at": "2026-07-13",
+    "url": "https://www.libreriabluemix.cl/marcador-pizarra-offix-punta-redonda-diferentes-colores",
+    "note": "MARCADOR PIZARRA OFFIX PUNTA REDONDA"
+  },
+  {
+    "sku_id": "sobre_oficio",
+    "retailer": "Dimeiggs",
+    "price_clp": 1290,
+    "observed_at": "2026-07-13",
+    "url": "https://www.dimeiggs.cl/sobre-americano-228x107mm-blanco-70-gsm-fultons/p",
+    "note": "Sobre Americano 228 X 105 Mm Blanco 70 Gramos Fultons (por unidad)"
+  },
+  {
+    "sku_id": "papel_higienico_pack",
+    "retailer": "Jumbo",
+    "price_clp": 6747,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/ph-elite-ultra-suave-dh-12-roll-25m-c-u-1957547/p",
+    "note": "Papel Higienico Elite Ultra Suave Doble Hoja 25 m 12 un."
+  },
+  {
+    "sku_id": "papel_higienico_pack",
+    "retailer": "Unimarc",
+    "price_clp": 6290,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/papel-hig-rendiplus-dh-confort-12x27-mt",
+    "note": "Papel higienico Confort doble hoja rendiplus 12 un 27 mt"
+  },
+  {
+    "sku_id": "toalla_papel_rollo",
+    "retailer": "Unimarc",
+    "price_clp": 1950,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/toalla-papel-clasica-dh-nova-3x12-mt",
+    "note": "Toalla de papel Nova clasica doble hoja 3 un de 12 m"
+  },
+  {
+    "sku_id": "toalla_papel_rollo",
+    "retailer": "Unimarc",
+    "price_clp": 3390,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/toalla-papel-maxirollo-th-elite-2x20mt",
+    "note": "Toalla de papel Elite deco maxi rollo 2 un 20 mt"
+  },
+  {
+    "sku_id": "papel_facial_caja",
+    "retailer": "Unimarc",
+    "price_clp": 3150,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/panuelos-elite-facial-normal-90-hojas-x-3-u",
+    "note": "Panuelos faciales Elite 3 cajas de 90 un"
+  },
+  {
+    "sku_id": "toallitas_humedas_pack",
+    "retailer": "Unimarc",
+    "price_clp": 3350,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/toallas-desinfectantes-virutex-multiuso-limon-50-un",
+    "note": "Toallas humedas Virutex desinfectantes multiuso limon 50 un"
+  },
+  {
+    "sku_id": "bolsa_basura_pack",
+    "retailer": "Unimarc",
+    "price_clp": 1400,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/bolsa-basura-biodeg-80x110-virutex-10-un",
+    "note": "Bolsa de basura Virutex grande (80x110 cm) rollo 10 un"
+  },
+  {
+    "sku_id": "detergente_ropa",
+    "retailer": "Unimarc",
+    "price_clp": 16350,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/det-polvo-matic-multiaccion-omo-5-kg",
+    "note": "Detergente Omo matic polvo bolsa 5 Kg"
+  },
+  {
+    "sku_id": "lavaloza",
+    "retailer": "Unimarc",
+    "price_clp": 2090,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/lavaloza-conc-bio-act-limon-quix-500-ml",
+    "note": "Lavaloza concentrado Quix bio activos limon 500 ml"
+  },
+  {
+    "sku_id": "lavaloza",
+    "retailer": "Unimarc",
+    "price_clp": 3290,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/lavaloza-ultra-concentrado-quix-500-ml",
+    "note": "Lavaloza Quix ultra concentrado 500 ml"
+  },
+  {
+    "sku_id": "desinfectante_multiuso",
+    "retailer": "Jumbo",
+    "price_clp": 2190,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/limpiador-lysol-limon-900ml/p",
+    "note": "Limpiador Desinfectante Lysol Limon 900 ml"
+  },
+  {
+    "sku_id": "desinfectante_multiuso",
+    "retailer": "Unimarc",
+    "price_clp": 2090,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/limpiador-lysol-900-ml-lavanda",
+    "note": "Limpiador Lysol desinfectante liquido lavanda botella 900 ml"
+  },
+  {
+    "sku_id": "limpiavidrios",
+    "retailer": "Unimarc",
+    "price_clp": 2900,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/limpiavidrio-cif-gatillo-500ml",
+    "note": "Limpiador Cif expert vidrios y multiuso gatillo 500 ml"
+  },
+  {
+    "sku_id": "jabon_liquido",
+    "retailer": "Jumbo",
+    "price_clp": 1670,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/jabon-ballerina-relax-dp-750ml-1938735/p",
+    "note": "Jabon Liquido Ballerina Relax 750 ml"
+  },
+  {
+    "sku_id": "jabon_liquido",
+    "retailer": "Unimarc",
+    "price_clp": 1790,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/jabon-liq-dp-ballerina-750-m-berg-limon",
+    "note": "Jabon liquido energy Ballerina bergamota y limon doypack 750 ml"
+  },
+  {
+    "sku_id": "pala_aseo",
+    "retailer": "Unimarc",
+    "price_clp": 5490,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/pala-c-mango-fijo-virutex",
+    "note": "Pala Virutex con mango y banda adherente"
+  },
+  {
+    "sku_id": "trapero_mopa",
+    "retailer": "Unimarc",
+    "price_clp": 4392,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/mopa-algodon-clasica-c-ma-smart-clean-un",
+    "note": "Mopa algodon clasica con mango Smart Clean"
+  },
+  {
+    "sku_id": "pano_multiuso",
+    "retailer": "Unimarc",
+    "price_clp": 5250,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/pano-multiuso-ultra-virutex-6-u",
+    "note": "Pano multiuso Virutex ultra absorbente amarillo 6 un"
+  },
+  {
+    "sku_id": "cloro_gel",
+    "retailer": "Jumbo",
+    "price_clp": 1790,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/desinfectante-cloro-gel-clorox-original-900-ml/p",
+    "note": "Cloro Gel Clorox Original 900 ml"
+  },
+  {
+    "sku_id": "cloro_gel",
+    "retailer": "Unimarc",
+    "price_clp": 2150,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/cloro-gel-clorox-original-900-ml",
+    "note": "Cloro gel Clorox original 900 ml"
+  },
+  {
+    "sku_id": "cafe_instantaneo_170g",
+    "retailer": "Jumbo",
+    "price_clp": 6790,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/cafe-instantaneo-nescafe-tradicion-170-g/p",
+    "note": "Cafe Instantaneo Nescafe Tradicion Tarro 170 g (oferta, normal 8990)"
+  },
+  {
+    "sku_id": "cafe_instantaneo_170g",
+    "retailer": "Unimarc",
+    "price_clp": 6850,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/cafe-nescafe-tradicion-lata-170-g",
+    "note": "Cafe Nescafe tradicion tarro 170 gr (oferta, normal 8590)"
+  },
+  {
+    "sku_id": "azucar_1kg",
+    "retailer": "Jumbo",
+    "price_clp": 1290,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/azucar-blanca-granulada-iansa-1-kg/p",
+    "note": "Azucar Blanca Iansa 1 kg (oferta, normal 1450)"
+  },
+  {
+    "sku_id": "azucar_1kg",
+    "retailer": "Unimarc",
+    "price_clp": 1490,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/azucar-granulada-iansa-1-kg",
+    "note": "Azucar blanca Iansa 1 Kg"
+  },
+  {
+    "sku_id": "arroz_1kg",
+    "retailer": "Unimarc",
+    "price_clp": 2150,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/arroz-g2-largo-seleccion-tucapel-1-kg",
+    "note": "Arroz Tucapel gran seleccion G2 1 Kg"
+  },
+  {
+    "sku_id": "aceite_vegetal_900ml",
+    "retailer": "Jumbo",
+    "price_clp": 2541,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/aceite-maravilla-chef-1-l/p",
+    "note": "Aceite de Maravilla Chef Botella 1 L (oferta, normal 3630)"
+  },
+  {
+    "sku_id": "aceite_vegetal_900ml",
+    "retailer": "Jumbo",
+    "price_clp": 2850,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/aceite-vegetal-miraflores-900-ml-1952460/p",
+    "note": "Aceite Vegetal Miraflores 900 ml"
+  },
+  {
+    "sku_id": "fideos_400g",
+    "retailer": "Jumbo",
+    "price_clp": 1090,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/spaghetti-n-5-carozzi-bolsa-400-g-2/p",
+    "note": "Pasta Spaghetti N5 Carozzi 400 g"
+  },
+  {
+    "sku_id": "te_caja100",
+    "retailer": "Unimarc",
+    "price_clp": 3990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/te-ceylan-express-supremo-100-un",
+    "note": "Te Supremo ceylan express 100 bolsitas"
+  },
+  {
+    "sku_id": "leche_liquida_1l",
+    "retailer": "Jumbo",
+    "price_clp": 1300,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/leche-entera-colun-caja-1-l-natural/p",
+    "note": "Leche Colun Entera 1 L"
+  },
+  {
+    "sku_id": "agua_mineral_15l",
+    "retailer": "Jumbo",
+    "price_clp": 950,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/agua-purificada-sin-gas-benedictino-15-l-botella-desechable/p",
+    "note": "Agua Benedictino Sin Gas 1.5 L purificada"
+  },
+  {
+    "sku_id": "harina_1kg",
+    "retailer": "Jumbo",
+    "price_clp": 1600,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/harina-flor-collico-env-papel-1kg/p",
+    "note": "Harina Flor Collico Sin Polvos de Hornear 1 kg"
+  },
+  {
+    "sku_id": "gas_licuado_15kg",
+    "retailer": "Gas a Domicilio",
+    "price_clp": 26450,
+    "observed_at": "2026-07-13",
+    "url": "https://gasadomicilio.cl/producto/cilindro-gas-normal-15kg/",
+    "note": "CILINDRO GAS NORMAL 15KG, RM sector oriente; oferta, normal 30700"
+  },
+  {
+    "sku_id": "gas_licuado_15kg",
+    "retailer": "Central Abastible",
+    "price_clp": 30500,
+    "observed_at": "2026-07-13",
+    "url": "https://centralabastiblecl.cl/producto/cilindro-de-15-kilos/",
+    "note": "Carga de 15 Kilos Abastible, RM; oferta, normal 32400"
+  },
+  {
+    "sku_id": "gas_licuado_45kg",
+    "retailer": "Gas a Domicilio",
+    "price_clp": 77640,
+    "observed_at": "2026-07-13",
+    "url": "https://gasadomicilio.cl/producto/cilindro-gas-normal-45kg/",
+    "note": "CILINDRO GAS NORMAL 45KG, RM sector oriente; oferta, normal 90700"
+  },
+  {
+    "sku_id": "gas_licuado_45kg",
+    "retailer": "Central Abastible",
+    "price_clp": 87000,
+    "observed_at": "2026-07-13",
+    "url": "https://centralabastiblecl.cl/producto/cilindro-de-45-kilos/",
+    "note": "Carga de 45 Kilos Abastible, RM; oferta, normal 89500"
+  },
+  {
+    "sku_id": "legumbres_1kg",
+    "retailer": "Unimarc",
+    "price_clp": 2232,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/lentejas-6-mm-nuestra-cocina-1-kg",
+    "note": "Lentejas Nuestra Cocina 6 mm 1 Kg (oferta, normal 2790)"
+  },
+  {
+    "sku_id": "legumbres_1kg",
+    "retailer": "Jumbo",
+    "price_clp": 4500,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/lentejas-banquete-bolsa-1-kg-6mm/p",
+    "note": "Lentejas Banquete Calibre 6 mm 1 kg"
+  },
+  {
+    "sku_id": "atun_conserva",
+    "retailer": "Unimarc",
+    "price_clp": 1080,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/atun-lomito-agua-nuestra-cocina-160gr",
+    "note": "Atun lomito Nuestra Cocina en agua 160 g neto (oferta, normal 1350)"
+  },
+  {
+    "sku_id": "galletas_paquete",
+    "retailer": "Unimarc",
+    "price_clp": 820,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/galleta-triton-126-gr-frutilla",
+    "note": "Galletas Triton frutilla 126 g McKay"
+  }
 ]

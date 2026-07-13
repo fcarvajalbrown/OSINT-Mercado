@@ -80,6 +80,118 @@
     "spread_ratio": 0.06901311249137336
   },
   {
+    "sku_id": "archivador_palanca_oficio",
+    "reference_price_clp": 2802.5,
+    "confidence": "medium",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.49063336306868865
+  },
+  {
+    "sku_id": "lapiz_pasta_azul",
+    "reference_price_clp": 280.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "clips_metalicos_caja",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "marcador_permanente",
+    "reference_price_clp": 741.5,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.13081591368846932
+  },
+  {
+    "sku_id": "destacador_fluor",
+    "reference_price_clp": 717.5,
+    "confidence": "medium",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.8710801393728222
+  },
+  {
+    "sku_id": "tijeras_oficina",
+    "reference_price_clp": 2490.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "cinta_embalaje",
+    "reference_price_clp": 837.5,
+    "confidence": "medium",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.6029850746268657
+  },
+  {
+    "sku_id": "cartulina_espanola",
+    "reference_price_clp": 405.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "corchetera_metalica",
+    "reference_price_clp": 3555.5,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.13190831106736042
+  },
+  {
+    "sku_id": "corchetes_caja",
+    "reference_price_clp": 840.5,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.12016656751933373
+  },
+  {
+    "sku_id": "lapiz_grafito",
+    "reference_price_clp": 235.5,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.21656050955414013
+  },
+  {
+    "sku_id": "pegamento_barra",
+    "reference_price_clp": 2080.5,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.10526315789473684
+  },
+  {
+    "sku_id": "plumon_pizarra",
+    "reference_price_clp": 615.5,
+    "confidence": "medium",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.5670186839967506
+  },
+  {
+    "sku_id": "sobre_oficio",
+    "reference_price_clp": 1290.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
     "sku_id": "zapatos_seguridad_puntera_acero",
     "reference_price_clp": 23540.0,
     "confidence": "medium",
@@ -120,6 +232,54 @@
     "spread_ratio": 0.14362973210916866
   },
   {
+    "sku_id": "mascara_soldar",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "casco_seguridad",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "lentes_seguridad",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "guantes_cabritilla",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "cono_seguridad",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "botiquin_primeros_auxilios",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
     "sku_id": "cloro_lavandina_4l",
     "reference_price_clp": 3490.0,
     "confidence": "medium",
@@ -149,6 +309,294 @@
     "confidence": "medium",
     "n_observations": 1,
     "freshest_observed_at": "2026-07-12",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "papel_higienico_pack",
+    "reference_price_clp": 6518.5,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.07010815371634578
+  },
+  {
+    "sku_id": "toalla_papel_rollo",
+    "reference_price_clp": 2670.0,
+    "confidence": "medium",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.5393258426966292
+  },
+  {
+    "sku_id": "papel_facial_caja",
+    "reference_price_clp": 3150.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "toallitas_humedas_pack",
+    "reference_price_clp": 3350.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "bolsa_basura_pack",
+    "reference_price_clp": 1400.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "detergente_ropa",
+    "reference_price_clp": 16350.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "lavaloza",
+    "reference_price_clp": 2690.0,
+    "confidence": "medium",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.44609665427509293
+  },
+  {
+    "sku_id": "desinfectante_multiuso",
+    "reference_price_clp": 2140.0,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.04672897196261682
+  },
+  {
+    "sku_id": "limpiavidrios",
+    "reference_price_clp": 2900.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "jabon_liquido",
+    "reference_price_clp": 1730.0,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.06936416184971098
+  },
+  {
+    "sku_id": "pala_aseo",
+    "reference_price_clp": 5490.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "trapero_mopa",
+    "reference_price_clp": 4392.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "pano_multiuso",
+    "reference_price_clp": 5250.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "cloro_gel",
+    "reference_price_clp": 1970.0,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.18274111675126903
+  },
+  {
+    "sku_id": "pintura_esmalte_gal",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "pintura_latex_gal",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "brocha_pintura",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "rodillo_pintura",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "cinta_aisladora",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "huincha_medir",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "candado",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "martillo",
+    "reference_price_clp": 0.0,
+    "confidence": "insufficient",
+    "n_observations": 0,
+    "freshest_observed_at": "",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "cafe_instantaneo_170g",
+    "reference_price_clp": 6820.0,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.008797653958944282
+  },
+  {
+    "sku_id": "azucar_1kg",
+    "reference_price_clp": 1390.0,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.14388489208633093
+  },
+  {
+    "sku_id": "arroz_1kg",
+    "reference_price_clp": 2150.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "aceite_vegetal_900ml",
+    "reference_price_clp": 2695.5,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.11463550361713967
+  },
+  {
+    "sku_id": "fideos_400g",
+    "reference_price_clp": 1090.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "te_caja100",
+    "reference_price_clp": 3990.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "leche_liquida_1l",
+    "reference_price_clp": 1300.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "agua_mineral_15l",
+    "reference_price_clp": 950.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "harina_1kg",
+    "reference_price_clp": 1600.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "gas_licuado_15kg",
+    "reference_price_clp": 28475.0,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.14223002633889376
+  },
+  {
+    "sku_id": "gas_licuado_45kg",
+    "reference_price_clp": 82320.0,
+    "confidence": "high",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.11370262390670553
+  },
+  {
+    "sku_id": "legumbres_1kg",
+    "reference_price_clp": 3366.0,
+    "confidence": "medium",
+    "n_observations": 2,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.6737967914438503
+  },
+  {
+    "sku_id": "atun_conserva",
+    "reference_price_clp": 1080.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
+    "spread_ratio": 0.0
+  },
+  {
+    "sku_id": "galletas_paquete",
+    "reference_price_clp": 820.0,
+    "confidence": "medium",
+    "n_observations": 1,
+    "freshest_observed_at": "2026-07-13",
     "spread_ratio": 0.0
   }
 ]
