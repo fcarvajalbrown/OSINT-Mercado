@@ -28,3 +28,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0016 | Pull-based data publishing via Hostinger cron (refines ADR 0015)      | Accepted |
 | 0017 | Unit normalization before overprice scoring (extends ADR 0013)        | Accepted |
 | 0018 | Peer-price comparison engine (market as its own baseline)             | Accepted |
+| 0019 | Auto-SKU catalog (data-derived, not hand-curated)                     | Accepted |

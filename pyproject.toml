@@ -19,6 +19,7 @@ osint-ingest = "osint_mercado.ingest:main"
 osint-build-baselines = "osint_mercado.build_baselines:main"
 osint-score = "osint_mercado.score:main"
 osint-peer-score = "osint_mercado.peer_score:main"
+osint-catalog = "osint_mercado.catalog:main"
 osint-curate = "osint_mercado.curate:main"
 osint-build-site = "osint_mercado.build_site:main"
 
