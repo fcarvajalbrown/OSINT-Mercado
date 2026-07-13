@@ -1,1 +1,32 @@
-{}
+{
+  "5612ab12deb9e3af": {
+    "decision": "dismiss",
+    "note": "Probable escobillon industrial pesado segun ficha tecnica, no comparable a escoba de supermercado; baseline debil.",
+    "reviewed_at": "2026-07-12"
+  },
+  "69d88bd407e1ccac": {
+    "decision": "dismiss",
+    "note": "Zapato PVC SIN punta de acero; el baseline es con puntera de acero. Producto no comparable.",
+    "reviewed_at": "2026-07-12"
+  },
+  "7bfd1bbbe596fc94": {
+    "decision": "dismiss",
+    "note": "Bota de soldador anticlavo especializada, no comparable al baseline de calzado generico.",
+    "reviewed_at": "2026-07-12"
+  },
+  "90f5cb11bca6ecd9": {
+    "decision": "confirm",
+    "note": "Escobillones, sobreprecio moderado 1.89x sobre referencia.",
+    "reviewed_at": "2026-07-12"
+  },
+  "a311ef975d16cf90": {
+    "decision": "confirm",
+    "note": "Escobillon Virutex uso exterior, producto real verificable; 2.58x sobre referencia retail.",
+    "reviewed_at": "2026-07-12"
+  },
+  "e63348aaec9550bf": {
+    "decision": "confirm",
+    "note": "Cloro gel Igenix 2,2%, 1.88x sobre referencia.",
+    "reviewed_at": "2026-07-12"
+  }
+}
