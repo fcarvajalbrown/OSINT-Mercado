@@ -12,6 +12,8 @@ on:
 jobs:
   ingest:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # commit the refreshed pending queue + fx cache back to the repo
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -37,3 +39,19 @@ jobs:
           name: oc-items-${{ steps.d.outputs.fecha }}
           path: data/*.parquet
           if-no-files-found: warn
+      # Score the freshly ingested dataset into the pending review queue. Deploy stays
+      # manual (workflow_dispatch in build-deploy.yml): scoring never auto-publishes, so the
+      # human curation gate (ADR 0006) is never bypassed.
+      - name: Score into pending queue
+        run: osint-score --items "data/oc_items_${{ steps.d.outputs.fecha }}.parquet" --out data/pending_anomalies.json --fx-cache data/fx_rates.json
+      - name: Commit refreshed pending queue
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/pending_anomalies.json data/fx_rates.json
+          if git diff --cached --quiet; then
+            echo "no changes to pending queue"
+          else
+            git commit -m "data(pipeline): refresh pending anomalies for ${{ steps.d.outputs.fecha }}"
+            git push
+          fi
