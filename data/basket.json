@@ -98,7 +98,11 @@
     "unit": "unidad",
     "category": "Oficina y computación",
     "unspsc_category_code": 0,
-    "unspsc_product_code": 0
+    "unspsc_product_code": 0,
+    "exclude": [
+      "kit",
+      "trofeo"
+    ]
   },
   {
     "sku_id": "mouse_usb",
@@ -660,7 +664,11 @@
     "unspsc_category_code": 0,
     "unspsc_product_code": 0,
     "base_size": 900,
-    "base_dim": "ml"
+    "base_dim": "ml",
+    "exclude": [
+      "toallita",
+      "toallitas"
+    ]
   },
   {
     "sku_id": "limpiavidrios",
@@ -756,7 +764,10 @@
     "unit": "galón",
     "category": "Ferretería y herramientas",
     "unspsc_category_code": 0,
-    "unspsc_product_code": 0
+    "unspsc_product_code": 0,
+    "exclude": [
+      "tineta"
+    ]
   },
   {
     "sku_id": "pintura_latex_gal",
@@ -770,7 +781,10 @@
     "unit": "galón",
     "category": "Ferretería y herramientas",
     "unspsc_category_code": 0,
-    "unspsc_product_code": 0
+    "unspsc_product_code": 0,
+    "exclude": [
+      "tineta"
+    ]
   },
   {
     "sku_id": "brocha_pintura",
@@ -983,7 +997,13 @@
     "unspsc_category_code": 0,
     "unspsc_product_code": 0,
     "base_size": 1000,
-    "base_dim": "g"
+    "base_dim": "g",
+    "exclude": [
+      "almendra",
+      "arroz",
+      "avena",
+      "integral"
+    ]
   },
   {
     "sku_id": "gas_licuado_15kg",
@@ -1047,5 +1067,124 @@
     "unspsc_product_code": 0,
     "base_size": 160,
     "base_dim": "g"
+  },
+  {
+    "sku_id": "nueces_1kg",
+    "canonical_name": "Nueces sin cascara (1kg)",
+    "keywords": [
+      "nueces"
+    ],
+    "unit": "kg",
+    "category": "Alimentos y abarrotes",
+    "base_size": 1000,
+    "base_dim": "g",
+    "unspsc_category_code": 0,
+    "unspsc_product_code": 0,
+    "exclude": [
+      "almendra",
+      "ciruela",
+      "datil",
+      "mani",
+      "mix",
+      "pasas",
+      "surtido"
+    ]
+  },
+  {
+    "sku_id": "hervidor_electrico",
+    "canonical_name": "Hervidor electrico ~1.7L",
+    "keywords": [
+      "hervidor"
+    ],
+    "unit": "unidad",
+    "category": "Ferretería y herramientas",
+    "unspsc_category_code": 0,
+    "unspsc_product_code": 0
+  },
+  {
+    "sku_id": "opalina_resma",
+    "canonical_name": "Papel opalina carta (paquete 100 hojas)",
+    "keywords": [
+      "opalina"
+    ],
+    "unit": "paquete",
+    "category": "Oficina y computación",
+    "base_count": 100,
+    "unspsc_category_code": 0,
+    "unspsc_product_code": 0
+  },
+  {
+    "sku_id": "terciado_18mm",
+    "canonical_name": "Terciado estructural 18mm 122x244",
+    "keywords": [
+      "terciado"
+    ],
+    "unit": "plancha",
+    "category": "Ferretería y herramientas",
+    "unspsc_category_code": 0,
+    "unspsc_product_code": 0,
+    "exclude": [
+      "puerta"
+    ]
+  },
+  {
+    "sku_id": "algodon_hidrofilo_kg",
+    "canonical_name": "Algodon hidrofilo (1kg)",
+    "keywords": [
+      "algodon hidrofilo"
+    ],
+    "unit": "kg",
+    "category": "Salud e higiene",
+    "base_size": 1000,
+    "base_dim": "g",
+    "unspsc_category_code": 0,
+    "unspsc_product_code": 0
+  },
+  {
+    "sku_id": "aro_basquetbol",
+    "canonical_name": "Aro de basquetbol metalico",
+    "keywords": [
+      "aro basquetbol",
+      "aro de basquetbol",
+      "aro basketball"
+    ],
+    "unit": "unidad",
+    "category": "Ferretería y herramientas",
+    "unspsc_category_code": 0,
+    "unspsc_product_code": 0,
+    "exclude": [
+      "ajustable",
+      "poste",
+      "sistema",
+      "tablero"
+    ]
+  },
+  {
+    "sku_id": "panales_adultos",
+    "canonical_name": "Panales para adultos (paquete)",
+    "keywords": [
+      "panales adultos",
+      "panal adulto",
+      "panales para adultos",
+      "panal incontinencia"
+    ],
+    "unit": "paquete",
+    "category": "Salud e higiene",
+    "base_count": 20,
+    "unspsc_category_code": 0,
+    "unspsc_product_code": 0
+  },
+  {
+    "sku_id": "jugo_nectar_15l",
+    "canonical_name": "Nectar / jugo envasado (1.5L)",
+    "keywords": [
+      "nectar"
+    ],
+    "unit": "botella",
+    "category": "Alimentos y abarrotes",
+    "base_size": 1500,
+    "base_dim": "ml",
+    "unspsc_category_code": 0,
+    "unspsc_product_code": 0
   }
 ]

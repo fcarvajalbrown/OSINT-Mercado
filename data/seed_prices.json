@@ -1088,5 +1088,125 @@
     "observed_at": "2026-07-13",
     "url": "https://alimentosselectos.cl/producto/atun-lomito-san-jose/",
     "note": "Lomos de Atun San Jose 160g aceite"
+  },
+  {
+    "sku_id": "nueces_1kg",
+    "retailer": "Marjano",
+    "price_clp": 11990,
+    "observed_at": "2026-07-13",
+    "url": "https://marjano.cl/tienda/frutos-secos/nueces/nueces-mariposa-1-kg/",
+    "note": "Nueces Mariposa 1 kg"
+  },
+  {
+    "sku_id": "nueces_1kg",
+    "retailer": "Hausnusse",
+    "price_clp": 12990,
+    "observed_at": "2026-07-13",
+    "url": "https://hausnusse.cl/products/nuez-mariposa-1kg",
+    "note": "Nuez mariposa 1 kg"
+  },
+  {
+    "sku_id": "hervidor_electrico",
+    "retailer": "Oster",
+    "price_clp": 17990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.oster.cl/hervidor-electrico-oster-con-capacidad-de-1-7-l-bvstkt3102/p",
+    "note": "Hervidor Oster 1.7 lt BVSTKT3101"
+  },
+  {
+    "sku_id": "hervidor_electrico",
+    "retailer": "Oster",
+    "price_clp": 29990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.oster.cl/hervidor-electrico-oster-de-acero-inoxidable-bvstke671/p",
+    "note": "Hervidor Oster acero inox 1.7 lt BVSTKE671"
+  },
+  {
+    "sku_id": "opalina_resma",
+    "retailer": "Arte Full Chile",
+    "price_clp": 6500,
+    "observed_at": "2026-07-13",
+    "url": "https://artefullchile.cl/products/opalina-blanca-200gr-lisa-100h",
+    "note": "Opalina Blanca Lisa 200gr 100 Hojas carta"
+  },
+  {
+    "sku_id": "opalina_resma",
+    "retailer": "Diazol",
+    "price_clp": 10837,
+    "observed_at": "2026-07-13",
+    "url": "https://diazol.cl/opalinas-lisas-blancas/364-opalinas-lisas-carta-200-g-100-uds.html",
+    "note": "Opalina Lisa Blanca Carta 200 g 100 hojas"
+  },
+  {
+    "sku_id": "terciado_18mm",
+    "retailer": "Chilemat",
+    "price_clp": 26590,
+    "observed_at": "2026-07-13",
+    "url": "https://www.chilemat.com/terciado-estructural-18-mm-122-x-244-paneles-leonera-33473/p",
+    "note": "Terciado Estructural 18 Mm 1,22 X 2,44 Leonera"
+  },
+  {
+    "sku_id": "terciado_18mm",
+    "retailer": "Ferreteria DAB",
+    "price_clp": 25736,
+    "observed_at": "2026-07-13",
+    "url": "https://ferreteriadab.cl/maderas-y-tableros/maderas/terciados.html",
+    "note": "Plancha Terciado Estructural 18mm 1,22 X 2,44 Tulsa"
+  },
+  {
+    "sku_id": "algodon_hidrofilo_kg",
+    "retailer": "Farmex",
+    "price_clp": 9090,
+    "observed_at": "2026-07-13",
+    "url": "https://farmex.cl/products/algodon-hidrofilo-prensado-1kilo",
+    "note": "Algodon Hidrofilo Prensado 1 Kilo"
+  },
+  {
+    "sku_id": "algodon_hidrofilo_kg",
+    "retailer": "Variedades Adonays",
+    "price_clp": 10990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.variedadesadonays.cl/algodon-hidrofilo-prensado-tresor-1kg",
+    "note": "Algodon Hidrofilo Prensado Tresor 1kg"
+  },
+  {
+    "sku_id": "aro_basquetbol",
+    "retailer": "Soloferta",
+    "price_clp": 18743,
+    "observed_at": "2026-07-13",
+    "url": "https://soloferta.cl/deportes-y-fitness/accesorios-fitness/aro-de-basquetbol-45cm/",
+    "note": "Aro De Basquetbol 45cm acero"
+  },
+  {
+    "sku_id": "panales_adultos",
+    "retailer": "Jumbo",
+    "price_clp": 29490,
+    "observed_at": "2026-07-13",
+    "url": "https://www.jumbo.cl/slip-para-incontinencia-tena-21-unid-talla-l/p",
+    "note": "Panales Adulto Tena Slip Ultra Talla G 21 un"
+  },
+  {
+    "sku_id": "panales_adultos",
+    "retailer": "Salcobrand",
+    "price_clp": 16799,
+    "observed_at": "2026-07-13",
+    "url": "https://salcobrand.cl/products/panal-premium-para-adultos-cotidian-talla-g-20-unidades",
+    "note": "Panal Adultos Cotidian Talla G 20 Unidades"
+  },
+  {
+    "sku_id": "jugo_nectar_15l",
+    "retailer": "Unimarc",
+    "price_clp": 1990,
+    "observed_at": "2026-07-13",
+    "url": "https://www.unimarc.cl/product/nectar-watts-pet-1-5l-naranja",
+    "note": "Nectar Watts naranja 1.5 L"
+  },
+  {
+    "sku_id": "jugo_nectar_15l",
+    "retailer": "Booz",
+    "price_clp": 1130,
+    "observed_at": "2026-07-13",
+    "url": "https://www.booz.cl/productos/nectar-naranja-15-lts-watts",
+    "note": "Nectar Naranja 1.5 lts Watts"
   }
 ]

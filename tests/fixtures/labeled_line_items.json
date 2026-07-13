@@ -8,7 +8,7 @@
   {"producto": "Papel para fotocopiadora", "espec_proveedor": "PAPEL FOTOCOPIA TAMANO OFICIO 500 HOJAS", "espec_comprador": "", "expected_sku_id": "papel_resma_oficio_75g", "note": "Photocopy ream, oficio, 500 sheets."},
 
   {"producto": "Guantes protectores", "espec_proveedor": "GUANTES MULTIFLEX COT:151", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: gloves but NOT nitrile."},
-  {"producto": "Papel multiuso", "espec_proveedor": "RESMA DE OPALINA LISA TAMANO CARTA 100 HOJAS DE 200 GRS.", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: opalina cardstock (200g, 100 sheets), not a 75g bond ream."},
+  {"producto": "Papel multiuso", "espec_proveedor": "RESMA DE OPALINA LISA TAMANO CARTA 100 HOJAS DE 200 GRS.", "espec_comprador": "", "expected_sku_id": "opalina_resma", "note": "Opalina cardstock: matches opalina_resma ('opalina'); must NOT leak into a 75g bond ream."},
   {"producto": "TE SUPREMO NEGRO ARGENTINA", "espec_proveedor": "(4249251) TE SUPREMO NEGRO ARGENTINA CAJA 100 BOLSAS UNIDAD RM", "espec_comprador": "", "expected_sku_id": "te_caja100", "note": "Black tea 100 bags: matches te_caja100 ('te negro bolsas'); must NOT match gloves-caja-100."},
   {"producto": "AVENA OSO INSTANTANEA", "espec_proveedor": "(4208519) AVENA OSO INSTANTANEA CAJA 500 G UNIDAD RM", "espec_comprador": "", "expected_sku_id": null, "note": "Hard negative: oatmeal 'CAJA 500 G' must not match masks-caja-50."},
   {"producto": "Palas para basura", "espec_proveedor": "PALA ASEO PLASTICA CON MANGO DE 74 cm", "espec_comprador": "", "expected_sku_id": "pala_aseo", "note": "Dustpan: matches pala_aseo ('pala aseo'); must NOT leak into escoba_fibra."},

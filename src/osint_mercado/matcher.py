@@ -37,8 +37,17 @@ def normalize(text: str) -> str:
 
 
 def build_match_text(producto: str, espec_proveedor: str, espec_comprador: str) -> str:
-    """Normalized concatenation of the fields carrying product identity."""
-    return normalize(" ".join([producto, espec_proveedor, espec_comprador]))
+    """Text carrying the SPECIFIC item identity, for keyword matching.
+
+    Prefer the especificacion fields, which describe the actual item. The
+    `producto` field in this data is usually a broad UNSPSC *product-category*
+    label ("Nueces o frutos secos", "Brochas", "Harina de trigo") that pollutes
+    matching: a keyword in the category name fires even when the real item (in the
+    espec) is almond flour, a paint roller, or hazelnuts. So fall back to
+    `producto` only when both especificacion fields are empty (ADR 0021).
+    """
+    espec = normalize(" ".join([espec_proveedor or "", espec_comprador or ""]))
+    return espec if espec else normalize(producto or "")
 
 
 def _keyword_tokens(keyword: str) -> list[str]:

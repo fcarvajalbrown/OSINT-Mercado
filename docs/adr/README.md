@@ -30,3 +30,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0018 | Peer-price comparison engine (market as its own baseline)             | Accepted |
 | 0019 | Auto-SKU catalog (data-derived, not hand-curated)                     | Accepted |
 | 0020 | Cross-confirmation publish gate (two methods must agree)              | Accepted |
+| 0021 | Match on the especificacion, not the UNSPSC category label            | Accepted |

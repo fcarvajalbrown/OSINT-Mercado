@@ -18,9 +18,22 @@ def test_normalize_strips_accents_lowercases_and_collapses_whitespace():
     assert matcher.normalize("Tóner   HP  85A") == "toner hp 85a"
 
 
-def test_build_match_text_joins_identity_fields_excluding_category():
+def test_build_match_text_prefers_espec_over_category_label():
+    # With espec present, the broad `producto` category label is NOT matched on
+    # (it pollutes: e.g. "Harina de trigo" category vs "harina de almendra" item).
     text = matcher.build_match_text("Producto", "EspecProv", "EspecComp")
-    assert "producto" in text and "especprov" in text and "especcomp" in text
+    assert "especprov" in text and "especcomp" in text
+    assert "producto" not in text
+
+
+def test_build_match_text_falls_back_to_category_when_espec_empty():
+    assert matcher.build_match_text("Agua mineral", "", "") == "agua mineral"
+
+
+def test_category_label_alone_does_not_match_when_espec_contradicts():
+    # "Harina de trigo" is the UNSPSC category; the real item is almond flour.
+    r = _match(producto="Harina de trigo", espec_proveedor="KILOS DE HARINA DE ALMENDRA")
+    assert r.sku_id is None
 
 
 def test_extintor_positive_matches_by_keyword():

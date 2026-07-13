@@ -7,8 +7,8 @@ BASKET_PATH = Path(__file__).parent.parent / "data" / "basket.json"
 
 def test_basket_skus_are_unique_and_expanded():
     skus = load_basket(BASKET_PATH)
-    assert len(skus) == 74
-    assert len({s.sku_id for s in skus}) == 74
+    assert len(skus) == 82
+    assert len({s.sku_id for s in skus}) == 82
 
 
 def test_every_sku_has_canonical_name_unit_and_keywords():
@@ -29,4 +29,5 @@ def test_every_sku_has_a_dashboard_category():
         "Limpieza",
         "Ferretería y herramientas",
         "Alimentos y abarrotes",
+        "Salud e higiene",
     }

@@ -35,7 +35,7 @@ _COUNT_PATTERNS = [
     rf"\b{_NUM}\s*(?:unidades|unidad|unid|und)\b",
     r"\b(?:pack|set|caja|cajas|bolsa|estuche|paquete|paq|juego|blister|display|"
     rf"dispensador)\s+(?:de\s+|x\s*)?{_NUM}\b",
-    rf"\b{_NUM}\s*(?:colores|bolsas|bolsitas|sobres|pliegos|pares)\b",
+    rf"\b{_NUM}\s*(?:colores|bolsas|bolsitas|sobres|pliegos|pares|corchetes|grapas)\b",
 ]
 
 
