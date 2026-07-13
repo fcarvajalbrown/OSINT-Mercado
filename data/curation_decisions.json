@@ -1,4 +1,9 @@
 {
+  "0d6f5abd89f2eac9": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 3.4385x vs baseline $31990 + peers comuna-vs-comuna 7.5569x sobre mediana $14556 (n=18 compradores).",
+    "reviewed_at": "2026-07-13"
+  },
   "26d8c73533d310ba": {
     "decision": "confirm",
     "note": "Set 8 lapiz pasta $17832 = $2229/unidad vs baseline $385 (5.8x)",
@@ -9,10 +14,20 @@
     "note": "Cartulina de colores espanola $2142/pliego vs baseline $352 (6.1x)",
     "reviewed_at": "2026-07-13"
   },
+  "40f43b13c6437192": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 12.975x vs baseline $616 + peers comuna-vs-comuna 7.3707x sobre mediana $1083 (n=10 compradores).",
+    "reviewed_at": "2026-07-13"
+  },
   "5612ab12deb9e3af": {
     "decision": "dismiss",
     "note": "Probable escobillon industrial pesado segun ficha tecnica, no comparable a escoba de supermercado; baseline debil.",
     "reviewed_at": "2026-07-12"
+  },
+  "6469c449e702e020": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 5.3476x vs baseline $840 + peers comuna-vs-comuna 6.8054x sobre mediana $660 (n=8 compradores).",
+    "reviewed_at": "2026-07-13"
   },
   "69d88bd407e1ccac": {
     "decision": "dismiss",
@@ -24,6 +39,11 @@
     "note": "Bota de soldador anticlavo especializada, no comparable al baseline de calzado generico.",
     "reviewed_at": "2026-07-12"
   },
+  "8f23bb8cfec4ac89": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 19.6541x vs baseline $3368 + peers comuna-vs-comuna 3.0903x sobre mediana $21420 (n=9 compradores).",
+    "reviewed_at": "2026-07-13"
+  },
   "90f5cb11bca6ecd9": {
     "decision": "confirm",
     "note": "Escobillones, sobreprecio moderado 1.89x sobre referencia.",
@@ -34,14 +54,39 @@
     "note": "Escobillon Virutex uso exterior, producto real verificable; 2.58x sobre referencia retail.",
     "reviewed_at": "2026-07-12"
   },
+  "a6ea08f6621d2252": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 7.3944x vs baseline $4490 + peers comuna-vs-comuna 6.2x sobre mediana $1071 (n=218 compradores).",
+    "reviewed_at": "2026-07-13"
+  },
   "d4cccf5151c4db10": {
     "decision": "confirm",
     "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); mismo OC compra cartulina a $595/pliego",
+    "reviewed_at": "2026-07-13"
+  },
+  "d636fc6fc55fecdf": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 3.5879x vs baseline $1990 + peers comuna-vs-comuna 3.1488x sobre mediana $2268 (n=16 compradores).",
+    "reviewed_at": "2026-07-13"
+  },
+  "d9b188029c753f9d": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 6.9131x vs baseline $4090 + peers comuna-vs-comuna 6.895x sobre mediana $4101 (n=22 compradores).",
+    "reviewed_at": "2026-07-13"
+  },
+  "e102b4f24fa1c430": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 11.1838x vs baseline $1595 + peers comuna-vs-comuna 7.5707x sobre mediana $2356 (n=13 compradores).",
     "reviewed_at": "2026-07-13"
   },
   "e63348aaec9550bf": {
     "decision": "confirm",
     "note": "Cloro gel Igenix 2,2%, 1.88x sobre referencia.",
     "reviewed_at": "2026-07-12"
+  },
+  "f9755e1e131546ad": {
+    "decision": "confirm",
+    "note": "Cross-confirmado (2 fuentes): retail 9.0864x vs baseline $2190 + peers comuna-vs-comuna 5.1763x sobre mediana $3844 (n=12 compradores).",
+    "reviewed_at": "2026-07-13"
   }
 }
