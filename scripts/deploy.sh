@@ -19,7 +19,8 @@ SRC_DIR="${SRC_DIR:-dist}"
 SSH_PORT="${SSH_PORT:-22}"
 
 DRY=""
-if [[ "${1:-}" == "--dry-run" ]]; then DRY="-n"; fi
+VERBOSE=""
+if [[ "${1:-}" == "--dry-run" ]]; then DRY="-n"; VERBOSE="-vi"; fi  # itemize changes on dry-run
 
 : "${SSH_HOST:?SSH_HOST is required}"
 : "${SSH_USER:?SSH_USER is required}"
@@ -35,7 +36,7 @@ echo "Deploying '$SRC_DIR/' -> ${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/ (port
 
 # --delete mirrors the source: files removed locally are removed on the remote.
 # Scoped to SSH_REMOTE_PATH (public_html), never the account root.
-sshpass -e rsync ${DRY} -az --delete \
+sshpass -e rsync ${DRY} ${VERBOSE} -az --delete \
   -e "ssh -p ${SSH_PORT} -o StrictHostKeyChecking=accept-new" \
   "${SRC_DIR}/" "${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/"
 
