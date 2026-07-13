@@ -1,7 +1,7 @@
 {
   "0d6f5abd89f2eac9": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 3.4385x vs baseline $31990 + peers comuna-vs-comuna 7.5569x sobre mediana $14556 (n=18 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
   "26d8c73533d310ba": {
@@ -15,8 +15,8 @@
     "reviewed_at": "2026-07-13"
   },
   "40f43b13c6437192": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 12.975x vs baseline $616 + peers comuna-vs-comuna 7.3707x sobre mediana $1083 (n=10 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
   "5612ab12deb9e3af": {
@@ -25,8 +25,8 @@
     "reviewed_at": "2026-07-12"
   },
   "6469c449e702e020": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 5.3476x vs baseline $840 + peers comuna-vs-comuna 6.8054x sobre mediana $660 (n=8 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
   "69d88bd407e1ccac": {
@@ -40,8 +40,8 @@
     "reviewed_at": "2026-07-12"
   },
   "8f23bb8cfec4ac89": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 19.6541x vs baseline $3368 + peers comuna-vs-comuna 3.0903x sobre mediana $21420 (n=9 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
   "90f5cb11bca6ecd9": {
@@ -55,8 +55,8 @@
     "reviewed_at": "2026-07-12"
   },
   "a6ea08f6621d2252": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 7.3944x vs baseline $4490 + peers comuna-vs-comuna 6.2x sobre mediana $1071 (n=218 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
   "d4cccf5151c4db10": {
@@ -65,18 +65,18 @@
     "reviewed_at": "2026-07-13"
   },
   "d636fc6fc55fecdf": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 3.5879x vs baseline $1990 + peers comuna-vs-comuna 3.1488x sobre mediana $2268 (n=16 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
   "d9b188029c753f9d": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 6.9131x vs baseline $4090 + peers comuna-vs-comuna 6.895x sobre mediana $4101 (n=22 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
   "e102b4f24fa1c430": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 11.1838x vs baseline $1595 + peers comuna-vs-comuna 7.5707x sobre mediana $2356 (n=13 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
   "e63348aaec9550bf": {
@@ -85,8 +85,8 @@
     "reviewed_at": "2026-07-12"
   },
   "f9755e1e131546ad": {
-    "decision": "confirm",
-    "note": "Cross-confirmado (2 fuentes): retail 9.0864x vs baseline $2190 + peers comuna-vs-comuna 5.1763x sobre mediana $3844 (n=12 compradores).",
+    "decision": "dismiss",
+    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   }
 }
