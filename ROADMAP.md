@@ -115,9 +115,15 @@ _Shaped by: ADR 0003 (transport superseded), 0004, 0007; new ADR 0015._
 **Status:** Not Started
 
 - **Broaden the basket** progressively toward national / broad product categories.
+- **Archive the source order in our own store** (not just a link out). Each published flag
+  must stay verifiable even when the official Mercado Público page is unreachable or a reader
+  cannot access it. Snapshot the relevant order payload (or a rendered copy) into the versioned
+  store / site data so the evidence travels with the flag. Extends ADR 0007 (provenance is
+  currently a link + capture timestamp only). **Priority: high** — a watchdog claim that can't
+  be checked because the source link is down is unacceptable.
 - **Robust statistics** (MAD / IQR) in the anomaly core.
 - **Cryptographic provenance** hashing of source data for tamper-evident reports suitable for
-  oversight bodies (Contraloría).
+  oversight bodies (Contraloría), building on the archived payload above.
 - **Historical trends**: price-over-time views per SKU and per commune.
 
 _Shaped by: ADR 0004, 0005, 0007._
