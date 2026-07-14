@@ -73,6 +73,31 @@ def is_publishable(flag: dict, espec: str, sku: Sku, *, peer_confirmed: bool) ->
     return True, "clean"
 
 
+def is_publishable_medium(flag: dict, espec: str, sku: Sku) -> tuple[bool, str]:
+    """Medium-conservative gate for autonomous publishing.
+
+    Keeps the checks that prevent *false* accusations - a `pending` overprice at
+    watch tier or above, in a sane ratio band, whose SKU keyword actually appears
+    in the item's especificacion, with no red-context (bundle / dispenser /
+    quote-request / multi-gallon-or-tineta container / appliance). Drops the
+    stricter peer-agreement and tier-stable requirements, so tier-variable and
+    single-source flags publish too. Each still carries its source-order link.
+    """
+    if flag.get("status") != "pending":
+        return False, "not pending"
+    ratio = flag.get("overprice_ratio") or 0
+    if flag.get("severity") not in ("severe", "high", "watch"):
+        return False, "below watch tier"
+    if not (MIN_RATIO <= ratio <= MAX_RATIO):
+        return False, "ratio outside sane band"
+    text = matcher.normalize(espec)
+    if not any(matcher._keyword_matches(kw, text) for kw in sku.keywords):
+        return False, "SKU keyword absent from espec"
+    if has_red_context(espec):
+        return False, "red context (bundle/dispenser/container/quote/appliance)"
+    return True, "clean (medium)"
+
+
 def is_auto_publishable(flag: dict, espec: str, sku: Sku, *, peer_confirmed: bool) -> tuple[bool, str]:
     """Stricter gate for UNATTENDED publishing: is_publishable AND a tier-stable SKU.
 

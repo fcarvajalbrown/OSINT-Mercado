@@ -1,4 +1,9 @@
 {
+  "04c9d72be254df33": {
+    "decision": "confirm",
+    "note": "Nectar 1.5L 1.9x vs baseline",
+    "reviewed_at": "2026-07-14"
+  },
   "0d6f5abd89f2eac9": {
     "decision": "dismiss",
     "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
@@ -59,6 +64,11 @@
     "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
   },
+  "906b1da6c1de0561": {
+    "decision": "confirm",
+    "note": "Opalina 5 cajas de 100 hojas, 2.0x vs baseline paquete 100 hojas",
+    "reviewed_at": "2026-07-14"
+  },
   "90f5cb11bca6ecd9": {
     "decision": "confirm",
     "note": "Escobillones, sobreprecio moderado 1.89x sobre referencia.",
@@ -80,9 +90,9 @@
     "reviewed_at": "2026-07-12"
   },
   "a6ea08f6621d2252": {
-    "decision": "dismiss",
-    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
-    "reviewed_at": "2026-07-13"
+    "decision": "confirm",
+    "note": "Te sabores 20 bolsitas Supremo, sobreprecio 7.4x vs baseline te 100 bolsas (nivel medio, te saborizado)",
+    "reviewed_at": "2026-07-14"
   },
   "d4cccf5151c4db10": {
     "decision": "confirm",
@@ -95,9 +105,9 @@
     "reviewed_at": "2026-07-14"
   },
   "d636fc6fc55fecdf": {
-    "decision": "dismiss",
-    "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
-    "reviewed_at": "2026-07-13"
+    "decision": "confirm",
+    "note": "Escobillon exterior fibra dura 3.6x vs baseline escoba",
+    "reviewed_at": "2026-07-14"
   },
   "d9b188029c753f9d": {
     "decision": "dismiss",
@@ -113,6 +123,11 @@
     "decision": "confirm",
     "note": "Cloro gel Igenix 2,2%, 1.88x sobre referencia.",
     "reviewed_at": "2026-07-12"
+  },
+  "efe81a37693cc87a": {
+    "decision": "confirm",
+    "note": "Te sabores 75 bolsitas, 2.3x normalizado por bolsa",
+    "reviewed_at": "2026-07-14"
   },
   "f9755e1e131546ad": {
     "decision": "dismiss",

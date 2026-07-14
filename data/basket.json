@@ -923,7 +923,9 @@
     "unit": "frasco",
     "category": "Alimentos y abarrotes",
     "unspsc_category_code": 0,
-    "unspsc_product_code": 0
+    "unspsc_product_code": 0,
+    "base_size": 170,
+    "base_dim": "g"
   },
   {
     "sku_id": "azucar_1kg",
