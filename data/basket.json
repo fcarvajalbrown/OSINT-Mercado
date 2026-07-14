@@ -70,7 +70,13 @@
     "unit": "blister",
     "category": "Oficina y computación",
     "unspsc_category_code": 0,
-    "unspsc_product_code": 0
+    "unspsc_product_code": 0,
+    "exclude": [
+      "consola",
+      "juego de mesa",
+      "juguete",
+      "oftalmoscopio"
+    ]
   },
   {
     "sku_id": "pilas_aaa_blister4",
@@ -84,7 +90,13 @@
     "unit": "blister",
     "category": "Oficina y computación",
     "unspsc_category_code": 0,
-    "unspsc_product_code": 0
+    "unspsc_product_code": 0,
+    "exclude": [
+      "consola",
+      "juego de mesa",
+      "juguete",
+      "oftalmoscopio"
+    ]
   },
   {
     "sku_id": "pendrive_usb_16gb",
