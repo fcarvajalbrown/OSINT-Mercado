@@ -1,0 +1,16 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="OSINT-Mercado">
+  <title>OSINT-Mercado</title>
+  <defs>
+    <clipPath id="om-lens"><circle cx="25" cy="25" r="13.5"/></clipPath>
+  </defs>
+  <!-- handle -->
+  <line x1="37" y1="37" x2="55" y2="55" stroke="#4ea1ff" stroke-width="7" stroke-linecap="round"/>
+  <!-- price bars inside the lens; the tallest (the overprice we catch) is severity-red -->
+  <g clip-path="url(#om-lens)">
+    <rect x="16.5" y="26" width="5" height="13" rx="1" fill="#4ea1ff"/>
+    <rect x="23" y="21" width="5" height="18" rx="1" fill="#4ea1ff"/>
+    <rect x="29.5" y="15" width="5" height="24" rx="1" fill="#e0473f"/>
+  </g>
+  <!-- lens ring -->
+  <circle cx="25" cy="25" r="16" fill="none" stroke="#4ea1ff" stroke-width="5"/>
+</svg>
