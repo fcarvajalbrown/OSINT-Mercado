@@ -27,6 +27,10 @@ RED_CONTEXT = (
     "granel", "ajustable", "calefon", "estufa", "batidora", "semi industrial",
     "juego de mesa", "oftalmoscopio", "pedestal", "segun eett", "por metro",
     "arriendo", "instalacion",
+    # tier / wrong-product signals surfaced by review: heavy-duty vs consumer,
+    # chargers vs batteries, tablets/aerosol vs the liquid SKU, lockers, etc.
+    "industrial", "municipal", "jumbo", "isofit", "locker", "cargador",
+    "recargable", "pastilla", "aerosol", "profesional", "aguarras",
 )
 
 MIN_RATIO = 1.5
@@ -53,6 +57,55 @@ def has_red_context(espec: str) -> bool:
     if re.search(r"\b[2-9]\s*gl\b", e):
         return True
     return False
+
+
+def matched_sku_ids(espec: str, skus) -> set:
+    """Which basket SKUs the espec matches (same rule as the matcher)."""
+    text = matcher.normalize(espec)
+    out = set()
+    for s in skus:
+        if any(matcher._keyword_matches(kw, text) for kw in s.keywords) and not any(
+            matcher._keyword_matches(x, text) for x in s.exclude
+        ):
+            out.add(s.sku_id)
+    return out
+
+
+def looks_like_bundle(espec: str, skus) -> bool:
+    """A single clean purchase line names one product; a bundle/multi-item line
+    matches several SKUs, enumerates, or is verbose. Reject those - the priced
+    total is not attributable to the one SKU our keyword happened to hit."""
+    if len(matched_sku_ids(espec, skus)) > 1:
+        return True
+    if espec.count("\n") >= 2:
+        return True
+    if len(matcher.normalize(espec)) > 220:
+        return True
+    return False
+
+
+def is_publishable_volume(flag: dict, espec: str, sku: Sku, skus) -> tuple[bool, str]:
+    """Volume gate: like is_publishable_medium but replaces the peer requirement
+    with a direct bundle/multi-item detector, so clean single-product retail flags
+    publish without needing peer agreement. Keeps right-product, red-context and
+    ratio guards."""
+    ok, why = is_publishable_medium(flag, espec, sku)
+    if not ok:
+        return False, why
+    if looks_like_bundle(espec, skus):
+        return False, "bundle / multi-item line"
+    # heavy-duty stapler capacity (100+ hojas) is a different tier from the desktop
+    # baseline; "hojas" alone is fine (a paper ream is 500 hojas).
+    if sku.sku_id == "corchetera_metalica" and re.search(r"\b[1-9]\d\d\s*hojas", matcher.normalize(espec)):
+        return False, "heavy-duty capacity tier"
+    # packaging language we did NOT normalize (divisor stayed 1) means the unit is
+    # uncertain - a box of 10 reams priced against one ream reads as a fake 11x.
+    if (flag.get("unit_divisor") or 1) == 1 and re.search(
+        r"\b(cajas|pack|paquetes|estuche|resmas|block|display|x\s*\d+|\d+\s*cajas)\b",
+        matcher.normalize(espec),
+    ):
+        return False, "unnormalized pack/box multiplier"
+    return True, "clean (volume)"
 
 
 def is_publishable(flag: dict, espec: str, sku: Sku, *, peer_confirmed: bool) -> tuple[bool, str]:

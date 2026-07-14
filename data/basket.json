@@ -218,13 +218,18 @@
       "lapicera pasta"
     ],
     "exclude": [
+      "borrable",
       "correccion",
+      "frixion",
+      "gel",
       "pasta base",
       "pasta dental",
       "pasta dientes",
       "pasta muro",
       "plumon",
-      "plumones"
+      "plumones",
+      "super gel",
+      "tinta gel"
     ],
     "unit": "unidad",
     "category": "Oficina y computación",
