@@ -1,7 +1,7 @@
 {
   "04c9d72be254df33": {
-    "decision": "confirm",
-    "note": "Nectar 1.5L 1.9x vs baseline",
+    "decision": "dismiss",
+    "note": "Bundle: '2 BOTELLAS DE 1.5 LITROS' multi-flavor line (pina/naranja/frutilla); 2-bottle multiplier not normalized (div=1)",
     "reviewed_at": "2026-07-14"
   },
   "0d6f5abd89f2eac9": {
@@ -10,8 +10,8 @@
     "reviewed_at": "2026-07-13"
   },
   "26d8c73533d310ba": {
-    "decision": "confirm",
-    "note": "Set 8 lapices pasta $17832 = $2229/unidad vs $385 (5.8x)",
+    "decision": "dismiss",
+    "note": "Bundle: 'SET DE LAPIZ PASTA DE COLORES SET 8 UNIDADES' is a multi-unit colored-pen set, not one plain blue ballpoint; price not attributable per plain-pen baseline (tier + bundle)",
     "reviewed_at": "2026-07-14"
   },
   "2beda709733d47ce": {
@@ -65,8 +65,8 @@
     "reviewed_at": "2026-07-13"
   },
   "906b1da6c1de0561": {
-    "decision": "confirm",
-    "note": "Opalina 5 cajas de 100 hojas, 2.0x vs baseline paquete 100 hojas",
+    "decision": "dismiss",
+    "note": "Pack/box + size mismatch: '5 CAJAS DE 100 HOJAS CADA CAJA' priced against a 500-hoja resma baseline; box multiplier not normalized (div=1)",
     "reviewed_at": "2026-07-14"
   },
   "90f5cb11bca6ecd9": {
@@ -75,8 +75,8 @@
     "reviewed_at": "2026-07-12"
   },
   "922cedfe4d778fdc": {
-    "decision": "confirm",
-    "note": "Resma oficio 75g 500 hojas $22253 vs baseline $4090 (5.4x), producto exacto",
+    "decision": "dismiss",
+    "note": "Pack multiplier: 'PAPEL FOTOCOPIA OFICIO 75G 500 HOJAS' qty=10; human review of the order shows priced unit covers a 10-ream pack, not one ream",
     "reviewed_at": "2026-07-14"
   },
   "92fd6f2262d703b4": {
