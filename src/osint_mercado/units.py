@@ -75,6 +75,24 @@ _DIM_TOKENS = {
 }
 
 
+def parse_any_size(text: str) -> tuple[str, float] | None:
+    """Detect which physical dimension a text carries a size in, and its magnitude.
+
+    Returns (dim, base_size) for the first dimension that parses, or None for a
+    dimensionless (per-unit) good. Dimensions are tried in priority order
+    g > ml > m: solid goods (weight) and liquids (volume) rarely carry both, and
+    on the rare co-occurrence the weight is the defining size for the commodities
+    in scope. The comparison layer only ever pairs an OC item with CM rows parsed
+    in the *same* dimension, so a mis-detected dimension routes to review rather
+    than producing a false comparison.
+    """
+    for dim in ("g", "ml", "m"):
+        size = parse_size_in_dim(text, dim)
+        if size is not None:
+            return dim, size
+    return None
+
+
 def parse_size_in_dim(text: str, dim: str) -> float | None:
     """Return the dominant magnitude (in base unit) found for `dim`, or None.
 

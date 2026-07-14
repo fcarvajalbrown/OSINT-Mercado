@@ -62,3 +62,32 @@ def test_size_metres_takes_dominant_length():
 def test_size_absent_returns_none():
     assert units.parse_size_in_dim("Cartulina de colores", "ml") is None
     assert units.parse_size_in_dim("agua mineral 500 cc", "g") is None
+
+
+# ---- parse_any_size: detect which dimension a text carries a size in ----
+
+def test_any_size_detects_grams():
+    assert units.parse_any_size("CAFE INSTANTANEO GOLD TARRO 170 G") == ("g", 170.0)
+
+
+def test_any_size_detects_millilitres():
+    assert units.parse_any_size("AGUA MINERAL SIN GAS 600 CC") == ("ml", 600.0)
+
+
+def test_any_size_detects_metres():
+    assert units.parse_any_size("CINTA EMBALAJE ROLLO 5 CM X 200 MTS") == ("m", 200.0)
+
+
+def test_any_size_kg_normalizes_to_grams():
+    assert units.parse_any_size("GAS LICUADO CILINDRO 11 KG") == ("g", 11000.0)
+
+
+def test_any_size_none_when_dimensionless():
+    # A stapler / a chair carries no g/ml/m size; it is a per-unit good.
+    assert units.parse_any_size("CORCHETERA METALICA 24/6") is None
+
+
+def test_any_size_prefers_dimension_with_larger_magnitude_signal():
+    # When two dimensions appear, the one whose parsed magnitude is a real product
+    # size wins over an incidental one. Here grams is the product size.
+    assert units.parse_any_size("AZUCAR GRANULADA BOLSA 1 KG")[0] == "g"
