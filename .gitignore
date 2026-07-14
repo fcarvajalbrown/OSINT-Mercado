@@ -32,3 +32,7 @@ scratch/
 # Ingested output data (parquet). Curated/published datasets (basket.json,
 # seed_prices.json, baselines.json, rm_municipal_codes.json) are committed.
 data/*.parquet
+# The Convenio Marco reference catalog is a versioned reference dataset (ADR 0024):
+# a single, weekly-refreshed file that is the normative evidence CM leads cite, so
+# it is committed (reproducible via osint-cm-fetch if history bloat ever forces a swap).
+!data/cm_catalog.parquet
