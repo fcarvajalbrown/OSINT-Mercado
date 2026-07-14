@@ -6,13 +6,23 @@
   },
   "26d8c73533d310ba": {
     "decision": "confirm",
-    "note": "Set 8 lapiz pasta $17832 = $2229/unidad vs baseline $385 (5.8x)",
-    "reviewed_at": "2026-07-13"
+    "note": "Set 8 lapices pasta $17832 = $2229/unidad vs $385 (5.8x)",
+    "reviewed_at": "2026-07-14"
+  },
+  "2beda709733d47ce": {
+    "decision": "confirm",
+    "note": "Nueces 1kg Piwen $28160 vs baseline $12490 (2.3x), producto exacto",
+    "reviewed_at": "2026-07-14"
+  },
+  "2fe4f6f8a79ff499": {
+    "decision": "confirm",
+    "note": "Huincha metalica 5m $19635 vs baseline $8990 (2.2x), producto exacto",
+    "reviewed_at": "2026-07-14"
   },
   "375b5bace7d58ec2": {
     "decision": "confirm",
-    "note": "Cartulina de colores espanola $2142/pliego vs baseline $352 (6.1x)",
-    "reviewed_at": "2026-07-13"
+    "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); el mismo comprador paga cartulina mucho mas barata en otras lineas",
+    "reviewed_at": "2026-07-14"
   },
   "40f43b13c6437192": {
     "decision": "dismiss",
@@ -39,6 +49,11 @@
     "note": "Bota de soldador anticlavo especializada, no comparable al baseline de calzado generico.",
     "reviewed_at": "2026-07-12"
   },
+  "80dba2647500f1f8": {
+    "decision": "confirm",
+    "note": "Brocha 2 pulgadas Uyustools $9520 vs baseline $2190 (4.3x)",
+    "reviewed_at": "2026-07-14"
+  },
   "8f23bb8cfec4ac89": {
     "decision": "dismiss",
     "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
@@ -48,6 +63,16 @@
     "decision": "confirm",
     "note": "Escobillones, sobreprecio moderado 1.89x sobre referencia.",
     "reviewed_at": "2026-07-12"
+  },
+  "922cedfe4d778fdc": {
+    "decision": "confirm",
+    "note": "Resma oficio 75g 500 hojas $22253 vs baseline $4090 (5.4x), producto exacto",
+    "reviewed_at": "2026-07-14"
+  },
+  "92fd6f2262d703b4": {
+    "decision": "confirm",
+    "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); el mismo comprador paga cartulina mucho mas barata en otras lineas",
+    "reviewed_at": "2026-07-14"
   },
   "a311ef975d16cf90": {
     "decision": "confirm",
@@ -61,8 +86,13 @@
   },
   "d4cccf5151c4db10": {
     "decision": "confirm",
-    "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); mismo OC compra cartulina a $595/pliego",
-    "reviewed_at": "2026-07-13"
+    "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); el mismo comprador paga cartulina mucho mas barata en otras lineas",
+    "reviewed_at": "2026-07-14"
+  },
+  "d576524361bd2caf": {
+    "decision": "confirm",
+    "note": "Pendrive 16GB $9282 vs baseline $3368 (2.8x), producto exacto",
+    "reviewed_at": "2026-07-14"
   },
   "d636fc6fc55fecdf": {
     "decision": "dismiss",
@@ -88,5 +118,10 @@
     "decision": "dismiss",
     "note": "REVERTIDO: falso positivo por contaminacion de etiqueta de categoria UNSPSC; el cross-check no fue independiente. Pendiente fix del matcher.",
     "reviewed_at": "2026-07-13"
+  },
+  "faf7fadb4461bc51": {
+    "decision": "confirm",
+    "note": "Corchetera 24/6 30 hojas $9847 vs baseline $3556 (2.8x), producto exacto",
+    "reviewed_at": "2026-07-14"
   }
 }
