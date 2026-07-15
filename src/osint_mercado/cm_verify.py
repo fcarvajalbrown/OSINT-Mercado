@@ -81,6 +81,8 @@ def assess_lead(oc_text: str, cm_reference_text: str) -> tuple[bool, str]:
     clean, reason = assess(oc_text)
     if not clean:
         return False, reason
+    if verify.has_red_context(cm_reference_text):
+        return False, "CM reference is a rental/dispenser/service, not a purchase"
     if looks_like_bundle(cm_reference_text):
         return False, "CM reference is a bundle / set / multi-pack"
     return True, "clean single-product line"

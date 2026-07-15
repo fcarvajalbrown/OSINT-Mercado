@@ -48,6 +48,16 @@ def test_assess_lead_rejects_when_cm_reference_is_a_bundle():
     assert "reference" in reason
 
 
+def test_assess_lead_rejects_when_cm_reference_is_a_rental():
+    # A purchase compared to a CM "ARRIENDO" (rental) reference is invalid.
+    clean, reason = cm_verify.assess_lead(
+        "NOTEBOOK ASUS B1403CVA INTEL CORE ULTRA 7 16GB",
+        "ARRIENDO LAPTOP ASUS EXPERTBOOK B1403C WINDOWS 11 PRO",
+    )
+    assert clean is False
+    assert "reference" in reason
+
+
 def test_assess_lead_clean_when_both_single_product():
     clean, _ = cm_verify.assess_lead(
         "CAFE INSTANTANEO GOLD TARRO 170 G", "CAFE INSTANTANEO GOLD TARRO 50 G"
