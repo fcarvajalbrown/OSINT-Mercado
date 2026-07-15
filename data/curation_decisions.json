@@ -25,8 +25,8 @@
     "reviewed_at": "2026-07-14"
   },
   "375b5bace7d58ec2": {
-    "decision": "confirm",
-    "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); el mismo comprador paga cartulina mucho mas barata en otras lineas",
+    "decision": "dismiss",
+    "note": "Pack-ambiguous: 'Cartulina de colores (espanola)' at 6.08x; if an assorted-color pack this is a false accusation",
     "reviewed_at": "2026-07-14"
   },
   "40f43b13c6437192": {
@@ -55,8 +55,8 @@
     "reviewed_at": "2026-07-12"
   },
   "80dba2647500f1f8": {
-    "decision": "confirm",
-    "note": "Brocha 2 pulgadas Uyustools $9520 vs baseline $2190 (4.3x)",
+    "decision": "dismiss",
+    "note": "Tier/size: 'Brocha 2 Uyustools' vs generic 'brocha' baseline that does not control brush size or bristle tier",
     "reviewed_at": "2026-07-14"
   },
   "8f23bb8cfec4ac89": {
@@ -80,8 +80,8 @@
     "reviewed_at": "2026-07-14"
   },
   "92fd6f2262d703b4": {
-    "decision": "confirm",
-    "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); el mismo comprador paga cartulina mucho mas barata en otras lineas",
+    "decision": "dismiss",
+    "note": "Pack-ambiguous: 'Pliegos de Cartulina de colores' may be an assorted-color multipack, not one pliego; marginal watch-tier (1.68x)",
     "reviewed_at": "2026-07-14"
   },
   "a311ef975d16cf90": {
@@ -90,13 +90,13 @@
     "reviewed_at": "2026-07-12"
   },
   "a6ea08f6621d2252": {
-    "decision": "confirm",
-    "note": "Te sabores 20 bolsitas Supremo, sobreprecio 7.4x vs baseline te 100 bolsas (nivel medio, te saborizado)",
+    "decision": "dismiss",
+    "note": "Small-format upscaling + tier: 20-bag pack scaled up to 100 (div=0.2) and flavored 'surtido 6 sabores' vs plain-te baseline",
     "reviewed_at": "2026-07-14"
   },
   "d4cccf5151c4db10": {
-    "decision": "confirm",
-    "note": "Cartulina de colores $2380/pliego vs baseline $352 (6.8x); el mismo comprador paga cartulina mucho mas barata en otras lineas",
+    "decision": "dismiss",
+    "note": "Pack-ambiguous: 'Cartulina de colores' at 6.75x; if an assorted-color pack this is a false accusation",
     "reviewed_at": "2026-07-14"
   },
   "d576524361bd2caf": {
@@ -105,8 +105,8 @@
     "reviewed_at": "2026-07-14"
   },
   "d636fc6fc55fecdf": {
-    "decision": "confirm",
-    "note": "Escobillon exterior fibra dura 3.6x vs baseline escoba",
+    "decision": "dismiss",
+    "note": "Tier: 'ESCOBILLON EXTERIOR FIBRA DURA TIPO VIRUTEX' is a heavier exterior push broom, not the basic escoba de fibra baseline (n=1, weak)",
     "reviewed_at": "2026-07-14"
   },
   "d9b188029c753f9d": {
@@ -125,8 +125,8 @@
     "reviewed_at": "2026-07-12"
   },
   "efe81a37693cc87a": {
-    "decision": "confirm",
-    "note": "Te sabores 75 bolsitas, 2.3x normalizado por bolsa",
+    "decision": "dismiss",
+    "note": "Tier: flavored 'surtido 6 sabores' te (75 bolsitas) vs plain-te baseline",
     "reviewed_at": "2026-07-14"
   },
   "f9755e1e131546ad": {
