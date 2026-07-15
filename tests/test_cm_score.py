@@ -79,6 +79,30 @@ def test_run_skips_unconvertible_currency_line(tmp_path):
     assert json.loads(out.read_text(encoding="utf-8")) == []
 
 
+def test_category_label_does_not_drive_a_match(tmp_path):
+    # The broad UNSPSC category label ("Papas fritas o galletas tostadas") must not
+    # match a CM product; only the especificacion ("Snack de Todito") does (ADR 0021).
+    items = tmp_path / "oc_items.parquet"
+    pl.DataFrame([{
+        "oc_id": "800-1-SE26", "correlativo": 1, "comuna": "Renca",
+        "product": "Papas fritas o galletas tostadas",
+        "espec_comprador": "Snack de Todito 220 G", "espec_proveedor": "",
+        "unit_price": 660.0, "moneda": "CLP", "product_code": 50192109,
+        "fecha": "2026-07-10", "captured_at": "2026-07-10T00:00:00Z",
+        "oc_url": "https://mp/800-1-SE26"},
+    ]).write_parquet(items)
+    cat = tmp_path / "cm_catalog.parquet"
+    pl.DataFrame([
+        {"code": "50192109", "region": "METROPOLITANA", "producto": "PAPAS PRE-FRITAS MINUTO VERDE",
+         "marca": "MINUTO VERDE", "modelo": "BOLSA", "medida": "1 K", "proveedor": "P",
+         "rut": "1-9", "precio_neto": 1000.0} for _ in range(3)
+    ]).write_parquet(cat)
+    out = tmp_path / "cm_pending.json"
+    fxc = tmp_path / "fx_rates.json"
+    _, report = cm_score.run(items, cat, fxc, out, session=None)
+    assert report["leads"] == 0
+
+
 def test_run_is_deterministic(tmp_path):
     items = _oc_parquet(tmp_path)
     cat = _cm_parquet(tmp_path)

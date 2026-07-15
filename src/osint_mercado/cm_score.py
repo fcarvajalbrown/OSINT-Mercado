@@ -15,7 +15,7 @@ from dataclasses import asdict
 from datetime import date
 from pathlib import Path
 
-from osint_mercado import api_client, cm_catalog, cm_scoring, cm_verify, fx
+from osint_mercado import api_client, cm_catalog, cm_scoring, cm_verify, fx, matcher
 
 
 def _resolve(items: str) -> list[str]:
@@ -37,10 +37,17 @@ def _row_date(row: dict) -> date:
 
 
 def _oc_text(row: dict) -> str:
-    return " ".join(
-        str(row.get(f) or "")
-        for f in ("product", "espec_comprador", "espec_proveedor")
-    ).strip()
+    """The item-identity text for matching and size-parsing.
+
+    Espec-first (falls back to the `product` label only when both especificacion
+    fields are empty), so the broad UNSPSC category label never drives a match -
+    a category like "Papas fritas o galletas tostadas" would otherwise match an
+    unrelated CM product a "Snack de Todito" espec never should (ADR 0021).
+    """
+    return matcher.build_match_text(
+        row.get("product") or "", row.get("espec_proveedor") or "",
+        row.get("espec_comprador") or "",
+    )
 
 
 def _code(row: dict) -> str | None:
