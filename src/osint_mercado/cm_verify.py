@@ -40,6 +40,9 @@ def looks_like_bundle(oc_text: str) -> bool:
     text = normalize(oc_text)
     if any(_has_word(w, text) for w in _BUNDLE_WORDS):
         return True
+    # an assorted "N colores" set (e.g. a 12-colour tempera box), N >= 2
+    if re.search(r"\b([2-9]|\d{2,})\s*colores\b", text):
+        return True
     if oc_text.count("\n") >= 2:  # enumerated flavors / variants
         return True
     if len(text) > _MAX_CLEAN_LEN:
@@ -64,4 +67,20 @@ def assess(oc_text: str) -> tuple[bool, str]:
         return False, "bundle / set / multi-item line"
     if has_pack_ambiguity(oc_text):
         return False, "unresolved pack/box multiplier"
+    return True, "clean single-product line"
+
+
+def assess_lead(oc_text: str, cm_reference_text: str) -> tuple[bool, str]:
+    """Clean only if BOTH the OC line and the matched CM reference are single items.
+
+    The scorer matches on shared tokens, so a single-product OC line can land on a
+    CM reference that is itself a set/multi-pack (e.g. a 12-colour tempera box):
+    the per-unit comparison is then apples-to-oranges. Screening the CM reference
+    for the same bundle signals catches that class of false positive.
+    """
+    clean, reason = assess(oc_text)
+    if not clean:
+        return False, reason
+    if looks_like_bundle(cm_reference_text):
+        return False, "CM reference is a bundle / set / multi-pack"
     return True, "clean single-product line"

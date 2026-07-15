@@ -35,3 +35,21 @@ def test_reason_is_returned_for_clean():
     clean, reason = cm_verify.assess("PENDRIVE DE 16 GB")
     assert clean is True
     assert isinstance(reason, str) and reason
+
+
+def test_assess_lead_rejects_when_cm_reference_is_a_bundle():
+    # A clean single-product OC line, but the matched CM reference is a 12-colour
+    # SET - the per-unit comparison is apples-to-oranges.
+    clean, reason = cm_verify.assess_lead(
+        "TEMPERA LIQUIDA GIOTTO CAFE 250 G",
+        "TEMPERA ESCOLAR GIOTTO 12 COLORES NO TOXICO LAVABLE 15 ML",
+    )
+    assert clean is False
+    assert "reference" in reason
+
+
+def test_assess_lead_clean_when_both_single_product():
+    clean, _ = cm_verify.assess_lead(
+        "CAFE INSTANTANEO GOLD TARRO 170 G", "CAFE INSTANTANEO GOLD TARRO 50 G"
+    )
+    assert clean is True

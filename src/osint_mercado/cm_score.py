@@ -55,7 +55,7 @@ def run(items_path, cm_catalog_path, fx_cache_path, out_path, *, session=None,
         min_refs: int = cm_scoring.MIN_REFS, accumulate: bool = True):
     import polars as pl
 
-    cm_by_code = cm_catalog.load_catalog(cm_catalog_path)
+    cm_by_code = cm_scoring.enrich_catalog(cm_catalog.load_catalog(cm_catalog_path))
     fx_cache = fx.load_fx_cache(fx_cache_path)
     session = session or api_client.make_session()
 
@@ -90,7 +90,7 @@ def run(items_path, cm_catalog_path, fx_cache_path, out_path, *, session=None,
             )
             if lead is None:
                 continue
-            clean, reason = cm_verify.assess(lead.oc_text)
+            clean, reason = cm_verify.assess_lead(lead.oc_text, lead.cm_sample_producto)
             record = asdict(lead)
             record["clean"] = clean
             record["clean_reason"] = reason
