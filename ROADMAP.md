@@ -116,6 +116,27 @@ _Shaped by: ADR 0006, 0007; new ADR 0014._
 
 _Shaped by: ADR 0003 (transport superseded), 0004, 0007; new ADR 0015._
 
+## Phase 6 — Convenio Marco normative engine
+**Status:** Done (engine + lead queue; leads pending human curation)
+
+The most defensible comparison: could the organism have bought this cheaper under the framework
+agreement it was bound to consider? (ADR 0024.)
+
+- `cm_catalog.py` fetches the weekly CM index, reads every inner CSV (incl. the multi-CSV zips),
+  keeps METROPOLITANA + NACIONAL rows with a valid 8-digit UNSPSC + positive net price, dedups, and
+  caches a committed `data/cm_catalog.parquet` (434,782 rows, 471 codes).
+- `cm_scoring.py` matches same-product rows by >=2 distinctive-token overlap within the shared code
+  (never the code alone; espec-only, not the category label, per ADR 0021), normalizes both sides
+  per g/ml/m/each (`units.parse_any_size`), and measures the paid price against the median matched
+  CM price. Net-to-net (CM PRECIO EN TIENDA confirmed net of IVA). Band [1.5x, 15x], min 3 refs.
+- `cm_verify.py` tags each lead clean-or-not (bundle / red-context / pack-ambiguity, screening the
+  CM reference too). `osint-cm-score` emits `data/cm_pending.json` with provenance + CM evidence.
+- Over 27 RM captures: 4,529 line-items under a CM code -> 356 size-normalized region-matched
+  same-product leads -> 151 clean first-pass. Investigative leads for the human gate (ADR 0006),
+  never auto-published.
+
+_Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
+
 ## Later phases (toward the PDF's grand vision)
 **Status:** Not Started
 
