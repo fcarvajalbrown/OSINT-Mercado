@@ -76,6 +76,15 @@ def test_min_refs_enforced():
 
 # ---- lead carries evidence + provenance ----
 
+def test_enrich_precomputes_tokens_and_size_without_changing_results():
+    cm_rows = [_cm("CAFE INSTANTANEO GOLD TARRO 50 G", 2000) for _ in range(3)]
+    plain = cm_scoring.compare("CAFE INSTANTANEO GOLD TARRO 170 G", 13600.0, cm_rows)
+    enriched_rows = cm_scoring.enrich_catalog({"50201709": cm_rows})["50201709"]
+    assert "_tokens" in enriched_rows[0] and "_size" in enriched_rows[0]
+    fast = cm_scoring.compare("CAFE INSTANTANEO GOLD TARRO 170 G", 13600.0, enriched_rows)
+    assert fast == plain
+
+
 def test_score_cm_returns_lead_with_evidence_and_provenance():
     cm_rows = [_cm("CAFE INSTANTANEO GOLD TARRO 50 G", 2000, region="NACIONAL")
                for _ in range(3)]

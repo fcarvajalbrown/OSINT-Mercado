@@ -93,11 +93,42 @@ def distinctive_tokens(text: str) -> set[str]:
     return out
 
 
+def _desc(row: dict) -> str:
+    d = row.get("_desc")
+    return d if d is not None else cm_catalog.descriptive_text(row)
+
+
+def _row_tokens(row: dict) -> set[str]:
+    t = row.get("_tokens")
+    return t if t is not None else distinctive_tokens(_desc(row))
+
+
+def _row_size(row: dict):
+    return row["_size"] if "_size" in row else units.parse_any_size(_desc(row))
+
+
+def enrich_catalog(cm_by_code: dict) -> dict:
+    """Precompute each CM row's descriptive text, token set and parsed size once.
+
+    The scorer scans every CM row under a code for every OC line under it (millions
+    of pairs on the popular codes); caching these on the row makes that scan cheap
+    frozenset intersections instead of re-normalizing text each time. Behaviour is
+    unchanged - `compare` reads the cached fields when present, computes them when
+    not (so tests can pass plain dicts).
+    """
+    for rows in cm_by_code.values():
+        for row in rows:
+            desc = cm_catalog.descriptive_text(row)
+            row["_desc"] = desc
+            row["_tokens"] = distinctive_tokens(desc)
+            row["_size"] = units.parse_any_size(desc)
+    return cm_by_code
+
+
 def _matched_rows(oc_tokens: set[str], cm_rows: list[dict]) -> list[dict]:
     matched = []
     for row in cm_rows:
-        shared = oc_tokens & distinctive_tokens(cm_catalog.descriptive_text(row))
-        if len(shared) >= MIN_SHARED_TOKENS:
+        if len(oc_tokens & _row_tokens(row)) >= MIN_SHARED_TOKENS:
             matched.append(row)
     return matched
 
@@ -111,7 +142,7 @@ def _dominant_dimension(oc_text: str, matched: list[dict]) -> str:
     """
     counts = {"g": 0, "ml": 0, "m": 0}
     for row in matched:
-        parsed = units.parse_any_size(cm_catalog.descriptive_text(row))
+        parsed = _row_size(row)
         if parsed is not None:
             counts[parsed[0]] += 1
     best_dim, best_n = max(counts.items(), key=lambda kv: kv[1])
@@ -154,7 +185,7 @@ def compare(oc_text: str, unit_price_clp_net: float, cm_rows: list[dict],
     refs = []
     sample = None
     for row in matched:
-        cm_pu = _per_unit(cm_catalog.descriptive_text(row), row["precio_neto"], dim)
+        cm_pu = _per_unit(_desc(row), row["precio_neto"], dim)
         if cm_pu is not None and cm_pu > 0:
             refs.append(cm_pu)
             if sample is None:
