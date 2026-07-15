@@ -33,3 +33,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0021 | Match on the especificacion, not the UNSPSC category label            | Accepted |
 | 0022 | SoloTodo as the independent retail second source (goods)              | Accepted |
 | 0023 | Conservative publish-verification filter (autonomous publishing)      | Accepted |
+| 0024 | Convenio Marco size-normalized comparison engine                      | Accepted |
