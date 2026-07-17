@@ -2351,7 +2351,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2371-212-AG26",
-    "captured_at": "2026-07-16T13:39:37.782295+00:00"
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "fa4810c33bafc85a",
@@ -4991,7 +4991,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-694-AG26",
-    "captured_at": "2026-07-16T13:39:37.782295+00:00"
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "7e4e3a7bc23ad3e7",
@@ -9831,7 +9831,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=5215-414-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "5e3a54421e4632fc",
@@ -9853,7 +9853,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=5215-414-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "8ed49beb6662ac7c",
@@ -9875,7 +9875,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=5215-414-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "444474ef93aa5b81",
@@ -9897,7 +9897,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=5215-414-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "4b7c584f5f879a73",
@@ -23383,7 +23383,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1059261-18-AG26",
-    "captured_at": "2026-07-16T13:39:37.782295+00:00"
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "f4bd620d10c07f86",
@@ -24112,6 +24112,28 @@
     "captured_at": "2026-07-14T20:03:20.647573+00:00"
   },
   {
+    "id": "ab2928e305abc193",
+    "oc_id": "2343-333-CM26",
+    "correlativo": 10,
+    "comuna": "Santiago",
+    "sku_id": "cartulina_espanola",
+    "matched_rule": "keyword",
+    "product": "CARTULINA RHEIN CARPETA 15 COLORES 18 PLIEGOS 26,5X37,5 CM UNIDAD RM",
+    "quantity": 80.0,
+    "moneda": "CLP",
+    "unit_price": 938.0,
+    "unit_price_clp_gross": 1116.22,
+    "unit_divisor": 15.0,
+    "normalized_unit_price_clp": 74.41,
+    "reference_price_clp": 352.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2111,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-333-CM26",
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
+  },
+  {
     "id": "d26785fc83ef25a2",
     "oc_id": "2343-239-AG26",
     "correlativo": 1,
@@ -24684,6 +24706,28 @@
     "captured_at": "2026-07-14T20:03:20.647573+00:00"
   },
   {
+    "id": "91ff86ddbcadef33",
+    "oc_id": "2343-333-CM26",
+    "correlativo": 31,
+    "comuna": "Santiago",
+    "sku_id": "pegamento_barra",
+    "matched_rule": "keyword",
+    "product": "PEGAMENTO BARRA ADIX TRANSP 40GR NO TOX LAVABLE PAPEL-CARTULINA-TELA UNIDAD RM",
+    "quantity": 60.0,
+    "moneda": "CLP",
+    "unit_price": 440.0,
+    "unit_price_clp_gross": 523.6,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 523.6,
+    "reference_price_clp": 2080.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.2517,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-333-CM26",
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
+  },
+  {
     "id": "e062add902ddc44d",
     "oc_id": "2343-191-CM26",
     "correlativo": 12,
@@ -24946,6 +24990,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2703-494-SE26",
     "captured_at": "2026-07-13T19:00:40.947124+00:00"
+  },
+  {
+    "id": "dad939b474808a87",
+    "oc_id": "2701-448-AG26",
+    "correlativo": 7,
+    "comuna": "Talagante",
+    "sku_id": "azucar_1kg",
+    "matched_rule": "keyword",
+    "product": "Dulces con azúcar o sustitutos",
+    "quantity": 3.0,
+    "moneda": "CLP",
+    "unit_price": 680.0,
+    "unit_price_clp_gross": 809.2,
+    "unit_divisor": 3.0,
+    "normalized_unit_price_clp": 269.73,
+    "reference_price_clp": 1390.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.1941,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-448-AG26",
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "265b5bececa3e590",
@@ -25606,6 +25672,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-434-AG26",
     "captured_at": "2026-07-16T13:39:37.782295+00:00"
+  },
+  {
+    "id": "41daed5383ce6faf",
+    "oc_id": "2701-448-AG26",
+    "correlativo": 8,
+    "comuna": "Talagante",
+    "sku_id": "toalla_papel_rollo",
+    "matched_rule": "keyword",
+    "product": "Toallas de papel",
+    "quantity": 5.0,
+    "moneda": "CLP",
+    "unit_price": 5290.0,
+    "unit_price_clp_gross": 6295.1,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 6295.1,
+    "reference_price_clp": 2670.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.3577,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-448-AG26",
+    "captured_at": "2026-07-17T13:09:47.891496+00:00"
   },
   {
     "id": "09d265da75d17a7b",
