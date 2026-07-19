@@ -24,7 +24,8 @@ is a superseded historical artifact).
 Split across three planes (ADR 0001): a Python + Polars pipeline runs on **external compute**
 (GitHub Actions — Python does not run on the target Hostinger shared host); the store is
 **versioned data files** in the repo (ADR 0004); the presentation plane is a **static
-frontend** deployed to Hostinger via its native Git integration (ADR 0003). No Rust/PyO3
+frontend** deployed to Hostinger by rsync-over-SSH from GitHub Actions (ADR 0015, key auth
+per ADR 0025; supersedes the native Git integration of ADR 0003). No Rust/PyO3
 (ADR 0002). Matching is a **controlled-basket classifier** (ADR 0005). Every published flag
 passes a **human curation gate** (ADR 0006) and carries a **provenance link** (ADR 0007).
 
@@ -72,6 +73,16 @@ passes a **human curation gate** (ADR 0006) and carries a **provenance link** (A
 - The ChileCompra API ticket lives only in a gitignored `.env` (key `CHILECOMPRA_API_TICKET`)
   locally, and a GitHub Actions secret of the same name in CI. Never commit it, print it, or
   put it in a fixture or a logged URL.
+- **Deploy auth (Hostinger) is by SSH key, not password.** Hostinger rejects password SSH auth
+  on this account (`u703383606`), so `build-deploy.yml` and `setup-refresh.yml` authenticate
+  with a dedicated ed25519 key stored in the `SSH_KEY` GitHub Actions secret (private key only;
+  its public key is in the server's `~/.ssh/authorized_keys`). `scripts/deploy.sh` writes
+  `SSH_KEY` to a `chmod 600` temp file and passes `-i <key> -o IdentitiesOnly=yes` to rsync's
+  ssh. Host/port/user/remote-path are non-secret Actions *variables* (`SSH_HOST`, `SSH_PORT`,
+  `SSH_USER`, `SSH_REMOTE_PATH`). The old password path (`sshpass`, the `SSH_HOSTINGER` secret)
+  was removed once key auth was verified (ADR 0025). Do not reintroduce password auth.
+- Deploy is `workflow_dispatch`-only: `gh workflow run build-deploy.yml` (add
+  `-f dry_run=true` to preview with `rsync -n` before a real publish). No push auto-publishes.
 - This dev machine intercepts TLS with a self-signed cert. HTTP clients verify against the OS
   trust store via the `truststore` package (`truststore.inject_into_ssl()`). **Never disable
   certificate verification.**
