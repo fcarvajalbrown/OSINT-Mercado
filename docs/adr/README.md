@@ -34,3 +34,4 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0022 | SoloTodo as the independent retail second source (goods)              | Accepted |
 | 0023 | Conservative publish-verification filter (autonomous publishing)      | Accepted |
 | 0024 | Convenio Marco size-normalized comparison engine                      | Accepted |
+| 0025 | SSH key auth for deploy (refines ADR 0015)                            | Accepted |

@@ -11,18 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ vars.SSH_HOST != '' }}
     steps:
-      - name: Install sshpass
-        run: sudo apt-get update && sudo apt-get install -y sshpass
       - name: Write gh_config.php on the server
         env:
           SSH_HOST: ${{ vars.SSH_HOST }}
           SSH_PORT: ${{ vars.SSH_PORT }}
           SSH_USER: ${{ vars.SSH_USER }}
           SSH_REMOTE_PATH: ${{ vars.SSH_REMOTE_PATH }}
-          SSHPASS: ${{ secrets.SSH_HOSTINGER }}
+          SSH_KEY: ${{ secrets.SSH_KEY }}
           GH_TOKEN: ${{ secrets.OSINT_GIT }}
         run: |
-          sshpass -e ssh -p "$SSH_PORT" -o StrictHostKeyChecking=accept-new \
+          KEY_FILE="$(mktemp)"; chmod 600 "$KEY_FILE"
+          trap 'rm -f "$KEY_FILE"' EXIT
+          printf '%s\n' "$SSH_KEY" > "$KEY_FILE"
+          ssh -i "$KEY_FILE" -p "$SSH_PORT" -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new \
             "$SSH_USER@$SSH_HOST" "cat > ${SSH_REMOTE_PATH}/gh_config.php" <<PHP
           <?php
           declare(strict_types=1);

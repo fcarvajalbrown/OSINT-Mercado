@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 # Deploy the built static site to Hostinger public_html over SSH.
 #
-# Password auth is non-interactive via sshpass (the password is the only secret).
+# Auth is by SSH private key (Hostinger rejects password auth on this account).
 # Required env:
 #   SSH_HOST          Hostinger SSH host
 #   SSH_USER          SSH username
 #   SSH_REMOTE_PATH   remote target (e.g. public_html or domains/<site>/public_html)
-#   SSHPASS           the SSH password (map SSH_HOSTINGER -> SSHPASS in CI)
+#   SSH_KEY           the private key contents (map the SSH_KEY secret in CI)
 # Optional env:
 #   SSH_PORT          SSH port (default 22)
 #   SRC_DIR           built site dir (default dist)
@@ -25,12 +25,19 @@ if [[ "${1:-}" == "--dry-run" ]]; then DRY="-n"; VERBOSE="-vi"; fi  # itemize ch
 : "${SSH_HOST:?SSH_HOST is required}"
 : "${SSH_USER:?SSH_USER is required}"
 : "${SSH_REMOTE_PATH:?SSH_REMOTE_PATH is required}"
-: "${SSHPASS:?SSHPASS is required (the SSH password)}"
+: "${SSH_KEY:?SSH_KEY is required (the SSH private key)}"
 
 if [[ ! -d "$SRC_DIR" ]]; then
   echo "source dir '$SRC_DIR' not found; build the site first (osint-build-site)" >&2
   exit 1
 fi
+
+# Write the key to a private temp file with strict perms; clean it up on exit.
+KEY_FILE="$(mktemp)"
+chmod 600 "$KEY_FILE"
+cleanup() { rm -f "$KEY_FILE"; }
+trap cleanup EXIT
+printf '%s\n' "$SSH_KEY" > "$KEY_FILE"
 
 echo "Deploying '$SRC_DIR/' -> ${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/ (port ${SSH_PORT})${DRY:+ [dry-run]}"
 
@@ -39,9 +46,9 @@ echo "Deploying '$SRC_DIR/' -> ${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/ (port
 # Excludes protect server-managed files this push must never touch:
 #   gh_config.php     - holds the refresh.php token (created on the server)
 #   data/             - flags.json is pulled by the Hostinger cron (refresh.php)
-sshpass -e rsync ${DRY} ${VERBOSE} -az --delete \
+rsync ${DRY} ${VERBOSE} -az --delete \
   --exclude 'gh_config.php' --exclude 'data/' \
-  -e "ssh -p ${SSH_PORT} -o StrictHostKeyChecking=accept-new" \
+  -e "ssh -i '${KEY_FILE}' -p ${SSH_PORT} -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new" \
   "${SRC_DIR}/" "${SSH_USER}@${SSH_HOST}:${SSH_REMOTE_PATH}/"
 
 echo "Done."

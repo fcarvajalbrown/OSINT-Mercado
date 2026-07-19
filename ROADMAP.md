@@ -108,11 +108,10 @@ _Shaped by: ADR 0006, 0007; new ADR 0014._
 - `osint-build-site` builds `dist/` from `data/confirmed_flags.json` + basket (adds
   canonical name, category, overprice %). Built in CI (`.github/workflows/build-deploy.yml`).
 - Deploy over SSH: `scripts/deploy.sh` mirrors `dist/` to `public_html` with
-  `rsync -az --delete` via `sshpass` (password `SSH_HOSTINGER`; host/port/user/path as
-  non-secret CI variables). `workflow_dispatch`-only + `--dry-run`; env validated before any
-  network call. Transport supersedes ADR 0003 (ADR 0015).
-- **Pending:** the real `SSH_HOSTINGER` secret + host/port/user and the user's explicit
-  go-ahead before the first live publish to the public site.
+  `rsync -az --delete`, authenticating with an SSH private key (`SSH_KEY` secret; host/port/
+  user/path as non-secret CI variables). `workflow_dispatch`-only + `--dry-run`; env validated
+  before any network call. Transport supersedes ADR 0003 (ADR 0015); key auth per ADR 0025.
+- **Pending:** the user's explicit go-ahead before the first live publish to the public site.
 
 _Shaped by: ADR 0003 (transport superseded), 0004, 0007; new ADR 0015._
 
