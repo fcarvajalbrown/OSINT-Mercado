@@ -25407,7 +25407,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-448-AG26",
-    "captured_at": "2026-07-17T13:09:47.891496+00:00"
+    "captured_at": "2026-07-20T13:50:46.279036+00:00"
   },
   {
     "id": "265b5bececa3e590",
@@ -26089,7 +26089,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-448-AG26",
-    "captured_at": "2026-07-17T13:09:47.891496+00:00"
+    "captured_at": "2026-07-20T13:50:46.279036+00:00"
   },
   {
     "id": "09d265da75d17a7b",
