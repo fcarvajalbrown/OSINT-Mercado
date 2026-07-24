@@ -66,6 +66,28 @@
     "captured_at": "2026-07-13T18:33:03.168923+00:00"
   },
   {
+    "id": "01667b76767112b9",
+    "oc_id": "1718-709-CM26",
+    "correlativo": 3,
+    "comuna": "",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "BOLSA DE BASURA SUPERIOR 80X120 140 L PAQUETE X 10 UNIDADES RM",
+    "quantity": 100.0,
+    "moneda": "CLP",
+    "unit_price": 1894.0,
+    "unit_price_clp_gross": 2253.86,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 225.39,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.1701,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1718-709-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "da38821ace14e129",
     "oc_id": "2766-342-CM26",
     "correlativo": 1,
@@ -528,6 +550,28 @@
     "captured_at": "2026-07-21T13:45:49.544191+00:00"
   },
   {
+    "id": "88bc50217918958d",
+    "oc_id": "1718-709-CM26",
+    "correlativo": 1,
+    "comuna": "",
+    "sku_id": "toalla_papel_rollo",
+    "matched_rule": "keyword",
+    "product": "TOALLA DE PAPEL ELITE PROFESSIONAL HOJA SIMPLE 250M 2 ROLLOS RM",
+    "quantity": 225.0,
+    "moneda": "CLP",
+    "unit_price": 6046.0,
+    "unit_price_clp_gross": 7194.74,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 7194.74,
+    "reference_price_clp": 2670.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.6947,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1718-709-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "a7288243e79fb718",
     "oc_id": "1736-564-CM26",
     "correlativo": 2,
@@ -658,6 +702,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2376-563-AG26",
     "captured_at": "2026-07-23T13:43:32.757223+00:00"
+  },
+  {
+    "id": "1b8477a233ce1807",
+    "oc_id": "3827-417-AG26",
+    "correlativo": 1,
+    "comuna": "319",
+    "sku_id": "jugo_nectar_15l",
+    "matched_rule": "keyword",
+    "product": "Jugos y néctar envasados",
+    "quantity": 180.0,
+    "moneda": "CLP",
+    "unit_price": 1623.0,
+    "unit_price_clp_gross": 1931.37,
+    "unit_divisor": 0.8,
+    "normalized_unit_price_clp": 2414.21,
+    "reference_price_clp": 1560.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 1.5476,
+    "severity": "watch",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3827-417-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "45cba9fdf329aada",
@@ -1559,7 +1625,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2723-229-CM26",
-    "captured_at": "2026-07-23T13:43:32.757223+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "08eb8878f43b1805",
@@ -2662,6 +2728,50 @@
     "captured_at": "2026-07-12T22:15:11.616091+00:00"
   },
   {
+    "id": "5563927399777812",
+    "oc_id": "1306643-248-AG26",
+    "correlativo": 7,
+    "comuna": "Cerro Navia",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 12.0,
+    "moneda": "CLP",
+    "unit_price": 180.0,
+    "unit_price_clp_gross": 214.2,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 214.2,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2985,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1306643-248-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "a1581dca2a6647e4",
+    "oc_id": "1306643-248-AG26",
+    "correlativo": 4,
+    "comuna": "Cerro Navia",
+    "sku_id": "lapiz_pasta_azul",
+    "matched_rule": "keyword",
+    "product": "Lápiz pasta",
+    "quantity": 150.0,
+    "moneda": "CLP",
+    "unit_price": 77.0,
+    "unit_price_clp_gross": 91.63,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 91.63,
+    "reference_price_clp": 385.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.238,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1306643-248-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "9d116076d4d57e0c",
     "oc_id": "2371-167-AG26",
     "correlativo": 74,
@@ -2835,7 +2945,29 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1306643-235-AG26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "5579c23ae5e29a5f",
+    "oc_id": "1306643-248-AG26",
+    "correlativo": 2,
+    "comuna": "Cerro Navia",
+    "sku_id": "pilas_aa_blister4",
+    "matched_rule": "keyword",
+    "product": "Pilas alcalinas",
+    "quantity": 60.0,
+    "moneda": "CLP",
+    "unit_price": 267.0,
+    "unit_price_clp_gross": 317.73,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 317.73,
+    "reference_price_clp": 3790.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.0838,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1306643-248-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "069bc1063e290471",
@@ -2880,6 +3012,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2371-189-AG26",
     "captured_at": "2026-07-14T20:24:29.137950+00:00"
+  },
+  {
+    "id": "f8d59b90b449d7b9",
+    "oc_id": "1306643-248-AG26",
+    "correlativo": 3,
+    "comuna": "Cerro Navia",
+    "sku_id": "pilas_aaa_blister4",
+    "matched_rule": "keyword",
+    "product": "Pilas alcalinas",
+    "quantity": 60.0,
+    "moneda": "CLP",
+    "unit_price": 267.0,
+    "unit_price_clp_gross": 317.73,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 317.73,
+    "reference_price_clp": 4740.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.067,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1306643-248-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "fb944f10b7e3dbd4",
@@ -4969,7 +5123,7 @@
     "severity": "watch",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4201-439-AG26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "fc2f61ece91aed3b",
@@ -5035,7 +5189,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4201-380-AG26",
-    "captured_at": "2026-07-23T13:43:32.757223+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "9dec2ac3b5e9a167",
@@ -5500,6 +5654,50 @@
     "captured_at": "2026-07-22T13:40:24.260078+00:00"
   },
   {
+    "id": "556202ee81db400b",
+    "oc_id": "1736-735-AG26",
+    "correlativo": 11,
+    "comuna": "El Bosque",
+    "sku_id": "desinfectante_multiuso",
+    "matched_rule": "keyword",
+    "product": "Cepillos para aseos",
+    "quantity": 10.0,
+    "moneda": "CLP",
+    "unit_price": 1613.0,
+    "unit_price_clp_gross": 1919.47,
+    "unit_divisor": 0.5556,
+    "normalized_unit_price_clp": 3455.05,
+    "reference_price_clp": 2140.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 1.6145,
+    "severity": "watch",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-735-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "a4a75a240021a426",
+    "oc_id": "1736-735-AG26",
+    "correlativo": 1,
+    "comuna": "El Bosque",
+    "sku_id": "escoba_fibra",
+    "matched_rule": "keyword",
+    "product": "Cepillos para aseos",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 5179.0,
+    "unit_price_clp_gross": 6163.01,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 6163.01,
+    "reference_price_clp": 1990.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 3.097,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-735-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "9e820ab233b7d225",
     "oc_id": "1736-489-SE26",
     "correlativo": 11,
@@ -5586,6 +5784,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-538-AG26",
     "captured_at": "2026-07-13T18:12:21.464647+00:00"
+  },
+  {
+    "id": "ae3e543b7f2028f4",
+    "oc_id": "1736-735-AG26",
+    "correlativo": 21,
+    "comuna": "El Bosque",
+    "sku_id": "jabon_liquido",
+    "matched_rule": "keyword",
+    "product": "Cepillos para aseos",
+    "quantity": 4.0,
+    "moneda": "CLP",
+    "unit_price": 1683.0,
+    "unit_price_clp_gross": 2002.77,
+    "unit_divisor": 0.3333,
+    "normalized_unit_price_clp": 6008.31,
+    "reference_price_clp": 1730.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 3.473,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-735-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "4ecc97e3a5b81c09",
@@ -5850,6 +6070,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-725-CM26",
     "captured_at": "2026-07-23T13:43:32.757223+00:00"
+  },
+  {
+    "id": "f1466bb05a2b85b1",
+    "oc_id": "1736-735-AG26",
+    "correlativo": 12,
+    "comuna": "El Bosque",
+    "sku_id": "papel_higienico_pack",
+    "matched_rule": "keyword",
+    "product": "Cepillos para aseos",
+    "quantity": 40.0,
+    "moneda": "CLP",
+    "unit_price": 351.0,
+    "unit_price_clp_gross": 417.69,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 417.69,
+    "reference_price_clp": 6518.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0641,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-735-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "0527c7f6842a2394",
@@ -6204,6 +6446,50 @@
     "captured_at": "2026-07-23T13:43:32.757223+00:00"
   },
   {
+    "id": "753b185781c8497c",
+    "oc_id": "1736-735-AG26",
+    "correlativo": 13,
+    "comuna": "El Bosque",
+    "sku_id": "toalla_papel_rollo",
+    "matched_rule": "keyword",
+    "product": "Cepillos para aseos",
+    "quantity": 10.0,
+    "moneda": "CLP",
+    "unit_price": 3509.0,
+    "unit_price_clp_gross": 4175.71,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 4175.71,
+    "reference_price_clp": 2670.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 1.5639,
+    "severity": "watch",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-735-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "5f9704e6c0144fdf",
+    "oc_id": "1736-735-AG26",
+    "correlativo": 18,
+    "comuna": "El Bosque",
+    "sku_id": "toallitas_humedas_pack",
+    "matched_rule": "keyword",
+    "product": "Cepillos para aseos",
+    "quantity": 5.0,
+    "moneda": "CLP",
+    "unit_price": 2483.0,
+    "unit_price_clp_gross": 2954.77,
+    "unit_divisor": 450.0,
+    "normalized_unit_price_clp": 6.57,
+    "reference_price_clp": 3450.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0019,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-735-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "9494bd146abc3b0f",
     "oc_id": "1736-590-CM26",
     "correlativo": 1,
@@ -6465,7 +6751,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4704-233-AG26",
-    "captured_at": "2026-07-22T13:40:24.260078+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "0d55f7245a385163",
@@ -6487,7 +6773,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4704-233-AG26",
-    "captured_at": "2026-07-22T13:40:24.260078+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "7fc224c5ce367279",
@@ -7169,7 +7455,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4704-233-AG26",
-    "captured_at": "2026-07-22T13:40:24.260078+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "2759edace9accd13",
@@ -7213,7 +7499,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2432-471-AG26",
-    "captured_at": "2026-07-23T13:43:32.757223+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "7bdbe8d8fcf4e766",
@@ -7257,7 +7543,7 @@
     "severity": "watch",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2432-378-CM26",
-    "captured_at": "2026-07-14T21:05:14.169547+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "47a40f49242e99f2",
@@ -7279,7 +7565,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2432-471-AG26",
-    "captured_at": "2026-07-23T13:43:32.757223+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "9905d421903103bb",
@@ -11066,6 +11352,28 @@
     "captured_at": "2026-07-14T20:24:29.137950+00:00"
   },
   {
+    "id": "f3f2b95969df103e",
+    "oc_id": "5215-390-AG26",
+    "correlativo": 5,
+    "comuna": "La Granja",
+    "sku_id": "agua_mineral_15l",
+    "matched_rule": "keyword",
+    "product": "Agua mineral",
+    "quantity": 250.0,
+    "moneda": "CLP",
+    "unit_price": 320.0,
+    "unit_price_clp_gross": 380.8,
+    "unit_divisor": 0.4,
+    "normalized_unit_price_clp": 952.0,
+    "reference_price_clp": 1075.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.8856,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=5215-390-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "ddd73bb971ab2105",
     "oc_id": "5215-445-AG26",
     "correlativo": 2,
@@ -12339,7 +12647,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-463-AG26",
-    "captured_at": "2026-07-22T13:40:24.260078+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "958886fb36188856",
@@ -12361,7 +12669,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-463-AG26",
-    "captured_at": "2026-07-22T13:40:24.260078+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "e13eec1c51d8fbd1",
@@ -12848,6 +13156,28 @@
     "captured_at": "2026-07-23T13:43:32.757223+00:00"
   },
   {
+    "id": "0da8ad7390f149cd",
+    "oc_id": "2273-469-AG26",
+    "correlativo": 41,
+    "comuna": "La Pintana",
+    "sku_id": "cartulina_espanola",
+    "matched_rule": "keyword",
+    "product": "Notas de papel autoadhesivo",
+    "quantity": 10.0,
+    "moneda": "CLP",
+    "unit_price": 1149.0,
+    "unit_price_clp_gross": 1367.31,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 1367.31,
+    "reference_price_clp": 352.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 3.8789,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-469-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "b5e38e84087ccd5a",
     "oc_id": "2274-114-AG26",
     "correlativo": 1,
@@ -13002,6 +13332,28 @@
     "captured_at": "2026-07-14T22:22:28.223946+00:00"
   },
   {
+    "id": "c064b89e7071d059",
+    "oc_id": "2273-469-AG26",
+    "correlativo": 40,
+    "comuna": "La Pintana",
+    "sku_id": "corchetera_metalica",
+    "matched_rule": "keyword",
+    "product": "Notas de papel autoadhesivo",
+    "quantity": 30.0,
+    "moneda": "CLP",
+    "unit_price": 629.0,
+    "unit_price_clp_gross": 748.51,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 748.51,
+    "reference_price_clp": 3555.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.2105,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-469-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "d3356daa93544869",
     "oc_id": "2273-345-CM26",
     "correlativo": 37,
@@ -13110,6 +13462,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2274-91-CM26",
     "captured_at": "2026-07-13T19:00:40.947124+00:00"
+  },
+  {
+    "id": "276be7fd97ad6ddb",
+    "oc_id": "2273-469-AG26",
+    "correlativo": 34,
+    "comuna": "La Pintana",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "Notas de papel autoadhesivo",
+    "quantity": 30.0,
+    "moneda": "CLP",
+    "unit_price": 1620.0,
+    "unit_price_clp_gross": 1927.8,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 1927.8,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.6868,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-469-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "f430dc45ed2080bd",
@@ -13417,7 +13791,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-463-AG26",
-    "captured_at": "2026-07-22T13:40:24.260078+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "7cc3ce585fb62e73",
@@ -13439,7 +13813,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-463-AG26",
-    "captured_at": "2026-07-22T13:40:24.260078+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "df48c17736d6be23",
@@ -13860,6 +14234,28 @@
     "captured_at": "2026-07-22T13:40:24.260078+00:00"
   },
   {
+    "id": "96012b5b5e126606",
+    "oc_id": "2273-469-AG26",
+    "correlativo": 12,
+    "comuna": "La Pintana",
+    "sku_id": "opalina_resma",
+    "matched_rule": "keyword",
+    "product": "Clips para papel",
+    "quantity": 5.0,
+    "moneda": "CLP",
+    "unit_price": 4313.0,
+    "unit_price_clp_gross": 5132.47,
+    "unit_divisor": 0.25,
+    "normalized_unit_price_clp": 20529.88,
+    "reference_price_clp": 8668.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.3683,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-469-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "87d57033cdea14ec",
     "oc_id": "2274-91-CM26",
     "correlativo": 22,
@@ -14034,6 +14430,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-427-AG26",
     "captured_at": "2026-07-23T13:43:32.757223+00:00"
+  },
+  {
+    "id": "7b78c0cd7cf7e373",
+    "oc_id": "2273-469-AG26",
+    "correlativo": 18,
+    "comuna": "La Pintana",
+    "sku_id": "pegamento_barra",
+    "matched_rule": "keyword",
+    "product": "Archivadores de fichas",
+    "quantity": 12.0,
+    "moneda": "CLP",
+    "unit_price": 378.0,
+    "unit_price_clp_gross": 449.82,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 449.82,
+    "reference_price_clp": 2080.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.2162,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-469-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "ecc0172fbec16ffe",
@@ -14872,6 +15290,28 @@
     "captured_at": "2026-07-13T18:33:03.168923+00:00"
   },
   {
+    "id": "08181314b710a00e",
+    "oc_id": "3877-277-AG26",
+    "correlativo": 37,
+    "comuna": "Lampa",
+    "sku_id": "archivador_palanca_oficio",
+    "matched_rule": "keyword",
+    "product": "Papel multiuso",
+    "quantity": 50.0,
+    "moneda": "CLP",
+    "unit_price": 700.0,
+    "unit_price_clp_gross": 833.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 833.0,
+    "reference_price_clp": 2802.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2972,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-277-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "e0c8eb0e9189040b",
     "oc_id": "3877-210-AG26",
     "correlativo": 20,
@@ -14938,6 +15378,28 @@
     "captured_at": "2026-07-16T13:39:37.782295+00:00"
   },
   {
+    "id": "b92518fbbb27de19",
+    "oc_id": "3877-277-AG26",
+    "correlativo": 4,
+    "comuna": "Lampa",
+    "sku_id": "cinta_embalaje",
+    "matched_rule": "keyword",
+    "product": "Papel multiuso",
+    "quantity": 100.0,
+    "moneda": "CLP",
+    "unit_price": 564.0,
+    "unit_price_clp_gross": 671.16,
+    "unit_divisor": 0.25,
+    "normalized_unit_price_clp": 2684.64,
+    "reference_price_clp": 837.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 3.2055,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-277-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "db2679a5cf9da7d1",
     "oc_id": "3877-208-AG26",
     "correlativo": 8,
@@ -14958,6 +15420,50 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-208-AG26",
     "captured_at": "2026-07-14T20:37:33.392077+00:00"
+  },
+  {
+    "id": "408ba0c5f6b434a3",
+    "oc_id": "3877-277-AG26",
+    "correlativo": 41,
+    "comuna": "Lampa",
+    "sku_id": "corchetera_metalica",
+    "matched_rule": "keyword",
+    "product": "Papel multiuso",
+    "quantity": 10.0,
+    "moneda": "CLP",
+    "unit_price": 7530.0,
+    "unit_price_clp_gross": 8960.7,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 8960.7,
+    "reference_price_clp": 3555.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 2.5202,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-277-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "a47d0e4145d46d02",
+    "oc_id": "3877-277-AG26",
+    "correlativo": 11,
+    "comuna": "Lampa",
+    "sku_id": "corchetes_caja",
+    "matched_rule": "keyword",
+    "product": "Papel multiuso",
+    "quantity": 20.0,
+    "moneda": "CLP",
+    "unit_price": 1299.0,
+    "unit_price_clp_gross": 1545.81,
+    "unit_divisor": 0.2,
+    "normalized_unit_price_clp": 7729.05,
+    "reference_price_clp": 840.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 9.1958,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-277-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "a8de648df4ac84f4",
@@ -15002,6 +15508,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-233-AG26",
     "captured_at": "2026-07-14T20:37:33.392077+00:00"
+  },
+  {
+    "id": "b50fef4b019799a6",
+    "oc_id": "3877-277-AG26",
+    "correlativo": 15,
+    "comuna": "Lampa",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "Papel multiuso",
+    "quantity": 120.0,
+    "moneda": "CLP",
+    "unit_price": 166.0,
+    "unit_price_clp_gross": 197.54,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 197.54,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2753,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-277-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "04c9d72be254df33",
@@ -15222,6 +15750,72 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-276-AG26",
     "captured_at": "2026-07-16T13:39:37.782295+00:00"
+  },
+  {
+    "id": "d933180962ebcba3",
+    "oc_id": "3877-277-AG26",
+    "correlativo": 29,
+    "comuna": "Lampa",
+    "sku_id": "sobre_oficio",
+    "matched_rule": "keyword",
+    "product": "Papel multiuso",
+    "quantity": 1000.0,
+    "moneda": "CLP",
+    "unit_price": 84.0,
+    "unit_price_clp_gross": 99.96,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 99.96,
+    "reference_price_clp": 745.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.1342,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-277-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "0a8bdbef22478625",
+    "oc_id": "3877-277-AG26",
+    "correlativo": 30,
+    "comuna": "Lampa",
+    "sku_id": "sobre_oficio",
+    "matched_rule": "keyword",
+    "product": "Papel multiuso",
+    "quantity": 500.0,
+    "moneda": "CLP",
+    "unit_price": 129.0,
+    "unit_price_clp_gross": 153.51,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 153.51,
+    "reference_price_clp": 745.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2061,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-277-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "f34de94e6196d306",
+    "oc_id": "3877-277-AG26",
+    "correlativo": 31,
+    "comuna": "Lampa",
+    "sku_id": "sobre_oficio",
+    "matched_rule": "keyword",
+    "product": "Papel multiuso",
+    "quantity": 1000.0,
+    "moneda": "CLP",
+    "unit_price": 27.0,
+    "unit_price_clp_gross": 32.13,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 32.13,
+    "reference_price_clp": 745.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.0431,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3877-277-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "02844a08a2e84883",
@@ -15466,6 +16060,28 @@
     "captured_at": "2026-07-14T21:47:58.499988+00:00"
   },
   {
+    "id": "a3ced7a139e1d7c3",
+    "oc_id": "2345-324-CM26",
+    "correlativo": 6,
+    "comuna": "Las Condes",
+    "sku_id": "huincha_medir",
+    "matched_rule": "keyword",
+    "product": "HUINCHA DE MEDIR TRUPER METÁLICA 10M UNIDAD REGIÓN RM",
+    "quantity": 250.0,
+    "moneda": "CLP",
+    "unit_price": 18613.0,
+    "unit_price_clp_gross": 22149.47,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 22149.47,
+    "reference_price_clp": 8990.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.4638,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2345-324-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "7f14dcfa564e6acd",
     "oc_id": "2345-254-AG26",
     "correlativo": 9,
@@ -15486,6 +16102,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2345-254-AG26",
     "captured_at": "2026-07-14T22:22:28.223946+00:00"
+  },
+  {
+    "id": "838c472d5c79e514",
+    "oc_id": "2345-296-AG26",
+    "correlativo": 2,
+    "comuna": "Las Condes",
+    "sku_id": "teclado_usb",
+    "matched_rule": "keyword",
+    "product": "Teclados",
+    "quantity": 10.0,
+    "moneda": "CLP",
+    "unit_price": 9294.0,
+    "unit_price_clp_gross": 11059.86,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 11059.86,
+    "reference_price_clp": 5740.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 1.9268,
+    "severity": "watch",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2345-296-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "746e4a793fb2b717",
@@ -17336,6 +17974,28 @@
     "captured_at": "2026-07-22T13:40:24.260078+00:00"
   },
   {
+    "id": "be6c2a2075bb80e0",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 15,
+    "comuna": "Maipú",
+    "sku_id": "corchetera_metalica",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 50.0,
+    "moneda": "CLP",
+    "unit_price": 14800.0,
+    "unit_price_clp_gross": 17612.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 17612.0,
+    "reference_price_clp": 3555.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 4.9535,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "2424c4723760a76f",
     "oc_id": "2770-127-SE26",
     "correlativo": 1,
@@ -17378,6 +18038,72 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-165-SE26",
     "captured_at": "2026-07-14T21:33:01.294989+00:00"
+  },
+  {
+    "id": "db4b9edb29e2fc22",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 18,
+    "comuna": "Maipú",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 8000.0,
+    "moneda": "CLP",
+    "unit_price": 120.0,
+    "unit_price_clp_gross": 142.8,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 142.8,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.199,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "4d4afe7792d60096",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 19,
+    "comuna": "Maipú",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 6000.0,
+    "moneda": "CLP",
+    "unit_price": 120.0,
+    "unit_price_clp_gross": 142.8,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 142.8,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.199,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "808dd6fadd44ea43",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 20,
+    "comuna": "Maipú",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 6000.0,
+    "moneda": "CLP",
+    "unit_price": 120.0,
+    "unit_price_clp_gross": 142.8,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 142.8,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.199,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "4656d585bb9be05e",
@@ -17490,6 +18216,50 @@
     "captured_at": "2026-07-14T21:33:01.294989+00:00"
   },
   {
+    "id": "2cb8e2d7b2ebe709",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 4,
+    "comuna": "Maipú",
+    "sku_id": "lapiz_pasta_azul",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 600.0,
+    "moneda": "CLP",
+    "unit_price": 3250.0,
+    "unit_price_clp_gross": 3867.5,
+    "unit_divisor": 50.0,
+    "normalized_unit_price_clp": 77.35,
+    "reference_price_clp": 385.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2009,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "018ff41ff94740d2",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 5,
+    "comuna": "Maipú",
+    "sku_id": "lapiz_pasta_azul",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 300.0,
+    "moneda": "CLP",
+    "unit_price": 3250.0,
+    "unit_price_clp_gross": 3867.5,
+    "unit_divisor": 50.0,
+    "normalized_unit_price_clp": 77.35,
+    "reference_price_clp": 385.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2009,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "88480fb059d19a64",
     "oc_id": "2770-165-SE26",
     "correlativo": 3,
@@ -17512,6 +18282,28 @@
     "captured_at": "2026-07-14T21:33:01.294989+00:00"
   },
   {
+    "id": "b66c76a0f132a6ad",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 30,
+    "comuna": "Maipú",
+    "sku_id": "marcador_permanente",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 6000.0,
+    "moneda": "CLP",
+    "unit_price": 170.0,
+    "unit_price_clp_gross": 202.3,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 202.3,
+    "reference_price_clp": 741.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.2728,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "497b0756be9ce6a0",
     "oc_id": "2583-206-AG26",
     "correlativo": 5,
@@ -17532,6 +18324,50 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2583-206-AG26",
     "captured_at": "2026-07-14T21:33:01.294989+00:00"
+  },
+  {
+    "id": "11ccb5456b8244be",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 3,
+    "comuna": "Maipú",
+    "sku_id": "pegamento_barra",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 2500.0,
+    "moneda": "CLP",
+    "unit_price": 180.0,
+    "unit_price_clp_gross": 214.2,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 214.2,
+    "reference_price_clp": 2080.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.103,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "47bb9f264b6ff4bf",
+    "oc_id": "2770-258-SE26",
+    "correlativo": 29,
+    "comuna": "Maipú",
+    "sku_id": "pilas_aaa_blister4",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 2000.0,
+    "moneda": "CLP",
+    "unit_price": 1140.0,
+    "unit_price_clp_gross": 1356.6,
+    "unit_divisor": 2.0,
+    "normalized_unit_price_clp": 678.3,
+    "reference_price_clp": 4740.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.1431,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2770-258-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "3000ca97a7672672",
@@ -17773,7 +18609,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2674-582-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "6c1105291fcdb4e8",
@@ -18964,6 +19800,28 @@
     "captured_at": "2026-07-23T13:43:32.757223+00:00"
   },
   {
+    "id": "0dff154a900de940",
+    "oc_id": "2393-895-AG26",
+    "correlativo": 1,
+    "comuna": "Pedro Aguirre Cerda",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "Bolsas de basura",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 372000.0,
+    "unit_price_clp_gross": 442680.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 442680.0,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 334.0981,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2393-895-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "a824a2de212d6ee8",
     "oc_id": "2395-258-CM26",
     "correlativo": 5,
@@ -19335,7 +20193,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2393-730-AG26",
-    "captured_at": "2026-07-14T20:37:33.392077+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "88d9124c306095b3",
@@ -19599,7 +20457,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2393-874-AG26",
-    "captured_at": "2026-07-23T13:43:32.757223+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "7274c380b524a408",
@@ -20018,6 +20876,50 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2393-749-AG26",
     "captured_at": "2026-07-13T18:33:03.168923+00:00"
+  },
+  {
+    "id": "f74ae348e73f0fa3",
+    "oc_id": "2393-896-AG26",
+    "correlativo": 1,
+    "comuna": "Pedro Aguirre Cerda",
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "matched_rule": "keyword",
+    "product": "Zapatos de hombre",
+    "quantity": 25.0,
+    "moneda": "CLP",
+    "unit_price": 42900.0,
+    "unit_price_clp_gross": 51051.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 51051.0,
+    "reference_price_clp": 23540.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.1687,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2393-896-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "2dedf63a32cc9646",
+    "oc_id": "2393-896-AG26",
+    "correlativo": 2,
+    "comuna": "Pedro Aguirre Cerda",
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "matched_rule": "keyword",
+    "product": "Zapatos de mujer",
+    "quantity": 25.0,
+    "moneda": "CLP",
+    "unit_price": 45900.0,
+    "unit_price_clp_gross": 54621.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 54621.0,
+    "reference_price_clp": 23540.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.3203,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2393-896-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "4d9dcae0c568b098",
@@ -22173,7 +23075,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2403-277-AG26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "5e9dabaf4f3f7697",
@@ -22327,7 +23229,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2403-277-AG26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "760f0edc8f8881e8",
@@ -22459,7 +23361,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2403-274-AG26",
-    "captured_at": "2026-07-16T13:39:37.782295+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "d5b336f79c5ea6f1",
@@ -22547,7 +23449,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2403-277-AG26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "46687ea324f7574c",
@@ -22591,7 +23493,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2403-277-AG26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "597d869dfe52cb9f",
@@ -22614,6 +23516,94 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2403-764-CM25",
     "captured_at": "2026-07-16T13:39:37.782295+00:00"
+  },
+  {
+    "id": "edec7492e233b567",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 2,
+    "comuna": "Pirque",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "BOLSA DE BASURA MAXIPACK 120X130 280 L PAQUETE X 10 UNIDADES RM",
+    "quantity": 300.0,
+    "moneda": "CLP",
+    "unit_price": 2166.0,
+    "unit_price_clp_gross": 2577.54,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 257.75,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.1945,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "98cfeedceb038e32",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 3,
+    "comuna": "Pirque",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "BOLSA DE BASURA TREMEX 70X90 70 L PAQUETE X 10 UNIDADES RM",
+    "quantity": 300.0,
+    "moneda": "CLP",
+    "unit_price": 648.0,
+    "unit_price_clp_gross": 771.12,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 77.11,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0582,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "0f4a061ffdf058a2",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 4,
+    "comuna": "Pirque",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "BOLSA DE BASURA TREMEX 80X110 120 L PAQUETE X 10 UNIDADES RM",
+    "quantity": 800.0,
+    "moneda": "CLP",
+    "unit_price": 1347.0,
+    "unit_price_clp_gross": 1602.93,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 160.29,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.121,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "7b51f4e67c08ff0c",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 5,
+    "comuna": "Pirque",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "BOLSA DE BASURA IMPEKE 50X70 30 L PAQUETE X 10 UNIDADES RM",
+    "quantity": 600.0,
+    "moneda": "CLP",
+    "unit_price": 299.0,
+    "unit_price_clp_gross": 355.81,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 35.58,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0269,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "03cec8598c59b612",
@@ -22792,6 +23782,28 @@
     "captured_at": "2026-07-14T20:24:29.137950+00:00"
   },
   {
+    "id": "dfae4cec40dcb85e",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 1,
+    "comuna": "Pirque",
+    "sku_id": "desinfectante_multiuso",
+    "matched_rule": "keyword",
+    "product": "AEROSOL AMBIENTAL DESINFECTANTE IGENIX TRADICIONAL 360 ML D-541/24 RM",
+    "quantity": 200.0,
+    "moneda": "CLP",
+    "unit_price": 1532.0,
+    "unit_price_clp_gross": 1823.08,
+    "unit_divisor": 0.4,
+    "normalized_unit_price_clp": 4557.7,
+    "reference_price_clp": 2140.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 2.1298,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "1f6de045a2c22cac",
     "oc_id": "2719-350-AG26",
     "correlativo": 44,
@@ -22924,6 +23936,28 @@
     "captured_at": "2026-07-13T18:12:21.464647+00:00"
   },
   {
+    "id": "0b790a87a72ce261",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 10,
+    "comuna": "Pirque",
+    "sku_id": "lavaloza",
+    "matched_rule": "keyword",
+    "product": "LAVALOZA VIRUTEX DESENGRASANTE BOTELLA 1,200 ML CITRICO RM",
+    "quantity": 50.0,
+    "moneda": "CLP",
+    "unit_price": 2140.0,
+    "unit_price_clp_gross": 2546.6,
+    "unit_divisor": 0.0024,
+    "normalized_unit_price_clp": 1061083.33,
+    "reference_price_clp": 2690.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 394.4548,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "7345a92276d073b6",
     "oc_id": "2719-350-AG26",
     "correlativo": 59,
@@ -22944,6 +23978,50 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-350-AG26",
     "captured_at": "2026-07-14T20:24:29.137950+00:00"
+  },
+  {
+    "id": "0cacb31df44d0c97",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 21,
+    "comuna": "Pirque",
+    "sku_id": "pano_multiuso",
+    "matched_rule": "keyword",
+    "product": "PAÑOS VIRUTEX PRO MULTIUSO PAQUETE DE 3 UNIDADES RM",
+    "quantity": 150.0,
+    "moneda": "CLP",
+    "unit_price": 678.0,
+    "unit_price_clp_gross": 806.82,
+    "unit_divisor": 3.0,
+    "normalized_unit_price_clp": 268.94,
+    "reference_price_clp": 5250.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.0512,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "c0fbba72592fcb94",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 14,
+    "comuna": "Pirque",
+    "sku_id": "papel_higienico_pack",
+    "matched_rule": "keyword",
+    "product": "PAPEL HIGIENICO TORK HOJA SIMPLE 6 ROLLOS 500 M RM",
+    "quantity": 300.0,
+    "moneda": "CLP",
+    "unit_price": 12747.0,
+    "unit_price_clp_gross": 15168.93,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 15168.93,
+    "reference_price_clp": 6518.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 2.3271,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "67be69a01e8dea00",
@@ -23012,6 +24090,50 @@
     "captured_at": "2026-07-18T13:08:07.557192+00:00"
   },
   {
+    "id": "e4d93034b7db31a9",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 15,
+    "comuna": "Pirque",
+    "sku_id": "toalla_papel_rollo",
+    "matched_rule": "keyword",
+    "product": "TOALLA DE PAPEL TECNOPAPEL HOJA SIMPLE 250M 2 ROLLOS RM",
+    "quantity": 300.0,
+    "moneda": "CLP",
+    "unit_price": 7449.0,
+    "unit_price_clp_gross": 8864.31,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 8864.31,
+    "reference_price_clp": 2670.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 3.32,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "25ac7b4d03fe06be",
+    "oc_id": "2719-422-CM26",
+    "correlativo": 16,
+    "comuna": "Pirque",
+    "sku_id": "trapero_mopa",
+    "matched_rule": "keyword",
+    "product": "TRAPERO REUTILIZABLE TREMEX ALGODON DOBLE C/OJAL 50X45 CM RM",
+    "quantity": 200.0,
+    "moneda": "CLP",
+    "unit_price": 1036.0,
+    "unit_price_clp_gross": 1232.84,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 1232.84,
+    "reference_price_clp": 4392.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2807,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2719-422-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "4eb709c0004a957d",
     "oc_id": "2460-667-AG26",
     "correlativo": 5,
@@ -23075,7 +24197,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2462-131-AG26",
-    "captured_at": "2026-07-13T18:39:53.686159+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "be87851c05b6c6f7",
@@ -23097,7 +24219,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2462-131-AG26",
-    "captured_at": "2026-07-13T18:39:53.686159+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "7549279878b35601",
@@ -23164,6 +24286,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2462-121-AG26",
     "captured_at": "2026-07-14T22:22:28.223946+00:00"
+  },
+  {
+    "id": "53ac9c30a95612fc",
+    "oc_id": "2460-677-AG26",
+    "correlativo": 4,
+    "comuna": "Providencia",
+    "sku_id": "brocha_pintura",
+    "matched_rule": "keyword",
+    "product": "Brochas",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 181876.0,
+    "unit_price_clp_gross": 216432.44,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 216432.44,
+    "reference_price_clp": 2190.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 98.8276,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2460-677-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "0dd650a4e8b25644",
@@ -23427,7 +24571,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2460-654-AG26",
-    "captured_at": "2026-07-16T13:39:37.782295+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "288e4917811e0d42",
@@ -23584,6 +24728,28 @@
     "captured_at": "2026-07-14T21:59:17.838299+00:00"
   },
   {
+    "id": "196df32b66bb9b32",
+    "oc_id": "2460-677-AG26",
+    "correlativo": 9,
+    "comuna": "Providencia",
+    "sku_id": "pegamento_barra",
+    "matched_rule": "keyword",
+    "product": "Barras de pegamento libres de ácido",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 120561.0,
+    "unit_price_clp_gross": 143467.59,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 143467.59,
+    "reference_price_clp": 2080.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 68.9582,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2460-677-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "30859f39a4180d14",
     "oc_id": "2460-590-AG26",
     "correlativo": 9,
@@ -23625,7 +24791,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2460-681-TD26",
-    "captured_at": "2026-07-23T13:43:32.757223+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "ee5b775ceac93e92",
@@ -24442,6 +25608,28 @@
     "captured_at": "2026-07-14T21:33:01.294989+00:00"
   },
   {
+    "id": "e27b32714efcfe93",
+    "oc_id": "2453-533-TD26",
+    "correlativo": 1,
+    "comuna": "Quinta Normal",
+    "sku_id": "papel_higienico_pack",
+    "matched_rule": "keyword",
+    "product": "Papel higiénico",
+    "quantity": 1400.0,
+    "moneda": "CLP",
+    "unit_price": 290.5,
+    "unit_price_clp_gross": 345.69,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 345.69,
+    "reference_price_clp": 6518.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.053,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2453-533-TD26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "af7cbd53d789cc0a",
     "oc_id": "2453-460-AG26",
     "correlativo": 1,
@@ -24571,7 +25759,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1431841-621-CM26",
-    "captured_at": "2026-07-13T18:39:53.686159+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "a593b4caf7cf87ae",
@@ -24835,7 +26023,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1431841-684-AG26",
-    "captured_at": "2026-07-16T13:39:37.782295+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "9761fc95bfd54b7c",
@@ -24967,7 +26155,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1431841-621-CM26",
-    "captured_at": "2026-07-13T18:39:53.686159+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "b2e71fc8d72a6fa2",
@@ -25012,6 +26200,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1431841-370-CM26",
     "captured_at": "2026-07-14T19:52:51.211675+00:00"
+  },
+  {
+    "id": "0a63c3205fede8f0",
+    "oc_id": "2374-67-SE26",
+    "correlativo": 1,
+    "comuna": "Recoleta",
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "matched_rule": "keyword",
+    "product": "Zapatos de hombre",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 8403361.0,
+    "unit_price_clp_gross": 9999999.59,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 9999999.59,
+    "reference_price_clp": 23540.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 424.8088,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2374-67-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "1b85a20cb9bcb814",
@@ -25891,7 +27101,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-306-AG26",
-    "captured_at": "2026-07-13T18:21:08.032184+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "e2585959286d13ca",
@@ -26070,6 +27280,28 @@
     "captured_at": "2026-07-14T20:24:29.137950+00:00"
   },
   {
+    "id": "f64cdc853c83d610",
+    "oc_id": "1741-158-AG26",
+    "correlativo": 35,
+    "comuna": "San Miguel",
+    "sku_id": "corchetera_metalica",
+    "matched_rule": "keyword",
+    "product": "Artículos de papelería",
+    "quantity": 2.0,
+    "moneda": "CLP",
+    "unit_price": 10690.0,
+    "unit_price_clp_gross": 12721.1,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 12721.1,
+    "reference_price_clp": 3555.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 3.5779,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-158-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "320ab9af50ecbfb5",
     "oc_id": "1741-303-AG26",
     "correlativo": 1,
@@ -26090,6 +27322,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-303-AG26",
     "captured_at": "2026-07-14T22:22:28.223946+00:00"
+  },
+  {
+    "id": "84754508409280ae",
+    "oc_id": "1741-158-AG26",
+    "correlativo": 36,
+    "comuna": "San Miguel",
+    "sku_id": "corchetes_caja",
+    "matched_rule": "keyword",
+    "product": "Artículos de papelería",
+    "quantity": 2.0,
+    "moneda": "CLP",
+    "unit_price": 210.0,
+    "unit_price_clp_gross": 249.9,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 249.9,
+    "reference_price_clp": 840.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.2973,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-158-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "8431d01f9ef5fce3",
@@ -26158,6 +27412,28 @@
     "captured_at": "2026-07-15T13:31:36.642021+00:00"
   },
   {
+    "id": "d8f6629ac06416c0",
+    "oc_id": "1741-158-AG26",
+    "correlativo": 2,
+    "comuna": "San Miguel",
+    "sku_id": "lapiz_grafito",
+    "matched_rule": "keyword",
+    "product": "Artículos de papelería",
+    "quantity": 20.0,
+    "moneda": "CLP",
+    "unit_price": 564.0,
+    "unit_price_clp_gross": 671.16,
+    "unit_divisor": 12.0,
+    "normalized_unit_price_clp": 55.93,
+    "reference_price_clp": 235.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.2375,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-158-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "9aadd080d9b38a9a",
     "oc_id": "1741-303-AG26",
     "correlativo": 14,
@@ -26221,7 +27497,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-324-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "1b3b2a1362bbf565",
@@ -26243,7 +27519,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-324-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "4b292ee940d187a9",
@@ -26265,7 +27541,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-324-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "4204f4bab0c3328a",
@@ -26287,7 +27563,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-324-AG26",
-    "captured_at": "2026-07-15T13:31:36.642021+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "834cc838d7800fd2",
@@ -26400,6 +27676,28 @@
     "captured_at": "2026-07-14T21:05:14.169547+00:00"
   },
   {
+    "id": "7b755fff364d6e2d",
+    "oc_id": "1741-158-AG26",
+    "correlativo": 12,
+    "comuna": "San Miguel",
+    "sku_id": "pegamento_barra",
+    "matched_rule": "keyword",
+    "product": "Artículos de papelería",
+    "quantity": 2.0,
+    "moneda": "CLP",
+    "unit_price": 7440.0,
+    "unit_price_clp_gross": 8853.6,
+    "unit_divisor": 24.0,
+    "normalized_unit_price_clp": 368.9,
+    "reference_price_clp": 2080.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.1773,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-158-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "5c66e5ea7003d0c3",
     "oc_id": "1741-233-AG26",
     "correlativo": 10,
@@ -26508,6 +27806,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-228-AG26",
     "captured_at": "2026-07-14T21:05:14.169547+00:00"
+  },
+  {
+    "id": "6c0175717a88b8f3",
+    "oc_id": "1741-158-AG26",
+    "correlativo": 4,
+    "comuna": "San Miguel",
+    "sku_id": "tijeras_oficina",
+    "matched_rule": "keyword",
+    "product": "Artículos de papelería",
+    "quantity": 15.0,
+    "moneda": "CLP",
+    "unit_price": 250.0,
+    "unit_price_clp_gross": 297.5,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 297.5,
+    "reference_price_clp": 2090.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.1423,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1741-158-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "2daf5868c399a039",
@@ -28135,7 +29455,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2452-121-CM26",
-    "captured_at": "2026-07-18T13:08:07.557192+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "f2255c2db35750c9",
@@ -28334,6 +29654,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-239-AG26",
     "captured_at": "2026-07-14T19:52:51.211675+00:00"
+  },
+  {
+    "id": "f18167c1e9c685e9",
+    "oc_id": "2343-244-AG26",
+    "correlativo": 1,
+    "comuna": "Santiago",
+    "sku_id": "cloro_lavandina_4l",
+    "matched_rule": "keyword",
+    "product": "Protege sábanas de hospital",
+    "quantity": 500.0,
+    "moneda": "CLP",
+    "unit_price": 2990.0,
+    "unit_price_clp_gross": 3558.1,
+    "unit_divisor": 0.25,
+    "normalized_unit_price_clp": 14232.4,
+    "reference_price_clp": 3490.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 4.0781,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-244-AG26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "8f2a70ab362a8e42",
@@ -28553,7 +29895,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-264-AG26",
-    "captured_at": "2026-07-14T21:33:01.294989+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "5cfc13c77bf9e585",
@@ -29213,7 +30555,29 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2703-581-SE26",
-    "captured_at": "2026-07-22T13:40:24.260078+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "d47c6c29c965afe2",
+    "oc_id": "2701-473-CM26",
+    "correlativo": 12,
+    "comuna": "Talagante",
+    "sku_id": "archivador_palanca_oficio",
+    "matched_rule": "keyword",
+    "product": "FUNDA ARTEL PLÁSTICA ARCHIVADOR TRANSP T/OFICIO LOMO BLANCO 10 UNIDADES RM",
+    "quantity": 50.0,
+    "moneda": "CLP",
+    "unit_price": 596.0,
+    "unit_price_clp_gross": 709.24,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 70.92,
+    "reference_price_clp": 2802.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.0253,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-473-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "dad939b474808a87",
@@ -29744,6 +31108,28 @@
     "captured_at": "2026-07-21T13:45:49.544191+00:00"
   },
   {
+    "id": "66ceb5986c773837",
+    "oc_id": "2701-474-CM26",
+    "correlativo": 12,
+    "comuna": "Talagante",
+    "sku_id": "lapiz_pasta_azul",
+    "matched_rule": "keyword",
+    "product": "LÁPIZ PASTA TORRE PUNTA MEDIA ROJO 1,0MM 50 UNIDADES RM",
+    "quantity": 3.0,
+    "moneda": "CLP",
+    "unit_price": 4814.0,
+    "unit_price_clp_gross": 5728.66,
+    "unit_divisor": 50.0,
+    "normalized_unit_price_clp": 114.57,
+    "reference_price_clp": 385.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2976,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-474-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "fb6529d3bb6fcc82",
     "oc_id": "2701-417-AG26",
     "correlativo": 2,
@@ -29942,6 +31328,72 @@
     "captured_at": "2026-07-14T21:18:15.154893+00:00"
   },
   {
+    "id": "1454aa5f79c6222a",
+    "oc_id": "2701-473-CM26",
+    "correlativo": 1,
+    "comuna": "Talagante",
+    "sku_id": "pegamento_barra",
+    "matched_rule": "keyword",
+    "product": "PEGAMENTO BARRA ARTEL TRANSP 36GR NO TOX LAVABLE PAPEL-CARTULINA-TELA UNIDAD RM",
+    "quantity": 177.0,
+    "moneda": "CLP",
+    "unit_price": 439.0,
+    "unit_price_clp_gross": 522.41,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 522.41,
+    "reference_price_clp": 2080.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.2511,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-473-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "66d5828cfc68c9d0",
+    "oc_id": "2701-474-CM26",
+    "correlativo": 13,
+    "comuna": "Talagante",
+    "sku_id": "pilas_aa_blister4",
+    "matched_rule": "keyword",
+    "product": "PILA DURACELL ALCALINA AA 1,5 V 2 UNIDADES RM",
+    "quantity": 30.0,
+    "moneda": "CLP",
+    "unit_price": 1243.0,
+    "unit_price_clp_gross": 1479.17,
+    "unit_divisor": 2.0,
+    "normalized_unit_price_clp": 739.59,
+    "reference_price_clp": 3790.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.1951,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-474-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
+    "id": "eb42de5d57e0524c",
+    "oc_id": "2701-475-CM26",
+    "correlativo": 8,
+    "comuna": "Talagante",
+    "sku_id": "pilas_aaa_blister4",
+    "matched_rule": "keyword",
+    "product": "PILA DURACELL ALCALINA AAA 1,5 V 12 UNIDADES RM",
+    "quantity": 6.0,
+    "moneda": "CLP",
+    "unit_price": 7263.0,
+    "unit_price_clp_gross": 8642.97,
+    "unit_divisor": 12.0,
+    "normalized_unit_price_clp": 720.25,
+    "reference_price_clp": 4740.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.152,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-475-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "dae35b0dc2b32a1f",
     "oc_id": "2701-420-AG26",
     "correlativo": 5,
@@ -29962,6 +31414,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-420-AG26",
     "captured_at": "2026-07-14T22:39:15.160818+00:00"
+  },
+  {
+    "id": "7411ba85a7f5e059",
+    "oc_id": "2701-474-CM26",
+    "correlativo": 16,
+    "comuna": "Talagante",
+    "sku_id": "sobre_oficio",
+    "matched_rule": "keyword",
+    "product": "SOBRE FULTON´S AMERICANO BLANCO 22,8 X 10,6 CM2 80 GR UNIDAD RM",
+    "quantity": 1000.0,
+    "moneda": "CLP",
+    "unit_price": 36.0,
+    "unit_price_clp_gross": 42.84,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 42.84,
+    "reference_price_clp": 745.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.0575,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-474-CM26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "2bfc970f2c7a5152",
@@ -30162,6 +31636,28 @@
     "captured_at": "2026-07-14T22:22:28.223946+00:00"
   },
   {
+    "id": "d0fbb5f3b336288a",
+    "oc_id": "2703-423-SE26",
+    "correlativo": 1,
+    "comuna": "Talagante",
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "matched_rule": "keyword",
+    "product": "Abrazaderas de pantalón para personas con discapacidad física",
+    "quantity": 69.0,
+    "moneda": "CLP",
+    "unit_price": 60800.0,
+    "unit_price_clp_gross": 72352.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 72352.0,
+    "reference_price_clp": 23540.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 3.0736,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2703-423-SE26",
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+  },
+  {
     "id": "eea877cf26d44b96",
     "oc_id": "3665-31-AG26",
     "correlativo": 1,
@@ -30203,7 +31699,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3665-376-AG26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "a8a361ea5ef41853",
@@ -30423,7 +31919,7 @@
     "severity": "watch",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3665-376-AG26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
     "id": "eeccd15a5805362e",
