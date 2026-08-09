@@ -5343,7 +5343,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2296-364-SE26",
-    "captured_at": "2026-08-08T12:49:54.472638+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "4d94d8db3be0c31c",
@@ -12317,7 +12317,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2676-463-AG26",
-    "captured_at": "2026-07-31T14:01:01.221093+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "00b0d57c0ba28550",
@@ -23383,7 +23383,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2735-1821-CM25",
-    "captured_at": "2026-07-30T13:47:46.083099+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "8d8833be7008dbdb",
@@ -42438,6 +42438,28 @@
     "captured_at": "2026-07-14T21:18:15.154893+00:00"
   },
   {
+    "id": "80ab1ab0345de05c",
+    "oc_id": "2343-408-CM26",
+    "correlativo": 3,
+    "comuna": "Santiago",
+    "sku_id": "mascarillas_quirurgicas_caja50",
+    "matched_rule": "keyword",
+    "product": "MASCARILLA DESECHABLE SMARTMED QUIRÚRGICA DE TRES CAPAS UNIDAD",
+    "quantity": 3000.0,
+    "moneda": "CLP",
+    "unit_price": 15.0,
+    "unit_price_clp_gross": 17.85,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 17.85,
+    "reference_price_clp": 3640.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.0049,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-408-CM26",
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
+  },
+  {
     "id": "1bbd87dcaf1ed127",
     "oc_id": "2343-278-AG26",
     "correlativo": 14,
@@ -43161,7 +43183,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-473-CM26",
-    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "dad939b474808a87",
@@ -43293,7 +43315,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-495-CM26",
-    "captured_at": "2026-08-01T13:19:02.544703+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "80dba2647500f1f8",
@@ -43733,7 +43755,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-495-CM26",
-    "captured_at": "2026-08-01T13:19:02.544703+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "4cfc6f532ba52e22",
@@ -43865,7 +43887,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-474-CM26",
-    "captured_at": "2026-07-25T13:21:10.038302+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "101cb797e97946aa",
@@ -43887,7 +43909,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-495-CM26",
-    "captured_at": "2026-08-01T13:19:02.544703+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "6815d38985ceb503",
@@ -44151,7 +44173,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-473-CM26",
-    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "66d5828cfc68c9d0",
@@ -44173,7 +44195,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-474-CM26",
-    "captured_at": "2026-07-25T13:21:10.038302+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "0f178fbdb34b5aa3",
@@ -44217,7 +44239,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-475-CM26",
-    "captured_at": "2026-07-24T13:37:46.390649+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "5893bb6aa0a804a0",
@@ -44305,7 +44327,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-474-CM26",
-    "captured_at": "2026-07-25T13:21:10.038302+00:00"
+    "captured_at": "2026-08-09T12:32:44.963126+00:00"
   },
   {
     "id": "2bfc970f2c7a5152",
