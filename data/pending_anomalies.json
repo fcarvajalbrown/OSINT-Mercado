@@ -14561,7 +14561,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2680-200-AG26",
-    "captured_at": "2026-08-14T12:59:00.898027+00:00"
+    "captured_at": "2026-08-16T12:21:28.714642+00:00"
   },
   {
     "id": "d7e9127dc13908d0",
@@ -44660,6 +44660,50 @@
     "captured_at": "2026-08-15T12:38:58.182887+00:00"
   },
   {
+    "id": "4c2e0db9e2a51cb4",
+    "oc_id": "1059261-19-CM26",
+    "correlativo": 12,
+    "comuna": "San Pedro",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "DESTACADOR DOM BOLSILLO DELGADO NARANJA FLÚOR P/BISELADA 1MM UNIDAD RM",
+    "quantity": 19.0,
+    "moneda": "CLP",
+    "unit_price": 176.0,
+    "unit_price_clp_gross": 209.44,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 209.44,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2919,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1059261-19-CM26",
+    "captured_at": "2026-08-16T12:21:28.714642+00:00"
+  },
+  {
+    "id": "9e4f863782bb8dcd",
+    "oc_id": "1059261-19-CM26",
+    "correlativo": 14,
+    "comuna": "San Pedro",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "DESTACADOR DOM BOLSILLO DELGADO ROSA FLÚOR P/BISELADA 1MM UNIDAD RM",
+    "quantity": 21.0,
+    "moneda": "CLP",
+    "unit_price": 176.0,
+    "unit_price_clp_gross": 209.44,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 209.44,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2919,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1059261-19-CM26",
+    "captured_at": "2026-08-16T12:21:28.714642+00:00"
+  },
+  {
     "id": "e6bf4069f006fc85",
     "oc_id": "4498-49-CM26",
     "correlativo": 34,
@@ -46044,6 +46088,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-373-CM26",
     "captured_at": "2026-07-30T13:47:46.083099+00:00"
+  },
+  {
+    "id": "51e8eaa6e785f9a4",
+    "oc_id": "2343-434-CM26",
+    "correlativo": 6,
+    "comuna": "Santiago",
+    "sku_id": "agua_mineral_15l",
+    "matched_rule": "keyword",
+    "product": "AGUA MINERAL SIN GAS VITAL BOTELLA 600 CC UNIDAD RM",
+    "quantity": 400.0,
+    "moneda": "CLP",
+    "unit_price": 406.0,
+    "unit_price_clp_gross": 483.14,
+    "unit_divisor": 0.4,
+    "normalized_unit_price_clp": 1207.85,
+    "reference_price_clp": 1075.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 1.1236,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-434-CM26",
+    "captured_at": "2026-08-16T12:21:28.714642+00:00"
   },
   {
     "id": "82504f99ff659dfe",
@@ -49783,7 +49849,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3665-469-AG26",
-    "captured_at": "2026-08-15T12:38:58.182887+00:00"
+    "captured_at": "2026-08-16T12:21:28.714642+00:00"
   },
   {
     "id": "d76d78e7bd3b37c9",
