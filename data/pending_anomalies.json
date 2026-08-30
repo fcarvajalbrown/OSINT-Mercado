@@ -3605,7 +3605,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2721-307-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
   },
   {
     "id": "aedf8c414838c63d",
@@ -45053,7 +45053,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2422-187-CM26",
-    "captured_at": "2026-08-20T12:45:23.234158+00:00"
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
   },
   {
     "id": "80a0eafa7ac97d73",
@@ -45075,7 +45075,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2422-187-CM26",
-    "captured_at": "2026-08-20T12:45:23.234158+00:00"
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
   },
   {
     "id": "7862d51a6d358c7b",
@@ -45097,7 +45097,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2422-187-CM26",
-    "captured_at": "2026-08-20T12:45:23.234158+00:00"
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
   },
   {
     "id": "b6505967a72f8231",
@@ -54230,6 +54230,28 @@
     "captured_at": "2026-08-04T14:06:33.304229+00:00"
   },
   {
+    "id": "8c9e311ce831ba18",
+    "oc_id": "2343-481-AG26",
+    "correlativo": 1,
+    "comuna": "Santiago",
+    "sku_id": "basurero_plastico_60l",
+    "matched_rule": "keyword",
+    "product": "Recipientes para residuos sanitarios",
+    "quantity": 4.0,
+    "moneda": "CLP",
+    "unit_price": 24500.0,
+    "unit_price_clp_gross": 29155.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 29155.0,
+    "reference_price_clp": 12990.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.2444,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-481-AG26",
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
+  },
+  {
     "id": "f2255c2db35750c9",
     "oc_id": "2343-278-AG26",
     "correlativo": 1,
@@ -54338,6 +54360,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-456-AG26",
     "captured_at": "2026-08-25T12:48:16.052528+00:00"
+  },
+  {
+    "id": "b9080c5192ca21ed",
+    "oc_id": "2343-80-CM26",
+    "correlativo": 2,
+    "comuna": "Santiago",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "BOLSA DE BASURA IMPEKE 70X90 70 L PAQUETE X 10 UNIDADES RM",
+    "quantity": 141.0,
+    "moneda": "CLP",
+    "unit_price": 753.0,
+    "unit_price_clp_gross": 896.07,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 89.61,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0676,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-80-CM26",
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
   },
   {
     "id": "195c34ac9afdd7db",
@@ -55242,6 +55286,28 @@
     "captured_at": "2026-08-27T21:48:30.871577+00:00"
   },
   {
+    "id": "5da32e1d5936b05a",
+    "oc_id": "2343-80-CM26",
+    "correlativo": 3,
+    "comuna": "Santiago",
+    "sku_id": "lavaloza",
+    "matched_rule": "keyword",
+    "product": "LAVALOZA WINKLER DESENGRASANTE BIDON 5000 ML LIMON RM",
+    "quantity": 45.0,
+    "moneda": "CLP",
+    "unit_price": 5500.0,
+    "unit_price_clp_gross": 6545.0,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 654.5,
+    "reference_price_clp": 2690.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2433,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-80-CM26",
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
+  },
+  {
     "id": "a373b12facc8cf95",
     "oc_id": "2343-236-CM26",
     "correlativo": 15,
@@ -55306,6 +55372,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-278-AG26",
     "captured_at": "2026-08-05T14:03:59.590007+00:00"
+  },
+  {
+    "id": "fc3d7c87e3d368a7",
+    "oc_id": "2343-80-CM26",
+    "correlativo": 16,
+    "comuna": "Santiago",
+    "sku_id": "pala_aseo",
+    "matched_rule": "keyword",
+    "product": "PALA DE ASEO MR ROB PLASTICA CON MANGO 80 CM RM",
+    "quantity": 12.0,
+    "moneda": "CLP",
+    "unit_price": 649.0,
+    "unit_price_clp_gross": 772.31,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 772.31,
+    "reference_price_clp": 5490.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.1407,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-80-CM26",
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
   },
   {
     "id": "ec0ea34d1df6efcd",
@@ -55394,6 +55482,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-315-CM26",
     "captured_at": "2026-07-31T14:01:01.221093+00:00"
+  },
+  {
+    "id": "63a1d8ae2c7b1289",
+    "oc_id": "2343-80-CM26",
+    "correlativo": 8,
+    "comuna": "Santiago",
+    "sku_id": "pano_multiuso",
+    "matched_rule": "keyword",
+    "product": "PAÑOS MR ROB MULTIUSO PAQUETE DE 6 UNIDADES RM",
+    "quantity": 54.0,
+    "moneda": "CLP",
+    "unit_price": 2944.0,
+    "unit_price_clp_gross": 3503.36,
+    "unit_divisor": 6.0,
+    "normalized_unit_price_clp": 583.89,
+    "reference_price_clp": 5250.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.1112,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-80-CM26",
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
   },
   {
     "id": "f0188b12e8b2934d",
@@ -55858,6 +55968,28 @@
     "captured_at": "2026-07-31T14:01:01.221093+00:00"
   },
   {
+    "id": "484346c238681d2d",
+    "oc_id": "2343-80-CM26",
+    "correlativo": 7,
+    "comuna": "Santiago",
+    "sku_id": "toalla_papel_rollo",
+    "matched_rule": "keyword",
+    "product": "TOALLA DE PAPEL ELITE PROFESSIONAL HOJA SIMPLE 200 M 2 ROLLOS RM",
+    "quantity": 100.0,
+    "moneda": "CLP",
+    "unit_price": 6492.0,
+    "unit_price_clp_gross": 7725.48,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 7725.48,
+    "reference_price_clp": 2670.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.8934,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-80-CM26",
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
+  },
+  {
     "id": "be9492bca072009c",
     "oc_id": "2452-197-CM25",
     "correlativo": 1,
@@ -55966,6 +56098,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-389-AG26",
     "captured_at": "2026-08-27T21:48:30.871577+00:00"
+  },
+  {
+    "id": "bfc15435f5b5b69c",
+    "oc_id": "2343-80-CM26",
+    "correlativo": 6,
+    "comuna": "Santiago",
+    "sku_id": "trapero_mopa",
+    "matched_rule": "keyword",
+    "product": "TRAPERO REUTILIZABLE VIRUTEX PRO ALGODON SIMPLE C/OJAL 50X50 CM RM",
+    "quantity": 180.0,
+    "moneda": "CLP",
+    "unit_price": 1024.0,
+    "unit_price_clp_gross": 1218.56,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 1218.56,
+    "reference_price_clp": 4392.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2774,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-80-CM26",
+    "captured_at": "2026-08-30T15:46:19.034880+00:00"
   },
   {
     "id": "a92dc8ed0a38881f",
