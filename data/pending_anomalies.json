@@ -1,5 +1,49 @@
 [
   {
+    "id": "5f6aa1f4d7ccbb12",
+    "oc_id": "1736-439-CM26",
+    "correlativo": 35,
+    "comuna": "",
+    "sku_id": "agua_mineral_15l",
+    "matched_rule": "keyword",
+    "product": "AGUA MINERAL CON GAS VITAL BOTELLA 600 CC UNIDAD RM",
+    "quantity": 1700.0,
+    "moneda": "CLP",
+    "unit_price": 379.0,
+    "unit_price_clp_gross": 451.01,
+    "unit_divisor": 0.4,
+    "normalized_unit_price_clp": 1127.52,
+    "reference_price_clp": 1075.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 1.0489,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-439-CM26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
+  },
+  {
+    "id": "58bf4b3bc09b48b8",
+    "oc_id": "1736-439-CM26",
+    "correlativo": 38,
+    "comuna": "",
+    "sku_id": "agua_mineral_15l",
+    "matched_rule": "keyword",
+    "product": "AGUA MINERAL SIN GAS VITAL BOTELLA 600 CC UNIDAD RM",
+    "quantity": 4750.0,
+    "moneda": "CLP",
+    "unit_price": 401.0,
+    "unit_price_clp_gross": 477.19,
+    "unit_divisor": 0.4,
+    "normalized_unit_price_clp": 1192.97,
+    "reference_price_clp": 1075.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 1.1097,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-439-CM26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
+  },
+  {
     "id": "471f770f9acd2f0e",
     "oc_id": "2343-300-CM26",
     "correlativo": 22,
@@ -4068,6 +4112,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3658-279-AG26",
     "captured_at": "2026-07-14T19:52:51.211675+00:00"
+  },
+  {
+    "id": "c17fe24fd8a3b1c8",
+    "oc_id": "3658-483-AG26",
+    "correlativo": 1,
+    "comuna": "Calera De Tango",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "Bolsas de basura",
+    "quantity": 1500.0,
+    "moneda": "CLP",
+    "unit_price": 147.0,
+    "unit_price_clp_gross": 174.93,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 174.93,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.132,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3658-483-AG26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "9958eaf7f92d3ce5",
@@ -9369,7 +9435,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-489-SE26",
-    "captured_at": "2026-07-14T21:05:14.169547+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "8d853a73787f0ef7",
@@ -9391,7 +9457,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-489-SE26",
-    "captured_at": "2026-07-14T21:05:14.169547+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "e121a41f0620f25c",
@@ -10513,7 +10579,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-489-SE26",
-    "captured_at": "2026-07-14T21:05:14.169547+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "c38a978df8db8eff",
@@ -11415,7 +11481,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-416-AG26",
-    "captured_at": "2026-07-28T14:01:42.930130+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "acbfd33fa4a0219b",
@@ -11437,7 +11503,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-702-CM26",
-    "captured_at": "2026-07-16T13:39:37.782295+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "c76c9e0b47f0634e",
@@ -12031,7 +12097,7 @@
     "severity": "watch",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-489-SE26",
-    "captured_at": "2026-07-14T21:05:14.169547+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "a6ea08f6621d2252",
@@ -12229,7 +12295,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-702-CM26",
-    "captured_at": "2026-07-16T13:39:37.782295+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "2c8748decc6e0607",
@@ -12428,6 +12494,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-780-AG26",
     "captured_at": "2026-08-03T14:18:12.429798+00:00"
+  },
+  {
+    "id": "a14fa6eec8ee1994",
+    "oc_id": "1736-886-SE26",
+    "correlativo": 1,
+    "comuna": "El Bosque",
+    "sku_id": "toallitas_humedas_pack",
+    "matched_rule": "keyword",
+    "product": "Toallitas húmedas",
+    "quantity": 2500.0,
+    "moneda": "CLP",
+    "unit_price": 502.0,
+    "unit_price_clp_gross": 597.38,
+    "unit_divisor": 20.0,
+    "normalized_unit_price_clp": 29.87,
+    "reference_price_clp": 3450.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0087,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1736-886-SE26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "0e75c8ffac9f5a25",
@@ -15023,7 +15111,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2793-817-AG26",
-    "captured_at": "2026-08-28T21:50:29.660162+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "972865ef20e01eb7",
@@ -15178,6 +15266,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2791-97-CM26",
     "captured_at": "2026-07-14T21:59:17.838299+00:00"
+  },
+  {
+    "id": "39807237c65585d3",
+    "oc_id": "2792-593-AG26",
+    "correlativo": 4,
+    "comuna": "Huechuraba",
+    "sku_id": "destacador_fluor",
+    "matched_rule": "keyword",
+    "product": "Marcadores",
+    "quantity": 300.0,
+    "moneda": "CLP",
+    "unit_price": 146.0,
+    "unit_price_clp_gross": 173.74,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 173.74,
+    "reference_price_clp": 717.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 0.2421,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2792-593-AG26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "22557cdc7d0290cf",
@@ -22657,7 +22767,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2961-582-AG26",
-    "captured_at": "2026-08-08T12:49:54.472638+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "0afef81cbd012771",
@@ -23185,7 +23295,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2961-477-AG26",
-    "captured_at": "2026-07-29T14:08:04.645399+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "f757d0b49b6e9c4a",
@@ -23207,7 +23317,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2961-477-AG26",
-    "captured_at": "2026-07-29T14:08:04.645399+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "999561252d1fa203",
@@ -23229,7 +23339,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2961-477-AG26",
-    "captured_at": "2026-07-29T14:08:04.645399+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "9322cd8d8c7d2345",
@@ -23537,7 +23647,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2961-565-AG26",
-    "captured_at": "2026-08-05T14:03:59.590007+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "9bd4c9d3805d8845",
@@ -23559,7 +23669,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2961-565-AG26",
-    "captured_at": "2026-08-05T14:03:59.590007+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "988bf9c9183e8a5b",
@@ -24483,7 +24593,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-580-AG26",
-    "captured_at": "2026-08-21T12:50:00.792708+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "46e32ddf2cc6172d",
@@ -24659,7 +24769,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-604-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "4176ee2d01b3096e",
@@ -24681,7 +24791,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-604-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "990b64c88555efcc",
@@ -24703,7 +24813,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-604-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "e9752478816316e0",
@@ -25319,7 +25429,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-580-AG26",
-    "captured_at": "2026-08-21T12:50:00.792708+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "9f78230af412cc36",
@@ -25385,7 +25495,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-580-AG26",
-    "captured_at": "2026-08-21T12:50:00.792708+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "a6a9ae50c3bd7c7c",
@@ -25407,7 +25517,7 @@
     "severity": "watch",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-580-AG26",
-    "captured_at": "2026-08-21T12:50:00.792708+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "f430dc45ed2080bd",
@@ -26265,7 +26375,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-580-AG26",
-    "captured_at": "2026-08-21T12:50:00.792708+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "d7c23737c9151d63",
@@ -26969,7 +27079,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-626-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "abbda618aa0aa2c9",
@@ -27035,7 +27145,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-626-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "5de98bf85549233d",
@@ -27541,7 +27651,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-580-AG26",
-    "captured_at": "2026-08-21T12:50:00.792708+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "6d5895753e997397",
@@ -27805,7 +27915,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-580-AG26",
-    "captured_at": "2026-08-21T12:50:00.792708+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "98da10dfb6f1b131",
@@ -27896,6 +28006,28 @@
     "captured_at": "2026-07-13T18:33:03.168923+00:00"
   },
   {
+    "id": "49ad3c1d8e058412",
+    "oc_id": "2273-533-CM26",
+    "correlativo": 1,
+    "comuna": "La Pintana",
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "matched_rule": "keyword",
+    "product": "ZAPATOS SEGURIDAD PANAMA JACK DIELÉCTRICO CUERO NOBUCK C/PUNTERA COMPOSITE 42 PAR REGIÓN RM",
+    "quantity": 13.0,
+    "moneda": "CLP",
+    "unit_price": 48458.0,
+    "unit_price_clp_gross": 57665.02,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 57665.02,
+    "reference_price_clp": 23540.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.4497,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-533-CM26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
+  },
+  {
     "id": "2f6c63b6d92dce78",
     "oc_id": "2273-538-CM26",
     "correlativo": 1,
@@ -27916,6 +28048,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-538-CM26",
     "captured_at": "2026-08-13T13:06:24.168403+00:00"
+  },
+  {
+    "id": "6f58b1d002464120",
+    "oc_id": "2273-572-CM26",
+    "correlativo": 1,
+    "comuna": "La Pintana",
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "matched_rule": "keyword",
+    "product": "ZAPATOS SEGURIDAD PANAMA JACK DIELÉCTRICO CUERO NOBUCK C/PUNTERA COMPOSITE 36 PAR REGIÓN RM",
+    "quantity": 40.0,
+    "moneda": "CLP",
+    "unit_price": 51129.0,
+    "unit_price_clp_gross": 60843.51,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 60843.51,
+    "reference_price_clp": 23540.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.5847,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2273-572-CM26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "8287de7ac38d9669",
@@ -30448,6 +30602,28 @@
     "captured_at": "2026-08-27T21:48:30.871577+00:00"
   },
   {
+    "id": "a759e0011041a91c",
+    "oc_id": "2735-1076-AG26",
+    "correlativo": 8,
+    "comuna": "Lo Barnechea",
+    "sku_id": "desinfectante_multiuso",
+    "matched_rule": "keyword",
+    "product": "Quemadores de alcohol",
+    "quantity": 6.0,
+    "moneda": "CLP",
+    "unit_price": 3590.0,
+    "unit_price_clp_gross": 4272.1,
+    "unit_divisor": 6.6667,
+    "normalized_unit_price_clp": 640.82,
+    "reference_price_clp": 2140.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.2994,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2735-1076-AG26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
+  },
+  {
     "id": "3da48d4c86dffcf3",
     "oc_id": "2735-630-AG26",
     "correlativo": 1,
@@ -31215,7 +31391,7 @@
     "severity": "watch",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=744835-465-CM26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "b46749cc5345ad17",
@@ -31303,7 +31479,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=744835-465-CM26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "e2443b6ca0cff1a2",
@@ -31633,7 +31809,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=744835-465-CM26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "e9226b84d7e4c5b7",
@@ -31655,7 +31831,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=744835-465-CM26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "1c00780ab80b1e14",
@@ -34097,7 +34273,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4099-418-SE26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "fb0fee063f43e376",
@@ -34119,7 +34295,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4099-418-SE26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "c7f4b25895d55476",
@@ -34163,7 +34339,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4099-418-SE26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "966fdcac73b75d1a",
@@ -34185,7 +34361,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4099-418-SE26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "21906d7ff2d164d9",
@@ -34450,6 +34626,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2674-416-AG26",
     "captured_at": "2026-07-14T21:59:17.838299+00:00"
+  },
+  {
+    "id": "e91a5caed038c22d",
+    "oc_id": "2674-748-AG26",
+    "correlativo": 1,
+    "comuna": "Melipilla",
+    "sku_id": "guantes_cabritilla",
+    "matched_rule": "keyword",
+    "product": "Guantes protectores",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 3172200.0,
+    "unit_price_clp_gross": 3774918.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 3774918.0,
+    "reference_price_clp": 1808.5,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2087.3199,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2674-748-AG26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "4daeb7b5b59c59c0",
@@ -35505,7 +35703,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2789-374-CM26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "16bd8552968e128f",
@@ -35527,7 +35725,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2789-374-CM26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "6d787e0e2fef7a68",
@@ -35549,7 +35747,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2789-374-CM26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "e503d10bdee15936",
@@ -35571,7 +35769,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2789-374-CM26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "83c3fd8c1611c438",
@@ -35747,7 +35945,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2789-374-CM26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "7dd7429b3b78e66a",
@@ -35791,7 +35989,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2789-374-CM26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "bf159fba6b78bd91",
@@ -35945,7 +36143,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2789-374-CM26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "84981398d915139b",
@@ -35967,7 +36165,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2789-374-CM26",
-    "captured_at": "2026-07-21T13:45:49.544191+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "b8c54851ad08d56b",
@@ -39531,7 +39729,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2733-410-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "cb6826f0293c11f8",
@@ -39751,7 +39949,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2733-410-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "5d8eddd6f4b6f40f",
@@ -41951,7 +42149,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2403-343-AG26",
-    "captured_at": "2026-08-21T12:50:00.792708+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "554559e6f35d44a0",
@@ -43623,7 +43821,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2460-821-SE26",
-    "captured_at": "2026-08-27T21:48:30.871577+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "cb211acde1bb2022",
@@ -44638,6 +44836,28 @@
     "captured_at": "2026-08-26T12:48:35.149374+00:00"
   },
   {
+    "id": "57edd3ddc3e3908c",
+    "oc_id": "2279-598-AG26",
+    "correlativo": 1,
+    "comuna": "Pudahuel",
+    "sku_id": "jugo_nectar_15l",
+    "matched_rule": "keyword",
+    "product": "Jugos y néctar concentrados",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 1720310.0,
+    "unit_price_clp_gross": 2047168.9,
+    "unit_divisor": 3.04,
+    "normalized_unit_price_clp": 673410.82,
+    "reference_price_clp": 1560.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 431.6736,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2279-598-AG26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
+  },
+  {
     "id": "ce00ec9b6fba0738",
     "oc_id": "2279-569-CM26",
     "correlativo": 9,
@@ -45493,7 +45713,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2484-292-SE26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "4e28b8096ffac060",
@@ -47058,6 +47278,28 @@
     "captured_at": "2026-08-12T13:03:52.695775+00:00"
   },
   {
+    "id": "6ae0b90a203c23a1",
+    "oc_id": "1431841-1076-AG26",
+    "correlativo": 1,
+    "comuna": "Recoleta",
+    "sku_id": "jugo_nectar_15l",
+    "matched_rule": "keyword",
+    "product": "Servicios de catering",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 2800000.0,
+    "unit_price_clp_gross": 3332000.0,
+    "unit_divisor": 0.1333,
+    "normalized_unit_price_clp": 24990000.0,
+    "reference_price_clp": 1560.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 16019.2308,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1431841-1076-AG26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
+  },
+  {
     "id": "a6ec6e0c991b44dd",
     "oc_id": "1431841-654-AG26",
     "correlativo": 3,
@@ -47320,6 +47562,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1431841-879-CM26",
     "captured_at": "2026-08-18T12:44:20.576145+00:00"
+  },
+  {
+    "id": "7a2625ba01f47b8f",
+    "oc_id": "1431841-1077-AG26",
+    "correlativo": 5,
+    "comuna": "Recoleta",
+    "sku_id": "martillo",
+    "matched_rule": "keyword",
+    "product": "Martillos de demolición",
+    "quantity": 2.0,
+    "moneda": "CLP",
+    "unit_price": 433613.0,
+    "unit_price_clp_gross": 515999.47,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 515999.47,
+    "reference_price_clp": 9240.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 55.8441,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1431841-1077-AG26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "3a34cfab03a965a9",
@@ -47740,6 +48004,28 @@
     "captured_at": "2026-08-11T12:58:57.055805+00:00"
   },
   {
+    "id": "aac913b5c51c2599",
+    "oc_id": "1431841-1054-AG26",
+    "correlativo": 1,
+    "comuna": "Recoleta",
+    "sku_id": "zapatos_seguridad_puntera_acero",
+    "matched_rule": "keyword",
+    "product": "Calzado protector contra materias peligrosas",
+    "quantity": 64.0,
+    "moneda": "CLP",
+    "unit_price": 53100.0,
+    "unit_price_clp_gross": 63189.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 63189.0,
+    "reference_price_clp": 23540.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 2.6843,
+    "severity": "high",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1431841-1054-AG26",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
+  },
+  {
     "id": "37e82f9f416fa9f0",
     "oc_id": "1431841-370-CM26",
     "correlativo": 1,
@@ -47869,7 +48155,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2407-555-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "7e67738f1119ae2a",
@@ -48023,7 +48309,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2407-555-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "8b3e40a77c7296fc",
@@ -48331,7 +48617,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2407-555-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "14b5aef2cd8e6b9a",
@@ -48354,6 +48640,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2407-362-AG26",
     "captured_at": "2026-07-14T21:05:14.169547+00:00"
+  },
+  {
+    "id": "9540b8746b2aa282",
+    "oc_id": "2407-433-SE24",
+    "correlativo": 7,
+    "comuna": "Renca",
+    "sku_id": "papel_higienico_pack",
+    "matched_rule": "keyword+fuzzy",
+    "product": "Baños portátiles",
+    "quantity": 2.0,
+    "moneda": "CLP",
+    "unit_price": 69580.0,
+    "unit_price_clp_gross": 82800.2,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 82800.2,
+    "reference_price_clp": 6518.5,
+    "baseline_confidence": "high",
+    "overprice_ratio": 12.7023,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2407-433-SE24",
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "9906111b64fb3e06",
@@ -48529,7 +48837,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2407-555-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "d774cf98047c2148",
@@ -48661,7 +48969,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2407-555-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "6297599cba8942ad",
@@ -52533,7 +52841,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=4499-172-AG26",
-    "captured_at": "2026-08-26T12:48:35.149374+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "447f0bb8c71a5fc5",
@@ -53039,7 +53347,7 @@
     "severity": "watch",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1718-874-AG26",
-    "captured_at": "2026-08-28T21:50:29.660162+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "3b229c04ccef8d82",
@@ -54249,7 +54557,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-481-AG26",
-    "captured_at": "2026-08-30T15:46:19.034880+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "f2255c2db35750c9",
@@ -54557,7 +54865,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-333-CM26",
-    "captured_at": "2026-08-22T12:35:09.369440+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "9388650fd62e4c58",
@@ -55723,7 +56031,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-333-CM26",
-    "captured_at": "2026-08-22T12:35:09.369440+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "e327600716fabb5a",
@@ -56031,7 +56339,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-477-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "2b6c6343f61ab6db",
@@ -57109,7 +57417,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-597-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "4cfc6f532ba52e22",
@@ -57175,7 +57483,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-597-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "4d6c82648d5fff84",
@@ -57241,7 +57549,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-568-AG26",
-    "captured_at": "2026-08-22T12:35:09.369440+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "3a336a8f69b92cc1",
@@ -58187,7 +58495,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-597-AG26",
-    "captured_at": "2026-08-29T16:11:21.396336+00:00"
+    "captured_at": "2026-09-01T16:03:09.833117+00:00"
   },
   {
     "id": "5659d970df7e2642",
