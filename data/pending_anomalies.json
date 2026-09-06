@@ -31875,7 +31875,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2735-990-CM26",
-    "captured_at": "2026-08-14T12:59:00.898027+00:00"
+    "captured_at": "2026-09-06T14:40:47.278202+00:00"
   },
   {
     "id": "e11f036fbabbf49e",
@@ -46464,6 +46464,28 @@
     "captured_at": "2026-07-25T13:21:10.038302+00:00"
   },
   {
+    "id": "8b9fca0e5a7147fc",
+    "oc_id": "2462-199-AG26",
+    "correlativo": 3,
+    "comuna": "Providencia",
+    "sku_id": "toalla_papel_rollo",
+    "matched_rule": "keyword",
+    "product": "Toallas de papel",
+    "quantity": 2.0,
+    "moneda": "CLP",
+    "unit_price": 4000.0,
+    "unit_price_clp_gross": 4760.0,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 4760.0,
+    "reference_price_clp": 2670.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 1.7828,
+    "severity": "watch",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2462-199-AG26",
+    "captured_at": "2026-09-06T14:40:47.278202+00:00"
+  },
+  {
     "id": "953513b39edd8666",
     "oc_id": "2462-172-AG26",
     "correlativo": 1,
@@ -46484,6 +46506,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2462-172-AG26",
     "captured_at": "2026-08-15T12:38:58.182887+00:00"
+  },
+  {
+    "id": "53ee5bb6925adf8d",
+    "oc_id": "2462-199-AG26",
+    "correlativo": 1,
+    "comuna": "Providencia",
+    "sku_id": "toallitas_humedas_pack",
+    "matched_rule": "keyword",
+    "product": "Toallitas húmedas",
+    "quantity": 2.0,
+    "moneda": "CLP",
+    "unit_price": 2000.0,
+    "unit_price_clp_gross": 2380.0,
+    "unit_divisor": 100.0,
+    "normalized_unit_price_clp": 23.8,
+    "reference_price_clp": 3450.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0069,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2462-199-AG26",
+    "captured_at": "2026-09-06T14:40:47.278202+00:00"
   },
   {
     "id": "75695671d31a675f",
@@ -61268,6 +61312,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3665-473-AG26",
     "captured_at": "2026-08-25T12:48:16.052528+00:00"
+  },
+  {
+    "id": "1ab2f9f868dcf9d6",
+    "oc_id": "3665-514-AG26",
+    "correlativo": 17,
+    "comuna": "Til Til",
+    "sku_id": "azucar_1kg",
+    "matched_rule": "keyword",
+    "product": "Productos de edulcorantes o azúcares naturales",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 1760.0,
+    "unit_price_clp_gross": 2094.4,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 2094.4,
+    "reference_price_clp": 1390.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 1.5068,
+    "severity": "watch",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=3665-514-AG26",
+    "captured_at": "2026-09-06T14:40:47.278202+00:00"
   },
   {
     "id": "69faf4fca0e6d16a",
