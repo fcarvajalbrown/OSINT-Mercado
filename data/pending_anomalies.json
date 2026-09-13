@@ -2329,7 +2329,7 @@
     "severity": "severe",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2933-287-SE26",
-    "captured_at": "2026-09-09T15:57:08.080672+00:00"
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "3f5298ea0c780435",
@@ -5937,7 +5937,7 @@
     "severity": "high",
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1306643-340-AG26",
-    "captured_at": "2026-09-12T14:53:35.556032+00:00"
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "6d1e573b3cadf4db",
@@ -6289,7 +6289,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1306643-340-AG26",
-    "captured_at": "2026-09-12T14:53:35.556032+00:00"
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "17ff967032f90eb0",
@@ -37023,7 +37023,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2412-558-AG26",
-    "captured_at": "2026-09-12T14:53:35.556032+00:00"
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "bf4e97955aa15ca7",
@@ -37111,7 +37111,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2412-558-AG26",
-    "captured_at": "2026-09-12T14:53:35.556032+00:00"
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "411700570e086e4a",
@@ -37617,7 +37617,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2412-558-AG26",
-    "captured_at": "2026-09-12T14:53:35.556032+00:00"
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "c6e9c441fab0638e",
@@ -37837,7 +37837,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2412-558-AG26",
-    "captured_at": "2026-09-12T14:53:35.556032+00:00"
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "73978e584f19278c",
@@ -43052,6 +43052,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2393-807-AG26",
     "captured_at": "2026-07-30T13:47:46.083099+00:00"
+  },
+  {
+    "id": "7608b0f889633193",
+    "oc_id": "2393-1097-AG26",
+    "correlativo": 1,
+    "comuna": "Pedro Aguirre Cerda",
+    "sku_id": "huincha_medir",
+    "matched_rule": "keyword",
+    "product": "Utensilios de medición",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 240070.0,
+    "unit_price_clp_gross": 285683.3,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 285683.3,
+    "reference_price_clp": 8990.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 31.7779,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2393-1097-AG26",
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "7a5273b8f7406621",
@@ -60629,7 +60651,7 @@
     "severity": null,
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=1718-960-AG26",
-    "captured_at": "2026-09-10T15:51:04.787461+00:00"
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "0c56ac8783aebc84",
@@ -61622,6 +61644,50 @@
     "captured_at": "2026-09-08T16:00:14.198790+00:00"
   },
   {
+    "id": "f432f3297ecbc5b3",
+    "oc_id": "2343-521-CM26",
+    "correlativo": 1,
+    "comuna": "Santiago",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "BOLSA DE BASURA MAXIPACK 50X70 30 L PAQUETE X 10 UNIDADES RM",
+    "quantity": 100.0,
+    "moneda": "CLP",
+    "unit_price": 275.0,
+    "unit_price_clp_gross": 327.25,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 32.73,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0247,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-521-CM26",
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
+  },
+  {
+    "id": "50f3ce79985c6c06",
+    "oc_id": "2343-521-CM26",
+    "correlativo": 10,
+    "comuna": "Santiago",
+    "sku_id": "bolsa_basura_pack",
+    "matched_rule": "keyword",
+    "product": "BOLSA DE BASURA TREMEX 70X90 70 L PAQUETE X 10 UNIDADES RM",
+    "quantity": 49.0,
+    "moneda": "CLP",
+    "unit_price": 650.0,
+    "unit_price_clp_gross": 773.5,
+    "unit_divisor": 10.0,
+    "normalized_unit_price_clp": 77.35,
+    "reference_price_clp": 1325.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 0.0584,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-521-CM26",
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
+  },
+  {
     "id": "b9080c5192ca21ed",
     "oc_id": "2343-80-CM26",
     "correlativo": 2,
@@ -61908,6 +61974,50 @@
     "captured_at": "2026-07-24T13:37:46.390649+00:00"
   },
   {
+    "id": "070f1a0db453442a",
+    "oc_id": "2343-518-AG26",
+    "correlativo": 1,
+    "comuna": "Santiago",
+    "sku_id": "cloro_lavandina_4l",
+    "matched_rule": "keyword",
+    "product": "Fotómetros",
+    "quantity": 1.0,
+    "moneda": "CLP",
+    "unit_price": 646340.0,
+    "unit_price_clp_gross": 769144.6,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 769144.6,
+    "reference_price_clp": 3490.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 220.3853,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-518-AG26",
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
+  },
+  {
+    "id": "d985405c87c17286",
+    "oc_id": "2343-518-AG26",
+    "correlativo": 2,
+    "comuna": "Santiago",
+    "sku_id": "cloro_lavandina_4l",
+    "matched_rule": "keyword",
+    "product": "Reactivos para depuración del agua",
+    "quantity": 5.0,
+    "moneda": "CLP",
+    "unit_price": 24140.0,
+    "unit_price_clp_gross": 28726.6,
+    "unit_divisor": 1.0,
+    "normalized_unit_price_clp": 28726.6,
+    "reference_price_clp": 3490.0,
+    "baseline_confidence": "medium",
+    "overprice_ratio": 8.2311,
+    "severity": "severe",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-518-AG26",
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
+  },
+  {
     "id": "8f2a70ab362a8e42",
     "oc_id": "2343-199-CM26",
     "correlativo": 11,
@@ -62082,6 +62192,28 @@
     "status": "unit_ambiguous",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-389-AG26",
     "captured_at": "2026-08-27T21:48:30.871577+00:00"
+  },
+  {
+    "id": "afe454a13bfe25fd",
+    "oc_id": "2343-521-CM26",
+    "correlativo": 11,
+    "comuna": "Santiago",
+    "sku_id": "desinfectante_multiuso",
+    "matched_rule": "keyword",
+    "product": "AEROSOL AMBIENTAL DESINFECTANTE IGENIX TRADICIONAL 360 ML D-541/24 RM",
+    "quantity": 150.0,
+    "moneda": "CLP",
+    "unit_price": 1864.0,
+    "unit_price_clp_gross": 2218.16,
+    "unit_divisor": 0.4,
+    "normalized_unit_price_clp": 5545.4,
+    "reference_price_clp": 2140.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 2.5913,
+    "severity": null,
+    "status": "unit_ambiguous",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2343-521-CM26",
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "a81f75c4db01ec5b",
@@ -65558,6 +65690,28 @@
     "status": "pending",
     "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-542-AG26",
     "captured_at": "2026-09-11T15:50:21.636436+00:00"
+  },
+  {
+    "id": "9a528518e88e6d8e",
+    "oc_id": "2701-637-AG26",
+    "correlativo": 2,
+    "comuna": "Talagante",
+    "sku_id": "te_caja100",
+    "matched_rule": "keyword",
+    "product": "Té instantáneo",
+    "quantity": 70.0,
+    "moneda": "CLP",
+    "unit_price": 3295.0,
+    "unit_price_clp_gross": 3921.05,
+    "unit_divisor": 0.5,
+    "normalized_unit_price_clp": 7842.1,
+    "reference_price_clp": 4490.0,
+    "baseline_confidence": "high",
+    "overprice_ratio": 1.7466,
+    "severity": "watch",
+    "status": "pending",
+    "oc_url": "https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idOC=2701-637-AG26",
+    "captured_at": "2026-09-13T15:22:04.521337+00:00"
   },
   {
     "id": "bdd727ec12be39a3",
