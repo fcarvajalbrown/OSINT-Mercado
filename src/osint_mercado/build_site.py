@@ -8,7 +8,9 @@ plain static site deployable to any host.
 
 import argparse
 import glob
+import hashlib
 import json
+import re
 import shutil
 from pathlib import Path
 
@@ -27,6 +29,7 @@ QUEUE_FILES = {
     "precio_pares": "data/peer_pending.json",
 }
 DECISIONS_PATH = "data/curation_decisions.json"
+ASSET_REF = re.compile(r'(href|src)="\./([^"?#]+\.(?:css|js|svg))"')
 
 # Fields carried through to the published dashboard dataset.
 _PUBLIC_FIELDS = (
@@ -99,6 +102,19 @@ def _write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def fingerprint_assets(site_dir: Path) -> None:
+    def versioned(match: re.Match) -> str:
+        attr, rel = match.groups()
+        asset = site_dir / rel
+        if not asset.is_file():
+            return match.group(0)
+        version = hashlib.sha256(asset.read_bytes()).hexdigest()[:10]
+        return f'{attr}="./{rel}?v={version}"'
+
+    for page in site_dir.glob("*.html"):
+        page.write_text(ASSET_REF.sub(versioned, page.read_text(encoding="utf-8")), encoding="utf-8")
+
+
 def build(confirmed_path, basket_path, frontend_dir, out_dir,
           items_glob=ITEMS_GLOB, anchors_path="data/anchors.json",
           mirror_dir=MIRROR_PUBLIC_DIR, queue_files=None, decisions_path=DECISIONS_PATH) -> Path:
@@ -122,6 +138,7 @@ def build(confirmed_path, basket_path, frontend_dir, out_dir,
         _write_json(data_dir / "mirror" / f"{oc_id}.json", doc)
     if Path(anchors_path).exists():
         shutil.copyfile(anchors_path, data_dir / "anchors.json")
+    fingerprint_assets(out_dir)
     return out_dir
 
 

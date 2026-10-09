@@ -1,3 +1,4 @@
+import hashlib
 import json
 
 from osint_mercado import build_site
@@ -48,3 +49,21 @@ def test_build_is_deterministic(tmp_path):
     first = (out / "data" / "flags.json").read_bytes()
     build_site.build(confirmed, "data/basket.json", "frontend", out)
     assert (out / "data" / "flags.json").read_bytes() == first
+
+
+def test_fingerprint_assets_versions_local_css_js_and_svg(tmp_path):
+    (tmp_path / "styles.css").write_text("a{}", encoding="utf-8")
+    (tmp_path / "app.js").write_text("1", encoding="utf-8")
+    (tmp_path / "index.html").write_text(
+        '<link href="./styles.css"><script src="./app.js"></script>'
+        '<a href="./data/flags.json"></a><a href="./stellar.html"></a><script src="./missing.js"></script>',
+        encoding="utf-8",
+    )
+    build_site.fingerprint_assets(tmp_path)
+    html = (tmp_path / "index.html").read_text(encoding="utf-8")
+    css_v = hashlib.sha256(b"a{}").hexdigest()[:10]
+    assert f'href="./styles.css?v={css_v}"' in html
+    assert 'src="./app.js?v=' in html
+    assert 'href="./data/flags.json"' in html
+    assert 'href="./stellar.html"' in html
+    assert 'src="./missing.js"' in html
