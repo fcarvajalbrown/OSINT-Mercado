@@ -154,7 +154,7 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
 - **Finding:** every published flag's official link (ADR 0007) now opens Mercado Público's
   "No Tiene los Permiso suficientes para visualizar la ficha" dialog for a reader who is not
   logged in (checked on all 4 published orders). The provenance link no longer lets the public
-  verify anything on its own. Addressed by mirroring the API record (ADR 0028).
+  verify anything on its own. A mirror of the API record is proposed (ADR 0028, 0029), not decided; nothing from it is deployed.
 - **Rule:** every change to the published set needs `osint-anchor publish` and a redeploy of
   `anchors.json`, or the new rows show as not anchored.
 - Backfill of purchase orders from 13 July 2026 onwards runs with `scripts/ingest_range.sh`

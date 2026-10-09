@@ -1,8 +1,8 @@
 # 0028 — Mirror the official record of every published order
 
-**Status:** Accepted (refines ADR 0007; builds on ADR 0026 and 0027)
+**Status:** Proposed (refines ADR 0007; builds on ADR 0026 and 0027). Written without Felipe's input; reopened for review
 **Date:** 2026-10-09
-**Deciders:** Felipe Carvajal Brown
+**Deciders:** Felipe Carvajal Brown (pending)
 
 ## Context
 

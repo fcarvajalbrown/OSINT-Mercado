@@ -37,5 +37,5 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0025 | SSH key auth for deploy (refines ADR 0015)                            | Accepted |
 | 0026 | Anchor published flags on the Stellar ledger                         | Accepted |
 | 0027 | Anchor the source order line behind each flag (extends ADR 0026)      | Accepted |
-| 0028 | Mirror the official record of every published order                  | Accepted |
-| 0029 | Scrub personal data from free text in the public mirror               | Accepted |
+| 0028 | Mirror the official record of every published order                  | Proposed |
+| 0029 | Scrub personal data from free text in the public mirror               | Proposed |

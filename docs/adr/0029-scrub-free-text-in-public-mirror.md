@@ -1,9 +1,8 @@
 # 0029 — Scrub personal data from free text in the public mirror (refines ADR 0028)
 
-**Status:** Accepted (refines ADR 0028)
+**Status:** Proposed (refines ADR 0028). Written without Felipe's input; reopened for review
 **Date:** 2026-10-09
-**Deciders:** Felipe Carvajal Brown (under his standing instruction to proceed with the
-recommended approach while away; open to revision)
+**Deciders:** Felipe Carvajal Brown (pending)
 
 ## Context
 
