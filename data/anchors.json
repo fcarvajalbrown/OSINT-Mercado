@@ -1,0 +1,21 @@
+{
+  "network": "testnet",
+  "flag_ids": [
+    "d576524361bd2caf",
+    "2beda709733d47ce",
+    "2fe4f6f8a79ff499",
+    "faf7fadb4461bc51"
+  ],
+  "leaves": [
+    "dd9a6bf9d6611f64c060e7e7cb2f3264f11ddddf0f2db1560acf847faf8c69aa",
+    "eb2ec87dae39618f448151a86534c8cb4ac99e3663701e69e50574560cdeb4ca",
+    "16841a4c1c1a3c5608951c36f801f786efad0058ad9831f0447318352e1470cf",
+    "87f7d40530de810aeea95150f299b70254bef98ecbe69c9c5f6553a93c2da899"
+  ],
+  "digest": "6892657981bbfd6c67a1db38df4e17e7a999f58f736dd9d1585fcfe1cca8ea3b",
+  "tx_hash": "ad864ba7a7a7afd3c70092b176eb0fc6e5d5694da18f698f99884ecabab95e8f",
+  "ledger": 5111255,
+  "anchored_at": "2026-10-09T21:04:22Z",
+  "account": "GDELZ2EASKTAPIRIII6K3PTZX54Q4PFYXUO6IT2IYK3KUNP6NS3RFXLW",
+  "explorer_url": "https://stellar.expert/explorer/testnet/tx/ad864ba7a7a7afd3c70092b176eb0fc6e5d5694da18f698f99884ecabab95e8f"
+}
