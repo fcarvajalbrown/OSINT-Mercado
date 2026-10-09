@@ -16,6 +16,7 @@ import polars as pl
 
 from osint_mercado.basket import Sku, load_basket
 from osint_mercado.integrity import attach_mirrors, attach_sources, queue_record
+from osint_mercado.leads import public_leads
 from osint_mercado.store import ITEM_COLUMNS
 
 ITEMS_GLOB = "data/oc_items_*.parquet"
@@ -82,6 +83,18 @@ def public_queue(queue_files=None, decisions_path=DECISIONS_PATH) -> dict:
     return queue_record(queues, decided)
 
 
+def public_lead_rows(confirmed_path, queue_files=None, decisions_path=DECISIONS_PATH) -> list[dict]:
+    queue_files = QUEUE_FILES if queue_files is None else queue_files
+    queues = {
+        engine: json.loads(Path(path).read_text(encoding="utf-8"))
+        for engine, path in queue_files.items() if Path(path).exists()
+    }
+    decisions_file = Path(decisions_path)
+    decisions = json.loads(decisions_file.read_text(encoding="utf-8")) if decisions_file.exists() else {}
+    confirmed = json.loads(Path(confirmed_path).read_text(encoding="utf-8"))
+    return public_leads(queues, decisions, {row["id"] for row in confirmed})
+
+
 def _write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
@@ -103,6 +116,7 @@ def build(confirmed_path, basket_path, frontend_dir, out_dir,
     _write_json(data_dir / "flags.json", flags)
     _write_json(data_dir / "sources.json", sources)
     _write_json(data_dir / "queue.json", public_queue(queue_files, decisions_path))
+    _write_json(data_dir / "leads.json", public_lead_rows(confirmed_path, queue_files, decisions_path))
     (data_dir / "mirror").mkdir(exist_ok=True)
     for oc_id, doc in mirrors.items():
         _write_json(data_dir / "mirror" / f"{oc_id}.json", doc)

@@ -8,7 +8,7 @@ import truststore
 from dotenv import load_dotenv
 from stellar_sdk import Keypair, Network, Server, TransactionBuilder
 
-from osint_mercado.build_site import ITEMS_GLOB, public_dataset, public_queue
+from osint_mercado.build_site import ITEMS_GLOB, public_dataset, public_lead_rows, public_queue
 from osint_mercado.integrity import record
 
 truststore.inject_into_ssl()
@@ -99,8 +99,9 @@ def main() -> None:
     missing = [f["id"] for f in flags if f["id"] not in sources]
     unmirrored = [f["oc_id"] for f in flags if "mirror_sha256" not in f]
     queue = public_queue()
-    rec = anchor(flags, load_secret(), args.out, queue=queue)
-    print(f"anchored {len(flags)} flags, digest {rec['digest']}")
+    lead_rows = public_lead_rows(args.confirmed)
+    rec = anchor(flags + lead_rows, load_secret(), args.out, queue=queue)
+    print(f"anchored {len(flags)} flags and {len(lead_rows)} lead rows, digest {rec['digest']}")
     print(f"sealed review queue: {queue['total']} leads, digest {queue['digest']}")
     print(f"tx {rec['tx_hash']} ledger {rec['ledger']}: {rec['explorer_url']}")
     if missing:
