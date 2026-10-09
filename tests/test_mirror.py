@@ -28,6 +28,21 @@ def test_redact_blanks_only_contact_fields_and_keeps_the_original():
     assert RAW == original
 
 
+def test_redact_drops_free_text_description_and_masks_emails_and_phones():
+    raw = copy.deepcopy(RAW)
+    raw["Listado"][0]["Descripcion"] = "coordinar con ANA PEREZ correo: ana.perez@muni.cl fono 228290846"
+    raw["Listado"][0]["Items"]["Listado"][0]["EspecificacionProveedor"] = (
+        "Pendrive 16GB, consultas a ventas@proveedor.cl o +56 9 8765 4321, OC 600/00155/2026"
+    )
+    out = mirror.redact(raw)["Listado"][0]
+    assert out["Descripcion"] is None
+    spec = out["Items"]["Listado"][0]["EspecificacionProveedor"]
+    assert "ventas@proveedor.cl" not in spec
+    assert "8765" not in spec
+    assert "600/00155/2026" in spec
+    assert spec.startswith("Pendrive 16GB")
+
+
 def test_public_copy_carries_hash_of_untouched_record():
     doc = mirror.public_copy("1-1", RAW, NOW)
     assert doc["oc_id"] == "1-1"
@@ -53,6 +68,17 @@ def test_mirror_orders_writes_raw_and_public_and_never_overwrites(tmp_path):
 
     assert mirror.mirror_orders(["1-1"], fetch, tmp_path, lambda: "later") == []
     assert calls == ["1-1"]
+
+
+def test_rebuild_public_reapplies_redaction_and_keeps_capture_time(tmp_path):
+    mirror.mirror_orders(["1-1"], lambda _oc: RAW, tmp_path, lambda: NOW)
+    public = tmp_path / "public" / "1-1.json"
+    stale = json.loads(public.read_text(encoding="utf-8"))
+    stale["record"] = RAW
+    public.write_text(json.dumps(stale), encoding="utf-8")
+    assert mirror.rebuild_public(tmp_path) == ["1-1"]
+    rebuilt = json.loads(public.read_text(encoding="utf-8"))
+    assert rebuilt == mirror.public_copy("1-1", RAW, NOW)
 
 
 def test_attach_mirrors_hashes_public_copy_into_flag(tmp_path):
