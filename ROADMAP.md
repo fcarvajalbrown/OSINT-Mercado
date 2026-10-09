@@ -167,6 +167,13 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   per day over 27 captured days), so the quota covers roughly 16-25 days of data per calendar
   day. Never run two ingests in parallel on one ticket: simultaneous requests already drew a 429
   (ADR 0008), and two processes can exceed the daily cap in about three hours.
+- **API client gaps (found against published rate-limit practice):** no persisted daily request
+  counter or stop before the 10,000 cap; no circuit breaker (after 4 retries an order is skipped
+  and the run keeps firing); no retry on 5xx or timeouts; a day with skipped orders is still
+  written and then skipped forever by `ingest_range.sh`, with the gaps unrecorded; no response
+  cache, so a killed or restarted day re-fetches everything (four mid-day kills on 2026-10-09
+  spent quota for nothing); no jitter. Already right: Retry-After honoured, exponential backoff,
+  session reuse, User-Agent, 60 s timeout, 0.25 s pacing.
 
 _Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028._
 
