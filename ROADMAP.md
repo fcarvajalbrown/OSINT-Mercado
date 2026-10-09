@@ -231,8 +231,13 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   copy paper cases come to about +9% and +31%, not +992% and +555%. The method detects prices out
   of range of their code group; on this data that is not the same as overprice. Runs locally;
   the server has no Python.
+- **Automatic result live (ADR 0033).** After the parser fixes ("x N" boxes, sachets), 150 of
+  3,893 leads carry an automatic result: 73 normal, 41 alto, 35 fuera de rango, 1 error de datos.
+  Sealed at testnet ledger 5112586 (digest b7c74471...), deployed, live files pass both parity
+  checks. The "alto" level still reflects format in places (instant coffee sticks against jars
+  per gram).
 
-_Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028._
+_Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028, 0030, 0031, 0032, 0033._
 
 ## Later phases (toward the PDF's grand vision)
 **Status:** Not Started
