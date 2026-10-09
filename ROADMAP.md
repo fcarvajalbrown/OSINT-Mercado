@@ -173,7 +173,15 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   written and then skipped forever by `ingest_range.sh`, with the gaps unrecorded; no response
   cache, so a killed or restarted day re-fetches everything (four mid-day kills on 2026-10-09
   spent quota for nothing); no jitter. Already right: Retry-After honoured, exponential backoff,
-  session reuse, User-Agent, 60 s timeout, 0.25 s pacing.
+  session reuse, User-Agent, 60 s timeout, 0.25 s pacing. Fixed by `fetcher.py` (cache, rolling
+  24 h log stopping at 9,000, jittered retries on 429/5xx/timeouts, breaker after 5 consecutive
+  failures, every retry logged) and per-day `oc_items_<fecha>.gaps.json`.
+- **Measured 429 behaviour (single process, 90 s windows):** at 0.25 s pacing, 88 requests gave
+  54 orders with 28 retries (32%, all HTTP 429, no Retry-After header); at 1.0 s, 58 requests
+  gave 42 orders with 14 retries (24%). The limit is not plain spacing and is undocumented.
+  1.0 s is the default (`PACE` overrides): about 2,300 requests per hour stays under the 9,000
+  stop for three hours. Stop runs with `scripts/stop_ingest.ps1`, never a command-line match that
+  can kill its own shell.
 
 _Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028._
 
