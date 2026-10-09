@@ -64,3 +64,30 @@ def test_estimates_use_only_earlier_same_code_same_unit_rm_clp_lines_within_a_ye
     assert e["overprice_pct"] == round(100 * (300 - 104.5) / 104.5, 2)
     assert (e["window_from"], e["window_to"]) == ("2025-09-10", "2026-09-10")
     assert e["method"] == ae.METHOD
+
+
+def test_dispersed_group_gives_no_estimate():
+    assert ae.estimate_line(25.0, datetime(2026, 9, 1), [10.0] * 5 + [30.0] * 5) is None
+
+
+def test_pack_and_size_are_priced_per_base_unit():
+    assert ae.base_quantity("Resma papel carta caja de 10") == ("u", 10.0)
+    assert ae.base_quantity("Agua purificada bidon 20 litros") == ("ml", 20000.0)
+    assert ae.base_quantity("Lapiz pasta azul") == ("u", 1.0)
+
+
+def test_a_box_is_compared_per_unit_with_single_units():
+    rm = ae.RM_REGION
+    rows = [(f"c{i}", 1, f"2026-08-{i + 1:02d}T10:00:00", 111, "unidad", 3000.0 + 10 * i, "CLP", rm, "Resma carta")
+            for i in range(10)]
+    rows.append(("box", 1, "2026-09-10T10:00:00", 111, "unidad", 32000.0, "CLP", rm, "Resma carta caja de 10"))
+    items = pl.DataFrame(rows, schema={
+        "oc_id": pl.String, "correlativo": pl.Int64, "fecha": pl.String, "product_code": pl.Int64,
+        "unidad": pl.String, "unit_price": pl.Float64, "moneda": pl.String, "region": pl.String,
+        "product": pl.String,
+    }, orient="row")
+    e = ae.estimates_for(items, {("box", 1)})[("box", 1)]
+    assert e["price_clp"] == 3200.0
+    assert e["base_qty"] == 10.0
+    assert e["level"] == "sobreprecio"
+    assert 4 < e["overprice_pct"] < 6

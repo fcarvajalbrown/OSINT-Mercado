@@ -3,6 +3,8 @@ from datetime import datetime, timedelta
 
 import polars as pl
 
+from osint_mercado.units import parse_any_size, parse_count
+
 METHOD = "cgu-alice-2025+ufmg-tukey-2024"
 MIN_COMPARABLES = 10
 WINDOW_DAYS = 365
@@ -10,10 +12,20 @@ CV_LIMIT = 0.25
 TUKEY_K = 1.5
 DATA_ERROR_FACTOR = 100
 RM_REGION = "Región Metropolitana de Santiago"
+BASE_UNIT_LABELS = {"u": "unidad", "g": "gramo", "ml": "mililitro", "m": "metro"}
 
 
 def normalise_unit(value) -> str:
     return " ".join(str(value or "").lower().split())
+
+
+def base_quantity(text: str) -> tuple[str, float]:
+    count = parse_count(text) or 1
+    size = parse_any_size(text)
+    if size is None:
+        return "u", float(count)
+    dim, magnitude = size
+    return dim, count * magnitude
 
 
 def _band(prices: list[float]) -> list[float]:
@@ -51,8 +63,16 @@ def level(price: float, q3: float, fence: float) -> str:
     return "normal"
 
 
+def _line_text(row: dict) -> str:
+    return " ".join(str(row.get(k) or "") for k in TEXT_COLUMNS)
+
+
+TEXT_COLUMNS = ("product", "espec_comprador", "espec_proveedor")
+
+
 def comparable_lines(items: pl.DataFrame) -> pl.DataFrame:
-    return (
+    items = items.with_columns([pl.lit(None, pl.String).alias(c) for c in TEXT_COLUMNS if c not in items.columns])
+    lines = (
         items.filter(
             (pl.col("moneda") == "CLP")
             & (pl.col("region") == RM_REGION)
@@ -67,8 +87,15 @@ def comparable_lines(items: pl.DataFrame) -> pl.DataFrame:
             pl.col("product_code").cast(pl.Int64).alias("code"),
         )
         .filter(pl.col("at").is_not_null())
-        .select("oc_id", "correlativo", "at", "code", "unit", "unit_price")
     )
+    texts = [_line_text(row) for row in lines.select(TEXT_COLUMNS).iter_rows(named=True)]
+    bases = [base_quantity(t) for t in texts]
+    return lines.with_columns(
+        pl.Series("dim", [b[0] for b in bases], dtype=pl.String),
+        pl.Series("base_qty", [b[1] for b in bases], dtype=pl.Float64),
+    ).with_columns(
+        (pl.col("unit_price") / pl.col("base_qty")).alias("base_price"),
+    ).select("oc_id", "correlativo", "at", "code", "unit", "dim", "base_qty", "unit_price", "base_price")
 
 
 def _round(value: float) -> float:
@@ -79,6 +106,8 @@ def estimate_line(price: float, at: datetime, prices_before: list[float]) -> dic
     if len(prices_before) < MIN_COMPARABLES:
         return None
     ref = cgu_reference(prices_before)
+    if ref["cv"] > CV_LIMIT:
+        return None
     q1, q3, fence = tukey_fence(prices_before)
     return {
         "method": METHOD,
@@ -104,18 +133,20 @@ def estimates_for(items: pl.DataFrame, keys: set[tuple[str, int]]) -> dict[tuple
     if lines.is_empty() or not keys:
         return {}
     groups = {
-        (code, unit): frame.sort("at")
-        for (code, unit), frame in lines.group_by(["code", "unit"])
+        key: frame.sort("at")
+        for key, frame in lines.group_by(["code", "unit", "dim"])
     }
     out = {}
     for row in lines.iter_rows(named=True):
         key = (row["oc_id"], row["correlativo"])
         if key not in keys:
             continue
-        group = groups[(row["code"], row["unit"])]
+        group = groups[(row["code"], row["unit"], row["dim"])]
         start = row["at"] - timedelta(days=WINDOW_DAYS)
-        before = group.filter((pl.col("at") < row["at"]) & (pl.col("at") >= start))["unit_price"].to_list()
-        est = estimate_line(float(row["unit_price"]), row["at"], [float(p) for p in before])
+        before = group.filter((pl.col("at") < row["at"]) & (pl.col("at") >= start))["base_price"].to_list()
+        est = estimate_line(float(row["base_price"]), row["at"], [float(p) for p in before])
         if est:
+            est["base_unit"] = BASE_UNIT_LABELS[row["dim"]]
+            est["base_qty"] = row["base_qty"]
             out[key] = est
     return out

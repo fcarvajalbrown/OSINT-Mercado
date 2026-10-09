@@ -221,6 +221,16 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   rule means the group is not homogeneous. Of the 82 homogeneous ones, the overprice cases still
   include likely pack-versus-unit lines (copy paper, water). The CV test checks the comparables,
   not the lead line's own format. Not sealed or deployed until a format gate exists.
+- **Format gate on the automatic estimate (pack/size parser + CGU 25% CV), measured.** 8.3 s for
+  3,893 leads on the local PC. Estimates drop from 1,079 to 143: 69 normal, 36 high, 37 overprice,
+  1 data error. None of the top 12 overprice cases is a clean comparison: bundled orders priced as
+  one unit (Talagante rollers, "solicitud completa adjunta"), a wrong product code (Talagante
+  vehicle service under electrical systems), a broom width read as a length (Peñalolén 45 cm),
+  packs the parser misses ("cajas de resma x 10", "96 sachet"), and tier mismatches (10 m kitchen
+  roll against 250 m jumbo rolls, opalina against plain reams). With the misses fixed by hand the
+  copy paper cases come to about +9% and +31%, not +992% and +555%. The method detects prices out
+  of range of their code group; on this data that is not the same as overprice. Runs locally;
+  the server has no Python.
 
 _Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028._
 
