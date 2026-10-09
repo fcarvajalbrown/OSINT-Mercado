@@ -28,7 +28,7 @@ def test_levels_follow_the_tukey_fence():
     assert fence == pytest.approx(16.75 + 1.5 * 4.5)
     assert ae.level(15, q3, fence) == "normal"
     assert ae.level(17, q3, fence) == "alto"
-    assert ae.level(30, q3, fence) == "sobreprecio"
+    assert ae.level(30, q3, fence) == "fuera_de_rango"
     assert ae.level(fence * 101, q3, fence) == "error_de_datos"
 
 
@@ -60,7 +60,7 @@ def test_estimates_use_only_earlier_same_code_same_unit_rm_clp_lines_within_a_ye
     assert e["n_comparables"] == 10
     assert e["reference_clp"] == 104.5
     assert e["reference_rule"] == "media"
-    assert e["level"] == "sobreprecio"
+    assert e["level"] == "fuera_de_rango"
     assert e["overprice_pct"] == round(100 * (300 - 104.5) / 104.5, 2)
     assert (e["window_from"], e["window_to"]) == ("2025-09-10", "2026-09-10")
     assert e["method"] == ae.METHOD
@@ -89,5 +89,5 @@ def test_a_box_is_compared_per_unit_with_single_units():
     e = ae.estimates_for(items, {("box", 1)})[("box", 1)]
     assert e["price_clp"] == 3200.0
     assert e["base_qty"] == 10.0
-    assert e["level"] == "sobreprecio"
+    assert e["level"] == "fuera_de_rango"
     assert 4 < e["overprice_pct"] < 6

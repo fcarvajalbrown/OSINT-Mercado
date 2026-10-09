@@ -57,7 +57,7 @@ def level(price: float, q3: float, fence: float) -> str:
     if price > DATA_ERROR_FACTOR * fence:
         return "error_de_datos"
     if price > fence:
-        return "sobreprecio"
+        return "fuera_de_rango"
     if price > q3:
         return "alto"
     return "normal"

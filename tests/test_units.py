@@ -91,3 +91,10 @@ def test_any_size_prefers_dimension_with_larger_magnitude_signal():
     # When two dimensions appear, the one whose parsed magnitude is a real product
     # size wins over an incidental one. Here grams is the product size.
     assert units.parse_any_size("AZUCAR GRANULADA BOLSA 1 KG")[0] == "g"
+
+
+def test_sachets_and_boxes_of_n_are_counted():
+    assert units.parse_count("CAFE INSTANTANEO STICK 1.8 G 96 SACHET") == 96
+    assert units.parse_count("CAJAS DE RESMA X 10 PAPEL TAMANO CARTA DE 500 HOJAS") == 10
+    assert units.parse_count("CAJAS DE RESMAS X 5 PAPEL TAMANO OFICIO") == 5
+    assert units.parse_count("Lapiz x 2 mm") is None
