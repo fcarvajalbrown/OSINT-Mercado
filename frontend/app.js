@@ -1,6 +1,18 @@
 "use strict";
 
-const state = { flags: [], sources: {}, anchors: null, integrity: {}, chain: null };
+const state = {
+  flags: [], sources: {}, anchors: null, integrity: {}, chain: null,
+  leads: [], leadSeal: {}, queue: null, leadPage: 0,
+};
+
+const LEADS_PER_PAGE = 50;
+const ENGINE_LABELS = {
+  anomalias: "Referencia de mercado",
+  convenio_marco: "Convenio Marco",
+  precio_pares: "Precio entre pares",
+};
+const QUEUE_DATA_NAME = "osint-mercado-queue";
+const NUMBER = new Intl.NumberFormat("es-CL", { maximumFractionDigits: 2 });
 
 const HORIZON_URL = "https://horizon-testnet.stellar.org";
 const EXPLORER_TX_URL = "https://stellar.expert/explorer/testnet/tx/";
@@ -189,6 +201,126 @@ function render() {
   list.innerHTML = filtered.map((flag) => `<li>${fichaHtml(flag)}</li>`).join("");
 }
 
+function leadFilters() {
+  return {
+    search: document.getElementById("lead-search").value.trim().toLocaleLowerCase("es"),
+    comuna: document.getElementById("lead-comuna").value,
+    engine: document.getElementById("lead-engine").value,
+    status: document.getElementById("lead-status").value,
+  };
+}
+
+function leadMatches(lead, f) {
+  return (!f.comuna || lead.comuna === f.comuna)
+    && (!f.engine || lead.engine === f.engine)
+    && (!f.status || lead.status === f.status)
+    && (!f.search || String(lead.product || "").toLocaleLowerCase("es").includes(f.search));
+}
+
+function leadStatusCell(lead) {
+  if (lead.status === "descartado") {
+    return `<span class="estado descartado">Descartado</span><small>${escapeHtml(lead.review_note || "")}</small>`;
+  }
+  return `<span class="estado en_revision">En revisión</span><small>${escapeHtml(ENGINE_LABELS[lead.engine] || lead.engine)}</small>`;
+}
+
+function leadSealCell(lead) {
+  const seal = state.leadSeal[lead.id];
+  const status = seal || "pending";
+  return `<span class="mini-dot ${status}" aria-hidden="true"></span>${STATUS_LABELS[status] || escapeHtml(status)}`;
+}
+
+function renderLeads() {
+  const body = document.getElementById("lead-rows");
+  const filtered = state.leads.filter((lead) => leadMatches(lead, leadFilters()));
+  const pages = Math.max(1, Math.ceil(filtered.length / LEADS_PER_PAGE));
+  state.leadPage = Math.min(state.leadPage, pages - 1);
+  const start = state.leadPage * LEADS_PER_PAGE;
+  const slice = filtered.slice(start, start + LEADS_PER_PAGE);
+  document.getElementById("lead-count").textContent = filtered.length === state.leads.length
+    ? `${NUMBER.format(state.leads.length)} casos`
+    : `${NUMBER.format(filtered.length)} de ${NUMBER.format(state.leads.length)}`;
+  document.getElementById("lead-page").textContent = `Página ${state.leadPage + 1} de ${pages}`;
+  document.getElementById("lead-prev").disabled = state.leadPage === 0;
+  document.getElementById("lead-next").disabled = state.leadPage >= pages - 1;
+  body.innerHTML = slice.map((lead) => `
+    <tr>
+      <td>${escapeHtml(lead.comuna)}</td>
+      <td class="producto">${escapeHtml(lead.product)}</td>
+      <td class="num">${typeof lead.quantity === "number" ? NUMBER.format(lead.quantity) : "-"}</td>
+      <td class="num">${fmtClp(lead.price_paid_clp)}<small>${lead.price_basis === "neto" ? "neto" : "con IVA"}</small></td>
+      <td>${lead.oc_url ? `<a href="${escapeHtml(lead.oc_url)}" target="_blank" rel="noopener">${escapeHtml(lead.oc_id)}</a>` : escapeHtml(lead.oc_id)}<small>línea ${escapeHtml(lead.correlativo)}</small></td>
+      <td>${leadStatusCell(lead)}</td>
+      <td class="sello">${leadSealCell(lead)}</td>
+    </tr>`).join("");
+}
+
+function setupLeadControls() {
+  fillOptions("lead-comuna", uniqueSorted(state.leads, "comuna"));
+  const engineSelect = document.getElementById("lead-engine");
+  for (const engine of [...new Set(state.leads.map((l) => l.engine))]) {
+    const opt = document.createElement("option");
+    opt.value = engine;
+    opt.textContent = ENGINE_LABELS[engine] || engine;
+    engineSelect.appendChild(opt);
+  }
+  for (const id of ["lead-search", "lead-comuna", "lead-engine", "lead-status"]) {
+    document.getElementById(id).addEventListener("input", () => {
+      state.leadPage = 0;
+      renderLeads();
+    });
+  }
+  document.getElementById("lead-prev").addEventListener("click", () => {
+    state.leadPage = Math.max(0, state.leadPage - 1);
+    renderLeads();
+  });
+  document.getElementById("lead-next").addEventListener("click", () => {
+    state.leadPage += 1;
+    renderLeads();
+  });
+}
+
+async function verifyLeads() {
+  if (!state.anchors) return;
+  const anchored = new Set(state.anchors.leaves);
+  const ids = new Set(state.anchors.flag_ids);
+  const chainOk = state.chain && state.chain.status === "verified";
+  const leaves = await Promise.all(state.leads.map((lead) => leafOf(lead)));
+  state.leads.forEach((lead, i) => {
+    if (!ids.has(lead.id)) state.leadSeal[lead.id] = "unanchored";
+    else if (!anchored.has(leaves[i]) || (state.chain && state.chain.status === "tampered")) state.leadSeal[lead.id] = "tampered";
+    else state.leadSeal[lead.id] = chainOk ? "verified" : "pending";
+  });
+  renderLeads();
+}
+
+async function checkQueue() {
+  const box = document.getElementById("queue-status");
+  const queue = state.queue;
+  const anchors = state.anchors;
+  if (!queue || !anchors || !anchors.queue_digest) {
+    box.className = "queue-status unanchored";
+    box.textContent = "La cola de revisión todavía no tiene sello.";
+    return;
+  }
+  const localDigest = await digestOf(queue.lead_hashes);
+  const ops = await fetchJson(`${HORIZON_URL}/transactions/${anchors.tx_hash}/operations?limit=10`, null);
+  const records = ops && ops._embedded ? ops._embedded.records : [];
+  const entry = records.find((op) => op.type === "manage_data" && op.name === QUEUE_DATA_NAME);
+  const total = NUMBER.format(queue.total);
+  if (!entry) {
+    box.className = "queue-status unreachable";
+    box.textContent = `Cola de revisión de ${total} casos. No pudimos leer su sello en la red Stellar ahora.`;
+    return;
+  }
+  const onChain = base64Hex(entry.value);
+  const ok = onChain === anchors.queue_digest && localDigest === anchors.queue_digest;
+  box.className = `queue-status ${ok ? "verified" : "tampered"}`;
+  box.innerHTML = ok
+    ? `La cola de ${escapeHtml(total)} casos en revisión está sellada en la misma transacción. Si alguien quita un caso, el sello deja de coincidir. <span class="hash">${escapeHtml(onChain.slice(0, 16))}...</span>`
+    : `La cola de revisión publicada no coincide con la sellada en Stellar.`;
+}
+
 async function loadTimeline() {
   const list = document.getElementById("timeline");
   const account = state.anchors && state.anchors.account;
@@ -229,18 +361,22 @@ async function verify() {
 }
 
 async function load() {
-  [state.flags, state.sources, state.anchors] = await Promise.all([
+  [state.flags, state.sources, state.anchors, state.leads, state.queue] = await Promise.all([
     fetchJson("./data/flags.json", []),
     fetchJson("./data/sources.json", {}),
     fetchJson("./data/anchors.json", null),
+    fetchJson("./data/leads.json", []),
+    fetchJson("./data/queue.json", null),
   ]);
+  setupLeadControls();
+  renderLeads();
   fillOptions("filter-comuna", uniqueSorted(state.flags, "comuna"));
   fillOptions("filter-categoria", uniqueSorted(state.flags, "category"));
   for (const id of ["filter-comuna", "filter-categoria", "filter-severidad"]) {
     document.getElementById(id).addEventListener("change", render);
   }
   render();
-  await Promise.all([verify(), loadTimeline()]);
+  await Promise.all([verify().then(verifyLeads), loadTimeline(), checkQueue()]);
 }
 
 load();

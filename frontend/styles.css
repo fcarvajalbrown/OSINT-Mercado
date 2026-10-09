@@ -240,3 +240,29 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 @media (prefers-reduced-motion: reduce) {
   .seal.verified { animation: none; }
 }
+
+.revision { padding: 40px 0 16px; border-top: 1px solid var(--rule); }
+.queue-status { max-width: var(--measure); margin: 0 0 20px; padding: 12px 16px; background: var(--sheet); border: 1px solid var(--rule); border-left: 5px solid var(--rule); }
+.queue-status.verified { border-left-color: var(--stamp); }
+.queue-status.tampered { border-left-color: var(--bad); }
+.queue-status.unreachable { border-left-color: var(--watch); }
+.filters input[type="search"] { font: inherit; color: var(--ink); background: var(--sheet); border: 1px solid var(--rule); padding: 8px 10px; min-width: 220px; }
+
+.table-wrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--sheet); }
+.leads { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+.leads th { text-align: left; font-weight: 700; padding: 10px 12px; border-bottom: 2px solid var(--ink); white-space: nowrap; }
+.leads td { padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+.leads td small { display: block; color: var(--ink-soft); font-size: 0.82rem; }
+.leads .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.leads .producto { max-width: 36ch; }
+.leads .sello { white-space: nowrap; }
+.estado { font-weight: 700; }
+.estado.en_revision { color: var(--ink-soft); }
+.estado.descartado { color: var(--ink); text-decoration: line-through; text-decoration-thickness: 1px; }
+.mini-dot { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 50%; border: 2px solid var(--rule); vertical-align: -1px; }
+.mini-dot.verified { border-color: var(--stamp); background: var(--stamp); }
+.mini-dot.tampered { border-color: var(--bad); background: var(--bad); }
+
+.pager { display: flex; align-items: center; gap: 16px; margin: 16px 0 0; }
+.pager button { font: inherit; color: var(--ink); background: var(--sheet); border: 1px solid var(--ink); padding: 6px 14px; cursor: pointer; }
+.pager button:disabled { opacity: 0.4; cursor: default; }

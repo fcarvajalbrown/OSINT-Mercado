@@ -44,6 +44,23 @@ for (const [i, flag] of flags.entries()) {
     mirrored += 1;
   }
 }
+let leadCount = 0;
+try {
+  const leads = read("leads.json");
+  const anchored = new Set(anchors.leaves);
+  const withheld = ["overprice_ratio", "ratio", "severity", "reference_price_clp", "cm_reference_per_unit",
+    "peer_median_clp", "mad_clp", "robust_z", "overprice_pct"];
+  for (const lead of leads) {
+    const leak = withheld.filter((k) => k in lead);
+    if (leak.length) failures.push(`lead ${lead.id}: estimate field published (${leak.join(", ")})`);
+    if (anchors.flag_ids.includes(lead.id) && !anchored.has(await context.leafOf(lead))) {
+      failures.push(`lead ${lead.id}: not in the anchored leaves`);
+    }
+    leadCount += 1;
+  }
+} catch (e) {
+  if (e.code !== "ENOENT") throw e;
+}
 const digest = await context.digestOf(anchors.leaves);
 if (digest !== anchors.digest) failures.push(`digest ${digest} != ${anchors.digest}`);
 
@@ -51,4 +68,4 @@ if (failures.length) {
   console.log(failures.join("\n"));
   process.exit(1);
 }
-console.log(`parity ok: ${flags.length} flags, ${Object.keys(sources).length} sources, ${mirrored} mirrors, digest ${digest}`);
+console.log(`parity ok: ${flags.length} flags, ${Object.keys(sources).length} sources, ${mirrored} mirrors, ${leadCount} leads, digest ${digest}`);
