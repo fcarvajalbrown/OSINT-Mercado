@@ -57,3 +57,10 @@ and approved the recommended approach below.
   named individuals' phone numbers and emails, which the audit does not need.
 - **Link to a third-party archive (e.g. the Wayback Machine).** Rejected: the archived page would
   show the same permission dialog, and the project would not control the copy.
+
+## Review notes (while Proposed)
+
+- Felipe's direction: the mirror should capture the official order PDF. Per order: download the
+  PDF, hash the downloaded bytes immediately, then OCR it and save the text. The hash of the raw
+  PDF bytes is the value to anchor. Not yet checked: whether the PDF is reachable without a
+  logged-in session.

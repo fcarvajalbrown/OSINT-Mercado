@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OSINT-Mercado: cómo usamos Stellar</title>
+  <meta name="description" content="Cómo cada publicación de OSINT-Mercado queda anclada en la red Stellar y cómo comprobarlo en su navegador.">
+  <link rel="icon" type="image/svg+xml" href="./logo.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./stellar.css">
+</head>
+<body class="demo">
+  <header>
+    <div class="brand">
+      <img class="logo" src="./logo.svg" width="42" height="42" alt="">
+      <h1>OSINT-Mercado</h1>
+    </div>
+    <nav class="site-nav" aria-label="Secciones">
+      <a href="./index.html">Banderas</a>
+      <a href="./stellar.html" aria-current="page">Cómo usamos Stellar</a>
+    </nav>
+  </header>
+
+  <main id="demo">
+    <section class="hero" id="why">
+      <p class="eyebrow">Integridad de los datos publicados</p>
+      <h2>Cada publicación deja una huella en Stellar</h2>
+      <div class="why-grid">
+        <figure class="quote">
+          <blockquote>No Tiene los Permiso suficientes para visualizar la ficha</blockquote>
+          <figcaption>Mensaje que mostraba la ficha oficial de cada orden publicada en Mercado Público el 9 de octubre de 2026, al abrirla sin iniciar sesión.</figcaption>
+        </figure>
+        <ol class="why-list">
+          <li>La fuente oficial dejó de ser revisable para cualquier persona sin cuenta.</li>
+          <li>Este sitio y su repositorio los controla una sola persona.</li>
+          <li>Sin un registro externo, nadie podría comprobar que los datos publicados no se editaron después.</li>
+        </ol>
+      </div>
+      <p class="lead">Por eso cada publicación se registra en una transacción de la red Stellar. Cualquier cambio posterior queda a la vista, también las correcciones del propio autor. Esta página lo muestra en seis pasos, con los mismos archivos que usa el sitio y calculando todo en su navegador.</p>
+    </section>
+
+    <nav class="stepper" id="stepper" aria-label="Pasos">
+      <a href="#step-1" data-step="1"><b>1</b><span>Bandera</span></a>
+      <a href="#step-2" data-step="2"><b>2</b><span>Huellas</span></a>
+      <a href="#step-3" data-step="3"><b>3</b><span>Conjunto</span></a>
+      <a href="#step-4" data-step="4"><b>4</b><span>Stellar</span></a>
+      <a href="#step-5" data-step="5"><b>5</b><span>Alterar</span></a>
+      <a href="#step-6" data-step="6"><b>6</b><span>Historial</span></a>
+    </nav>
+
+    <section class="step" id="step-1" data-step="1">
+      <div class="step-head">
+        <span class="step-num">1</span>
+        <div>
+          <h3>Una bandera y su línea de orden de compra</h3>
+          <p>Una bandera publicada y la línea de la orden de compra tal como la entregó la API de Mercado Público al capturarla.</p>
+        </div>
+      </div>
+      <div class="picker" id="picker" role="group" aria-label="Elegir bandera"></div>
+      <div class="pair">
+        <article class="card" id="flag-card"></article>
+        <article class="card" id="source-card"></article>
+      </div>
+    </section>
+
+    <section class="step" id="step-2" data-step="2">
+      <div class="step-head">
+        <span class="step-num">2</span>
+        <div>
+          <h3>Texto canónico y huella SHA-256</h3>
+          <p>Cada objeto se escribe como JSON canónico: claves en orden alfabético, sin espacios, en UTF-8. SHA-256 lo convierte en una huella de 64 caracteres. Un solo carácter distinto produce otra huella.</p>
+        </div>
+      </div>
+      <div class="flow">
+        <div class="flow-row">
+          <div class="flow-in">
+            <span class="label">Línea de la orden, JSON canónico</span>
+            <pre class="json" id="source-json"></pre>
+          </div>
+          <div class="flow-arrow" aria-hidden="true"><span>SHA-256</span></div>
+          <div class="flow-out">
+            <span class="label">Huella de la línea</span>
+            <code class="hex hex-out" id="source-hash"></code>
+            <p class="check" id="source-check"></p>
+          </div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-in">
+            <span class="label">Bandera, JSON canónico (incluye la huella de la línea)</span>
+            <pre class="json" id="flag-json"></pre>
+          </div>
+          <div class="flow-arrow" aria-hidden="true"><span>SHA-256</span></div>
+          <div class="flow-out">
+            <span class="label">Huella de la bandera</span>
+            <code class="hex hex-out" id="flag-hash"></code>
+            <p class="check" id="flag-check"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" id="step-3" data-step="3">
+      <div class="step-head">
+        <span class="step-num">3</span>
+        <div>
+          <h3>Todas las huellas se combinan en una</h3>
+          <p>Las huellas de todas las banderas publicadas se ordenan, se unen como bytes y pasan otra vez por SHA-256. El resultado es la huella del conjunto: 32 bytes que resumen la publicación completa.</p>
+        </div>
+      </div>
+      <div class="merge">
+        <ol class="leaves" id="leaves"></ol>
+        <div class="merge-join" id="merge-join"></div>
+        <div class="merge-arrow" aria-hidden="true"><span>SHA-256</span></div>
+        <div class="digest-box">
+          <span class="label">Huella del conjunto publicado</span>
+          <code class="hex hex-out big" id="digest"></code>
+          <p class="check" id="digest-check"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" id="step-4" data-step="4">
+      <div class="step-head">
+        <span class="step-num">4</span>
+        <div>
+          <h3>La misma huella, registrada en Stellar</h3>
+          <p>A la izquierda, la huella que su navegador acaba de calcular. A la derecha, la que quedó en la transacción de Stellar (testnet), leída en este momento desde Horizon, el servidor público de la red.</p>
+        </div>
+      </div>
+      <div class="compare" id="compare">
+        <div class="side">
+          <span class="label">Calculada en su navegador</span>
+          <code class="hex grouped" id="cmp-local"></code>
+        </div>
+        <div class="verdict" id="cmp-verdict" role="status">Consultando Stellar...</div>
+        <div class="side">
+          <span class="label">Memo de la transacción en Stellar</span>
+          <code class="hex grouped" id="cmp-chain"></code>
+        </div>
+      </div>
+      <dl class="facts" id="tx-facts"></dl>
+      <p class="actions" id="tx-actions"></p>
+    </section>
+
+    <section class="step" id="step-5" data-step="5">
+      <div class="step-head">
+        <span class="step-num">5</span>
+        <div>
+          <h3>Intente alterar un dato</h3>
+          <p>Cambie un precio. Su navegador recalcula las huellas y las compara con lo que quedó en Stellar. El cambio vive solo en esta pestaña; no se guarda en ninguna parte.</p>
+        </div>
+      </div>
+      <div class="tamper">
+        <form class="tamper-form" id="tamper-form" autocomplete="off">
+          <p class="tamper-target" id="tamper-target"></p>
+          <label for="edit-paid">Precio pagado en la bandera (CLP, con IVA)
+            <input id="edit-paid" type="number" step="0.01" inputmode="decimal">
+          </label>
+          <label for="edit-unit">Precio unitario en la línea capturada (CLP, sin IVA)
+            <input id="edit-unit" type="number" step="0.01" inputmode="decimal">
+          </label>
+          <button type="button" id="tamper-reset" class="btn">Restaurar valores publicados</button>
+        </form>
+        <div class="tamper-result">
+          <div class="row-preview" id="tamper-row" role="status"></div>
+          <ul class="checks" id="tamper-checks"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="step" id="step-6" data-step="6">
+      <div class="step-head">
+        <span class="step-num">6</span>
+        <div>
+          <h3>Historial de la cuenta en Stellar</h3>
+          <p>Cada publicación es una transacción nueva desde la misma cuenta. Una transacción confirmada no se puede editar, así que una corrección queda registrada como una publicación más, junto a la anterior.</p>
+        </div>
+      </div>
+      <p class="meta" id="account-line"></p>
+      <ol class="timeline" id="timeline"></ol>
+      <p class="actions" id="timeline-actions"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Red: Stellar testnet. La testnet se reinicia de forma periódica, así que estas anclas son una demostración y no un registro permanente.</p>
+    <p>Las huellas se calculan con la función SHA-256 de su navegador sobre <a href="./data/flags.json">flags.json</a>, <a href="./data/sources.json">sources.json</a> y <a href="./data/anchors.json">anchors.json</a>. Código abierto en <a href="https://github.com/fcarvajalbrown/OSINT-Mercado" target="_blank" rel="noopener">GitHub</a>.</p>
+  </footer>
+
+  <script src="./shared.js"></script>
+  <script src="./stellar.js"></script>
+</body>
+</html>

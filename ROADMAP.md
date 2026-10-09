@@ -147,6 +147,13 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
 - The dashboard recomputes every hash in the browser and checks it against Horizon testnet; a
   changed value turns its row "Alterado". `tests/js/parity.mjs` proves Python and browser hashes
   agree byte for byte and that a changed price is caught; it runs inside pytest.
+- `stellar.html` (linked from the dashboard header) walks a viewer through the anchor in six
+  steps for the demo video: a flag and its captured order line, their canonical JSON and SHA-256
+  hashes, the batch digest, the live Horizon transaction side by side with the local digest, an
+  in-browser price edit that turns the row "Alterado", and the account's full anchor history
+  fetched from Horizon (4 flags at ledger 5111255, 2 at ledger 5111652). Hashing now lives in
+  `frontend/shared.js`, loaded by both pages, so a deploy must ship `shared.js` with `app.js`.
+  `tests/js/stellar.mjs` runs the page in a vm with a stubbed DOM and Horizon. Not deployed yet.
 - Deployed to osint-mercado.cl over scp (no rsync on the dev machine); the previous live files
   are kept on the server in `domains/osint-mercado.cl/backup-pre-stellar/`.
   `published/flags.json` was republished with `source_sha256`, so the refresh cron (ADR 0016)
@@ -162,6 +169,11 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   reword Buin to the Convenio Marco comparison, confirm a Piwen 1 kg retail price for El Bosque,
   confirm whether the Alcaplus pendrive price includes IVA, and refresh seed prices observed
   12-13 July before they pass the 90-day limit.
+- **Mirror direction (Felipe):** mirror the official order PDF, not only the API record. Order of
+  work per order: download the PDF, hash the exact downloaded bytes immediately (that hash is what
+  gets anchored), then OCR it and save the text. Open check before building: whether the PDF can
+  be fetched without a session, given the login wall on the order pages. ADR 0028/0029 stay
+  Proposed until this is settled with Felipe.
 - **Rule:** every change to the published set needs `osint-anchor publish` and a redeploy of
   `anchors.json`, or the new rows show as not anchored.
 - Backfill of purchase orders from 13 July 2026 onwards runs with `scripts/ingest_range.sh`
