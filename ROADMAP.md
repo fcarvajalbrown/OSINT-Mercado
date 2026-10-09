@@ -162,6 +162,11 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   reword Buin to the Convenio Marco comparison, confirm a Piwen 1 kg retail price for El Bosque,
   confirm whether the Alcaplus pendrive price includes IVA, and refresh seed prices observed
   12-13 July before they pass the 90-day limit.
+- **Mirror direction (Felipe):** mirror the official order PDF, not only the API record. Order of
+  work per order: download the PDF, hash the exact downloaded bytes immediately (that hash is what
+  gets anchored), then OCR it and save the text. Open check before building: whether the PDF can
+  be fetched without a session, given the login wall on the order pages. ADR 0028/0029 stay
+  Proposed until this is settled with Felipe.
 - **Rule:** every change to the published set needs `osint-anchor publish` and a redeploy of
   `anchors.json`, or the new rows show as not anchored.
 - Backfill of purchase orders from 13 July 2026 onwards runs with `scripts/ingest_range.sh`
