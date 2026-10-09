@@ -213,6 +213,14 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   kept the old stylesheets and the new pages rendered unstyled. The build now appends
   `?v=<sha256 prefix>` to every local css, js and svg link (`fingerprint_assets`), so each deploy
   loads fresh files. Data files are fetched with `cache: "no-store"`.
+- **Automatic estimate (ADR 0032) on real data, not yet published.** Of 3,893 lead rows, 1,079
+  have 10 or more comparables: 689 normal, 189 high, 192 overprice, 9 probable data errors. The
+  top overprice cases are format mismatches, not prices: a San Pedro promotional print job at
+  $587,500 against a $773 reference (+75,903%), a 72-colour marker set against single markers.
+  997 of the 1,079 fall back to the median because the group CV is above 25%, which by the CGU
+  rule means the group is not homogeneous. Of the 82 homogeneous ones, the overprice cases still
+  include likely pack-versus-unit lines (copy paper, water). The CV test checks the comparables,
+  not the lead line's own format. Not sealed or deployed until a format gate exists.
 
 _Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028._
 

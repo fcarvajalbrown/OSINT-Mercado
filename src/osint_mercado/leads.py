@@ -14,7 +14,7 @@ def usable_comuna(value) -> str:
     return text
 
 
-def public_row(engine: str, lead: dict, decision: dict | None) -> dict:
+def public_row(engine: str, lead: dict, decision: dict | None, auto: dict | None = None) -> dict:
     fields = ENGINE_FIELDS[engine]
     row = {
         "id": lead["id"],
@@ -34,15 +34,23 @@ def public_row(engine: str, lead: dict, decision: dict | None) -> dict:
         row["status"] = "descartado"
         row["review_note"] = decision.get("note")
         row["reviewed_at"] = decision.get("reviewed_at")
+    elif auto:
+        row["auto_estimate"] = auto
     return row
 
 
-def public_leads(queues: dict[str, list[dict]], decisions: dict, confirmed_ids: set[str]) -> list[dict]:
+def lead_key(lead: dict) -> tuple[str, int]:
+    return (str(lead.get("oc_id")), int(lead.get("correlativo") or 0))
+
+
+def public_leads(queues: dict[str, list[dict]], decisions: dict, confirmed_ids: set[str],
+                 auto_estimates: dict | None = None) -> list[dict]:
+    auto_estimates = auto_estimates or {}
     rows = []
     for engine, items in queues.items():
         for lead in items:
             if lead.get("id") in confirmed_ids:
                 continue
-            rows.append(public_row(engine, lead, decisions.get(lead.get("id"))))
+            rows.append(public_row(engine, lead, decisions.get(lead.get("id")), auto_estimates.get(lead_key(lead))))
     rows.sort(key=lambda r: (r["engine"], r["comuna"], str(r["oc_id"]), r["correlativo"] or 0, r["id"]))
     return rows

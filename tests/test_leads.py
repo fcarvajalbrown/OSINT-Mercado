@@ -78,3 +78,15 @@ def test_confirmed_leads_are_left_to_the_published_flags():
 
 def test_rows_are_in_a_stable_order():
     assert [r["id"] for r in build()] == [r["id"] for r in build()]
+
+
+def test_automatic_estimate_is_attached_to_open_leads_only():
+    queues = {"anomalias": [ANOMALY], "convenio_marco": [CM], "precio_pares": [PEER]}
+    auto = {("1-1", 8): {"reference_clp": 3000.0, "level": "sobreprecio"},
+            ("2-2", 5): {"reference_clp": 1000.0, "level": "alto"}}
+    decisions = {"c1": {"decision": "dismiss", "note": "CM", "reviewed_at": "2026-10-09"}}
+    rows = {r["id"]: r for r in leads.public_leads(queues, decisions, set(), auto)}
+    assert rows["a1"]["auto_estimate"]["level"] == "sobreprecio"
+    assert "auto_estimate" not in rows["c1"]
+    assert "auto_estimate" not in rows["p1"]
+    assert not ESTIMATE_KEYS & set(rows["a1"])
