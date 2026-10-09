@@ -158,7 +158,15 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
 - **Rule:** every change to the published set needs `osint-anchor publish` and a redeploy of
   `anchors.json`, or the new rows show as not anchored.
 - Backfill of purchase orders from 13 July 2026 onwards runs with `scripts/ingest_range.sh`
-  (the GitHub Actions ingest was removed); new anomalies still go through the curation gate.
+  (the GitHub Actions ingest was removed), newest-first and as a single process; new anomalies
+  still go through the curation gate.
+- **API quota (official, chilecompra.cl/api):** 10,000 requests per day per ticket, not
+  modifiable; one ticket per person; IP monitoring; abuse can mean suspension or a permanent
+  block; large downloads recommended between 22:00 and 07:00. One day of RM data costs at least
+  ~400 requests (52 listings plus one detail per listed order; median 340 municipal orders kept
+  per day over 27 captured days), so the quota covers roughly 16-25 days of data per calendar
+  day. Never run two ingests in parallel on one ticket: simultaneous requests already drew a 429
+  (ADR 0008), and two processes can exceed the daily cap in about three hours.
 
 _Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028._
 
