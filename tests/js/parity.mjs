@@ -26,12 +26,20 @@ const sources = read("sources.json");
 const anchors = read("anchors.json");
 
 const failures = [];
+let mirrored = 0;
 for (const [i, flag] of flags.entries()) {
   const leaf = await context.leafOf(flag);
   if (leaf !== anchors.leaves[i]) failures.push(`flag ${flag.id}: leaf ${leaf} != ${anchors.leaves[i]}`);
   const source = sources[flag.id];
   if (source && (await context.leafOf(source)) !== flag.source_sha256) {
     failures.push(`flag ${flag.id}: source hash mismatch`);
+  }
+  if (flag.mirror_sha256) {
+    const mirror = read(join("mirror", `${flag.oc_id}.json`));
+    if ((await context.leafOf(mirror)) !== flag.mirror_sha256) {
+      failures.push(`flag ${flag.id}: mirror hash mismatch`);
+    }
+    mirrored += 1;
   }
 }
 const digest = await context.digestOf(anchors.leaves);
@@ -41,4 +49,4 @@ if (failures.length) {
   console.log(failures.join("\n"));
   process.exit(1);
 }
-console.log(`parity ok: ${flags.length} flags, ${Object.keys(sources).length} sources, digest ${digest}`);
+console.log(`parity ok: ${flags.length} flags, ${Object.keys(sources).length} sources, ${mirrored} mirrors, digest ${digest}`);

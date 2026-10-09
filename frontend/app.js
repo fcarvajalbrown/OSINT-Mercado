@@ -85,21 +85,34 @@ async function checkChain(anchors) {
   }
 }
 
+function mirrorPath(flag) {
+  return `./data/mirror/${encodeURIComponent(flag.oc_id)}.json`;
+}
+
+async function checkMirror(flag) {
+  if (!flag.mirror_sha256) return { mirrorOk: null, mirror: null };
+  const mirror = await fetchJson(mirrorPath(flag), null);
+  return { mirrorOk: mirror ? (await leafOf(mirror)) === flag.mirror_sha256 : false, mirror };
+}
+
 async function checkFlag(flag) {
   const source = state.sources[flag.id];
   let sourceOk = null;
   if (flag.source_sha256) {
     sourceOk = source ? (await leafOf(source)) === flag.source_sha256 : false;
   }
+  const { mirrorOk, mirror } = await checkMirror(flag);
+  const base = { sourceOk, source, mirrorOk, mirror };
   if (!state.anchors || !state.anchors.flag_ids.includes(flag.id)) {
-    return { status: "unanchored", sourceOk, source };
+    return { status: "unanchored", ...base };
   }
   const inAnchor = state.anchors.leaves.includes(await leafOf(flag));
   const chainOk = state.chain && state.chain.status === "verified";
-  if (!inAnchor || sourceOk === false || (state.chain && state.chain.status === "tampered")) {
-    return { status: "tampered", sourceOk, source };
+  if (!inAnchor || sourceOk === false || mirrorOk === false
+      || (state.chain && state.chain.status === "tampered")) {
+    return { status: "tampered", ...base };
   }
-  return { status: chainOk ? "verified" : "pending", sourceOk, source };
+  return { status: chainOk ? "verified" : "pending", ...base };
 }
 
 function renderChain() {
@@ -124,12 +137,23 @@ function renderChain() {
     <code title="Huella SHA-256 del conjunto publicado">${a.digest}</code>`;
 }
 
+function sourceLinks(flag) {
+  const links = [];
+  if (flag.oc_url) links.push(`<a href="${flag.oc_url}" target="_blank" rel="noopener">orden</a>`);
+  if (flag.mirror_sha256) {
+    links.push(`<a href="${mirrorPath(flag)}" target="_blank" rel="noopener" title="Copia del registro oficial, por si la ficha pide inicio de sesión">copia</a>`);
+  }
+  return links.join(" &middot; ");
+}
+
 function integrityCell(flag) {
   const result = state.integrity[flag.id] || { status: "pending" };
   const label = INTEGRITY_LABELS[result.status] || result.status;
   const captured = result.source ? `<small>Fuente capturada ${fmtTime(result.source.captured_at)}</small>` : "";
-  const sourceWarn = result.sourceOk === false ? "<small>La copia de la fuente no coincide</small>" : "";
-  return `<span class="integrity ${result.status}">${label}</span>${captured}${sourceWarn}`;
+  const sourceWarn = result.sourceOk === false ? "<small>La línea capturada no coincide</small>" : "";
+  const mirrored = result.mirror ? `<small>Copia del registro oficial: ${fmtTime(result.mirror.fetched_at)}</small>` : "";
+  const mirrorWarn = result.mirrorOk === false ? "<small>La copia del registro oficial no coincide</small>" : "";
+  return `<span class="integrity ${result.status}">${label}</span>${captured}${mirrored}${sourceWarn}${mirrorWarn}`;
 }
 
 function fillOptions(selectId, values) {
@@ -193,7 +217,7 @@ function render() {
       { html: `<span class="num">${fmtClp(flag.reference_price_clp)}</span>`, cls: "num" },
       { html: `<span class="num mult">${pct} <small>(${mult})</small></span>`, cls: "num" },
       { html: `<span class="badge ${sev}">${SEV_LABELS[sev] || sev}</span>` },
-      { html: flag.oc_url ? `<a href="${flag.oc_url}" target="_blank" rel="noopener">orden</a>` : "" },
+      { html: sourceLinks(flag) },
       { html: integrityCell(flag), cls: "integrity-cell" },
     ];
     for (const cell of cells) {
