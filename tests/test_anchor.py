@@ -94,3 +94,50 @@ def test_build_transaction_carries_digest_in_memo_and_data():
     assert op.data_name == anchor.DATA_NAME
     assert op.data_value == bytes.fromhex(digest_hex)
     assert tx.signatures
+
+
+def test_queue_record_hashes_undecided_leads_and_counts_them():
+    queues = {
+        "anomalias": [{"id": "a", "comuna": "Buin", "severity": "high"},
+                      {"id": "b", "comuna": "Buin", "severity": None}],
+        "convenio_marco": [{"id": "c", "comuna": "Pirque", "severity": "severe"}],
+    }
+    rec = integrity.queue_record(queues, decided={"b"})
+    assert rec["total"] == 2
+    assert rec["lead_hashes"] == sorted([integrity.leaf(queues["anomalias"][0]),
+                                         integrity.leaf(queues["convenio_marco"][0])])
+    assert rec["digest"] == integrity.digest(rec["lead_hashes"])
+    assert rec["counts"]["by_engine"] == {"anomalias": 1, "convenio_marco": 1}
+    assert rec["counts"]["by_comuna"] == {"Buin": 1, "Pirque": 1}
+    assert rec["counts"]["by_severity"] == {"high": 1, "severe": 1}
+
+
+def test_queue_record_labels_missing_severity():
+    rec = integrity.queue_record({"x": [{"id": "a", "comuna": "Buin"}]}, decided=set())
+    assert rec["counts"]["by_severity"] == {"sin_clasificar": 1}
+
+
+def test_build_transaction_adds_queue_digest_entry_when_given():
+    kp = Keypair.random()
+    digest_hex = integrity.digest([integrity.leaf(FLAG)])
+    queue_hex = integrity.digest([integrity.leaf({"id": "q"})])
+    tx = anchor.build_transaction(Account(kp.public_key, 1), kp, digest_hex, queue_hex)
+    ops = tx.transaction.operations
+    assert [o.data_name for o in ops] == [anchor.DATA_NAME, anchor.QUEUE_DATA_NAME]
+    assert ops[1].data_value == bytes.fromhex(queue_hex)
+    assert tx.transaction.memo.memo_hash == bytes.fromhex(digest_hex)
+
+
+def test_anchor_records_queue_digest(monkeypatch, tmp_path):
+    sent = {}
+
+    def fake_submit(secret, digest_hex, queue_hex=None):
+        sent["queue"] = queue_hex
+        return {"hash": "tx9", "ledger": 7, "created_at": "2026-10-09T23:00:00Z"}
+
+    monkeypatch.setattr(anchor, "submit_digest", fake_submit)
+    queue = integrity.queue_record({"x": [{"id": "q", "comuna": "Buin"}]}, decided=set())
+    rec = anchor.anchor([FLAG], "S", tmp_path / "a.json", queue=queue)
+    assert sent["queue"] == queue["digest"]
+    assert rec["queue_digest"] == queue["digest"]
+    assert rec["queue_total"] == 1

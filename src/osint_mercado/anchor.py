@@ -8,7 +8,7 @@ import truststore
 from dotenv import load_dotenv
 from stellar_sdk import Keypair, Network, Server, TransactionBuilder
 
-from osint_mercado.build_site import ITEMS_GLOB, public_dataset
+from osint_mercado.build_site import ITEMS_GLOB, public_dataset, public_lead_rows, public_queue
 from osint_mercado.integrity import record
 
 truststore.inject_into_ssl()
@@ -18,31 +18,38 @@ HORIZON_URL = "https://horizon-testnet.stellar.org"
 FRIENDBOT_URL = "https://friendbot.stellar.org"
 EXPLORER_TX_URL = "https://stellar.expert/explorer/testnet/tx/"
 DATA_NAME = "osint-mercado"
+QUEUE_DATA_NAME = "osint-mercado-queue"
 
 
-def build_transaction(account, keypair: Keypair, digest_hex: str):
+def build_transaction(account, keypair: Keypair, digest_hex: str, queue_hex: str | None = None):
     raw = bytes.fromhex(digest_hex)
-    tx = (
+    builder = (
         TransactionBuilder(account, Network.TESTNET_NETWORK_PASSPHRASE, base_fee=100)
         .add_hash_memo(raw)
         .append_manage_data_op(DATA_NAME, raw)
-        .set_timeout(60)
-        .build()
     )
+    if queue_hex:
+        builder = builder.append_manage_data_op(QUEUE_DATA_NAME, bytes.fromhex(queue_hex))
+    tx = builder.set_timeout(60).build()
     tx.sign(keypair)
     return tx
 
 
-def submit_digest(secret: str, digest_hex: str) -> dict:
+def submit_digest(secret: str, digest_hex: str, queue_hex: str | None = None) -> dict:
     keypair = Keypair.from_secret(secret)
     server = Server(HORIZON_URL)
     account = server.load_account(keypair.public_key)
-    return server.submit_transaction(build_transaction(account, keypair, digest_hex))
+    return server.submit_transaction(build_transaction(account, keypair, digest_hex, queue_hex))
 
 
-def anchor(flags: list[dict], secret: str, out_path) -> dict:
+def anchor(flags: list[dict], secret: str, out_path, queue: dict | None = None) -> dict:
     rec = record(flags)
-    result = submit_digest(secret, rec["digest"])
+    if queue:
+        result = submit_digest(secret, rec["digest"], queue["digest"])
+        rec["queue_digest"] = queue["digest"]
+        rec["queue_total"] = queue["total"]
+    else:
+        result = submit_digest(secret, rec["digest"])
     rec["tx_hash"] = result["hash"]
     rec["ledger"] = result["ledger"]
     rec["anchored_at"] = result.get("created_at")
@@ -91,8 +98,11 @@ def main() -> None:
     flags, sources, _mirrors = public_dataset(args.confirmed, args.basket, args.items)
     missing = [f["id"] for f in flags if f["id"] not in sources]
     unmirrored = [f["oc_id"] for f in flags if "mirror_sha256" not in f]
-    rec = anchor(flags, load_secret(), args.out)
-    print(f"anchored {len(flags)} flags, digest {rec['digest']}")
+    queue = public_queue()
+    lead_rows = public_lead_rows(args.confirmed)
+    rec = anchor(flags + lead_rows, load_secret(), args.out, queue=queue)
+    print(f"anchored {len(flags)} flags and {len(lead_rows)} lead rows, digest {rec['digest']}")
+    print(f"sealed review queue: {queue['total']} leads, digest {queue['digest']}")
     print(f"tx {rec['tx_hash']} ledger {rec['ledger']}: {rec['explorer_url']}")
     if missing:
         print(f"flags without a source snapshot: {', '.join(missing)}")

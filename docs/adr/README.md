@@ -39,3 +39,5 @@ did not survive the actual deployment target — a webapp on Hostinger Business 
 | 0027 | Anchor the source order line behind each flag (extends ADR 0026)      | Accepted |
 | 0028 | Mirror the official record of every published order                  | Proposed |
 | 0029 | Scrub personal data from free text in the public mirror               | Proposed |
+| 0030 | Seal the review queue alongside the published set                     | Accepted |
+| 0031 | Publish every lead; the overprice estimate waits for human review     | Accepted |

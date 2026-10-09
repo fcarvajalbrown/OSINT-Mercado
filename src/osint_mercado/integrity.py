@@ -67,6 +67,35 @@ def attach_mirrors(flags: list[dict], public_dir) -> tuple[list[dict], dict]:
     return out, mirrors
 
 
+def queue_record(queues: dict[str, list[dict]], decided: set[str]) -> dict:
+    by_engine: dict[str, int] = {}
+    by_comuna: dict[str, int] = {}
+    by_severity: dict[str, int] = {}
+    hashes = []
+    for engine, leads in queues.items():
+        for lead in leads:
+            if lead.get("id") in decided:
+                continue
+            hashes.append(leaf(lead))
+            by_engine[engine] = by_engine.get(engine, 0) + 1
+            comuna = lead.get("comuna") or "sin_comuna"
+            by_comuna[comuna] = by_comuna.get(comuna, 0) + 1
+            severity = lead.get("severity") or "sin_clasificar"
+            by_severity[severity] = by_severity.get(severity, 0) + 1
+    hashes.sort()
+    return {
+        "network": NETWORK,
+        "total": len(hashes),
+        "lead_hashes": hashes,
+        "digest": digest(hashes),
+        "counts": {
+            "by_engine": by_engine,
+            "by_comuna": dict(sorted(by_comuna.items())),
+            "by_severity": by_severity,
+        },
+    }
+
+
 def record(flags: list[dict]) -> dict:
     leaves = [leaf(f) for f in flags]
     return {
