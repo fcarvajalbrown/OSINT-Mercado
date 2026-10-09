@@ -174,6 +174,13 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   gets anchored), then OCR it and save the text. Open check before building: whether the PDF can
   be fetched without a session, given the login wall on the order pages. ADR 0028/0029 stay
   Proposed until this is settled with Felipe.
+- Published per ADR 0031: 2 reviewed flags plus 3,893 lead rows (3,876 in review, 17 decided),
+  sealed with the review-queue digest (ADR 0030) at ledger 5112074. Data-quality items now
+  public: about 71 leads with no comuna and about 102 with codes or symbols in the comuna field,
+  shown as "Comuna sin identificar"; name variants such as "Calera De Tango" and "Til Til".
+- **Open for Felipe:** leads 90f5cb11bca6ecd9 (Conchali, escobillones) and a311ef975d16cf90
+  (Vitacura, escobillon) are "confirm" in the ledger but not in `confirmed_flags.json`. They are
+  published as "En revision" with no estimate until he decides.
 - **Rule:** every change to the published set needs `osint-anchor publish` and a redeploy of
   `anchors.json`, or the new rows show as not anchored.
 - Backfill of purchase orders from 13 July 2026 onwards runs with `scripts/ingest_range.sh`
