@@ -67,7 +67,8 @@
         <h2 id="revision-title">En revisión</h2>
         <span id="lead-count" class="count" role="status"></span>
       </div>
-      <p class="caveat">Todas las demás órdenes que los motores marcaron. Se publican los datos de la orden tal como están en Mercado Público. La estimación de sobreprecio, la severidad y el precio de referencia aparecen solo cuando una persona revisa cada caso.</p>
+      <p class="caveat">Todas las demás órdenes que los motores marcaron, con los datos de la orden tal como están en Mercado Público. Una persona todavía no ha revisado estos casos.</p>
+      <p class="caveat">El resultado automático compara el precio con compras de la Región Metropolitana del mismo código de producto y la misma unidad, en los 12 meses anteriores, por unidad, gramo, mililitro o metro según el formato. La referencia sigue el método de la Controladoria-Geral da União de Brasil (dos filtros de media más o menos una desviación estándar) y el nivel, los cuartiles de Tukey. Solo se calcula con 10 compras o más y cuando sus precios son parejos (coeficiente de variación de 25% o menos). Mide dónde cae un precio dentro de su grupo, no prueba un sobreprecio: un paquete, un formato distinto o un código mal puesto también lo sacan de rango.</p>
       <div id="queue-status" class="queue-status pending" role="status" aria-live="polite">Comprobando el sello de la cola de revisión...</div>
 
       <form class="filters" aria-label="Filtrar casos en revisión">
@@ -79,6 +80,17 @@
         </label>
         <label>Motor
           <select id="lead-engine"><option value="">Todos</option></select>
+        </label>
+        <label>Resultado automático
+          <select id="lead-level">
+            <option value="">Todos</option>
+            <option value="con">Con resultado</option>
+            <option value="normal">Normal</option>
+            <option value="alto">Alto</option>
+            <option value="fuera_de_rango">Fuera de rango</option>
+            <option value="error_de_datos">Probable error de datos</option>
+            <option value="sin">Sin resultado</option>
+          </select>
         </label>
         <label>Estado
           <select id="lead-status">
@@ -97,6 +109,7 @@
               <th scope="col">Producto</th>
               <th scope="col" class="num">Cantidad</th>
               <th scope="col" class="num">Pagado</th>
+              <th scope="col">Resultado automático</th>
               <th scope="col">Orden</th>
               <th scope="col">Estado</th>
               <th scope="col">Sello</th>

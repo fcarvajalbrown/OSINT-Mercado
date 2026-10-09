@@ -256,6 +256,13 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 .leads .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .leads .producto { max-width: 36ch; }
 .leads .sello { white-space: nowrap; }
+.leads .auto-cell { min-width: 22ch; }
+.auto { font-weight: 700; }
+.auto.none { font-weight: 400; color: var(--ink-soft); }
+.auto.normal { color: var(--ok); }
+.auto.alto { color: var(--watch); }
+.auto.fuera_de_rango { color: var(--bad); }
+.auto.error_de_datos { color: var(--ink-soft); }
 .estado { font-weight: 700; }
 .estado.en_revision { color: var(--ink-soft); }
 .estado.descartado { color: var(--ink); text-decoration: line-through; text-decoration-thickness: 1px; }

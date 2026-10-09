@@ -53,6 +53,14 @@ try {
   for (const lead of leads) {
     const leak = withheld.filter((k) => k in lead);
     if (leak.length) failures.push(`lead ${lead.id}: estimate field published (${leak.join(", ")})`);
+    const autoCell = context.leadAutoCell(lead);
+    if (lead.auto_estimate) {
+      const label = autoCell.match(/<span class="auto [^"]+">([^<]*)<\/span>/);
+      if (!label || /sobreprecio/i.test(label[1])) failures.push(`lead ${lead.id}: automatic result labelled "${label && label[1]}"`);
+      if (!autoCell.includes("sobre la referencia automática")) failures.push(`lead ${lead.id}: automatic result without its reference`);
+    } else if (!autoCell.includes("Sin resultado automático")) {
+      failures.push(`lead ${lead.id}: missing automatic result shown as present`);
+    }
     if (anchors.flag_ids.includes(lead.id) && !anchored.has(await context.leafOf(lead))) {
       failures.push(`lead ${lead.id}: not in the anchored leaves`);
     }

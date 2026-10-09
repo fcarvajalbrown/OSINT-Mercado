@@ -12,6 +12,13 @@ const ENGINE_LABELS = {
   precio_pares: "Precio entre pares",
 };
 const QUEUE_DATA_NAME = "osint-mercado-queue";
+const LEVEL_LABELS = {
+  normal: "Normal",
+  alto: "Alto",
+  fuera_de_rango: "Fuera de rango",
+  error_de_datos: "Probable error de datos",
+};
+const BASE_UNIT_PLURAL = { unidad: "unidad", gramo: "gramo", mililitro: "mililitro", metro: "metro" };
 const NUMBER = new Intl.NumberFormat("es-CL", { maximumFractionDigits: 2 });
 
 const HORIZON_URL = "https://horizon-testnet.stellar.org";
@@ -207,6 +214,7 @@ function leadFilters() {
     comuna: document.getElementById("lead-comuna").value,
     engine: document.getElementById("lead-engine").value,
     status: document.getElementById("lead-status").value,
+    level: document.getElementById("lead-level").value,
   };
 }
 
@@ -214,7 +222,33 @@ function leadMatches(lead, f) {
   return (!f.comuna || lead.comuna === f.comuna)
     && (!f.engine || lead.engine === f.engine)
     && (!f.status || lead.status === f.status)
+    && levelMatches(lead, f.level)
     && (!f.search || String(lead.product || "").toLocaleLowerCase("es").includes(f.search));
+}
+
+function levelMatches(lead, level) {
+  const auto = lead.auto_estimate;
+  if (!level) return true;
+  if (level === "con") return Boolean(auto);
+  if (level === "sin") return !auto;
+  return Boolean(auto) && auto.level === level;
+}
+
+function signedPct(n) {
+  return `${n > 0 ? "+" : ""}${NUMBER.format(n)}%`;
+}
+
+function leadAutoCell(lead) {
+  const auto = lead.auto_estimate;
+  if (!auto) return `<span class="auto none">Sin resultado automático</span>`;
+  const unit = BASE_UNIT_PLURAL[auto.base_unit] || auto.base_unit;
+  const note = auto.level === "fuera_de_rango"
+    ? "<small>Fuera de rango para su código: puede ser formato, paquete o sobreprecio.</small>"
+    : "";
+  return `<span class="auto ${escapeHtml(auto.level)}">${escapeHtml(LEVEL_LABELS[auto.level] || auto.level)}</span>`
+    + `<small>${signedPct(auto.overprice_pct)} sobre la referencia automática de ${fmtClp(auto.reference_clp)} neto por ${escapeHtml(unit)}</small>`
+    + `<small>Media de ${NUMBER.format(auto.n_kept)} de ${NUMBER.format(auto.n_comparables)} compras comparables</small>`
+    + note;
 }
 
 function leadStatusCell(lead) {
@@ -249,6 +283,7 @@ function renderLeads() {
       <td class="producto">${escapeHtml(lead.product)}</td>
       <td class="num">${typeof lead.quantity === "number" ? NUMBER.format(lead.quantity) : "-"}</td>
       <td class="num">${fmtClp(lead.price_paid_clp)}<small>${lead.price_basis === "neto" ? "neto" : "con IVA"}</small></td>
+      <td class="auto-cell">${leadAutoCell(lead)}</td>
       <td>${lead.oc_url ? `<a href="${escapeHtml(lead.oc_url)}" target="_blank" rel="noopener">${escapeHtml(lead.oc_id)}</a>` : escapeHtml(lead.oc_id)}<small>línea ${escapeHtml(lead.correlativo)}</small></td>
       <td>${leadStatusCell(lead)}</td>
       <td class="sello">${leadSealCell(lead)}</td>
@@ -264,7 +299,7 @@ function setupLeadControls() {
     opt.textContent = ENGINE_LABELS[engine] || engine;
     engineSelect.appendChild(opt);
   }
-  for (const id of ["lead-search", "lead-comuna", "lead-engine", "lead-status"]) {
+  for (const id of ["lead-search", "lead-comuna", "lead-engine", "lead-status", "lead-level"]) {
     document.getElementById(id).addEventListener("input", () => {
       state.leadPage = 0;
       renderLeads();
