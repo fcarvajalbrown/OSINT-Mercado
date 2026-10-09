@@ -136,6 +136,32 @@ agreement it was bound to consider? (ADR 0024.)
 
 _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
 
+## Phase 7 — Integrity layer on Stellar (Find Your Way hackathon)
+**Status:** In Progress
+
+- `osint-anchor` anchors the published flags on the Stellar testnet: one transaction per
+  publication carries the SHA-256 digest of every flag as a hash memo and a `manage_data` entry
+  (ADR 0026). Each flag also commits to the hash of its source order line as captured (ADR 0027).
+  First anchor: ledger 5111255, 18:04 Chile time (21:04 UTC), transaction
+  `ad864ba7a7a7afd3c70092b176eb0fc6e5d5694da18f698f99884ecabab95e8f`, 4 flags, 4 source lines.
+- The dashboard recomputes every hash in the browser and checks it against Horizon testnet; a
+  changed value turns its row "Alterado". `tests/js/parity.mjs` proves Python and browser hashes
+  agree byte for byte and that a changed price is caught; it runs inside pytest.
+- Deployed to osint-mercado.cl over scp (no rsync on the dev machine); the previous live files
+  are kept on the server in `domains/osint-mercado.cl/backup-pre-stellar/`.
+  `published/flags.json` was republished with `source_sha256`, so the refresh cron (ADR 0016)
+  serves the anchored set.
+- **Finding:** every published flag's official link (ADR 0007) now opens Mercado Público's
+  "No Tiene los Permiso suficientes para visualizar la ficha" dialog for a reader who is not
+  logged in (checked on all 4 published orders). The provenance link no longer lets the public
+  verify anything on its own. Addressed by mirroring the API record (ADR 0028).
+- **Rule:** every change to the published set needs `osint-anchor publish` and a redeploy of
+  `anchors.json`, or the new rows show as not anchored.
+- Backfill of purchase orders from 13 July 2026 onwards runs with `scripts/ingest_range.sh`
+  (the GitHub Actions ingest was removed); new anomalies still go through the curation gate.
+
+_Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028._
+
 ## Later phases (toward the PDF's grand vision)
 **Status:** Not Started
 
