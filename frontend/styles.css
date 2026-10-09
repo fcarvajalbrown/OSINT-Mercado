@@ -26,6 +26,17 @@ header { padding-top: 32px; }
 .brand { display: flex; align-items: center; gap: 12px; margin-bottom: 4px; }
 .brand h1 { margin: 0; }
 .logo { flex: none; display: block; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 14px; }
+.site-nav a {
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.site-nav a:hover { color: var(--ink); border-color: var(--accent); }
+.site-nav a[aria-current="page"] { color: var(--ink); background: var(--panel); }
 h1 { margin: 0 0 4px; font-size: 1.9rem; letter-spacing: -0.02em; }
 .tagline { margin: 0 0 12px; color: var(--muted); font-size: 1.05rem; }
 .note { margin: 0 0 8px; color: var(--muted); font-size: 0.9rem; max-width: 70ch; }
