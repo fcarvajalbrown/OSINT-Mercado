@@ -23,7 +23,7 @@ while [ "$(date -d "$day" +%s)" "$cmp" "$(date -d "$end" +%s)" ]; do
     echo "skip $fecha (already ingested)" >> "$log"
   else
     "$py" -m osint_mercado.ingest --fecha "$fecha" --codes data/rm_municipal_codes.json \
-      --out data --max-per-organism 200 --pace 0.25 >> "$log" 2>&1
+      --out data --max-per-organism 200 --pace "${PACE:-1.0}" >> "$log" 2>&1
     status=$?
     if [ "$status" -eq 3 ]; then
       echo "STOPPED at $fecha (quota or circuit breaker, see above)" >> "$log"
