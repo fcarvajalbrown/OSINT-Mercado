@@ -9,6 +9,7 @@ dependencies = [
     "polars>=1.0",
     "python-dotenv>=1.0",
     "rapidfuzz>=3.0",
+    "stellar-sdk>=13",
 ]
 
 [project.optional-dependencies]
@@ -23,6 +24,7 @@ osint-peer-score = "osint_mercado.peer_score:main"
 osint-catalog = "osint_mercado.catalog:main"
 osint-curate = "osint_mercado.curate:main"
 osint-build-site = "osint_mercado.build_site:main"
+osint-anchor = "osint_mercado.anchor:main"
 
 [build-system]
 requires = ["setuptools>=68"]

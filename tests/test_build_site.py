@@ -37,6 +37,7 @@ def test_build_writes_site(tmp_path):
     assert (out / "styles.css").exists()
     data = json.loads((out / "data" / "flags.json").read_text(encoding="utf-8"))
     assert data[0]["canonical_name"] == "Mouse óptico USB"
+    assert json.loads((out / "data" / "sources.json").read_text(encoding="utf-8")) == {}
 
 
 def test_build_is_deterministic(tmp_path):
