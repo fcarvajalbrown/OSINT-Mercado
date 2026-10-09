@@ -14,7 +14,8 @@
     "curation_note": "Pendrive 16GB $9282 vs baseline $3368 (2.8x), producto exacto",
     "canonical_name": "Pendrive USB 16GB",
     "category": "Oficina y computación",
-    "overprice_pct": 176
+    "overprice_pct": 176,
+    "source_sha256": "35fe17f7b62e6192a2d708da5dfeaa193ffc2946c01586b45a31d8b5ed2eaddd"
   },
   {
     "id": "2beda709733d47ce",
@@ -31,7 +32,8 @@
     "curation_note": "Nueces 1kg Piwen $28160 vs baseline $12490 (2.3x), producto exacto",
     "canonical_name": "Nueces sin cascara (1kg)",
     "category": "Alimentos y abarrotes",
-    "overprice_pct": 125
+    "overprice_pct": 125,
+    "source_sha256": "c1fa83785a3ecc44a9ce116b6f738f3873c321355389ad806ebb1a4e10589b55"
   },
   {
     "id": "2fe4f6f8a79ff499",
@@ -48,7 +50,8 @@
     "curation_note": "Huincha metalica 5m $19635 vs baseline $8990 (2.2x), producto exacto",
     "canonical_name": "Huincha de medir / flexómetro 5m",
     "category": "Ferretería y herramientas",
-    "overprice_pct": 118
+    "overprice_pct": 118,
+    "source_sha256": "97a00738ad18e9443be107468b4faca9a2ae3d7a417f8835e1303e913da60b26"
   },
   {
     "id": "faf7fadb4461bc51",
@@ -65,6 +68,7 @@
     "curation_note": "Corchetera 24/6 30 hojas $9847 vs baseline $3556 (2.8x), producto exacto",
     "canonical_name": "Corchetera metálica de escritorio (24/6)",
     "category": "Oficina y computación",
-    "overprice_pct": 177
+    "overprice_pct": 177,
+    "source_sha256": "07a4a25e665a7da7b8d564c5dcdb082db7104029ec7d3e69064cfcf8f30bf791"
   }
 ]
