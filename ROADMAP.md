@@ -155,6 +155,13 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   "No Tiene los Permiso suficientes para visualizar la ficha" dialog for a reader who is not
   logged in (checked on all 4 published orders). The provenance link no longer lets the public
   verify anything on its own. A mirror of the API record is proposed (ADR 0028, 0029), not decided; nothing from it is deployed.
+- After the fair-price study (`docs/research/fair-price-comparison.md`), San Bernardo
+  (corchetera, a Convenio Marco order at catalogue price against a smaller-stapler baseline) and
+  Pirque (huincha, mixed-grade baseline) were withdrawn through the ledger. Live set: Buin and
+  El Bosque, re-anchored at ledger 5111652 and verified on the live files. Open from the study:
+  reword Buin to the Convenio Marco comparison, confirm a Piwen 1 kg retail price for El Bosque,
+  confirm whether the Alcaplus pendrive price includes IVA, and refresh seed prices observed
+  12-13 July before they pass the 90-day limit.
 - **Rule:** every change to the published set needs `osint-anchor publish` and a redeploy of
   `anchors.json`, or the new rows show as not anchored.
 - Backfill of purchase orders from 13 July 2026 onwards runs with `scripts/ingest_range.sh`
