@@ -237,6 +237,8 @@ async function renderHashes() {
   setHtml("flag-check", checkLine(result.leafOk, "con la huella registrada en anchors.json.", "con la huella registrada en anchors.json."));
 }
 
+const LEAD_SAMPLE = 6;
+
 async function renderMerge() {
   const a = demo.anchors;
   if (!a) {
@@ -246,19 +248,34 @@ async function renderMerge() {
   const local = {};
   for (const flag of demo.flags) local[flag.id] = await leafOf(flag);
   const rows = a.leaves.map((leaf, i) => ({ leaf, id: a.flag_ids[i] }))
-    .sort((x, y) => (x.leaf < y.leaf ? -1 : x.leaf > y.leaf ? 1 : 0));
-  const html = rows.map((row, i) => {
-    const flag = demo.flags.find((f) => f.id === row.id);
-    const name = flag ? `${flag.comuna}: ${flag.canonical_name}` : row.id;
+    .sort((x, y) => (x.leaf < y.leaf ? -1 : x.leaf > y.leaf ? 1 : 0))
+    .map((row, i) => ({ ...row, order: i + 1, flag: demo.flags.find((f) => f.id === row.id) }));
+  const flagRows = rows.filter((row) => row.flag);
+  const leadRows = rows.filter((row) => !row.flag);
+  const shown = [...flagRows, ...leadRows.slice(0, LEAD_SAMPLE)].sort((x, y) => x.order - y.order);
+  const items = shown.map((row) => {
     const selected = row.id === demo.selectedId ? " selected" : "";
+    if (!row.flag) {
+      return `<li class="leaf">
+      <span class="leaf-order">${row.order}</span>
+      <span class="leaf-name">Caso en revisión ${esc(row.id)}</span>
+      <code class="hex">${hexHtml(row.leaf)}</code>
+      <span class="pill">En revisión</span>
+    </li>`;
+    }
     const match = local[row.id] === row.leaf;
     return `<li class="leaf${selected}">
-      <span class="leaf-order">${i + 1}</span>
-      <span class="leaf-name">${esc(name)}</span>
+      <span class="leaf-order">${row.order}</span>
+      <span class="leaf-name">${esc(`${row.flag.comuna}: ${row.flag.canonical_name}`)}</span>
       <code class="hex">${hexHtml(row.leaf)}</code>
       <span class="pill ${match ? "ok" : "bad"}">${match ? "Recalculada" : "No coincide"}</span>
     </li>`;
-  }).join("");
+  });
+  const hidden = leadRows.length - Math.min(leadRows.length, LEAD_SAMPLE);
+  if (hidden > 0) {
+    items.push(`<li class="leaf leaf-more">Y ${hidden.toLocaleString("es-CL")} huellas más de casos en revisión. La página de indicios las recalcula fila por fila.</li>`);
+  }
+  const html = items.join("");
   setHtml("leaves", html);
   setHtml("merge-join", `<span class="label">Unidas en orden: ${a.leaves.length} x 32 bytes = ${a.leaves.length * 32} bytes</span>`);
   const digest = await digestOf(a.leaves);
@@ -533,15 +550,13 @@ function setupReveal() {
   const steps = [...document.querySelectorAll(".step")];
   const chips = [...document.querySelectorAll("#stepper a")];
   if (typeof IntersectionObserver !== "function") return;
-  document.body.classList.add("js-reveal");
   const reveal = new IntersectionObserver((items) => {
     for (const item of items) {
       if (!item.isIntersecting) continue;
-      item.target.classList.add("is-visible");
       item.target.querySelectorAll(".hex-out").forEach(scramble);
       reveal.unobserve(item.target);
     }
-  }, { threshold: 0.15 });
+  });
   const active = new IntersectionObserver((items) => {
     for (const item of items) {
       if (!item.isIntersecting) continue;

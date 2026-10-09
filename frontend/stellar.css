@@ -106,8 +106,7 @@ body.demo header { max-width: 1180px; }
   background: var(--panel);
   scroll-margin-top: 64px;
 }
-.js-reveal .step { opacity: 0; transform: translateY(14px); transition: opacity 0.5s ease, transform 0.5s ease; }
-.js-reveal .step.is-visible { opacity: 1; transform: none; }
+.leaf.leaf-more { display: block; color: var(--muted); }
 .step-head { display: flex; gap: 18px; align-items: flex-start; margin-bottom: 20px; }
 .step-num {
   flex: none;
@@ -479,6 +478,5 @@ code { font-family: var(--mono); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .js-reveal .step { opacity: 1; transform: none; transition: none; }
   * { transition: none !important; scroll-behavior: auto !important; }
 }

@@ -133,6 +133,11 @@ for (const [i, flag] of flags.entries()) {
 }
 
 expect(plain(node("digest").innerHTML) === anchors.digest, "step 3 digest differs from anchors.json");
+const leafList = node("leaves").innerHTML;
+const leafItems = (leafList.match(/<li /g) || []).length;
+expect(leafItems <= flags.length + 7, `step 3 lists ${leafItems} entries; it must show a sample, not every sealed row`);
+expect(!leafList.includes("No coincide"), "step 3 marks a sealed entry as No coincide");
+if (anchors.leaves.length > flags.length + 6) expect(leafList.includes("huellas más"), "step 3 does not state how many entries are left out");
 expect(node("cmp-verdict").textContent === "Coinciden", `step 4 verdict is "${node("cmp-verdict").textContent}"`);
 
 const history = context.historyEntries(horizon[`${HORIZON}/accounts/${anchors.account}/operations?order=asc&limit=200&join=transactions`]._embedded.records, anchors);
