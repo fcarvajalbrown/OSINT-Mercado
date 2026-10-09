@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -u
 
-usage() { echo "usage: $0 YYYY-MM-DD YYYY-MM-DD [log_file]" >&2; exit 2; }
+usage() { echo "usage: $0 START END [log_file]  (dates YYYY-MM-DD; START after END runs newest-first)" >&2; exit 2; }
 [ $# -ge 2 ] || usage
 
 start="$1"
@@ -9,8 +9,15 @@ end="$2"
 log="${3:-/dev/stdout}"
 py="${PYTHON:-.venv/Scripts/python}"
 
+step="+ 1 day"
+cmp="-le"
+if [ "$(date -d "$start" +%s)" -gt "$(date -d "$end" +%s)" ]; then
+  step="- 1 day"
+  cmp="-ge"
+fi
+
 day="$start"
-while [ "$(date -d "$day" +%s)" -le "$(date -d "$end" +%s)" ]; do
+while [ "$(date -d "$day" +%s)" "$cmp" "$(date -d "$end" +%s)" ]; do
   fecha="$(date -d "$day" +%d%m%Y)"
   if [ -f "data/oc_items_${fecha}.parquet" ]; then
     echo "skip $fecha (already ingested)" >> "$log"
@@ -20,6 +27,6 @@ while [ "$(date -d "$day" +%s)" -le "$(date -d "$end" +%s)" ]; do
   else
     echo "FAILED $fecha" >> "$log"
   fi
-  day="$(date -d "$day + 1 day" +%Y-%m-%d)"
+  day="$(date -d "$day $step" +%Y-%m-%d)"
 done
 echo "finished $start..$end" >> "$log"
