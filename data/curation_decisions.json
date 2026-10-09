@@ -20,9 +20,9 @@
     "reviewed_at": "2026-07-14"
   },
   "2fe4f6f8a79ff499": {
-    "decision": "confirm",
-    "note": "Huincha metalica 5m $19635 vs baseline $8990 (2.2x), producto exacto",
-    "reviewed_at": "2026-07-14"
+    "decision": "dismiss",
+    "note": "Withdrawn pending review: baseline mixes Stanley PowerLock and Total tape grades; against the spec-matched Stanley item the ratio falls to about 1.5x (below 'high'), single unit in a small Compra Agil order. See docs/research/fair-price-comparison.md",
+    "reviewed_at": "2026-10-09"
   },
   "375b5bace7d58ec2": {
     "decision": "dismiss",
@@ -135,8 +135,8 @@
     "reviewed_at": "2026-07-13"
   },
   "faf7fadb4461bc51": {
-    "decision": "confirm",
-    "note": "Corchetera 24/6 30 hojas $9847 vs baseline $3556 (2.8x), producto exacto",
-    "reviewed_at": "2026-07-14"
+    "decision": "dismiss",
+    "note": "Not overpricing: Convenio Marco order (Tipo CM) for a 30-sheet TORRE stapler at 8,275 net, DIMERC's catalogue price; baseline 3,555.5 was the median of a 20-sheet Fultons and a medium NUOVO stapler, so the earlier 'producto exacto' note was wrong. See docs/research/fair-price-comparison.md",
+    "reviewed_at": "2026-10-09"
   }
 }
