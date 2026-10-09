@@ -19,7 +19,7 @@ const context = vm.createContext({
   fetch: () => Promise.reject(new Error("offline")),
   document: { getElementById: element, createElement: element },
 });
-for (const script of ["shared.js", "app.js"]) {
+for (const script of ["shared.js", "seal.js", "app.js"]) {
   vm.runInContext(readFileSync(join(siteDir, script), "utf-8"), context);
 }
 

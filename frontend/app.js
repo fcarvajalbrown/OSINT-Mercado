@@ -2,26 +2,43 @@
 
 const state = { flags: [], sources: {}, anchors: null, integrity: {}, chain: null };
 
-const HORIZON_TX_URL = "https://horizon-testnet.stellar.org/transactions/";
-const INTEGRITY_LABELS = {
-  pending: "Verificando...",
+const HORIZON_URL = "https://horizon-testnet.stellar.org";
+const EXPLORER_TX_URL = "https://stellar.expert/explorer/testnet/tx/";
+const STATUS_LABELS = {
+  pending: "Comprobando",
   verified: "Verificado",
   tampered: "Alterado",
-  unanchored: "Sin anclar",
+  unanchored: "Sin sellar",
 };
+const SEV_LABELS = { watch: "Moderada", high: "Alta", severe: "Severa" };
 
 const CLP = new Intl.NumberFormat("es-CL", { style: "currency", currency: "CLP", maximumFractionDigits: 0 });
-const SEV_LABELS = { watch: "Moderada", high: "Alta", severe: "Severa" };
+const RATIO = new Intl.NumberFormat("es-CL", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 
 function fmtClp(n) {
   return typeof n === "number" ? CLP.format(Math.round(n)) : "-";
+}
+
+function escapeHtml(text) {
+  return String(text ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;",
+  }[c]));
+}
+
+async function fetchJson(path, fallback) {
+  try {
+    const resp = await fetch(path, { cache: "no-store" });
+    return resp.ok ? await resp.json() : fallback;
+  } catch (_e) {
+    return fallback;
+  }
 }
 
 async function checkChain(anchors) {
   if (!anchors) return { status: "unanchored" };
   const localDigest = await digestOf(anchors.leaves);
   try {
-    const resp = await fetch(HORIZON_TX_URL + anchors.tx_hash);
+    const resp = await fetch(`${HORIZON_URL}/transactions/${anchors.tx_hash}`);
     if (!resp.ok) return { status: "unreachable", localDigest };
     const tx = await resp.json();
     const onChain = memoHex(tx);
@@ -62,45 +79,33 @@ async function checkFlag(flag) {
   return { status: chainOk ? "verified" : "pending", ...base };
 }
 
-function renderChain() {
-  const panel = document.getElementById("chain");
+function actaMessage(anchors, chain) {
+  if (!anchors) return "Esta publicación todavía no tiene sello.";
+  const when = fmtTime(anchors.anchored_at);
+  if (!chain) return "Comprobando el sello contra la red Stellar...";
+  if (chain.status === "verified") return `Sellado en Stellar el ${when}. Su navegador acaba de comprobar que lo que ve es lo que se selló.`;
+  if (chain.status === "tampered") return `Lo que ve no coincide con lo sellado en Stellar el ${when}. Algún dato cambió después de publicarse.`;
+  return `Sellado en Stellar el ${when}, pero no pudimos consultar la red ahora. Los datos se muestran sin comprobar.`;
+}
+
+function renderActa() {
   const a = state.anchors;
   const c = state.chain;
-  if (!a) {
-    panel.hidden = true;
-    return;
-  }
-  panel.hidden = false;
-  const statusText = !c ? "Consultando la red Stellar..."
-    : c.status === "verified" ? "El registro publicado coincide con el anclado en Stellar."
-    : c.status === "tampered" ? "El registro publicado no coincide con el anclado en Stellar."
-    : "No se pudo consultar la red Stellar en este momento.";
-  panel.className = `chain ${c ? c.status : "pending"}`;
-  panel.innerHTML = `
-    <strong>Registro de integridad en Stellar (testnet)</strong>
-    <span>${statusText}</span>
-    <span class="meta">Anclado: ${fmtTime(a.anchored_at)} &middot; ledger ${a.ledger}
-      &middot; <a href="${a.explorer_url}" target="_blank" rel="noopener">ver transacción</a></span>
-    <code title="Huella SHA-256 del conjunto publicado">${a.digest}</code>`;
+  const status = !a ? "unanchored" : c ? c.status : "pending";
+  const box = document.getElementById("acta-status");
+  box.className = `acta-status ${status}`;
+  const details = a ? `
+    <dl class="acta-facts">
+      <div><dt>Ledger</dt><dd>${escapeHtml(a.ledger)}</dd></div>
+      <div><dt>Transacción</dt><dd><a href="${EXPLORER_TX_URL}${escapeHtml(a.tx_hash)}" target="_blank" rel="noopener">${escapeHtml(a.tx_hash.slice(0, 10))}...${escapeHtml(a.tx_hash.slice(-6))}</a></dd></div>
+      <div class="wide"><dt>Huella del conjunto publicado</dt><dd class="hash">${escapeHtml(a.digest)}</dd></div>
+    </dl>` : "";
+  box.innerHTML = `<p class="status-line">${escapeHtml(actaMessage(a, c))}</p>${details}`;
+  renderSeal(document.getElementById("seal"), { digest: a ? a.digest : "", ledger: a ? a.ledger : "", status });
 }
 
-function sourceLinks(flag) {
-  const links = [];
-  if (flag.oc_url) links.push(`<a href="${flag.oc_url}" target="_blank" rel="noopener">orden</a>`);
-  if (flag.mirror_sha256) {
-    links.push(`<a href="${mirrorPath(flag)}" target="_blank" rel="noopener" title="Copia del registro oficial, por si la ficha pide inicio de sesión">copia</a>`);
-  }
-  return links.join(" &middot; ");
-}
-
-function integrityCell(flag) {
-  const result = state.integrity[flag.id] || { status: "pending" };
-  const label = INTEGRITY_LABELS[result.status] || result.status;
-  const captured = result.source ? `<small>Fuente capturada ${fmtTime(result.source.captured_at)}</small>` : "";
-  const sourceWarn = result.sourceOk === false ? "<small>La línea capturada no coincide</small>" : "";
-  const mirrored = result.mirror ? `<small>Copia del registro oficial: ${fmtTime(result.mirror.fetched_at)}</small>` : "";
-  const mirrorWarn = result.mirrorOk === false ? "<small>La copia del registro oficial no coincide</small>" : "";
-  return `<span class="integrity ${result.status}">${label}</span>${captured}${mirrored}${sourceWarn}${mirrorWarn}`;
+function uniqueSorted(items, key) {
+  return [...new Set(items.map((f) => f[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
 }
 
 function fillOptions(selectId, values) {
@@ -111,10 +116,6 @@ function fillOptions(selectId, values) {
     opt.textContent = value;
     select.appendChild(opt);
   }
-}
-
-function uniqueSorted(items, key) {
-  return [...new Set(items.map((f) => f[key]).filter(Boolean))].sort((a, b) => a.localeCompare(b, "es"));
 }
 
 function currentFilters() {
@@ -131,69 +132,96 @@ function matches(flag, f) {
     && (!f.severidad || flag.severity === f.severidad);
 }
 
+function fichaChecks(result) {
+  const lines = [];
+  if (result.source) lines.push(`Línea de la orden capturada el ${fmtTime(result.source.captured_at)}`);
+  if (result.sourceOk === false) lines.push("La línea capturada no coincide con su huella");
+  if (result.mirror) lines.push(`Copia del registro oficial del ${fmtTime(result.mirror.fetched_at)}`);
+  if (result.mirrorOk === false) lines.push("La copia del registro oficial no coincide con su huella");
+  return lines.map((l) => `<li>${escapeHtml(l)}</li>`).join("");
+}
+
+function fichaHtml(flag) {
+  const result = state.integrity[flag.id] || { status: "pending" };
+  const sev = flag.severity || "watch";
+  const ratio = typeof flag.overprice_ratio === "number" ? RATIO.format(flag.overprice_ratio) : "";
+  const links = [];
+  if (flag.oc_url) links.push(`<a href="${escapeHtml(flag.oc_url)}" target="_blank" rel="noopener">Orden ${escapeHtml(flag.oc_id)} en Mercado Público</a>`);
+  if (flag.mirror_sha256) links.push(`<a href="${mirrorPath(flag)}" target="_blank" rel="noopener">Copia del registro oficial</a>`);
+  return `
+    <article class="ficha ${result.status}">
+      <header class="ficha-head">
+        <h3><span class="comuna">${escapeHtml(flag.comuna)}</span> ${escapeHtml(flag.canonical_name || flag.sku_id)}</h3>
+        <p class="ficha-cat">${escapeHtml(flag.category)}</p>
+      </header>
+      <dl class="precios">
+        <div><dt>Pagó la municipalidad</dt><dd>${fmtClp(flag.unit_price_clp_gross)}</dd></div>
+        <div><dt>Referencia</dt><dd>${fmtClp(flag.reference_price_clp)}</dd></div>
+        <div class="ratio ${sev}"><dt>Diferencia</dt><dd>${ratio} veces <span class="sev">${SEV_LABELS[sev] || sev}</span></dd></div>
+      </dl>
+      <div class="ficha-sello">
+        <span class="mini-seal ${result.status}" aria-hidden="true"></span>
+        <div>
+          <p class="sello-label">${STATUS_LABELS[result.status] || escapeHtml(result.status)}</p>
+          <ul class="checks">${fichaChecks(result)}</ul>
+        </div>
+      </div>
+      ${flag.curation_note ? `<p class="nota">Nota de revisión: ${escapeHtml(flag.curation_note)}</p>` : ""}
+      <p class="fuentes">${links.join(" ")}</p>
+    </article>`;
+}
+
 function render() {
-  const table = document.getElementById("flags");
+  const list = document.getElementById("fichas");
   const empty = document.getElementById("empty");
-  const tbody = table.querySelector("tbody");
   const count = document.getElementById("count");
-
   const filtered = state.flags.filter((flag) => matches(flag, currentFilters()));
-  tbody.textContent = "";
-
   if (state.flags.length === 0) {
     empty.hidden = false;
-    table.hidden = true;
+    list.innerHTML = "";
     count.textContent = "";
     return;
   }
-
   empty.hidden = true;
-  table.hidden = false;
-  count.textContent = `${filtered.length} de ${state.flags.length} banderas`;
-
-  for (const flag of filtered) {
-    const tr = document.createElement("tr");
-    const sev = flag.severity || "watch";
-    const mult = flag.overprice_ratio ? `${flag.overprice_ratio.toFixed(1)}x` : "";
-    const pct = typeof flag.overprice_pct === "number" ? `+${flag.overprice_pct}%` : "";
-    const cells = [
-      flag.comuna || "",
-      flag.canonical_name || flag.sku_id || "",
-      flag.category || "",
-      { html: `<span class="num">${fmtClp(flag.unit_price_clp_gross)}</span>`, cls: "num" },
-      { html: `<span class="num">${fmtClp(flag.reference_price_clp)}</span>`, cls: "num" },
-      { html: `<span class="num mult">${pct} <small>(${mult})</small></span>`, cls: "num" },
-      { html: `<span class="badge ${sev}">${SEV_LABELS[sev] || sev}</span>` },
-      { html: sourceLinks(flag) },
-      { html: integrityCell(flag), cls: "integrity-cell" },
-    ];
-    for (const cell of cells) {
-      const td = document.createElement("td");
-      if (typeof cell === "string") {
-        td.textContent = cell;
-      } else {
-        td.innerHTML = cell.html;
-        if (cell.cls) td.className = cell.cls;
-      }
-      tr.appendChild(td);
-    }
-    tbody.appendChild(tr);
-  }
+  count.textContent = filtered.length === state.flags.length
+    ? `${state.flags.length} publicados`
+    : `${filtered.length} de ${state.flags.length}`;
+  list.innerHTML = filtered.map((flag) => `<li>${fichaHtml(flag)}</li>`).join("");
 }
 
-async function fetchJson(path, fallback) {
-  try {
-    const resp = await fetch(path, { cache: "no-store" });
-    return resp.ok ? await resp.json() : fallback;
-  } catch (_e) {
-    return fallback;
+async function loadTimeline() {
+  const list = document.getElementById("timeline");
+  const account = state.anchors && state.anchors.account;
+  if (!account) {
+    list.innerHTML = "<li class=\"timeline-empty\">Esta publicación todavía no tiene sello.</li>";
+    return;
   }
+  const page = await fetchJson(`${HORIZON_URL}/accounts/${account}/transactions?order=desc&limit=50`, null);
+  const records = page && page._embedded ? page._embedded.records : [];
+  const seals = records.filter((tx) => tx.memo_type === "hash" && tx.successful);
+  if (!seals.length) {
+    list.innerHTML = "<li class=\"timeline-empty\">No pudimos leer el historial desde la red Stellar en este momento.</li>";
+    return;
+  }
+  list.innerHTML = seals.map((tx) => {
+    const digest = memoHex(tx);
+    const current = state.anchors && tx.hash === state.anchors.tx_hash;
+    return `
+      <li class="${current ? "current" : ""}">
+        <span class="dot" aria-hidden="true"></span>
+        <div>
+          <p class="when">${escapeHtml(fmtTime(tx.created_at))}${current ? " <strong>sello vigente</strong>" : ""}</p>
+          <p class="meta">Ledger ${escapeHtml(tx.ledger)}, huella <span class="hash">${escapeHtml(digest.slice(0, 12))}...</span>
+            <a href="${EXPLORER_TX_URL}${escapeHtml(tx.hash)}" target="_blank" rel="noopener">ver transacción</a></p>
+        </div>
+      </li>`;
+  }).join("");
 }
 
 async function verify() {
-  renderChain();
+  renderActa();
   state.chain = await checkChain(state.anchors);
-  renderChain();
+  renderActa();
   for (const flag of state.flags) {
     state.integrity[flag.id] = await checkFlag(flag);
   }
@@ -212,7 +240,7 @@ async function load() {
     document.getElementById(id).addEventListener("change", render);
   }
   render();
-  verify();
+  await Promise.all([verify(), loadTimeline()]);
 }
 
 load();

@@ -3,76 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>OSINT-Mercado — Sobreprecios en compras municipales</title>
+  <title>OSINT-Mercado, sobreprecios en compras municipales</title>
   <link rel="icon" type="image/svg+xml" href="./logo.svg">
+  <link rel="preload" href="./fonts/atkinson-hyperlegible-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <header>
-    <div class="brand">
-      <img class="logo" src="./logo.svg" width="42" height="42" alt="">
-      <h1>OSINT-Mercado</h1>
-    </div>
-    <p class="tagline">Indicios de posible sobreprecio en compras municipales de la Región Metropolitana, para revisión ciudadana.</p>
-    <p class="note">
-      Cada fila es un <strong>indicio para revisar, no una acusación</strong>: una orden de compra
-      pública contrastada contra un precio de referencia para un producto equivalente. El precio por
-      sí solo no prueba una compra irregular — pueden diferir el formato, las condiciones comerciales
-      o el marco normativo aplicable (por ejemplo, alternativas dentro del mismo Convenio Marco). Cada
-      caso pasa por revisión humana y enlaza a la orden oficial en Mercado Público para su
-      verificación independiente.
-    </p>
+  <header class="masthead">
+    <a class="brand" href="./index.html">
+      <img class="logo" src="./logo.svg" width="34" height="34" alt="">
+      <span>OSINT-Mercado</span>
+    </a>
+    <nav class="site-nav" aria-label="Secciones">
+      <a href="./index.html" aria-current="page">Indicios</a>
+      <a href="./stellar.html">Cómo usamos Stellar</a>
+    </nav>
   </header>
 
-  <section class="filters" aria-label="Filtros">
-    <label>Comuna
-      <select id="filter-comuna"><option value="">Todas</option></select>
-    </label>
-    <label>Categoría
-      <select id="filter-categoria"><option value="">Todas</option></select>
-    </label>
-    <label>Severidad
-      <select id="filter-severidad">
-        <option value="">Todas</option>
-        <option value="watch">Moderada (&ge;1.5x)</option>
-        <option value="high">Alta (&ge;2x)</option>
-        <option value="severe">Severa (&ge;3x)</option>
-      </select>
-    </label>
-    <span id="count" class="count" role="status"></span>
-  </section>
-
   <main>
-    <div id="chain" class="chain pending" role="status" hidden></div>
-    <div id="empty" class="empty" hidden>
-      No hay banderas confirmadas todavía. Los casos pendientes están en revisión.
-    </div>
-    <div class="table-wrap">
-      <table id="flags" hidden>
-        <thead>
-          <tr>
-            <th>Comuna</th>
-            <th>Producto</th>
-            <th>Categoría</th>
-            <th class="num">Pagado (CLP, c/IVA)</th>
-            <th class="num">Referencia (CLP)</th>
-            <th class="num">Sobreprecio</th>
-            <th>Severidad</th>
-            <th>Fuente</th>
-            <th>Integridad</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
+    <section class="acta" aria-labelledby="acta-title">
+      <div class="acta-text">
+        <h1 id="acta-title">Posibles sobreprecios en compras municipales de la Región Metropolitana</h1>
+        <p class="lead">Cada indicio pasa por revisión humana antes de publicarse, y cada publicación queda sellada en la red Stellar. Su navegador comprueba ese sello cada vez que abre esta página.</p>
+        <div id="acta-status" class="acta-status pending" role="status" aria-live="polite">
+          <p class="status-line">Comprobando el sello contra la red Stellar...</p>
+        </div>
+      </div>
+      <figure class="seal-wrap" aria-hidden="true">
+        <div id="seal" class="seal pending"></div>
+      </figure>
+    </section>
+
+    <section class="indicios" aria-labelledby="indicios-title">
+      <div class="indicios-head">
+        <h2 id="indicios-title">Indicios publicados</h2>
+        <span id="count" class="count" role="status"></span>
+      </div>
+      <p class="caveat">Un indicio es una orden de compra pública cuyo precio unitario supera con holgura una referencia para un producto equivalente. No es una acusación: pueden diferir el formato, las condiciones de entrega o el canal de compra, como Convenio Marco.</p>
+
+      <form class="filters" aria-label="Filtrar indicios">
+        <label>Comuna
+          <select id="filter-comuna"><option value="">Todas</option></select>
+        </label>
+        <label>Categoría
+          <select id="filter-categoria"><option value="">Todas</option></select>
+        </label>
+        <label>Severidad
+          <select id="filter-severidad">
+            <option value="">Todas</option>
+            <option value="watch">Moderada, 1,5 veces o más</option>
+            <option value="high">Alta, 2 veces o más</option>
+            <option value="severe">Severa, 3 veces o más</option>
+          </select>
+        </label>
+      </form>
+
+      <div id="empty" class="empty" hidden>No hay indicios publicados todavía. Los casos pendientes siguen en revisión.</div>
+      <ol id="fichas" class="fichas"></ol>
+    </section>
+
+    <section class="historial" aria-labelledby="historial-title">
+      <h2 id="historial-title">Historial de sellos</h2>
+      <p class="caveat">Cada vez que cambia el conjunto publicado, se sella de nuevo. Los sellos anteriores siguen en la red, así que también se ve cuándo se corrigió algo.</p>
+      <ol id="timeline" class="timeline">
+        <li class="timeline-empty">Cargando el historial desde la red Stellar...</li>
+      </ol>
+    </section>
   </main>
 
-  <footer>
-    <p>Datos: Mercado Público / ChileCompra. Código y metodología abiertos.</p>
-    <p>Integridad: cada publicación queda anclada en la red Stellar (testnet). Su navegador recalcula la huella de cada fila y de la orden de compra tal como la capturamos, y la compara con ese registro público. Si alguien cambia un dato después de publicado, la fila aparece como alterada.</p>
+  <footer class="colophon">
+    <p>Datos: API pública de Mercado Público (ChileCompra). Sello: red de pruebas (testnet) de Stellar, consultada en Horizon. La testnet se reinicia cada cierto tiempo, así que este sello es una demostración y no un registro permanente.</p>
   </footer>
 
   <script src="./shared.js"></script>
+  <script src="./seal.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
