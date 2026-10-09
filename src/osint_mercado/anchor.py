@@ -88,13 +88,16 @@ def main() -> None:
         print(f"anchoring account: {init_account()}")
         return
 
-    flags, sources = public_dataset(args.confirmed, args.basket, args.items)
+    flags, sources, _mirrors = public_dataset(args.confirmed, args.basket, args.items)
     missing = [f["id"] for f in flags if f["id"] not in sources]
+    unmirrored = [f["oc_id"] for f in flags if "mirror_sha256" not in f]
     rec = anchor(flags, load_secret(), args.out)
     print(f"anchored {len(flags)} flags, digest {rec['digest']}")
     print(f"tx {rec['tx_hash']} ledger {rec['ledger']}: {rec['explorer_url']}")
     if missing:
         print(f"flags without a source snapshot: {', '.join(missing)}")
+    if unmirrored:
+        print(f"orders without a mirror (run osint-mirror first): {', '.join(unmirrored)}")
 
 
 if __name__ == "__main__":

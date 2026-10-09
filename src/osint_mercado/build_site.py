@@ -15,10 +15,11 @@ from pathlib import Path
 import polars as pl
 
 from osint_mercado.basket import Sku, load_basket
-from osint_mercado.integrity import attach_sources
+from osint_mercado.integrity import attach_mirrors, attach_sources
 from osint_mercado.store import ITEM_COLUMNS
 
 ITEMS_GLOB = "data/oc_items_*.parquet"
+MIRROR_PUBLIC_DIR = "data/mirror/public"
 
 # Fields carried through to the published dashboard dataset.
 _PUBLIC_FIELDS = (
@@ -55,10 +56,13 @@ def load_items(items_glob: str = ITEMS_GLOB) -> pl.DataFrame:
     return items.select(ITEM_COLUMNS)
 
 
-def public_dataset(confirmed_path, basket_path, items_glob=ITEMS_GLOB) -> tuple[list[dict], dict]:
+def public_dataset(confirmed_path, basket_path, items_glob=ITEMS_GLOB,
+                   mirror_dir=MIRROR_PUBLIC_DIR) -> tuple[list[dict], dict, dict]:
     confirmed = json.loads(Path(confirmed_path).read_text(encoding="utf-8"))
     flags = build_flags(confirmed, load_basket(basket_path))
-    return attach_sources(flags, load_items(items_glob))
+    flags, sources = attach_sources(flags, load_items(items_glob))
+    flags, mirrors = attach_mirrors(flags, mirror_dir)
+    return flags, sources, mirrors
 
 
 def _write_json(path: Path, data) -> None:
@@ -66,7 +70,8 @@ def _write_json(path: Path, data) -> None:
 
 
 def build(confirmed_path, basket_path, frontend_dir, out_dir,
-          items_glob=ITEMS_GLOB, anchors_path="data/anchors.json") -> Path:
+          items_glob=ITEMS_GLOB, anchors_path="data/anchors.json",
+          mirror_dir=MIRROR_PUBLIC_DIR) -> Path:
     out_dir = Path(out_dir)
     frontend_dir = Path(frontend_dir)
 
@@ -74,12 +79,15 @@ def build(confirmed_path, basket_path, frontend_dir, out_dir,
         shutil.rmtree(out_dir)
     shutil.copytree(frontend_dir, out_dir)
 
-    flags, sources = public_dataset(confirmed_path, basket_path, items_glob)
+    flags, sources, mirrors = public_dataset(confirmed_path, basket_path, items_glob, mirror_dir)
 
     data_dir = out_dir / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
     _write_json(data_dir / "flags.json", flags)
     _write_json(data_dir / "sources.json", sources)
+    (data_dir / "mirror").mkdir(exist_ok=True)
+    for oc_id, doc in mirrors.items():
+        _write_json(data_dir / "mirror" / f"{oc_id}.json", doc)
     if Path(anchors_path).exists():
         shutil.copyfile(anchors_path, data_dir / "anchors.json")
     return out_dir

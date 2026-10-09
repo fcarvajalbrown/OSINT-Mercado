@@ -25,6 +25,7 @@ osint-catalog = "osint_mercado.catalog:main"
 osint-curate = "osint_mercado.curate:main"
 osint-build-site = "osint_mercado.build_site:main"
 osint-anchor = "osint_mercado.anchor:main"
+osint-mirror = "osint_mercado.mirror:main"
 
 [build-system]
 requires = ["setuptools>=68"]

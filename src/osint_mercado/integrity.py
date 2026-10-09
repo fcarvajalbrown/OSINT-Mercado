@@ -1,6 +1,7 @@
 import hashlib
 import json
 import math
+from pathlib import Path
 
 import polars as pl
 
@@ -48,6 +49,22 @@ def attach_sources(flags: list[dict], items: pl.DataFrame) -> tuple[list[dict], 
             flag["source_sha256"] = leaf(snapshot)
         out.append(flag)
     return out, sources
+
+
+def attach_mirrors(flags: list[dict], public_dir) -> tuple[list[dict], dict]:
+    public_dir = Path(public_dir)
+    mirrors = {}
+    out = []
+    for flag in flags:
+        flag = dict(flag)
+        oc_id = flag.get("oc_id")
+        path = public_dir / f"{oc_id}.json"
+        if oc_id and path.exists():
+            doc = mirrors.get(oc_id) or json.loads(path.read_text(encoding="utf-8"))
+            mirrors[oc_id] = doc
+            flag["mirror_sha256"] = leaf(doc)
+        out.append(flag)
+    return out, mirrors
 
 
 def record(flags: list[dict]) -> dict:
