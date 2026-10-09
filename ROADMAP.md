@@ -208,6 +208,11 @@ _Shaped by: ADR 0005, 0006, 0013, 0017, 0018, 0021, 0022; new ADR 0024._
   1.0 s is the default (`PACE` overrides): about 2,300 requests per hour stays under the 9,000
   stop for three hours. Stop runs with `scripts/stop_ingest.ps1`, never a command-line match that
   can kill its own shell.
+- **Hostinger caches static assets for 7 days** (`Cache-Control: public, max-age=604800` on css and
+  js; html has no cache header). After the redesign deploy, browsers that had seen the old site
+  kept the old stylesheets and the new pages rendered unstyled. The build now appends
+  `?v=<sha256 prefix>` to every local css, js and svg link (`fingerprint_assets`), so each deploy
+  loads fresh files. Data files are fetched with `cache: "no-store"`.
 
 _Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028._
 
