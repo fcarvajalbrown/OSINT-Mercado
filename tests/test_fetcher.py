@@ -120,3 +120,12 @@ def test_non_retryable_4xx_fails_without_retry(tmp_path):
     with pytest.raises(api_client.ApiError):
         f.get_detail("a")
     assert len(responses.calls) == 1
+
+
+@responses.activate
+def test_each_retry_is_logged_with_its_reason(tmp_path, caplog):
+    responses.add(responses.GET, api_client.BASE_URL, status=503)
+    responses.add(responses.GET, api_client.BASE_URL, json=OK, status=200)
+    with caplog.at_level("WARNING"):
+        make(tmp_path).get_detail("1-1")
+    assert "retry 1 after HTTP 503" in caplog.text

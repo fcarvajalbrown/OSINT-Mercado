@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import random
 import time
@@ -8,6 +9,8 @@ import requests
 
 from osint_mercado import api_client
 from osint_mercado.api_client import ApiError
+
+logger = logging.getLogger(__name__)
 
 DAY_SECONDS = 86_400
 RETRYABLE_STATUS = {429, 500, 502, 503, 504}
@@ -114,5 +117,7 @@ class Fetcher:
                 if self.consecutive_failures >= self.breaker_threshold:
                     raise CircuitOpen(f"{self.consecutive_failures} consecutive failed requests, last: {reason}")
                 raise ApiError(f"OC API request failed after {attempt + 1} attempts: {reason}")
-            self.sleep(self._delay(attempt, retry_after))
+            delay = self._delay(attempt, retry_after)
+            logger.warning("retry %d after %s, waiting %.1f s", attempt + 1, reason, delay)
+            self.sleep(delay)
             attempt += 1
