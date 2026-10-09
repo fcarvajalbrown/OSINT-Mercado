@@ -19,13 +19,22 @@ fi
 day="$start"
 while [ "$(date -d "$day" +%s)" "$cmp" "$(date -d "$end" +%s)" ]; do
   fecha="$(date -d "$day" +%d%m%Y)"
-  if [ -f "data/oc_items_${fecha}.parquet" ]; then
+  if [ -f "data/oc_items_${fecha}.parquet" ] && [ ! -f "data/oc_items_${fecha}.gaps.json" ]; then
     echo "skip $fecha (already ingested)" >> "$log"
-  elif "$py" -m osint_mercado.ingest --fecha "$fecha" --codes data/rm_municipal_codes.json \
-      --out data --max-per-organism 200 --pace 0.25 >> "$log" 2>&1; then
-    echo "done $fecha" >> "$log"
   else
-    echo "FAILED $fecha" >> "$log"
+    "$py" -m osint_mercado.ingest --fecha "$fecha" --codes data/rm_municipal_codes.json \
+      --out data --max-per-organism 200 --pace 0.25 >> "$log" 2>&1
+    status=$?
+    if [ "$status" -eq 3 ]; then
+      echo "STOPPED at $fecha (quota or circuit breaker, see above)" >> "$log"
+      exit 3
+    elif [ "$status" -ne 0 ]; then
+      echo "FAILED $fecha (exit $status)" >> "$log"
+    elif [ -f "data/oc_items_${fecha}.gaps.json" ]; then
+      echo "done $fecha with gaps (re-run to fill them from cache)" >> "$log"
+    else
+      echo "done $fecha" >> "$log"
+    fi
   fi
   day="$(date -d "$day $step" +%Y-%m-%d)"
 done

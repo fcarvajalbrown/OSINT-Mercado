@@ -36,3 +36,7 @@ data/*.parquet
 # a single, weekly-refreshed file that is the normative evidence CM leads cite, so
 # it is committed (reproducible via osint-cm-fetch if history bloat ever forces a swap).
 !data/cm_catalog.parquet
+
+# API response cache and rolling request log (local operational state)
+data/cache/
+data/api_usage.log
