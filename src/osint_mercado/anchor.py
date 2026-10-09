@@ -99,7 +99,7 @@ def main() -> None:
     missing = [f["id"] for f in flags if f["id"] not in sources]
     unmirrored = [f["oc_id"] for f in flags if "mirror_sha256" not in f]
     queue = public_queue()
-    lead_rows = public_lead_rows(args.confirmed)
+    lead_rows = public_lead_rows(args.confirmed, items_glob=args.items)
     rec = anchor(flags + lead_rows, load_secret(), args.out, queue=queue)
     print(f"anchored {len(flags)} flags and {len(lead_rows)} lead rows, digest {rec['digest']}")
     print(f"sealed review queue: {queue['total']} leads, digest {queue['digest']}")
