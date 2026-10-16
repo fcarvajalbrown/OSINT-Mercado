@@ -69,6 +69,23 @@ passes a **human curation gate** (ADR 0006) and carries a **provenance link** (A
   `.claude/skills/`; `.claude/` is gitignored, so if it is missing reinstall with
   `npx skills add anthropics/knowledge-work-plugins@statistical-analysis`).
 
+## Ingest data and GitHub Actions artifacts
+- **Never use Actions artifacts as the store for ingested data.** The account has 0.5 GB of
+  Actions artifact storage shared by every repo, and artifacts expire after 90 days. The
+  old `ingest.yml` (removed in `2b1a732`) uploaded each day's `data/*.parquet` as an
+  `oc-items-DDMMYYYY` artifact and never committed or kept it anywhere else, because
+  `data/*.parquet` is gitignored. By mid-October 61 of those artifacts (17 Jul to 15 Sep, about
+  220 MB) were the only copy of that window and helped push the account past 90% of its
+  quota.
+- **Recovered:** those 61 days were downloaded, checked byte for byte against the artifacts,
+  and placed in `data/` as `oc_items_DDMMYYYY.parquet`. The artifacts were then deleted.
+  `oc_items_01092026` already existed locally and differed from the CI copy, so the CI copy is
+  `data/ci-artifact_oc_items_01092026.parquet`. Each artifact's `cm_catalog.parquet` was
+  identical to the tracked one and was discarded.
+- If ingest returns to CI, persist each day's parquet somewhere durable (ADR 0004's versioned
+  store or the Hostinger host). Any `upload-artifact` step sets `retention-days` of 7 or less
+  and is only a debugging aid.
+
 ## Secrets and TLS
 - The ChileCompra API ticket lives only in a gitignored `.env` (key `CHILECOMPRA_API_TICKET`)
   locally, and a GitHub Actions secret of the same name in CI. Never commit it, print it, or
