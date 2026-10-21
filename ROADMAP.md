@@ -156,5 +156,21 @@ _Shaped by: ADR 0007, 0016; new ADR 0026, 0027, 0028, 0030, 0031, 0032, 0033._
 - **Cryptographic provenance** hashing of source data for tamper-evident reports suitable for
   oversight bodies (Contraloría), building on the archived payload above.
 - **Historical trends**: price-over-time views per SKU and per commune.
+- **Rayen (APS clinical software), non-commodity audit pilot.** Asked for by a presidential
+  advisor, who wants automated procurement audits extended to non-commodity purchases. A search
+  of the ingested orders for "rayen" finds six real purchases in five municipalities: Vitacura
+  1480067-79-TD26 (100 Rayen APS licences, 15 months, 660 UF net, trato directo), Paine
+  2790-100-TD26 (DWH fed by Rayen data, 371.28 UF net, trato directo), La Pintana 2274-339-SE25
+  (queue system with Rayen integration, $72,366,108), Maipú 2583-592-SE24 (electronic medical
+  leave integrated with Rayen, $5,462,185), Padre Hurtado 3827-361/413/448/501-SE26 (call centre
+  with Rayen, $2,254,740 a month), La Pintana 2274-125-AG26 (Rayen-compatible printers,
+  $1,820,000). Matches for "Trayenta" (a drug) and other text are false positives.
+- **Rayen coverage gaps.** Municipal corporations and the Servicios de Salud are not ingested,
+  so these figures are a floor. The dataset has no supplier name or RUT column, so total Rayen
+  billing cannot be measured until order detail with the supplier is stored.
+- **Rayen pilot (Felipe's proposal, guide sent to the advisor):** measure all Rayen spend with
+  the supplier identified by RUT, read the bases (chilecompracl), build a replacement in one
+  comuna or Servicio de Salud, compare cost against the contract, then reuse the method. Guide
+  PDF and source: felipe_skill_voice `misc/2026-10-21_guia-rayen-chilecompra/`.
 
 _Shaped by: ADR 0004, 0005, 0007._
